@@ -1,0 +1,2836 @@
+Antibiotic_Class,Year,Location,Age_Group,Sex,Rate
+All classes,2011,National,0-19,Combined Gender,908.0769176
+B-lactams increased activity,2011,National,0-19,Combined Gender,93.51996792
+Cephalosporins,2011,National,0-19,Combined Gender,162.0059129
+Fluoroquinolones,2011,National,0-19,Combined Gender,8.879415807
+Lincosamides,2011,National,0-19,Combined Gender,12.72764521
+Macrolides,2011,National,0-19,Combined Gender,192.3031206
+Other,2011,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2011,National,0-19,Combined Gender,318.4558754
+Tetracycline,2011,National,0-19,Combined Gender,51.28160963
+Trimethoprim-sulfamethoxazole,2011,National,0-19,Combined Gender,58.33420219
+Urinary anti-infectives,2011,National,0-19,Combined Gender,10.10079783
+All classes,2011,National,0-19,Female,962.1997839
+B-lactams increased activity,2011,National,0-19,Female,Insufficient Data
+Cephalosporins,2011,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2011,National,0-19,Female,Insufficient Data
+Lincosamides,2011,National,0-19,Female,Insufficient Data
+Macrolides,2011,National,0-19,Female,Insufficient Data
+Other,2011,National,0-19,Female,Insufficient Data
+Penicillins,2011,National,0-19,Female,Insufficient Data
+Tetracycline,2011,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2011,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2011,National,0-19,Female,Insufficient Data
+All classes,2011,National,0-19,Male,855.2810603
+B-lactams increased activity,2011,National,0-19,Male,Insufficient Data
+Cephalosporins,2011,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2011,National,0-19,Male,Insufficient Data
+Lincosamides,2011,National,0-19,Male,Insufficient Data
+Macrolides,2011,National,0-19,Male,Insufficient Data
+Other,2011,National,0-19,Male,Insufficient Data
+Penicillins,2011,National,0-19,Male,Insufficient Data
+Tetracycline,2011,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2011,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2011,National,0-19,Male,Insufficient Data
+All classes,2011,National,20+,Combined Gender,838.2325727
+B-lactams increased activity,2011,National,20+,Combined Gender,60.31097187
+Cephalosporins,2011,National,20+,Combined Gender,97.68895675
+Fluoroquinolones,2011,National,20+,Combined Gender,131.5413859
+Lincosamides,2011,National,20+,Combined Gender,30.40220808
+Macrolides,2011,National,20+,Combined Gender,182.9677561
+Other,2011,National,20+,Combined Gender,2.174856577
+Penicillins,2011,National,20+,Combined Gender,145.6369167
+Tetracycline,2011,National,20+,Combined Gender,71.57159936
+Trimethoprim-sulfamethoxazole,2011,National,20+,Combined Gender,67.7777173
+Urinary anti-infectives,2011,National,20+,Combined Gender,48.16020409
+All classes,2011,National,20+,Female,1042.60277
+B-lactams increased activity,2011,National,20+,Female,Insufficient Data
+Cephalosporins,2011,National,20+,Female,Insufficient Data
+Fluoroquinolones,2011,National,20+,Female,Insufficient Data
+Lincosamides,2011,National,20+,Female,Insufficient Data
+Macrolides,2011,National,20+,Female,Insufficient Data
+Other,2011,National,20+,Female,Insufficient Data
+Penicillins,2011,National,20+,Female,Insufficient Data
+Tetracycline,2011,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2011,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2011,National,20+,Female,Insufficient Data
+All classes,2011,National,20+,Male,620.0639818
+B-lactams increased activity,2011,National,20+,Male,Insufficient Data
+Cephalosporins,2011,National,20+,Male,Insufficient Data
+Fluoroquinolones,2011,National,20+,Male,Insufficient Data
+Lincosamides,2011,National,20+,Male,Insufficient Data
+Macrolides,2011,National,20+,Male,Insufficient Data
+Other,2011,National,20+,Male,Insufficient Data
+Penicillins,2011,National,20+,Male,Insufficient Data
+Tetracycline,2011,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2011,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2011,National,20+,Male,Insufficient Data
+All classes,2011,National,Combined Ages,Combined Gender,876.7193207
+B-lactams increased activity,2011,National,Combined Ages,Combined Gender,70.73844721
+Cephalosporins,2011,National,Combined Ages,Combined Gender,117.3351825
+Fluoroquinolones,2011,National,Combined Ages,Combined Gender,101.2876402
+Lincosamides,2011,National,Combined Ages,Combined Gender,26.30938638
+Macrolides,2011,National,Combined Ages,Combined Gender,189.7934358
+Other,2011,National,Combined Ages,Combined Gender,1.754564887
+Penicillins,2011,National,Combined Ages,Combined Gender,195.986805
+Tetracycline,2011,National,Combined Ages,Combined Gender,67.87318113
+Trimethoprim-sulfamethoxazole,2011,National,Combined Ages,Combined Gender,66.69903271
+Urinary anti-infectives,2011,National,Combined Ages,Combined Gender,38.94164486
+All classes,2011,National,Combined Ages,Female,1036.198048
+B-lactams increased activity,2011,National,Combined Ages,Female,76.69849035
+Cephalosporins,2011,National,Combined Ages,Female,131.1002606
+Fluoroquinolones,2011,National,Combined Ages,Female,128.0764941
+Lincosamides,2011,National,Combined Ages,Female,31.09878785
+Macrolides,2011,National,Combined Ages,Female,225.4306134
+Other,2011,National,Combined Ages,Female,1.913284451
+Penicillins,2011,National,Combined Ages,Female,213.9937623
+Tetracycline,2011,National,Combined Ages,Female,77.26234298
+Trimethoprim-sulfamethoxazole,2011,National,Combined Ages,Female,82.68429345
+Urinary anti-infectives,2011,National,Combined Ages,Female,67.93971889
+All classes,2011,National,Combined Ages,Male,694.6161759
+B-lactams increased activity,2011,National,Combined Ages,Male,63.09280987
+Cephalosporins,2011,National,Combined Ages,Male,100.8597457
+Fluoroquinolones,2011,National,Combined Ages,Male,71.71736643
+Lincosamides,2011,National,Combined Ages,Male,20.86610696
+Macrolides,2011,National,Combined Ages,Male,148.9551371
+Other,2011,National,Combined Ages,Male,1.563352299
+Penicillins,2011,National,Combined Ages,Male,173.2407204
+Tetracycline,2011,National,Combined Ages,Male,56.96881342
+Trimethoprim-sulfamethoxazole,2011,National,Combined Ages,Male,48.99032572
+Urinary anti-infectives,2011,National,Combined Ages,Male,8.361797985
+All classes,2011,Alabama,Combined Ages,Combined Gender,1153.677456
+All other,2011,Alabama,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Alabama,Combined Ages,Combined Gender,181.863367
+Fluoroquinolones,2011,Alabama,Combined Ages,Combined Gender,142.6327182
+Macrolides,2011,Alabama,Combined Ages,Combined Gender,237.4158292
+Penicillins,2011,Alabama,Combined Ages,Combined Gender,212.5952877
+All classes,2011,Alaska,Combined Ages,Combined Gender,588.0268264
+All other,2011,Alaska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Alaska,Combined Ages,Combined Gender,74.58328028
+Fluoroquinolones,2011,Alaska,Combined Ages,Combined Gender,64.05913874
+Macrolides,2011,Alaska,Combined Ages,Combined Gender,134.3275134
+Penicillins,2011,Alaska,Combined Ages,Combined Gender,129.006452
+All classes,2011,Arizona,Combined Ages,Combined Gender,812.0912124
+All other,2011,Arizona,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Arizona,Combined Ages,Combined Gender,117.1741286
+Fluoroquinolones,2011,Arizona,Combined Ages,Combined Gender,93.24801977
+Macrolides,2011,Arizona,Combined Ages,Combined Gender,172.9699019
+Penicillins,2011,Arizona,Combined Ages,Combined Gender,172.9816015
+All classes,2011,Arkansas,Combined Ages,Combined Gender,1031.663235
+All other,2011,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Arkansas,Combined Ages,Combined Gender,158.1409154
+Fluoroquinolones,2011,Arkansas,Combined Ages,Combined Gender,116.4633359
+Macrolides,2011,Arkansas,Combined Ages,Combined Gender,215.686894
+Penicillins,2011,Arkansas,Combined Ages,Combined Gender,223.5524481
+All classes,2011,California,Combined Ages,Combined Gender,628.6119093
+All other,2011,California,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,California,Combined Ages,Combined Gender,77.1108051
+Fluoroquinolones,2011,California,Combined Ages,Combined Gender,71.44561358
+Macrolides,2011,California,Combined Ages,Combined Gender,135.0550714
+Penicillins,2011,California,Combined Ages,Combined Gender,155.6306654
+All classes,2011,Colorado,Combined Ages,Combined Gender,662.3295917
+All other,2011,Colorado,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Colorado,Combined Ages,Combined Gender,95.37731502
+Fluoroquinolones,2011,Colorado,Combined Ages,Combined Gender,68.32218383
+Macrolides,2011,Colorado,Combined Ages,Combined Gender,125.1047345
+Penicillins,2011,Colorado,Combined Ages,Combined Gender,163.6439327
+All classes,2011,Connecticut,Combined Ages,Combined Gender,882.4286005
+All other,2011,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Connecticut,Combined Ages,Combined Gender,113.4273731
+Fluoroquinolones,2011,Connecticut,Combined Ages,Combined Gender,97.71071012
+Macrolides,2011,Connecticut,Combined Ages,Combined Gender,203.1259781
+Penicillins,2011,Connecticut,Combined Ages,Combined Gender,189.7823417
+All classes,2011,Delaware,Combined Ages,Combined Gender,1024.478652
+All other,2011,Delaware,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Delaware,Combined Ages,Combined Gender,120.2296247
+Fluoroquinolones,2011,Delaware,Combined Ages,Combined Gender,126.4770678
+Macrolides,2011,Delaware,Combined Ages,Combined Gender,225.1993382
+Penicillins,2011,Delaware,Combined Ages,Combined Gender,234.4355159
+All classes,2011,District Of Columbia,Combined Ages,Combined Gender,1060.948814
+All other,2011,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,District Of Columbia,Combined Ages,Combined Gender,110.1913037
+Fluoroquinolones,2011,District Of Columbia,Combined Ages,Combined Gender,154.7151075
+Macrolides,2011,District Of Columbia,Combined Ages,Combined Gender,196.7048823
+Penicillins,2011,District Of Columbia,Combined Ages,Combined Gender,234.5144231
+All classes,2011,Florida,Combined Ages,Combined Gender,777.7363436
+All other,2011,Florida,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Florida,Combined Ages,Combined Gender,91.68906683
+Fluoroquinolones,2011,Florida,Combined Ages,Combined Gender,112.6888083
+Macrolides,2011,Florida,Combined Ages,Combined Gender,172.3555085
+Penicillins,2011,Florida,Combined Ages,Combined Gender,151.7737622
+All classes,2011,Georgia,Combined Ages,Combined Gender,873.8439221
+All other,2011,Georgia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Georgia,Combined Ages,Combined Gender,116.3728594
+Fluoroquinolones,2011,Georgia,Combined Ages,Combined Gender,108.7916838
+Macrolides,2011,Georgia,Combined Ages,Combined Gender,169.9707598
+Penicillins,2011,Georgia,Combined Ages,Combined Gender,194.0949625
+All classes,2011,Hawaii,Combined Ages,Combined Gender,679.4656634
+All other,2011,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Hawaii,Combined Ages,Combined Gender,76.11814539
+Fluoroquinolones,2011,Hawaii,Combined Ages,Combined Gender,86.96863634
+Macrolides,2011,Hawaii,Combined Ages,Combined Gender,151.5044067
+Penicillins,2011,Hawaii,Combined Ages,Combined Gender,154.5577257
+All classes,2011,Idaho,Combined Ages,Combined Gender,739.8127391
+All other,2011,Idaho,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Idaho,Combined Ages,Combined Gender,107.6642968
+Fluoroquinolones,2011,Idaho,Combined Ages,Combined Gender,71.2399702
+Macrolides,2011,Idaho,Combined Ages,Combined Gender,141.7142974
+Penicillins,2011,Idaho,Combined Ages,Combined Gender,171.3859816
+All classes,2011,Illinois,Combined Ages,Combined Gender,908.2350482
+All other,2011,Illinois,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Illinois,Combined Ages,Combined Gender,104.5294677
+Fluoroquinolones,2011,Illinois,Combined Ages,Combined Gender,99.73702447
+Macrolides,2011,Illinois,Combined Ages,Combined Gender,206.1191323
+Penicillins,2011,Illinois,Combined Ages,Combined Gender,225.1123156
+All classes,2011,Indiana,Combined Ages,Combined Gender,1058.633164
+All other,2011,Indiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Indiana,Combined Ages,Combined Gender,177.904178
+Fluoroquinolones,2011,Indiana,Combined Ages,Combined Gender,112.7049655
+Macrolides,2011,Indiana,Combined Ages,Combined Gender,216.6792986
+Penicillins,2011,Indiana,Combined Ages,Combined Gender,246.207097
+All classes,2011,Iowa,Combined Ages,Combined Gender,936.44475
+All other,2011,Iowa,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Iowa,Combined Ages,Combined Gender,151.9009339
+Fluoroquinolones,2011,Iowa,Combined Ages,Combined Gender,92.61621571
+Macrolides,2011,Iowa,Combined Ages,Combined Gender,227.4873047
+Penicillins,2011,Iowa,Combined Ages,Combined Gender,187.7322911
+All classes,2011,Kansas,Combined Ages,Combined Gender,1018.173037
+All other,2011,Kansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Kansas,Combined Ages,Combined Gender,159.8675419
+Fluoroquinolones,2011,Kansas,Combined Ages,Combined Gender,107.2562035
+Macrolides,2011,Kansas,Combined Ages,Combined Gender,205.2448549
+Penicillins,2011,Kansas,Combined Ages,Combined Gender,222.3497255
+All classes,2011,Kentucky,Combined Ages,Combined Gender,1320.835597
+All other,2011,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Kentucky,Combined Ages,Combined Gender,213.1646956
+Fluoroquinolones,2011,Kentucky,Combined Ages,Combined Gender,156.5279638
+Macrolides,2011,Kentucky,Combined Ages,Combined Gender,288.0764835
+Penicillins,2011,Kentucky,Combined Ages,Combined Gender,283.3212594
+All classes,2011,Louisiana,Combined Ages,Combined Gender,1193.936372
+Tetracycline,2012,National,20+,Female,Insufficient Data
+All other,2011,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Louisiana,Combined Ages,Combined Gender,152.0947834
+Fluoroquinolones,2011,Louisiana,Combined Ages,Combined Gender,126.0702797
+Macrolides,2011,Louisiana,Combined Ages,Combined Gender,275.2066359
+Penicillins,2011,Louisiana,Combined Ages,Combined Gender,234.057138
+All classes,2011,Maine,Combined Ages,Combined Gender,768.6919642
+All other,2011,Maine,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Maine,Combined Ages,Combined Gender,81.33612465
+Fluoroquinolones,2011,Maine,Combined Ages,Combined Gender,84.88226036
+Macrolides,2011,Maine,Combined Ages,Combined Gender,181.3409366
+Penicillins,2011,Maine,Combined Ages,Combined Gender,173.8585543
+All classes,2011,Maryland,Combined Ages,Combined Gender,859.6442626
+All other,2011,Maryland,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Maryland,Combined Ages,Combined Gender,98.43140795
+Fluoroquinolones,2011,Maryland,Combined Ages,Combined Gender,103.2994492
+Macrolides,2011,Maryland,Combined Ages,Combined Gender,176.8605143
+Penicillins,2011,Maryland,Combined Ages,Combined Gender,205.3825529
+All classes,2011,Massachusetts,Combined Ages,Combined Gender,842.1597787
+All other,2011,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Massachusetts,Combined Ages,Combined Gender,91.7537593
+Fluoroquinolones,2011,Massachusetts,Combined Ages,Combined Gender,92.03604965
+Macrolides,2011,Massachusetts,Combined Ages,Combined Gender,175.3822727
+Penicillins,2011,Massachusetts,Combined Ages,Combined Gender,212.7117223
+All classes,2011,Michigan,Combined Ages,Combined Gender,1005.797589
+All other,2011,Michigan,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Michigan,Combined Ages,Combined Gender,136.171782
+Fluoroquinolones,2011,Michigan,Combined Ages,Combined Gender,106.4961933
+Macrolides,2011,Michigan,Combined Ages,Combined Gender,209.1898832
+Penicillins,2011,Michigan,Combined Ages,Combined Gender,263.1927443
+All classes,2011,Minnesota,Combined Ages,Combined Gender,745.82707
+All other,2011,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Minnesota,Combined Ages,Combined Gender,98.17854068
+Fluoroquinolones,2011,Minnesota,Combined Ages,Combined Gender,76.00606653
+Macrolides,2011,Minnesota,Combined Ages,Combined Gender,158.7955391
+Penicillins,2011,Minnesota,Combined Ages,Combined Gender,186.0369732
+All classes,2011,Mississippi,Combined Ages,Combined Gender,1185.883956
+All other,2011,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Mississippi,Combined Ages,Combined Gender,175.7076903
+Fluoroquinolones,2011,Mississippi,Combined Ages,Combined Gender,137.0871698
+Macrolides,2011,Mississippi,Combined Ages,Combined Gender,262.0054095
+Penicillins,2011,Mississippi,Combined Ages,Combined Gender,221.1802157
+All classes,2011,Missouri,Combined Ages,Combined Gender,975.4805389
+All other,2011,Missouri,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Missouri,Combined Ages,Combined Gender,136.6354576
+Fluoroquinolones,2011,Missouri,Combined Ages,Combined Gender,108.7666391
+Macrolides,2011,Missouri,Combined Ages,Combined Gender,192.4012702
+Penicillins,2011,Missouri,Combined Ages,Combined Gender,228.2381179
+All classes,2011,Montana,Combined Ages,Combined Gender,724.2087543
+All other,2011,Montana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Montana,Combined Ages,Combined Gender,84.07068132
+Fluoroquinolones,2011,Montana,Combined Ages,Combined Gender,77.46976177
+Macrolides,2011,Montana,Combined Ages,Combined Gender,163.0290951
+All other,2012,Maryland,Combined Ages,Combined Gender,Insufficient Data
+Penicillins,2011,Montana,Combined Ages,Combined Gender,159.2293274
+All classes,2011,Nebraska,Combined Ages,Combined Gender,1008.948699
+All other,2011,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Nebraska,Combined Ages,Combined Gender,179.7021222
+Fluoroquinolones,2011,Nebraska,Combined Ages,Combined Gender,104.0580014
+Macrolides,2011,Nebraska,Combined Ages,Combined Gender,190.5947622
+Penicillins,2011,Nebraska,Combined Ages,Combined Gender,212.6286266
+All classes,2011,Nevada,Combined Ages,Combined Gender,724.8451401
+All other,2011,Nevada,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Nevada,Combined Ages,Combined Gender,94.7665404
+Fluoroquinolones,2011,Nevada,Combined Ages,Combined Gender,87.18818533
+Macrolides,2011,Nevada,Combined Ages,Combined Gender,158.7351918
+Penicillins,2011,Nevada,Combined Ages,Combined Gender,160.7044434
+All classes,2011,New Hampshire,Combined Ages,Combined Gender,723.6808716
+All other,2011,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,New Hampshire,Combined Ages,Combined Gender,81.86238012
+Fluoroquinolones,2011,New Hampshire,Combined Ages,Combined Gender,77.56893398
+Macrolides,2011,New Hampshire,Combined Ages,Combined Gender,159.7636159
+Penicillins,2011,New Hampshire,Combined Ages,Combined Gender,174.2642832
+All classes,2011,New Jersey,Combined Ages,Combined Gender,963.0522027
+All other,2011,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,New Jersey,Combined Ages,Combined Gender,115.2473409
+Fluoroquinolones,2011,New Jersey,Combined Ages,Combined Gender,124.898124
+Macrolides,2011,New Jersey,Combined Ages,Combined Gender,234.2607604
+Penicillins,2011,New Jersey,Combined Ages,Combined Gender,210.9639197
+All classes,2011,New Mexico,Combined Ages,Combined Gender,714.8112665
+All other,2011,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,New Mexico,Combined Ages,Combined Gender,92.94631417
+Fluoroquinolones,2011,New Mexico,Combined Ages,Combined Gender,73.67409271
+Macrolides,2011,New Mexico,Combined Ages,Combined Gender,164.7283954
+Penicillins,2011,New Mexico,Combined Ages,Combined Gender,165.2625593
+All classes,2011,New York,Combined Ages,Combined Gender,912.6846714
+All other,2011,New York,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,New York,Combined Ages,Combined Gender,108.2811608
+Fluoroquinolones,2011,New York,Combined Ages,Combined Gender,117.6978026
+Macrolides,2011,New York,Combined Ages,Combined Gender,215.8569913
+Penicillins,2011,New York,Combined Ages,Combined Gender,199.1557824
+All classes,2011,North Carolina,Combined Ages,Combined Gender,908.2682861
+All other,2011,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,North Carolina,Combined Ages,Combined Gender,127.1362571
+Fluoroquinolones,2011,North Carolina,Combined Ages,Combined Gender,111.538085
+Macrolides,2011,North Carolina,Combined Ages,Combined Gender,181.378142
+Penicillins,2011,North Carolina,Combined Ages,Combined Gender,197.3183003
+All classes,2011,North Dakota,Combined Ages,Combined Gender,1001.528847
+All other,2011,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,North Dakota,Combined Ages,Combined Gender,148.6502287
+Fluoroquinolones,2011,North Dakota,Combined Ages,Combined Gender,109.5008625
+Macrolides,2011,North Dakota,Combined Ages,Combined Gender,238.5645655
+Penicillins,2011,North Dakota,Combined Ages,Combined Gender,206.7030918
+All classes,2011,Ohio,Combined Ages,Combined Gender,993.4601057
+All other,2011,Ohio,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Ohio,Combined Ages,Combined Gender,127.6095902
+Fluoroquinolones,2011,Ohio,Combined Ages,Combined Gender,107.6604843
+Macrolides,2011,Ohio,Combined Ages,Combined Gender,235.5661172
+Penicillins,2011,Ohio,Combined Ages,Combined Gender,215.4946388
+All classes,2011,Oklahoma,Combined Ages,Combined Gender,912.0000306
+All other,2011,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Oklahoma,Combined Ages,Combined Gender,132.1753575
+Fluoroquinolones,2011,Oklahoma,Combined Ages,Combined Gender,105.2046849
+Macrolides,2011,Oklahoma,Combined Ages,Combined Gender,192.3375061
+Penicillins,2011,Oklahoma,Combined Ages,Combined Gender,190.9977956
+All classes,2011,Oregon,Combined Ages,Combined Gender,635.5335341
+All other,2011,Oregon,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Oregon,Combined Ages,Combined Gender,72.62505546
+Fluoroquinolones,2011,Oregon,Combined Ages,Combined Gender,73.09167803
+Macrolides,2011,Oregon,Combined Ages,Combined Gender,119.8879473
+Penicillins,2011,Oregon,Combined Ages,Combined Gender,146.7237522
+All classes,2011,Pennsylvania,Combined Ages,Combined Gender,876.102245
+All other,2011,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Pennsylvania,Combined Ages,Combined Gender,105.6894914
+Fluoroquinolones,2011,Pennsylvania,Combined Ages,Combined Gender,99.75634799
+Macrolides,2011,Pennsylvania,Combined Ages,Combined Gender,208.3043347
+Penicillins,2011,Pennsylvania,Combined Ages,Combined Gender,196.5688766
+All classes,2011,Rhode Island,Combined Ages,Combined Gender,935.1982567
+All other,2011,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Rhode Island,Combined Ages,Combined Gender,101.4000114
+Fluoroquinolones,2011,Rhode Island,Combined Ages,Combined Gender,118.8625501
+Macrolides,2011,Rhode Island,Combined Ages,Combined Gender,218.1525256
+Penicillins,2011,Rhode Island,Combined Ages,Combined Gender,210.1985989
+All classes,2011,South Carolina,Combined Ages,Combined Gender,941.3466654
+All other,2011,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,South Carolina,Combined Ages,Combined Gender,129.4084596
+Fluoroquinolones,2011,South Carolina,Combined Ages,Combined Gender,117.0657347
+Macrolides,2011,South Carolina,Combined Ages,Combined Gender,199.4452386
+Penicillins,2011,South Carolina,Combined Ages,Combined Gender,199.1955432
+All classes,2011,South Dakota,Combined Ages,Combined Gender,924.3142382
+All other,2011,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,South Dakota,Combined Ages,Combined Gender,162.8200944
+Fluoroquinolones,2011,South Dakota,Combined Ages,Combined Gender,92.29837012
+Macrolides,2011,South Dakota,Combined Ages,Combined Gender,213.492928
+Penicillins,2011,South Dakota,Combined Ages,Combined Gender,184.3334454
+All classes,2011,Tennessee,Combined Ages,Combined Gender,1246.525124
+All other,2011,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Tennessee,Combined Ages,Combined Gender,180.5179147
+Fluoroquinolones,2011,Tennessee,Combined Ages,Combined Gender,148.812512
+Macrolides,2011,Tennessee,Combined Ages,Combined Gender,259.0063593
+Penicillins,2011,Tennessee,Combined Ages,Combined Gender,240.6453703
+All classes,2011,Texas,Combined Ages,Combined Gender,931.8050263
+All other,2011,Texas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Texas,Combined Ages,Combined Gender,143.0263026
+Fluoroquinolones,2011,Texas,Combined Ages,Combined Gender,103.047422
+Macrolides,2011,Texas,Combined Ages,Combined Gender,195.7265888
+Penicillins,2011,Texas,Combined Ages,Combined Gender,204.3257866
+All classes,2011,Utah,Combined Ages,Combined Gender,846.4320412
+All other,2011,Utah,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Utah,Combined Ages,Combined Gender,131.4032843
+Fluoroquinolones,2011,Utah,Combined Ages,Combined Gender,71.36006016
+Macrolides,2011,Utah,Combined Ages,Combined Gender,160.138286
+Penicillins,2011,Utah,Combined Ages,Combined Gender,220.3164964
+All classes,2011,Vermont,Combined Ages,Combined Gender,696.6708756
+All other,2011,Vermont,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Vermont,Combined Ages,Combined Gender,84.79276878
+Fluoroquinolones,2011,Vermont,Combined Ages,Combined Gender,70.71822173
+Macrolides,2011,Vermont,Combined Ages,Combined Gender,152.1638918
+Penicillins,2011,Vermont,Combined Ages,Combined Gender,172.6354218
+All classes,2011,Virginia,Combined Ages,Combined Gender,866.1443052
+All other,2011,Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Virginia,Combined Ages,Combined Gender,124.3316665
+Fluoroquinolones,2011,Virginia,Combined Ages,Combined Gender,96.3540389
+Macrolides,2011,Virginia,Combined Ages,Combined Gender,185.5443696
+Penicillins,2011,Virginia,Combined Ages,Combined Gender,192.5706802
+All classes,2011,Washington,Combined Ages,Combined Gender,662.2791871
+All other,2011,Washington,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Washington,Combined Ages,Combined Gender,86.8374735
+Fluoroquinolones,2011,Washington,Combined Ages,Combined Gender,66.9121234
+Macrolides,2011,Washington,Combined Ages,Combined Gender,136.0827102
+Penicillins,2011,Washington,Combined Ages,Combined Gender,142.078245
+All classes,2011,West Virginia,Combined Ages,Combined Gender,1354.585522
+All other,2011,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,West Virginia,Combined Ages,Combined Gender,217.4181744
+Fluoroquinolones,2011,West Virginia,Combined Ages,Combined Gender,164.1501858
+Macrolides,2011,West Virginia,Combined Ages,Combined Gender,299.5694621
+Penicillins,2011,West Virginia,Combined Ages,Combined Gender,268.3221994
+All classes,2011,Wisconsin,Combined Ages,Combined Gender,779.1717029
+All other,2011,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Wisconsin,Combined Ages,Combined Gender,91.19741066
+Fluoroquinolones,2011,Wisconsin,Combined Ages,Combined Gender,76.99267357
+Macrolides,2011,Wisconsin,Combined Ages,Combined Gender,160.8669656
+Penicillins,2011,Wisconsin,Combined Ages,Combined Gender,192.9475186
+All classes,2011,Wyoming,Combined Ages,Combined Gender,774.0374997
+All other,2011,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2011,Wyoming,Combined Ages,Combined Gender,107.7292466
+Fluoroquinolones,2011,Wyoming,Combined Ages,Combined Gender,73.11300827
+Macrolides,2011,Wyoming,Combined Ages,Combined Gender,181.1862636
+Penicillins,2011,Wyoming,Combined Ages,Combined Gender,168.7102889
+All classes,2012,National,0-19,Combined Gender,858.0462689
+B-lactams increased activity,2012,National,0-19,Combined Gender,86.29636989
+Cephalosporins,2012,National,0-19,Combined Gender,152.4534877
+Fluoroquinolones,2012,National,0-19,Combined Gender,8.938502346
+Lincosamides,2012,National,0-19,Combined Gender,12.80138059
+Macrolides,2012,National,0-19,Combined Gender,184.8814073
+Other,2012,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2012,National,0-19,Combined Gender,297.1536426
+Tetracycline,2012,National,0-19,Combined Gender,49.36696318
+Trimethoprim-sulfamethoxazole,2012,National,0-19,Combined Gender,55.6517592
+Urinary anti-infectives,2012,National,0-19,Combined Gender,10.11550022
+All classes,2012,National,0-19,Female,910.5617694
+B-lactams increased activity,2012,National,0-19,Female,Insufficient Data
+Cephalosporins,2012,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2012,National,0-19,Female,Insufficient Data
+Lincosamides,2012,National,0-19,Female,Insufficient Data
+Macrolides,2012,National,0-19,Female,Insufficient Data
+Other,2012,National,0-19,Female,Insufficient Data
+Penicillins,2012,National,0-19,Female,Insufficient Data
+Tetracycline,2012,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2012,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2012,National,0-19,Female,Insufficient Data
+All classes,2012,National,0-19,Male,806.8499131
+B-lactams increased activity,2012,National,0-19,Male,Insufficient Data
+Cephalosporins,2012,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2012,National,0-19,Male,Insufficient Data
+Lincosamides,2012,National,0-19,Male,Insufficient Data
+Macrolides,2012,National,0-19,Male,Insufficient Data
+Other,2012,National,0-19,Male,Insufficient Data
+Penicillins,2012,National,0-19,Male,Insufficient Data
+Tetracycline,2012,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2012,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2012,National,0-19,Male,Insufficient Data
+All classes,2012,National,20+,Combined Gender,850.6181569
+B-lactams increased activity,2012,National,20+,Combined Gender,61.73916705
+Cephalosporins,2012,National,20+,Combined Gender,99.69904509
+Fluoroquinolones,2012,National,20+,Combined Gender,135.6667221
+Lincosamides,2012,National,20+,Combined Gender,32.09108895
+Macrolides,2012,National,20+,Combined Gender,176.8844846
+Other,2012,National,20+,Combined Gender,2.052752608
+Penicillins,2012,National,20+,Combined Gender,147.4506882
+Tetracycline,2012,National,20+,Combined Gender,74.75881163
+Trimethoprim-sulfamethoxazole,2012,National,20+,Combined Gender,70.72420462
+Urinary anti-infectives,2012,National,20+,Combined Gender,49.55119221
+All classes,2012,National,20+,Female,1055.426858
+B-lactams increased activity,2012,National,20+,Female,Insufficient Data
+Cephalosporins,2012,National,20+,Female,Insufficient Data
+Fluoroquinolones,2012,National,20+,Female,Insufficient Data
+Lincosamides,2012,National,20+,Female,Insufficient Data
+Macrolides,2012,National,20+,Female,Insufficient Data
+Other,2012,National,20+,Female,Insufficient Data
+Penicillins,2012,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2012,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2012,National,20+,Female,Insufficient Data
+All classes,2012,National,20+,Male,632.3820909
+B-lactams increased activity,2012,National,20+,Male,Insufficient Data
+Cephalosporins,2012,National,20+,Male,Insufficient Data
+Fluoroquinolones,2012,National,20+,Male,Insufficient Data
+Lincosamides,2012,National,20+,Male,Insufficient Data
+Macrolides,2012,National,20+,Male,Insufficient Data
+Other,2012,National,20+,Male,Insufficient Data
+Penicillins,2012,National,20+,Male,Insufficient Data
+Tetracycline,2012,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2012,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2012,National,20+,Male,Insufficient Data
+All classes,2012,National,Combined Ages,Combined Gender,866.7498101
+Penicillins,2012,Arizona,Combined Ages,Combined Gender,167.4284513
+B-lactams increased activity,2012,National,Combined Ages,Combined Gender,69.28543575
+Cephalosporins,2012,National,Combined Ages,Combined Gender,115.3594581
+Fluoroquinolones,2012,National,Combined Ages,Combined Gender,104.1482362
+Lincosamides,2012,National,Combined Ages,Combined Gender,27.51502866
+Macrolides,2012,National,Combined Ages,Combined Gender,181.8813604
+Other,2012,National,Combined Ages,Combined Gender,1.641740277
+Penicillins,2012,National,Combined Ages,Combined Gender,189.7301663
+Tetracycline,2012,National,Combined Ages,Combined Gender,69.43046192
+Trimethoprim-sulfamethoxazole,2012,National,Combined Ages,Combined Gender,67.83258567
+Urinary anti-infectives,2012,National,Combined Ages,Combined Gender,39.92533671
+All classes,2012,National,Combined Ages,Female,1032.145185
+B-lactams increased activity,2012,National,Combined Ages,Female,75.87965492
+Cephalosporins,2012,National,Combined Ages,Female,130.1191297
+Fluoroquinolones,2012,National,Combined Ages,Female,132.47344
+Lincosamides,2012,National,Combined Ages,Female,32.50035253
+Macrolides,2012,National,Combined Ages,Female,217.0123446
+Other,2012,National,Combined Ages,Female,1.822363721
+Penicillins,2012,National,Combined Ages,Female,208.267965
+Tetracycline,2012,National,Combined Ages,Female,79.34976005
+Trimethoprim-sulfamethoxazole,2012,National,Combined Ages,Female,84.55493611
+Urinary anti-infectives,2012,National,Combined Ages,Female,70.16523807
+All classes,2012,National,Combined Ages,Male,688.9591172
+B-lactams increased activity,2012,National,Combined Ages,Male,61.91227373
+Cephalosporins,2012,National,Combined Ages,Male,99.19667698
+Fluoroquinolones,2012,National,Combined Ages,Male,74.09467413
+Lincosamides,2012,National,Combined Ages,Male,22.10638631
+Macrolides,2012,National,Combined Ages,Male,144.1291684
+Other,2012,National,Combined Ages,Male,1.440578307
+Penicillins,2012,National,Combined Ages,Male,169.0425927
+Tetracycline,2012,National,Combined Ages,Male,58.62018353
+Trimethoprim-sulfamethoxazole,2012,National,Combined Ages,Male,50.03532454
+Urinary anti-infectives,2012,National,Combined Ages,Male,8.381258591
+All classes,2012,Alabama,Combined Ages,Combined Gender,1207.43189
+All other,2012,Alabama,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Alabama,Combined Ages,Combined Gender,183.4836545
+Fluoroquinolones,2012,Alabama,Combined Ages,Combined Gender,162.8127276
+Macrolides,2012,Alabama,Combined Ages,Combined Gender,244.210042
+Penicillins,2012,Alabama,Combined Ages,Combined Gender,219.8445101
+All classes,2012,Alaska,Combined Ages,Combined Gender,563.3486987
+All other,2012,Alaska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Alaska,Combined Ages,Combined Gender,69.0842328
+Fluoroquinolones,2012,Alaska,Combined Ages,Combined Gender,62.08048082
+Macrolides,2012,Alaska,Combined Ages,Combined Gender,128.8085452
+Penicillins,2012,Alaska,Combined Ages,Combined Gender,118.0932072
+All classes,2012,Arizona,Combined Ages,Combined Gender,778.9794297
+All other,2012,Arizona,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Arizona,Combined Ages,Combined Gender,112.5436729
+Fluoroquinolones,2012,Arizona,Combined Ages,Combined Gender,91.34926961
+Macrolides,2012,Arizona,Combined Ages,Combined Gender,160.3204354
+All classes,2012,Arkansas,Combined Ages,Combined Gender,1125.067046
+All other,2012,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Arkansas,Combined Ages,Combined Gender,176.8153901
+Fluoroquinolones,2012,Arkansas,Combined Ages,Combined Gender,134.3201912
+Macrolides,2012,Arkansas,Combined Ages,Combined Gender,222.6466585
+Penicillins,2012,Arkansas,Combined Ages,Combined Gender,236.0905503
+All classes,2012,California,Combined Ages,Combined Gender,587.7762276
+All other,2012,California,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,California,Combined Ages,Combined Gender,74.12957435
+Fluoroquinolones,2012,California,Combined Ages,Combined Gender,70.6218035
+Macrolides,2012,California,Combined Ages,Combined Gender,116.0573458
+Penicillins,2012,California,Combined Ages,Combined Gender,144.9728007
+All classes,2012,Colorado,Combined Ages,Combined Gender,642.530579
+All other,2012,Colorado,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Colorado,Combined Ages,Combined Gender,90.69744279
+Fluoroquinolones,2012,Colorado,Combined Ages,Combined Gender,66.95418214
+Macrolides,2012,Colorado,Combined Ages,Combined Gender,119.8900844
+Penicillins,2012,Colorado,Combined Ages,Combined Gender,157.6703355
+All classes,2012,Connecticut,Combined Ages,Combined Gender,878.8739698
+All other,2012,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Connecticut,Combined Ages,Combined Gender,113.8331114
+Fluoroquinolones,2012,Connecticut,Combined Ages,Combined Gender,100.3996843
+Macrolides,2012,Connecticut,Combined Ages,Combined Gender,191.8598461
+Penicillins,2012,Connecticut,Combined Ages,Combined Gender,191.5012873
+All classes,2012,Delaware,Combined Ages,Combined Gender,997.644678
+All other,2012,Delaware,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Delaware,Combined Ages,Combined Gender,117.672566
+Fluoroquinolones,2012,Delaware,Combined Ages,Combined Gender,129.0006119
+Macrolides,2012,Delaware,Combined Ages,Combined Gender,208.5582426
+Penicillins,2012,Delaware,Combined Ages,Combined Gender,225.4287307
+All classes,2012,District Of Columbia,Combined Ages,Combined Gender,1064.282801
+All other,2012,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,District Of Columbia,Combined Ages,Combined Gender,108.9024313
+Fluoroquinolones,2012,District Of Columbia,Combined Ages,Combined Gender,151.9899061
+Macrolides,2012,District Of Columbia,Combined Ages,Combined Gender,193.0092278
+Penicillins,2012,District Of Columbia,Combined Ages,Combined Gender,235.8666226
+All classes,2012,Florida,Combined Ages,Combined Gender,749.4235411
+All other,2012,Florida,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Florida,Combined Ages,Combined Gender,87.6600383
+Fluoroquinolones,2012,Florida,Combined Ages,Combined Gender,109.9862601
+Macrolides,2012,Florida,Combined Ages,Combined Gender,162.2954725
+Penicillins,2012,Florida,Combined Ages,Combined Gender,147.2449268
+All classes,2012,Georgia,Combined Ages,Combined Gender,894.8365843
+All other,2012,Georgia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Georgia,Combined Ages,Combined Gender,116.3598478
+Fluoroquinolones,2012,Georgia,Combined Ages,Combined Gender,113.4866428
+Macrolides,2012,Georgia,Combined Ages,Combined Gender,173.3308559
+Penicillins,2012,Georgia,Combined Ages,Combined Gender,195.8340327
+All classes,2012,Hawaii,Combined Ages,Combined Gender,681.0399522
+All other,2012,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Hawaii,Combined Ages,Combined Gender,74.69382509
+Fluoroquinolones,2012,Hawaii,Combined Ages,Combined Gender,88.220541
+Macrolides,2012,Hawaii,Combined Ages,Combined Gender,151.6496597
+Penicillins,2012,Hawaii,Combined Ages,Combined Gender,154.0860633
+All classes,2012,Idaho,Combined Ages,Combined Gender,728.2543385
+All other,2012,Idaho,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Idaho,Combined Ages,Combined Gender,106.3934156
+Fluoroquinolones,2012,Idaho,Combined Ages,Combined Gender,71.52530412
+Macrolides,2012,Idaho,Combined Ages,Combined Gender,133.5162416
+Penicillins,2012,Idaho,Combined Ages,Combined Gender,165.7325503
+All classes,2012,Illinois,Combined Ages,Combined Gender,888.5506809
+All other,2012,Illinois,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Illinois,Combined Ages,Combined Gender,101.8911945
+Fluoroquinolones,2012,Illinois,Combined Ages,Combined Gender,101.8468765
+Macrolides,2012,Illinois,Combined Ages,Combined Gender,195.2155271
+Penicillins,2012,Illinois,Combined Ages,Combined Gender,214.3206893
+All classes,2012,Indiana,Combined Ages,Combined Gender,1006.086712
+All other,2012,Indiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Indiana,Combined Ages,Combined Gender,168.5518212
+Fluoroquinolones,2012,Indiana,Combined Ages,Combined Gender,113.868081
+Macrolides,2012,Indiana,Combined Ages,Combined Gender,200.5419088
+Penicillins,2012,Indiana,Combined Ages,Combined Gender,218.7362779
+All classes,2012,Iowa,Combined Ages,Combined Gender,1018.287464
+All other,2012,Iowa,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Iowa,Combined Ages,Combined Gender,162.4931834
+Fluoroquinolones,2012,Iowa,Combined Ages,Combined Gender,113.4146495
+Macrolides,2012,Iowa,Combined Ages,Combined Gender,225.0877733
+Penicillins,2012,Iowa,Combined Ages,Combined Gender,206.2257005
+All classes,2012,Kansas,Combined Ages,Combined Gender,1022.231866
+All other,2012,Kansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Kansas,Combined Ages,Combined Gender,159.5191038
+Fluoroquinolones,2012,Kansas,Combined Ages,Combined Gender,117.6249062
+Macrolides,2012,Kansas,Combined Ages,Combined Gender,203.9434526
+Penicillins,2012,Kansas,Combined Ages,Combined Gender,212.2117412
+All classes,2012,Kentucky,Combined Ages,Combined Gender,1300.408558
+All other,2012,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Kentucky,Combined Ages,Combined Gender,198.4390636
+Fluoroquinolones,2012,Kentucky,Combined Ages,Combined Gender,162.9589263
+Macrolides,2012,Kentucky,Combined Ages,Combined Gender,275.6149781
+Penicillins,2012,Kentucky,Combined Ages,Combined Gender,274.881499
+All classes,2012,Louisiana,Combined Ages,Combined Gender,1204.828559
+All other,2012,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Louisiana,Combined Ages,Combined Gender,149.9314902
+Fluoroquinolones,2012,Louisiana,Combined Ages,Combined Gender,134.7878427
+Macrolides,2012,Louisiana,Combined Ages,Combined Gender,271.0749458
+Penicillins,2012,Louisiana,Combined Ages,Combined Gender,236.8681277
+All classes,2012,Maine,Combined Ages,Combined Gender,764.7648337
+All other,2012,Maine,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Maine,Combined Ages,Combined Gender,82.82381649
+Fluoroquinolones,2012,Maine,Combined Ages,Combined Gender,85.28158381
+Macrolides,2012,Maine,Combined Ages,Combined Gender,170.2768796
+Penicillins,2012,Maine,Combined Ages,Combined Gender,166.2234531
+All classes,2012,Maryland,Combined Ages,Combined Gender,841.4122854
+Cephalosporins,2012,Maryland,Combined Ages,Combined Gender,97.0428097
+Fluoroquinolones,2012,Maryland,Combined Ages,Combined Gender,102.7874787
+Macrolides,2012,Maryland,Combined Ages,Combined Gender,169.6589186
+Penicillins,2012,Maryland,Combined Ages,Combined Gender,197.0852295
+All classes,2012,Massachusetts,Combined Ages,Combined Gender,823.5149686
+All other,2012,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Massachusetts,Combined Ages,Combined Gender,91.51053911
+Fluoroquinolones,2012,Massachusetts,Combined Ages,Combined Gender,91.77530402
+Macrolides,2012,Massachusetts,Combined Ages,Combined Gender,159.6231364
+Penicillins,2012,Massachusetts,Combined Ages,Combined Gender,205.5312629
+All classes,2012,Michigan,Combined Ages,Combined Gender,893.5422666
+All other,2012,Michigan,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Michigan,Combined Ages,Combined Gender,115.8569755
+Fluoroquinolones,2012,Michigan,Combined Ages,Combined Gender,97.07743348
+Macrolides,2012,Michigan,Combined Ages,Combined Gender,191.9006815
+Penicillins,2012,Michigan,Combined Ages,Combined Gender,205.7168823
+All classes,2012,Minnesota,Combined Ages,Combined Gender,710.0755378
+All other,2012,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Minnesota,Combined Ages,Combined Gender,94.02875508
+Fluoroquinolones,2012,Minnesota,Combined Ages,Combined Gender,76.22839954
+Macrolides,2012,Minnesota,Combined Ages,Combined Gender,146.3638153
+Penicillins,2012,Minnesota,Combined Ages,Combined Gender,169.3655948
+All classes,2012,Mississippi,Combined Ages,Combined Gender,1250.429642
+All other,2012,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Mississippi,Combined Ages,Combined Gender,184.0849633
+Fluoroquinolones,2012,Mississippi,Combined Ages,Combined Gender,152.8036791
+Macrolides,2012,Mississippi,Combined Ages,Combined Gender,268.7736162
+Penicillins,2012,Mississippi,Combined Ages,Combined Gender,228.8139091
+All classes,2012,Missouri,Combined Ages,Combined Gender,965.0778296
+All other,2012,Missouri,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Missouri,Combined Ages,Combined Gender,135.2000595
+Fluoroquinolones,2012,Missouri,Combined Ages,Combined Gender,116.5017715
+Macrolides,2012,Missouri,Combined Ages,Combined Gender,184.9150289
+Penicillins,2012,Missouri,Combined Ages,Combined Gender,220.0222678
+All classes,2012,Montana,Combined Ages,Combined Gender,716.770086
+All other,2012,Montana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Montana,Combined Ages,Combined Gender,82.0275219
+Fluoroquinolones,2012,Montana,Combined Ages,Combined Gender,77.61244694
+Macrolides,2012,Montana,Combined Ages,Combined Gender,157.060616
+Penicillins,2012,Montana,Combined Ages,Combined Gender,155.8631088
+All classes,2012,Nebraska,Combined Ages,Combined Gender,1049.446167
+All other,2012,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Nebraska,Combined Ages,Combined Gender,179.7973793
+Fluoroquinolones,2012,Nebraska,Combined Ages,Combined Gender,118.2072954
+Macrolides,2012,Nebraska,Combined Ages,Combined Gender,186.7511925
+Penicillins,2012,Nebraska,Combined Ages,Combined Gender,224.1001635
+All classes,2012,Nevada,Combined Ages,Combined Gender,722.9104526
+All other,2012,Nevada,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Nevada,Combined Ages,Combined Gender,92.73324877
+Fluoroquinolones,2012,Nevada,Combined Ages,Combined Gender,90.09221322
+Macrolides,2012,Nevada,Combined Ages,Combined Gender,149.007747
+All other,2014,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+Penicillins,2012,Nevada,Combined Ages,Combined Gender,161.4430767
+All classes,2012,New Hampshire,Combined Ages,Combined Gender,740.8061927
+All other,2012,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,New Hampshire,Combined Ages,Combined Gender,86.14359981
+Fluoroquinolones,2012,New Hampshire,Combined Ages,Combined Gender,79.1302334
+Macrolides,2012,New Hampshire,Combined Ages,Combined Gender,153.8381303
+Penicillins,2012,New Hampshire,Combined Ages,Combined Gender,172.4925887
+All classes,2012,New Jersey,Combined Ages,Combined Gender,944.4225755
+All other,2012,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,New Jersey,Combined Ages,Combined Gender,112.2482289
+Fluoroquinolones,2012,New Jersey,Combined Ages,Combined Gender,125.3197183
+Macrolides,2012,New Jersey,Combined Ages,Combined Gender,223.3998975
+Penicillins,2012,New Jersey,Combined Ages,Combined Gender,206.6130329
+All classes,2012,New Mexico,Combined Ages,Combined Gender,707.1289086
+All other,2012,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,New Mexico,Combined Ages,Combined Gender,91.7351868
+Fluoroquinolones,2012,New Mexico,Combined Ages,Combined Gender,73.99050367
+Macrolides,2012,New Mexico,Combined Ages,Combined Gender,156.9994157
+Penicillins,2012,New Mexico,Combined Ages,Combined Gender,164.1402786
+All classes,2012,New York,Combined Ages,Combined Gender,913.2899954
+All other,2012,New York,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,New York,Combined Ages,Combined Gender,107.1070748
+Fluoroquinolones,2012,New York,Combined Ages,Combined Gender,120.3049736
+Macrolides,2012,New York,Combined Ages,Combined Gender,208.9874117
+Penicillins,2012,New York,Combined Ages,Combined Gender,198.6530009
+All classes,2012,North Carolina,Combined Ages,Combined Gender,950.4763576
+All other,2012,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,North Carolina,Combined Ages,Combined Gender,131.2000454
+Fluoroquinolones,2012,North Carolina,Combined Ages,Combined Gender,118.1213131
+Macrolides,2012,North Carolina,Combined Ages,Combined Gender,189.2841947
+Penicillins,2012,North Carolina,Combined Ages,Combined Gender,200.4314343
+All classes,2012,North Dakota,Combined Ages,Combined Gender,963.5725412
+All other,2012,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,North Dakota,Combined Ages,Combined Gender,145.0190607
+Fluoroquinolones,2012,North Dakota,Combined Ages,Combined Gender,110.3119117
+Macrolides,2012,North Dakota,Combined Ages,Combined Gender,217.5158649
+Penicillins,2012,North Dakota,Combined Ages,Combined Gender,194.1307815
+All classes,2012,Ohio,Combined Ages,Combined Gender,938.4391633
+All other,2012,Ohio,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Ohio,Combined Ages,Combined Gender,119.5960514
+Fluoroquinolones,2012,Ohio,Combined Ages,Combined Gender,104.1414726
+Macrolides,2012,Ohio,Combined Ages,Combined Gender,214.3562507
+Penicillins,2012,Ohio,Combined Ages,Combined Gender,195.5776125
+All classes,2012,Oklahoma,Combined Ages,Combined Gender,992.3746476
+All other,2012,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Oklahoma,Combined Ages,Combined Gender,145.871937
+Fluoroquinolones,2012,Oklahoma,Combined Ages,Combined Gender,119.3391221
+Macrolides,2012,Oklahoma,Combined Ages,Combined Gender,202.2714556
+Penicillins,2012,Oklahoma,Combined Ages,Combined Gender,204.5628428
+All classes,2012,Oregon,Combined Ages,Combined Gender,600.3694631
+All other,2012,Oregon,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Oregon,Combined Ages,Combined Gender,69.68117447
+Fluoroquinolones,2012,Oregon,Combined Ages,Combined Gender,70.68869649
+Macrolides,2012,Oregon,Combined Ages,Combined Gender,106.4850524
+Penicillins,2012,Oregon,Combined Ages,Combined Gender,134.6973338
+All classes,2012,Pennsylvania,Combined Ages,Combined Gender,868.7042119
+All other,2012,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Pennsylvania,Combined Ages,Combined Gender,106.0295208
+Fluoroquinolones,2012,Pennsylvania,Combined Ages,Combined Gender,102.0951597
+Macrolides,2012,Pennsylvania,Combined Ages,Combined Gender,196.3492018
+Penicillins,2012,Pennsylvania,Combined Ages,Combined Gender,191.187274
+All classes,2012,Rhode Island,Combined Ages,Combined Gender,960.1707901
+All other,2012,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Rhode Island,Combined Ages,Combined Gender,101.8143862
+Fluoroquinolones,2012,Rhode Island,Combined Ages,Combined Gender,125.3810478
+Macrolides,2012,Rhode Island,Combined Ages,Combined Gender,215.2003112
+Penicillins,2012,Rhode Island,Combined Ages,Combined Gender,212.9417074
+All classes,2012,South Carolina,Combined Ages,Combined Gender,992.0759807
+All other,2012,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,South Carolina,Combined Ages,Combined Gender,134.1877445
+Fluoroquinolones,2012,South Carolina,Combined Ages,Combined Gender,126.8526143
+Macrolides,2012,South Carolina,Combined Ages,Combined Gender,206.9119965
+Penicillins,2012,South Carolina,Combined Ages,Combined Gender,205.5378528
+All classes,2012,South Dakota,Combined Ages,Combined Gender,963.7513541
+All other,2012,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,South Dakota,Combined Ages,Combined Gender,171.2340384
+Fluoroquinolones,2012,South Dakota,Combined Ages,Combined Gender,102.3153514
+Macrolides,2012,South Dakota,Combined Ages,Combined Gender,208.5325415
+Penicillins,2012,South Dakota,Combined Ages,Combined Gender,192.290019
+All classes,2012,Tennessee,Combined Ages,Combined Gender,1248.914223
+All other,2012,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Tennessee,Combined Ages,Combined Gender,180.8908973
+Fluoroquinolones,2012,Tennessee,Combined Ages,Combined Gender,158.3432801
+Macrolides,2012,Tennessee,Combined Ages,Combined Gender,252.7056547
+Penicillins,2012,Tennessee,Combined Ages,Combined Gender,233.4305628
+All classes,2012,Texas,Combined Ages,Combined Gender,956.9410045
+All other,2012,Texas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Texas,Combined Ages,Combined Gender,143.0119709
+Fluoroquinolones,2012,Texas,Combined Ages,Combined Gender,112.3001989
+Macrolides,2012,Texas,Combined Ages,Combined Gender,200.1513657
+Penicillins,2012,Texas,Combined Ages,Combined Gender,209.2654438
+All classes,2012,Utah,Combined Ages,Combined Gender,838.2181491
+All other,2012,Utah,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Utah,Combined Ages,Combined Gender,128.9287278
+Fluoroquinolones,2012,Utah,Combined Ages,Combined Gender,72.08113004
+Macrolides,2012,Utah,Combined Ages,Combined Gender,151.3845014
+Penicillins,2012,Utah,Combined Ages,Combined Gender,221.7319594
+All classes,2012,Vermont,Combined Ages,Combined Gender,703.4102067
+All other,2012,Vermont,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Vermont,Combined Ages,Combined Gender,84.49188518
+Fluoroquinolones,2012,Vermont,Combined Ages,Combined Gender,70.67879605
+Macrolides,2012,Vermont,Combined Ages,Combined Gender,160.911125
+Penicillins,2012,Vermont,Combined Ages,Combined Gender,165.8971185
+All classes,2012,Virginia,Combined Ages,Combined Gender,869.0445897
+All other,2012,Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Virginia,Combined Ages,Combined Gender,125.7356474
+Fluoroquinolones,2012,Virginia,Combined Ages,Combined Gender,100.345565
+Macrolides,2012,Virginia,Combined Ages,Combined Gender,179.7500946
+Penicillins,2012,Virginia,Combined Ages,Combined Gender,189.8354949
+All classes,2012,Washington,Combined Ages,Combined Gender,633.2687714
+All other,2012,Washington,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Washington,Combined Ages,Combined Gender,82.31973841
+Fluoroquinolones,2012,Washington,Combined Ages,Combined Gender,65.38838584
+Macrolides,2012,Washington,Combined Ages,Combined Gender,129.8295454
+Penicillins,2012,Washington,Combined Ages,Combined Gender,131.66578
+All classes,2012,West Virginia,Combined Ages,Combined Gender,1338.254745
+All other,2012,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,West Virginia,Combined Ages,Combined Gender,215.0747907
+Fluoroquinolones,2012,West Virginia,Combined Ages,Combined Gender,169.2661529
+Macrolides,2012,West Virginia,Combined Ages,Combined Gender,275.8873423
+Penicillins,2012,West Virginia,Combined Ages,Combined Gender,259.8819272
+All classes,2012,Wisconsin,Combined Ages,Combined Gender,775.5203071
+All other,2012,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Wisconsin,Combined Ages,Combined Gender,89.87851989
+Fluoroquinolones,2012,Wisconsin,Combined Ages,Combined Gender,80.05935487
+Macrolides,2012,Wisconsin,Combined Ages,Combined Gender,162.4277051
+Penicillins,2012,Wisconsin,Combined Ages,Combined Gender,183.3688572
+All classes,2012,Wyoming,Combined Ages,Combined Gender,807.3553328
+All other,2012,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2012,Wyoming,Combined Ages,Combined Gender,112.0555632
+Fluoroquinolones,2012,Wyoming,Combined Ages,Combined Gender,74.63879784
+Macrolides,2012,Wyoming,Combined Ages,Combined Gender,180.7602276
+Penicillins,2012,Wyoming,Combined Ages,Combined Gender,174.4262108
+All classes,2013,National,0-19,Combined Gender,812.1408284
+B-lactams increased activity,2013,National,0-19,Combined Gender,83.82312025
+Cephalosporins,2013,National,0-19,Combined Gender,143.9680101
+Fluoroquinolones,2013,National,0-19,Combined Gender,8.93967099
+Lincosamides,2013,National,0-19,Combined Gender,13.00538609
+Macrolides,2013,National,0-19,Combined Gender,155.5996411
+Other,2013,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2013,National,0-19,Combined Gender,295.8072253
+Tetracycline,2013,National,0-19,Combined Gender,47.32689844
+Trimethoprim-sulfamethoxazole,2013,National,0-19,Combined Gender,53.57193583
+Urinary anti-infectives,2013,National,0-19,Combined Gender,9.686696244
+All classes,2013,National,0-19,Female,862.9140156
+B-lactams increased activity,2013,National,0-19,Female,Insufficient Data
+Cephalosporins,2013,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2013,National,0-19,Female,Insufficient Data
+Lincosamides,2013,National,0-19,Female,Insufficient Data
+Macrolides,2013,National,0-19,Female,Insufficient Data
+Other,2013,National,0-19,Female,Insufficient Data
+Penicillins,2013,National,0-19,Female,Insufficient Data
+Tetracycline,2013,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2013,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2013,National,0-19,Female,Insufficient Data
+All classes,2013,National,0-19,Male,762.1761464
+B-lactams increased activity,2013,National,0-19,Male,Insufficient Data
+Cephalosporins,2013,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2013,National,0-19,Male,Insufficient Data
+Lincosamides,2013,National,0-19,Male,Insufficient Data
+Macrolides,2013,National,0-19,Male,Insufficient Data
+Other,2013,National,0-19,Male,Insufficient Data
+Penicillins,2013,National,0-19,Male,Insufficient Data
+Tetracycline,2013,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2013,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2013,National,0-19,Male,Insufficient Data
+All classes,2013,National,20+,Combined Gender,843.3411071
+B-lactams increased activity,2013,National,20+,Combined Gender,67.46065859
+Cephalosporins,2013,National,20+,Combined Gender,102.2257428
+Fluoroquinolones,2013,National,20+,Combined Gender,136.2173251
+Lincosamides,2013,National,20+,Combined Gender,33.07660673
+Macrolides,2013,National,20+,Combined Gender,159.7008817
+Other,2013,National,20+,Combined Gender,2.088865312
+Penicillins,2013,National,20+,Combined Gender,151.7911183
+Tetracycline,2013,National,20+,Combined Gender,69.62305762
+Trimethoprim-sulfamethoxazole,2013,National,20+,Combined Gender,72.36622613
+Urinary anti-infectives,2013,National,20+,Combined Gender,48.79062495
+All classes,2013,National,20+,Female,1045.441864
+B-lactams increased activity,2013,National,20+,Female,Insufficient Data
+Cephalosporins,2013,National,20+,Female,Insufficient Data
+Fluoroquinolones,2013,National,20+,Female,Insufficient Data
+Lincosamides,2013,National,20+,Female,Insufficient Data
+Macrolides,2013,National,20+,Female,Insufficient Data
+Other,2013,National,20+,Female,Insufficient Data
+Penicillins,2013,National,20+,Female,Insufficient Data
+Tetracycline,2013,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2013,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2013,National,20+,Female,Insufficient Data
+All classes,2013,National,20+,Male,628.0284529
+B-lactams increased activity,2013,National,20+,Male,Insufficient Data
+Cephalosporins,2013,National,20+,Male,Insufficient Data
+Fluoroquinolones,2013,National,20+,Male,Insufficient Data
+Lincosamides,2013,National,20+,Male,Insufficient Data
+Macrolides,2013,National,20+,Male,Insufficient Data
+Other,2013,National,20+,Male,Insufficient Data
+Penicillins,2013,National,20+,Male,Insufficient Data
+Tetracycline,2013,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2013,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2013,National,20+,Male,Insufficient Data
+All classes,2013,National,Combined Ages,Combined Gender,848.6984486
+B-lactams increased activity,2013,National,Combined Ages,Combined Gender,72.85322684
+Cephalosporins,2013,National,Combined Ages,Combined Gender,114.8208934
+Fluoroquinolones,2013,National,Combined Ages,Combined Gender,104.817973
+Lincosamides,2013,National,Combined Ages,Combined Gender,28.35851004
+Macrolides,2013,National,Combined Ages,Combined Gender,161.1793791
+Other,2013,National,Combined Ages,Combined Gender,1.679173478
+Penicillins,2013,National,Combined Ages,Combined Gender,192.102782
+Tetracycline,2013,National,Combined Ages,Combined Gender,65.05132443
+Trimethoprim-sulfamethoxazole,2013,National,Combined Ages,Combined Gender,68.50538341
+Urinary anti-infectives,2013,National,Combined Ages,Combined Gender,39.32980292
+All classes,2013,National,Combined Ages,Female,1012.453638
+B-lactams increased activity,2013,National,Combined Ages,Female,80.73065068
+Cephalosporins,2013,National,Combined Ages,Female,130.2855941
+Fluoroquinolones,2013,National,Combined Ages,Female,133.3591513
+Lincosamides,2013,National,Combined Ages,Female,33.53028456
+Macrolides,2013,National,Combined Ages,Female,192.5564523
+Other,2013,National,Combined Ages,Female,1.866776952
+Penicillins,2013,National,Combined Ages,Female,210.8352804
+Tetracycline,2013,National,Combined Ages,Female,74.74763484
+Trimethoprim-sulfamethoxazole,2013,National,Combined Ages,Female,85.28285706
+Urinary anti-infectives,2013,National,Combined Ages,Female,69.2589555
+All classes,2013,National,Combined Ages,Male,672.817404
+B-lactams increased activity,2013,National,Combined Ages,Male,64.14005552
+Cephalosporins,2013,National,Combined Ages,Male,97.90106236
+Fluoroquinolones,2013,National,Combined Ages,Male,74.54873615
+Lincosamides,2013,National,Combined Ages,Male,22.74107776
+Macrolides,2013,National,Combined Ages,Male,127.5214423
+Other,2013,National,Combined Ages,Male,1.471120634
+Penicillins,2013,National,Combined Ages,Male,171.2092436
+Tetracycline,2013,National,Combined Ages,Male,54.52456338
+Trimethoprim-sulfamethoxazole,2013,National,Combined Ages,Male,50.64554827
+Urinary anti-infectives,2013,National,Combined Ages,Male,8.114554124
+All classes,2013,Alabama,Combined Ages,Combined Gender,1166.46098
+All other,2013,Alabama,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Alabama,Combined Ages,Combined Gender,178.9792855
+Fluoroquinolones,2013,Alabama,Combined Ages,Combined Gender,165.7910453
+Macrolides,2013,Alabama,Combined Ages,Combined Gender,220.4913719
+Penicillins,2013,Alabama,Combined Ages,Combined Gender,221.5405681
+All classes,2013,Alaska,Combined Ages,Combined Gender,508.8802714
+All other,2013,Alaska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Alaska,Combined Ages,Combined Gender,62.28813755
+Fluoroquinolones,2013,Alaska,Combined Ages,Combined Gender,58.00204541
+Macrolides,2013,Alaska,Combined Ages,Combined Gender,106.4796767
+Penicillins,2013,Alaska,Combined Ages,Combined Gender,104.7633735
+All classes,2013,Arizona,Combined Ages,Combined Gender,759.100408
+All other,2013,Arizona,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Arizona,Combined Ages,Combined Gender,110.2940167
+Fluoroquinolones,2013,Arizona,Combined Ages,Combined Gender,88.88184426
+Macrolides,2013,Arizona,Combined Ages,Combined Gender,145.3921592
+Penicillins,2013,Arizona,Combined Ages,Combined Gender,166.2214768
+All classes,2013,Arkansas,Combined Ages,Combined Gender,1148.930682
+All other,2013,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Arkansas,Combined Ages,Combined Gender,181.3925912
+Fluoroquinolones,2013,Arkansas,Combined Ages,Combined Gender,145.0770642
+Macrolides,2013,Arkansas,Combined Ages,Combined Gender,212.3188763
+Penicillins,2013,Arkansas,Combined Ages,Combined Gender,256.7701389
+All classes,2013,California,Combined Ages,Combined Gender,590.680284
+All other,2013,California,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,California,Combined Ages,Combined Gender,74.38989136
+Fluoroquinolones,2013,California,Combined Ages,Combined Gender,70.71072313
+Macrolides,2013,California,Combined Ages,Combined Gender,114.0975239
+Penicillins,2013,California,Combined Ages,Combined Gender,148.1818554
+All classes,2013,Colorado,Combined Ages,Combined Gender,632.1352554
+All other,2013,Colorado,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Colorado,Combined Ages,Combined Gender,88.26116456
+Fluoroquinolones,2013,Colorado,Combined Ages,Combined Gender,65.59236704
+Macrolides,2013,Colorado,Combined Ages,Combined Gender,112.9059162
+Penicillins,2013,Colorado,Combined Ages,Combined Gender,156.7941418
+All classes,2013,Connecticut,Combined Ages,Combined Gender,845.2513141
+All other,2013,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Connecticut,Combined Ages,Combined Gender,111.127987
+Fluoroquinolones,2013,Connecticut,Combined Ages,Combined Gender,97.89959329
+Macrolides,2013,Connecticut,Combined Ages,Combined Gender,161.4953404
+Penicillins,2013,Connecticut,Combined Ages,Combined Gender,187.6462941
+All classes,2013,Delaware,Combined Ages,Combined Gender,974.5999092
+All other,2013,Delaware,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Delaware,Combined Ages,Combined Gender,117.9731529
+Fluoroquinolones,2013,Delaware,Combined Ages,Combined Gender,127.552073
+Macrolides,2013,Delaware,Combined Ages,Combined Gender,182.7151009
+Penicillins,2013,Delaware,Combined Ages,Combined Gender,224.3969132
+All classes,2013,District Of Columbia,Combined Ages,Combined Gender,1044.049554
+All other,2013,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,District Of Columbia,Combined Ages,Combined Gender,106.3584348
+Fluoroquinolones,2013,District Of Columbia,Combined Ages,Combined Gender,149.7897124
+Macrolides,2013,District Of Columbia,Combined Ages,Combined Gender,176.1817778
+Penicillins,2013,District Of Columbia,Combined Ages,Combined Gender,224.9289105
+All classes,2013,Florida,Combined Ages,Combined Gender,736.3530125
+All other,2013,Florida,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Florida,Combined Ages,Combined Gender,87.60055746
+Fluoroquinolones,2013,Florida,Combined Ages,Combined Gender,111.2660493
+Macrolides,2013,Florida,Combined Ages,Combined Gender,144.795051
+Penicillins,2013,Florida,Combined Ages,Combined Gender,148.3560358
+All classes,2013,Georgia,Combined Ages,Combined Gender,871.2846553
+All other,2013,Georgia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Georgia,Combined Ages,Combined Gender,114.4329843
+Fluoroquinolones,2013,Georgia,Combined Ages,Combined Gender,114.6839699
+Macrolides,2013,Georgia,Combined Ages,Combined Gender,156.3773984
+Penicillins,2013,Georgia,Combined Ages,Combined Gender,196.4259719
+All classes,2013,Hawaii,Combined Ages,Combined Gender,647.8999167
+All other,2013,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Hawaii,Combined Ages,Combined Gender,71.82040714
+Fluoroquinolones,2013,Hawaii,Combined Ages,Combined Gender,84.63303068
+Macrolides,2013,Hawaii,Combined Ages,Combined Gender,134.3516441
+Penicillins,2013,Hawaii,Combined Ages,Combined Gender,146.8428098
+All classes,2013,Idaho,Combined Ages,Combined Gender,704.8039952
+All other,2013,Idaho,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Idaho,Combined Ages,Combined Gender,105.1668389
+Fluoroquinolones,2013,Idaho,Combined Ages,Combined Gender,69.90932781
+Macrolides,2013,Idaho,Combined Ages,Combined Gender,122.7703378
+Penicillins,2013,Idaho,Combined Ages,Combined Gender,163.3862502
+All classes,2013,Illinois,Combined Ages,Combined Gender,858.2912966
+All other,2013,Illinois,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Illinois,Combined Ages,Combined Gender,101.0901535
+Fluoroquinolones,2013,Illinois,Combined Ages,Combined Gender,100.8031068
+Macrolides,2013,Illinois,Combined Ages,Combined Gender,168.8312905
+Penicillins,2013,Illinois,Combined Ages,Combined Gender,210.3591475
+All classes,2013,Indiana,Combined Ages,Combined Gender,987.7713728
+All other,2013,Indiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Indiana,Combined Ages,Combined Gender,171.5278388
+Fluoroquinolones,2013,Indiana,Combined Ages,Combined Gender,114.7383518
+Macrolides,2013,Indiana,Combined Ages,Combined Gender,175.6558641
+Penicillins,2013,Indiana,Combined Ages,Combined Gender,222.7421849
+All classes,2013,Iowa,Combined Ages,Combined Gender,971.1234919
+All other,2013,Iowa,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Iowa,Combined Ages,Combined Gender,159.2969824
+Fluoroquinolones,2013,Iowa,Combined Ages,Combined Gender,113.1058218
+Macrolides,2013,Iowa,Combined Ages,Combined Gender,189.9558069
+Penicillins,2013,Iowa,Combined Ages,Combined Gender,206.0170531
+All classes,2013,Kansas,Combined Ages,Combined Gender,995.6505575
+All other,2013,Kansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Kansas,Combined Ages,Combined Gender,156.2993521
+Fluoroquinolones,2013,Kansas,Combined Ages,Combined Gender,118.0828102
+Macrolides,2013,Kansas,Combined Ages,Combined Gender,190.0914911
+Penicillins,2013,Kansas,Combined Ages,Combined Gender,206.2099122
+All classes,2013,Kentucky,Combined Ages,Combined Gender,1239.973177
+All other,2013,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Kentucky,Combined Ages,Combined Gender,192.8249632
+Fluoroquinolones,2013,Kentucky,Combined Ages,Combined Gender,163.1999146
+Macrolides,2013,Kentucky,Combined Ages,Combined Gender,233.364628
+Penicillins,2013,Kentucky,Combined Ages,Combined Gender,273.6303213
+All classes,2013,Louisiana,Combined Ages,Combined Gender,1191.287504
+All other,2013,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Louisiana,Combined Ages,Combined Gender,143.8954318
+Fluoroquinolones,2013,Louisiana,Combined Ages,Combined Gender,140.0771113
+Macrolides,2013,Louisiana,Combined Ages,Combined Gender,247.2840163
+Penicillins,2013,Louisiana,Combined Ages,Combined Gender,245.6094679
+All classes,2013,Maine,Combined Ages,Combined Gender,725.6004582
+All other,2013,Maine,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Maine,Combined Ages,Combined Gender,80.26930794
+Fluoroquinolones,2013,Maine,Combined Ages,Combined Gender,81.88940033
+Macrolides,2013,Maine,Combined Ages,Combined Gender,142.507274
+Penicillins,2013,Maine,Combined Ages,Combined Gender,161.6869471
+All classes,2013,Maryland,Combined Ages,Combined Gender,812.9324787
+All other,2013,Maryland,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Maryland,Combined Ages,Combined Gender,95.16079934
+Fluoroquinolones,2013,Maryland,Combined Ages,Combined Gender,100.4384097
+Macrolides,2013,Maryland,Combined Ages,Combined Gender,148.7513372
+Penicillins,2013,Maryland,Combined Ages,Combined Gender,193.0022663
+Macrolides,2014,National,0-19,Male,Insufficient Data
+All classes,2013,Massachusetts,Combined Ages,Combined Gender,773.2711629
+All other,2013,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Massachusetts,Combined Ages,Combined Gender,88.72820536
+Fluoroquinolones,2013,Massachusetts,Combined Ages,Combined Gender,87.00503244
+Macrolides,2013,Massachusetts,Combined Ages,Combined Gender,129.4351914
+Penicillins,2013,Massachusetts,Combined Ages,Combined Gender,194.3075366
+All classes,2013,Michigan,Combined Ages,Combined Gender,931.0334381
+All other,2013,Michigan,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Michigan,Combined Ages,Combined Gender,129.3348887
+Fluoroquinolones,2013,Michigan,Combined Ages,Combined Gender,105.8603192
+Macrolides,2013,Michigan,Combined Ages,Combined Gender,173.6388985
+Penicillins,2013,Michigan,Combined Ages,Combined Gender,231.2147823
+All classes,2013,Minnesota,Combined Ages,Combined Gender,706.7250196
+All other,2013,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Minnesota,Combined Ages,Combined Gender,95.82258588
+Fluoroquinolones,2013,Minnesota,Combined Ages,Combined Gender,75.91335397
+Macrolides,2013,Minnesota,Combined Ages,Combined Gender,128.8273387
+Penicillins,2013,Minnesota,Combined Ages,Combined Gender,171.8485207
+All classes,2013,Mississippi,Combined Ages,Combined Gender,1224.271708
+All other,2013,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Mississippi,Combined Ages,Combined Gender,182.2985951
+Fluoroquinolones,2013,Mississippi,Combined Ages,Combined Gender,158.7826406
+Macrolides,2013,Mississippi,Combined Ages,Combined Gender,240.3493443
+Penicillins,2013,Mississippi,Combined Ages,Combined Gender,234.6128575
+All classes,2013,Missouri,Combined Ages,Combined Gender,941.4063005
+All other,2013,Missouri,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Missouri,Combined Ages,Combined Gender,133.1672792
+Fluoroquinolones,2013,Missouri,Combined Ages,Combined Gender,116.5981303
+Macrolides,2013,Missouri,Combined Ages,Combined Gender,164.5585837
+Penicillins,2013,Missouri,Combined Ages,Combined Gender,219.5613505
+All classes,2013,Montana,Combined Ages,Combined Gender,674.0480793
+All other,2013,Montana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Montana,Combined Ages,Combined Gender,79.19540943
+Fluoroquinolones,2013,Montana,Combined Ages,Combined Gender,75.40251699
+Macrolides,2013,Montana,Combined Ages,Combined Gender,139.5421554
+Penicillins,2013,Montana,Combined Ages,Combined Gender,146.349235
+All classes,2013,Nebraska,Combined Ages,Combined Gender,1034.482054
+All other,2013,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Nebraska,Combined Ages,Combined Gender,176.6241227
+Fluoroquinolones,2013,Nebraska,Combined Ages,Combined Gender,122.3905158
+Macrolides,2013,Nebraska,Combined Ages,Combined Gender,173.0545771
+Penicillins,2013,Nebraska,Combined Ages,Combined Gender,223.0710247
+All classes,2013,Nevada,Combined Ages,Combined Gender,716.6015832
+All other,2013,Nevada,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Nevada,Combined Ages,Combined Gender,92.21136065
+Fluoroquinolones,2013,Nevada,Combined Ages,Combined Gender,90.19837048
+Macrolides,2013,Nevada,Combined Ages,Combined Gender,140.3286126
+Penicillins,2013,Nevada,Combined Ages,Combined Gender,163.6840917
+All classes,2013,New Hampshire,Combined Ages,Combined Gender,710.3067179
+All other,2013,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,New Hampshire,Combined Ages,Combined Gender,85.01530301
+Fluoroquinolones,2013,New Hampshire,Combined Ages,Combined Gender,74.98966442
+Macrolides,2013,New Hampshire,Combined Ages,Combined Gender,127.2429337
+Penicillins,2013,New Hampshire,Combined Ages,Combined Gender,170.4815305
+All classes,2013,New Jersey,Combined Ages,Combined Gender,922.6968349
+All other,2013,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,New Jersey,Combined Ages,Combined Gender,112.2233727
+All other,2015,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+Fluoroquinolones,2013,New Jersey,Combined Ages,Combined Gender,123.1017308
+Macrolides,2013,New Jersey,Combined Ages,Combined Gender,197.0751193
+Penicillins,2013,New Jersey,Combined Ages,Combined Gender,210.4429803
+All classes,2013,New Mexico,Combined Ages,Combined Gender,696.6705273
+All other,2013,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,New Mexico,Combined Ages,Combined Gender,90.05454036
+Fluoroquinolones,2013,New Mexico,Combined Ages,Combined Gender,73.69808735
+Macrolides,2013,New Mexico,Combined Ages,Combined Gender,147.5695423
+Penicillins,2013,New Mexico,Combined Ages,Combined Gender,161.7098608
+All classes,2013,New York,Combined Ages,Combined Gender,904.712935
+All other,2013,New York,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,New York,Combined Ages,Combined Gender,108.3607984
+Fluoroquinolones,2013,New York,Combined Ages,Combined Gender,119.3989971
+Macrolides,2013,New York,Combined Ages,Combined Gender,183.1707644
+Penicillins,2013,New York,Combined Ages,Combined Gender,207.4061292
+All classes,2013,North Carolina,Combined Ages,Combined Gender,900.5591447
+All other,2013,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,North Carolina,Combined Ages,Combined Gender,126.3802731
+Fluoroquinolones,2013,North Carolina,Combined Ages,Combined Gender,116.0734353
+Macrolides,2013,North Carolina,Combined Ages,Combined Gender,158.8681324
+Penicillins,2013,North Carolina,Combined Ages,Combined Gender,192.7922786
+All classes,2013,North Dakota,Combined Ages,Combined Gender,877.2636722
+All other,2013,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,North Dakota,Combined Ages,Combined Gender,140.0759542
+Fluoroquinolones,2013,North Dakota,Combined Ages,Combined Gender,107.1787383
+Macrolides,2013,North Dakota,Combined Ages,Combined Gender,173.8719941
+Penicillins,2013,North Dakota,Combined Ages,Combined Gender,177.6483062
+All classes,2013,Ohio,Combined Ages,Combined Gender,966.1079692
+All other,2013,Ohio,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Ohio,Combined Ages,Combined Gender,129.0666207
+Fluoroquinolones,2013,Ohio,Combined Ages,Combined Gender,115.9585914
+Macrolides,2013,Ohio,Combined Ages,Combined Gender,180.8624417
+Penicillins,2013,Ohio,Combined Ages,Combined Gender,220.3729915
+All classes,2013,Oklahoma,Combined Ages,Combined Gender,967.276943
+All other,2013,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Oklahoma,Combined Ages,Combined Gender,145.8668642
+Fluoroquinolones,2013,Oklahoma,Combined Ages,Combined Gender,118.1606559
+Macrolides,2013,Oklahoma,Combined Ages,Combined Gender,184.1548144
+Penicillins,2013,Oklahoma,Combined Ages,Combined Gender,204.0088365
+All classes,2013,Oregon,Combined Ages,Combined Gender,578.6255431
+All other,2013,Oregon,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Oregon,Combined Ages,Combined Gender,68.36810361
+Fluoroquinolones,2013,Oregon,Combined Ages,Combined Gender,68.86931438
+Macrolides,2013,Oregon,Combined Ages,Combined Gender,95.91939091
+Penicillins,2013,Oregon,Combined Ages,Combined Gender,131.7422993
+All classes,2013,Pennsylvania,Combined Ages,Combined Gender,896.2812026
+All other,2013,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Pennsylvania,Combined Ages,Combined Gender,115.1332048
+Fluoroquinolones,2013,Pennsylvania,Combined Ages,Combined Gender,109.08735
+Macrolides,2013,Pennsylvania,Combined Ages,Combined Gender,167.8204331
+Penicillins,2013,Pennsylvania,Combined Ages,Combined Gender,215.3617646
+All classes,2013,Rhode Island,Combined Ages,Combined Gender,899.5516037
+All other,2013,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Rhode Island,Combined Ages,Combined Gender,95.66557871
+Fluoroquinolones,2013,Rhode Island,Combined Ages,Combined Gender,118.3091155
+Macrolides,2013,Rhode Island,Combined Ages,Combined Gender,178.9745328
+Penicillins,2013,Rhode Island,Combined Ages,Combined Gender,202.3635549
+All classes,2013,South Carolina,Combined Ages,Combined Gender,964.7412964
+All other,2013,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,South Carolina,Combined Ages,Combined Gender,131.5260642
+Fluoroquinolones,2013,South Carolina,Combined Ages,Combined Gender,129.213645
+Macrolides,2013,South Carolina,Combined Ages,Combined Gender,184.5637708
+Penicillins,2013,South Carolina,Combined Ages,Combined Gender,203.8662897
+All classes,2013,South Dakota,Combined Ages,Combined Gender,893.2676491
+All other,2013,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,South Dakota,Combined Ages,Combined Gender,158.0733995
+Fluoroquinolones,2013,South Dakota,Combined Ages,Combined Gender,97.27353905
+Macrolides,2013,South Dakota,Combined Ages,Combined Gender,174.7185249
+Penicillins,2013,South Dakota,Combined Ages,Combined Gender,181.5008693
+All classes,2013,Tennessee,Combined Ages,Combined Gender,1189.570492
+All other,2013,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Tennessee,Combined Ages,Combined Gender,176.6249727
+Fluoroquinolones,2013,Tennessee,Combined Ages,Combined Gender,159.8156102
+Macrolides,2013,Tennessee,Combined Ages,Combined Gender,215.1911519
+Penicillins,2013,Tennessee,Combined Ages,Combined Gender,228.7731815
+All classes,2013,Texas,Combined Ages,Combined Gender,915.8735981
+All other,2013,Texas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Texas,Combined Ages,Combined Gender,135.3305054
+Fluoroquinolones,2013,Texas,Combined Ages,Combined Gender,111.8196559
+Macrolides,2013,Texas,Combined Ages,Combined Gender,179.1198461
+Penicillins,2013,Texas,Combined Ages,Combined Gender,205.3288144
+All classes,2013,Utah,Combined Ages,Combined Gender,812.5012583
+All other,2013,Utah,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Utah,Combined Ages,Combined Gender,127.4232763
+Fluoroquinolones,2013,Utah,Combined Ages,Combined Gender,72.17179214
+Macrolides,2013,Utah,Combined Ages,Combined Gender,141.7089817
+Penicillins,2013,Utah,Combined Ages,Combined Gender,217.298262
+All classes,2013,Vermont,Combined Ages,Combined Gender,656.0934985
+All other,2013,Vermont,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Vermont,Combined Ages,Combined Gender,83.73178805
+Fluoroquinolones,2013,Vermont,Combined Ages,Combined Gender,68.2339297
+Macrolides,2013,Vermont,Combined Ages,Combined Gender,121.7780348
+Penicillins,2013,Vermont,Combined Ages,Combined Gender,159.8195755
+All classes,2013,Virginia,Combined Ages,Combined Gender,833.3582323
+All other,2013,Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Virginia,Combined Ages,Combined Gender,123.8884097
+Fluoroquinolones,2013,Virginia,Combined Ages,Combined Gender,98.7409836
+Macrolides,2013,Virginia,Combined Ages,Combined Gender,153.0506418
+Penicillins,2013,Virginia,Combined Ages,Combined Gender,187.0522524
+All classes,2013,Washington,Combined Ages,Combined Gender,608.4052106
+All other,2013,Washington,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Washington,Combined Ages,Combined Gender,81.35186963
+Fluoroquinolones,2013,Washington,Combined Ages,Combined Gender,63.13147662
+Macrolides,2013,Washington,Combined Ages,Combined Gender,111.4265125
+Penicillins,2013,Washington,Combined Ages,Combined Gender,131.114981
+All classes,2013,West Virginia,Combined Ages,Combined Gender,1274.031911
+All other,2013,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,West Virginia,Combined Ages,Combined Gender,208.9856198
+Fluoroquinolones,2013,West Virginia,Combined Ages,Combined Gender,165.4842239
+Macrolides,2013,West Virginia,Combined Ages,Combined Gender,228.6918232
+Penicillins,2013,West Virginia,Combined Ages,Combined Gender,260.3469043
+All classes,2013,Wisconsin,Combined Ages,Combined Gender,747.651325
+All other,2013,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Wisconsin,Combined Ages,Combined Gender,89.05015242
+Fluoroquinolones,2013,Wisconsin,Combined Ages,Combined Gender,79.3015823
+Macrolides,2013,Wisconsin,Combined Ages,Combined Gender,140.0623965
+Penicillins,2013,Wisconsin,Combined Ages,Combined Gender,175.7040237
+All classes,2013,Wyoming,Combined Ages,Combined Gender,787.9118622
+All other,2013,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2013,Wyoming,Combined Ages,Combined Gender,112.6997221
+Fluoroquinolones,2013,Wyoming,Combined Ages,Combined Gender,73.9389736
+Macrolides,2013,Wyoming,Combined Ages,Combined Gender,166.3843333
+Penicillins,2013,Wyoming,Combined Ages,Combined Gender,173.5885588
+All classes,2014,National,0-19,Combined Gender,778.3693976
+B-lactams increased activity,2014,National,0-19,Combined Gender,78.83703866
+Cephalosporins,2014,National,0-19,Combined Gender,137.3168517
+Fluoroquinolones,2014,National,0-19,Combined Gender,9.027805993
+Lincosamides,2014,National,0-19,Combined Gender,13.74434889
+Macrolides,2014,National,0-19,Combined Gender,142.3439699
+Other,2014,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2014,National,0-19,Combined Gender,292.8357161
+Tetracycline,2014,National,0-19,Combined Gender,45.98613948
+Trimethoprim-sulfamethoxazole,2014,National,0-19,Combined Gender,47.74424676
+Urinary anti-infectives,2014,National,0-19,Combined Gender,10.07683173
+All classes,2014,National,0-19,Female,829.3913903
+B-lactams increased activity,2014,National,0-19,Female,Insufficient Data
+Cephalosporins,2014,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2014,National,0-19,Female,Insufficient Data
+Lincosamides,2014,National,0-19,Female,Insufficient Data
+Macrolides,2014,National,0-19,Female,Insufficient Data
+Other,2014,National,0-19,Female,Insufficient Data
+Penicillins,2014,National,0-19,Female,Insufficient Data
+Tetracycline,2014,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2014,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2014,National,0-19,Female,Insufficient Data
+All classes,2014,National,0-19,Male,728.3899638
+B-lactams increased activity,2014,National,0-19,Male,Insufficient Data
+Cephalosporins,2014,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2014,National,0-19,Male,Insufficient Data
+Lincosamides,2014,National,0-19,Male,Insufficient Data
+Other,2014,National,0-19,Male,Insufficient Data
+Penicillins,2014,National,0-19,Male,Insufficient Data
+Tetracycline,2014,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2014,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2014,National,0-19,Male,Insufficient Data
+All classes,2014,National,20+,Combined Gender,837.5099118
+All other,2015,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+B-lactams increased activity,2014,National,20+,Combined Gender,70.61024237
+Cephalosporins,2014,National,20+,Combined Gender,100.8560949
+Fluoroquinolones,2014,National,20+,Combined Gender,133.186792
+Lincosamides,2014,National,20+,Combined Gender,34.71902745
+Macrolides,2014,National,20+,Combined Gender,154.7899234
+Other,2014,National,20+,Combined Gender,2.119024582
+Penicillins,2014,National,20+,Combined Gender,151.4159373
+Tetracycline,2014,National,20+,Combined Gender,68.80282334
+Trimethoprim-sulfamethoxazole,2014,National,20+,Combined Gender,71.06548061
+Urinary anti-infectives,2014,National,20+,Combined Gender,49.9445659
+All classes,2014,National,20+,Female,1039.37911
+B-lactams increased activity,2014,National,20+,Female,Insufficient Data
+Cephalosporins,2014,National,20+,Female,Insufficient Data
+Fluoroquinolones,2014,National,20+,Female,Insufficient Data
+Lincosamides,2014,National,20+,Female,Insufficient Data
+Macrolides,2014,National,20+,Female,Insufficient Data
+Other,2014,National,20+,Female,Insufficient Data
+Penicillins,2014,National,20+,Female,Insufficient Data
+Tetracycline,2014,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2014,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2014,National,20+,Female,Insufficient Data
+All classes,2014,National,20+,Male,622.8574848
+B-lactams increased activity,2014,National,20+,Male,Insufficient Data
+Cephalosporins,2014,National,20+,Male,Insufficient Data
+Fluoroquinolones,2014,National,20+,Male,Insufficient Data
+Lincosamides,2014,National,20+,Male,Insufficient Data
+Macrolides,2014,National,20+,Male,Insufficient Data
+Other,2014,National,20+,Male,Insufficient Data
+Penicillins,2014,National,20+,Male,Insufficient Data
+Tetracycline,2014,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2014,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2014,National,20+,Male,Insufficient Data
+All classes,2014,National,Combined Ages,Combined Gender,834.6770628
+B-lactams increased activity,2014,National,Combined Ages,Combined Gender,73.79803102
+Cephalosporins,2014,National,Combined Ages,Combined Gender,111.8542517
+Fluoroquinolones,2014,National,Combined Ages,Combined Gender,102.7395668
+Lincosamides,2014,National,Combined Ages,Combined Gender,29.80842808
+Macrolides,2014,National,Combined Ages,Combined Gender,153.8239306
+Other,2014,National,Combined Ages,Combined Gender,1.717088017
+Penicillins,2014,National,Combined Ages,Combined Gender,190.5064118
+Tetracycline,2014,National,Combined Ages,Combined Gender,64.06100786
+Trimethoprim-sulfamethoxazole,2014,National,Combined Ages,Combined Gender,66.00603466
+Urinary anti-infectives,2014,National,Combined Ages,Combined Gender,40.36231216
+All classes,2014,National,Combined Ages,Female,998.8825143
+B-lactams increased activity,2014,National,Combined Ages,Female,82.60557582
+Cephalosporins,2014,National,Combined Ages,Female,127.5970718
+Fluoroquinolones,2014,National,Combined Ages,Female,131.1704956
+Lincosamides,2014,National,Combined Ages,Female,35.15258966
+Macrolides,2014,National,Combined Ages,Female,184.4302606
+Other,2014,National,Combined Ages,Female,1.913026751
+Penicillins,2014,National,Combined Ages,Female,208.5599402
+Tetracycline,2014,National,Combined Ages,Female,73.71209306
+Trimethoprim-sulfamethoxazole,2014,National,Combined Ages,Female,82.39540827
+Urinary anti-infectives,2014,National,Combined Ages,Female,71.34605252
+All classes,2014,National,Combined Ages,Male,658.8751299
+B-lactams increased activity,2014,National,Combined Ages,Male,64.14019788
+Cephalosporins,2014,National,Combined Ages,Male,94.74757384
+Fluoroquinolones,2014,National,Combined Ages,Male,72.65156955
+Lincosamides,2014,National,Combined Ages,Male,24.01611507
+Macrolides,2014,National,Combined Ages,Male,121.0960003
+Other,2014,National,Combined Ages,Male,1.49957817
+Penicillins,2014,National,Combined Ages,Male,170.4374879
+Tetracycline,2014,National,Combined Ages,Male,53.61139924
+Trimethoprim-sulfamethoxazole,2014,National,Combined Ages,Male,48.59927169
+Urinary anti-infectives,2014,National,Combined Ages,Male,8.075936286
+All classes,2014,Alabama,Combined Ages,Combined Gender,1123.180044
+All other,2014,Alabama,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Alabama,Combined Ages,Combined Gender,170.2397153
+Fluoroquinolones,2014,Alabama,Combined Ages,Combined Gender,160.2027085
+Macrolides,2014,Alabama,Combined Ages,Combined Gender,205.3856073
+Penicillins,2014,Alabama,Combined Ages,Combined Gender,215.6558708
+All classes,2014,Alaska,Combined Ages,Combined Gender,501.4028168
+All other,2014,Alaska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Alaska,Combined Ages,Combined Gender,60.41305386
+Fluoroquinolones,2014,Alaska,Combined Ages,Combined Gender,58.03505209
+Macrolides,2014,Alaska,Combined Ages,Combined Gender,101.6957455
+Penicillins,2014,Alaska,Combined Ages,Combined Gender,103.95764
+All classes,2014,Arizona,Combined Ages,Combined Gender,739.907487
+All other,2014,Arizona,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Arizona,Combined Ages,Combined Gender,107.0934834
+Fluoroquinolones,2014,Arizona,Combined Ages,Combined Gender,88.10499141
+Macrolides,2014,Arizona,Combined Ages,Combined Gender,136.3983395
+Penicillins,2014,Arizona,Combined Ages,Combined Gender,159.4553237
+All classes,2014,Arkansas,Combined Ages,Combined Gender,1154.92251
+All other,2014,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Arkansas,Combined Ages,Combined Gender,174.022989
+Fluoroquinolones,2014,Arkansas,Combined Ages,Combined Gender,149.3751789
+Macrolides,2014,Arkansas,Combined Ages,Combined Gender,209.1304925
+Penicillins,2014,Arkansas,Combined Ages,Combined Gender,251.8007942
+All classes,2014,California,Combined Ages,Combined Gender,569.9061107
+All other,2014,California,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,California,Combined Ages,Combined Gender,72.58695393
+Fluoroquinolones,2014,California,Combined Ages,Combined Gender,69.16082469
+Macrolides,2014,California,Combined Ages,Combined Gender,104.3429619
+Penicillins,2014,California,Combined Ages,Combined Gender,143.1092566
+All classes,2014,Colorado,Combined Ages,Combined Gender,624.0816592
+All other,2014,Colorado,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Colorado,Combined Ages,Combined Gender,85.47302714
+Fluoroquinolones,2014,Colorado,Combined Ages,Combined Gender,63.4652622
+Macrolides,2014,Colorado,Combined Ages,Combined Gender,110.2820291
+Penicillins,2014,Colorado,Combined Ages,Combined Gender,156.8328465
+All classes,2014,Connecticut,Combined Ages,Combined Gender,846.9593377
+All other,2014,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Connecticut,Combined Ages,Combined Gender,109.2877564
+B-lactams increased activity,2016,National,20+,Male,Insufficient Data
+Fluoroquinolones,2014,Connecticut,Combined Ages,Combined Gender,97.24079477
+Macrolides,2014,Connecticut,Combined Ages,Combined Gender,160.2908685
+Penicillins,2014,Connecticut,Combined Ages,Combined Gender,187.4470018
+All classes,2014,Delaware,Combined Ages,Combined Gender,937.647128
+All other,2014,Delaware,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Delaware,Combined Ages,Combined Gender,113.4367378
+Fluoroquinolones,2014,Delaware,Combined Ages,Combined Gender,121.3109466
+Macrolides,2014,Delaware,Combined Ages,Combined Gender,167.517224
+Penicillins,2014,Delaware,Combined Ages,Combined Gender,217.8987382
+All classes,2014,District Of Columbia,Combined Ages,Combined Gender,1020.732152
+All other,2014,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,District Of Columbia,Combined Ages,Combined Gender,103.2732022
+Fluoroquinolones,2014,District Of Columbia,Combined Ages,Combined Gender,145.3917556
+Macrolides,2014,District Of Columbia,Combined Ages,Combined Gender,168.1438564
+Penicillins,2014,District Of Columbia,Combined Ages,Combined Gender,216.539514
+All classes,2014,Florida,Combined Ages,Combined Gender,728.0903774
+All other,2014,Florida,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Florida,Combined Ages,Combined Gender,87.47648165
+Fluoroquinolones,2014,Florida,Combined Ages,Combined Gender,109.5593154
+Macrolides,2014,Florida,Combined Ages,Combined Gender,142.4045577
+Penicillins,2014,Florida,Combined Ages,Combined Gender,144.9775651
+All classes,2014,Georgia,Combined Ages,Combined Gender,840.2547363
+All other,2014,Georgia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Georgia,Combined Ages,Combined Gender,110.0865307
+Fluoroquinolones,2014,Georgia,Combined Ages,Combined Gender,110.5049715
+Macrolides,2014,Georgia,Combined Ages,Combined Gender,146.512639
+Penicillins,2014,Georgia,Combined Ages,Combined Gender,190.2534677
+All classes,2014,Hawaii,Combined Ages,Combined Gender,643.1298831
+All other,2014,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Hawaii,Combined Ages,Combined Gender,71.90463812
+Fluoroquinolones,2014,Hawaii,Combined Ages,Combined Gender,82.55730469
+Macrolides,2014,Hawaii,Combined Ages,Combined Gender,132.0651737
+Penicillins,2014,Hawaii,Combined Ages,Combined Gender,143.7831625
+All classes,2014,Idaho,Combined Ages,Combined Gender,692.3643225
+All other,2014,Idaho,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Idaho,Combined Ages,Combined Gender,102.7226479
+Fluoroquinolones,2014,Idaho,Combined Ages,Combined Gender,70.11050718
+Macrolides,2014,Idaho,Combined Ages,Combined Gender,119.0548033
+Penicillins,2014,Idaho,Combined Ages,Combined Gender,158.8424829
+All classes,2014,Illinois,Combined Ages,Combined Gender,852.3390981
+All other,2014,Illinois,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Illinois,Combined Ages,Combined Gender,98.45382428
+Fluoroquinolones,2014,Illinois,Combined Ages,Combined Gender,99.35465794
+Macrolides,2014,Illinois,Combined Ages,Combined Gender,165.9416905
+Penicillins,2014,Illinois,Combined Ages,Combined Gender,208.9461352
+All classes,2014,Indiana,Combined Ages,Combined Gender,950.287249
+All other,2014,Indiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Indiana,Combined Ages,Combined Gender,163.8676733
+Fluoroquinolones,2014,Indiana,Combined Ages,Combined Gender,109.8473773
+Macrolides,2014,Indiana,Combined Ages,Combined Gender,165.0418298
+Penicillins,2014,Indiana,Combined Ages,Combined Gender,215.0244624
+All classes,2014,Iowa,Combined Ages,Combined Gender,1000.150164
+All other,2014,Iowa,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Iowa,Combined Ages,Combined Gender,162.4871215
+Fluoroquinolones,2014,Iowa,Combined Ages,Combined Gender,115.8740939
+Macrolides,2014,Iowa,Combined Ages,Combined Gender,195.7159735
+Penicillins,2014,Iowa,Combined Ages,Combined Gender,214.2116927
+All classes,2014,Kansas,Combined Ages,Combined Gender,991.8439157
+All other,2014,Kansas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Kansas,Combined Ages,Combined Gender,155.0832553
+Fluoroquinolones,2014,Kansas,Combined Ages,Combined Gender,117.6308057
+Macrolides,2014,Kansas,Combined Ages,Combined Gender,181.9800855
+Penicillins,2014,Kansas,Combined Ages,Combined Gender,207.5557546
+All classes,2014,Kentucky,Combined Ages,Combined Gender,1261.77307
+All other,2014,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Kentucky,Combined Ages,Combined Gender,195.1538307
+Fluoroquinolones,2014,Kentucky,Combined Ages,Combined Gender,163.9710164
+Macrolides,2014,Kentucky,Combined Ages,Combined Gender,232.5213342
+Penicillins,2014,Kentucky,Combined Ages,Combined Gender,281.8345687
+All classes,2014,Louisiana,Combined Ages,Combined Gender,1176.509892
+All other,2014,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Louisiana,Combined Ages,Combined Gender,140.2508928
+Fluoroquinolones,2014,Louisiana,Combined Ages,Combined Gender,137.941605
+Macrolides,2014,Louisiana,Combined Ages,Combined Gender,239.5381807
+Penicillins,2014,Louisiana,Combined Ages,Combined Gender,245.1325017
+All classes,2014,Maine,Combined Ages,Combined Gender,719.7605499
+All other,2014,Maine,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Maine,Combined Ages,Combined Gender,81.74484565
+Fluoroquinolones,2014,Maine,Combined Ages,Combined Gender,80.97469417
+Macrolides,2014,Maine,Combined Ages,Combined Gender,133.0098587
+Penicillins,2014,Maine,Combined Ages,Combined Gender,161.1514342
+All classes,2014,Maryland,Combined Ages,Combined Gender,795.7591208
+All other,2014,Maryland,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Maryland,Combined Ages,Combined Gender,91.59267767
+Fluoroquinolones,2014,Maryland,Combined Ages,Combined Gender,97.18077266
+Macrolides,2014,Maryland,Combined Ages,Combined Gender,141.7578856
+Penicillins,2014,Maryland,Combined Ages,Combined Gender,192.7848405
+All classes,2014,Massachusetts,Combined Ages,Combined Gender,768.4742643
+All other,2014,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Massachusetts,Combined Ages,Combined Gender,87.24197113
+Fluoroquinolones,2014,Massachusetts,Combined Ages,Combined Gender,84.90629329
+Macrolides,2014,Massachusetts,Combined Ages,Combined Gender,123.8838095
+Penicillins,2014,Massachusetts,Combined Ages,Combined Gender,191.672314
+All classes,2014,Michigan,Combined Ages,Combined Gender,924.6672042
+All other,2014,Michigan,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Michigan,Combined Ages,Combined Gender,127.1727722
+Fluoroquinolones,2014,Michigan,Combined Ages,Combined Gender,106.2470705
+Macrolides,2014,Michigan,Combined Ages,Combined Gender,170.7536289
+Penicillins,2014,Michigan,Combined Ages,Combined Gender,230.1431683
+All classes,2014,Minnesota,Combined Ages,Combined Gender,709.9544581
+All other,2014,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Minnesota,Combined Ages,Combined Gender,95.99726269
+Fluoroquinolones,2014,Minnesota,Combined Ages,Combined Gender,74.36794472
+Macrolides,2014,Minnesota,Combined Ages,Combined Gender,126.1388836
+Penicillins,2014,Minnesota,Combined Ages,Combined Gender,176.6842008
+All classes,2014,Mississippi,Combined Ages,Combined Gender,1221.996741
+All other,2014,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Mississippi,Combined Ages,Combined Gender,177.0791218
+Fluoroquinolones,2014,Mississippi,Combined Ages,Combined Gender,158.7029734
+Macrolides,2014,Mississippi,Combined Ages,Combined Gender,235.3277151
+Penicillins,2014,Mississippi,Combined Ages,Combined Gender,232.8859593
+All classes,2014,Missouri,Combined Ages,Combined Gender,935.6978878
+All other,2014,Missouri,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Missouri,Combined Ages,Combined Gender,128.7587054
+Fluoroquinolones,2014,Missouri,Combined Ages,Combined Gender,115.6318774
+Macrolides,2014,Missouri,Combined Ages,Combined Gender,166.1830114
+Penicillins,2014,Missouri,Combined Ages,Combined Gender,215.5692099
+All classes,2014,Montana,Combined Ages,Combined Gender,647.9170342
+All other,2014,Montana,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Montana,Combined Ages,Combined Gender,75.59712538
+Fluoroquinolones,2014,Montana,Combined Ages,Combined Gender,73.66856882
+Macrolides,2014,Montana,Combined Ages,Combined Gender,126.8117458
+Penicillins,2014,Montana,Combined Ages,Combined Gender,141.3824141
+All classes,2014,Nebraska,Combined Ages,Combined Gender,1044.647364
+All other,2014,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Nebraska,Combined Ages,Combined Gender,174.8157829
+Fluoroquinolones,2014,Nebraska,Combined Ages,Combined Gender,124.1063979
+Macrolides,2014,Nebraska,Combined Ages,Combined Gender,176.4489719
+Penicillins,2014,Nebraska,Combined Ages,Combined Gender,227.3348382
+All classes,2014,Nevada,Combined Ages,Combined Gender,708.9648512
+All other,2014,Nevada,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Nevada,Combined Ages,Combined Gender,89.55030452
+Fluoroquinolones,2014,Nevada,Combined Ages,Combined Gender,89.0526889
+Macrolides,2014,Nevada,Combined Ages,Combined Gender,132.1974542
+Penicillins,2014,Nevada,Combined Ages,Combined Gender,164.7593092
+All classes,2014,New Hampshire,Combined Ages,Combined Gender,701.2598686
+All other,2014,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,New Hampshire,Combined Ages,Combined Gender,84.10264295
+Fluoroquinolones,2014,New Hampshire,Combined Ages,Combined Gender,73.86880442
+Macrolides,2014,New Hampshire,Combined Ages,Combined Gender,114.5142156
+Penicillins,2014,New Hampshire,Combined Ages,Combined Gender,170.1830778
+All classes,2014,New Jersey,Combined Ages,Combined Gender,902.2686331
+All other,2014,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,New Jersey,Combined Ages,Combined Gender,106.7687833
+Fluoroquinolones,2014,New Jersey,Combined Ages,Combined Gender,116.8758745
+Macrolides,2014,New Jersey,Combined Ages,Combined Gender,188.0610259
+Penicillins,2014,New Jersey,Combined Ages,Combined Gender,211.5196077
+All classes,2014,New Mexico,Combined Ages,Combined Gender,713.8199448
+All other,2014,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,New Mexico,Combined Ages,Combined Gender,91.41868034
+Fluoroquinolones,2014,New Mexico,Combined Ages,Combined Gender,76.5604544
+Macrolides,2014,New Mexico,Combined Ages,Combined Gender,144.7533914
+Penicillins,2014,New Mexico,Combined Ages,Combined Gender,166.8590583
+All classes,2014,New York,Combined Ages,Combined Gender,899.4814533
+All other,2014,New York,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,New York,Combined Ages,Combined Gender,106.9337798
+Fluoroquinolones,2014,New York,Combined Ages,Combined Gender,116.9144754
+Macrolides,2014,New York,Combined Ages,Combined Gender,177.7523017
+Penicillins,2014,New York,Combined Ages,Combined Gender,209.2284784
+All classes,2014,North Carolina,Combined Ages,Combined Gender,860.6740038
+All other,2014,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,North Carolina,Combined Ages,Combined Gender,118.2824435
+Fluoroquinolones,2014,North Carolina,Combined Ages,Combined Gender,112.129166
+Macrolides,2014,North Carolina,Combined Ages,Combined Gender,141.6451065
+Penicillins,2014,North Carolina,Combined Ages,Combined Gender,186.5661038
+All classes,2014,North Dakota,Combined Ages,Combined Gender,852.8429225
+All other,2014,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,North Dakota,Combined Ages,Combined Gender,133.3917797
+Fluoroquinolones,2014,North Dakota,Combined Ages,Combined Gender,105.2340693
+Macrolides,2014,North Dakota,Combined Ages,Combined Gender,158.3572284
+Penicillins,2014,North Dakota,Combined Ages,Combined Gender,176.7296026
+All classes,2014,Ohio,Combined Ages,Combined Gender,964.3850099
+All other,2014,Ohio,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Ohio,Combined Ages,Combined Gender,126.8689943
+Fluoroquinolones,2014,Ohio,Combined Ages,Combined Gender,116.5954049
+Macrolides,2014,Ohio,Combined Ages,Combined Gender,174.2656499
+Penicillins,2014,Ohio,Combined Ages,Combined Gender,223.3229022
+All classes,2014,Oklahoma,Combined Ages,Combined Gender,965.19012
+All other,2014,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Oklahoma,Combined Ages,Combined Gender,144.7167043
+Fluoroquinolones,2014,Oklahoma,Combined Ages,Combined Gender,116.4744894
+Macrolides,2014,Oklahoma,Combined Ages,Combined Gender,182.0771052
+Penicillins,2014,Oklahoma,Combined Ages,Combined Gender,208.125151
+All classes,2014,Oregon,Combined Ages,Combined Gender,569.8875886
+All other,2014,Oregon,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Oregon,Combined Ages,Combined Gender,69.23205883
+Fluoroquinolones,2014,Oregon,Combined Ages,Combined Gender,67.2975909
+Macrolides,2014,Oregon,Combined Ages,Combined Gender,89.15922694
+Penicillins,2014,Oregon,Combined Ages,Combined Gender,130.5157045
+All classes,2014,Pennsylvania,Combined Ages,Combined Gender,885.0390371
+All other,2014,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Pennsylvania,Combined Ages,Combined Gender,112.9378412
+Fluoroquinolones,2014,Pennsylvania,Combined Ages,Combined Gender,106.8561271
+Macrolides,2014,Pennsylvania,Combined Ages,Combined Gender,159.4821755
+Penicillins,2014,Pennsylvania,Combined Ages,Combined Gender,213.801918
+All classes,2014,Rhode Island,Combined Ages,Combined Gender,892.2845259
+All other,2014,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Rhode Island,Combined Ages,Combined Gender,93.85654296
+Fluoroquinolones,2014,Rhode Island,Combined Ages,Combined Gender,115.3042013
+Macrolides,2014,Rhode Island,Combined Ages,Combined Gender,171.6973425
+Penicillins,2014,Rhode Island,Combined Ages,Combined Gender,203.1672721
+All classes,2014,South Carolina,Combined Ages,Combined Gender,926.6209765
+All other,2014,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,South Carolina,Combined Ages,Combined Gender,124.205907
+Fluoroquinolones,2014,South Carolina,Combined Ages,Combined Gender,124.6228356
+Cephalosporins,2016,National,20+,Male,Insufficient Data
+Macrolides,2014,South Carolina,Combined Ages,Combined Gender,166.3450728
+Penicillins,2014,South Carolina,Combined Ages,Combined Gender,196.5839604
+All classes,2014,South Dakota,Combined Ages,Combined Gender,900.6093123
+All other,2014,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,South Dakota,Combined Ages,Combined Gender,155.3235034
+Fluoroquinolones,2014,South Dakota,Combined Ages,Combined Gender,93.12237232
+Macrolides,2014,South Dakota,Combined Ages,Combined Gender,180.8800656
+Penicillins,2014,South Dakota,Combined Ages,Combined Gender,191.286559
+All classes,2014,Tennessee,Combined Ages,Combined Gender,1161.77553
+All other,2014,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Tennessee,Combined Ages,Combined Gender,172.0902114
+Fluoroquinolones,2014,Tennessee,Combined Ages,Combined Gender,156.5366833
+Macrolides,2014,Tennessee,Combined Ages,Combined Gender,202.673608
+Penicillins,2014,Tennessee,Combined Ages,Combined Gender,226.6311858
+All classes,2014,Texas,Combined Ages,Combined Gender,898.7923493
+All other,2014,Texas,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Texas,Combined Ages,Combined Gender,129.8642083
+Fluoroquinolones,2014,Texas,Combined Ages,Combined Gender,108.2986845
+Macrolides,2014,Texas,Combined Ages,Combined Gender,170.3139401
+Penicillins,2014,Texas,Combined Ages,Combined Gender,208.4754878
+All classes,2014,Utah,Combined Ages,Combined Gender,782.823954
+All other,2014,Utah,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Utah,Combined Ages,Combined Gender,121.5336596
+Fluoroquinolones,2014,Utah,Combined Ages,Combined Gender,71.64469969
+Macrolides,2014,Utah,Combined Ages,Combined Gender,130.3356245
+Penicillins,2014,Utah,Combined Ages,Combined Gender,207.6952138
+All classes,2014,Vermont,Combined Ages,Combined Gender,638.1305601
+All other,2014,Vermont,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Vermont,Combined Ages,Combined Gender,83.52372152
+Fluoroquinolones,2014,Vermont,Combined Ages,Combined Gender,67.25964869
+Macrolides,2014,Vermont,Combined Ages,Combined Gender,108.3253852
+Penicillins,2014,Vermont,Combined Ages,Combined Gender,153.3825703
+All classes,2014,Virginia,Combined Ages,Combined Gender,798.9687339
+All other,2014,Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Virginia,Combined Ages,Combined Gender,117.2205745
+Fluoroquinolones,2014,Virginia,Combined Ages,Combined Gender,94.30668212
+Macrolides,2014,Virginia,Combined Ages,Combined Gender,140.8091156
+Penicillins,2014,Virginia,Combined Ages,Combined Gender,181.6100594
+All classes,2014,Washington,Combined Ages,Combined Gender,599.6562643
+All other,2014,Washington,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Washington,Combined Ages,Combined Gender,80.61169463
+Fluoroquinolones,2014,Washington,Combined Ages,Combined Gender,61.39527978
+Macrolides,2014,Washington,Combined Ages,Combined Gender,103.824082
+Penicillins,2014,Washington,Combined Ages,Combined Gender,130.5385193
+All classes,2014,West Virginia,Combined Ages,Combined Gender,1284.882053
+All other,2014,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,West Virginia,Combined Ages,Combined Gender,210.5698455
+Fluoroquinolones,2014,West Virginia,Combined Ages,Combined Gender,166.592114
+Macrolides,2014,West Virginia,Combined Ages,Combined Gender,220.7994429
+Penicillins,2014,West Virginia,Combined Ages,Combined Gender,261.4795339
+All classes,2014,Wisconsin,Combined Ages,Combined Gender,744.3790099
+Cephalosporins,2014,Wisconsin,Combined Ages,Combined Gender,89.18154275
+Fluoroquinolones,2014,Wisconsin,Combined Ages,Combined Gender,78.68072331
+Macrolides,2014,Wisconsin,Combined Ages,Combined Gender,132.3646685
+Penicillins,2014,Wisconsin,Combined Ages,Combined Gender,177.4095017
+All classes,2014,Wyoming,Combined Ages,Combined Gender,777.0324555
+All other,2014,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2014,Wyoming,Combined Ages,Combined Gender,111.119176
+Fluoroquinolones,2014,Wyoming,Combined Ages,Combined Gender,73.24288329
+Macrolides,2014,Wyoming,Combined Ages,Combined Gender,158.2790296
+Penicillins,2014,Wyoming,Combined Ages,Combined Gender,170.8918896
+All classes,2015,National,0-19,Combined Gender,788
+B-lactams increased activity,2015,National,0-19,Combined Gender,82
+Cephalosporins,2015,National,0-19,Combined Gender,140
+Fluoroquinolones,2015,National,0-19,Combined Gender,9
+Lincosamides,2015,National,0-19,Combined Gender,14
+Macrolides,2015,National,0-19,Combined Gender,139
+Other,2015,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2015,National,0-19,Combined Gender,303
+Tetracycline,2015,National,0-19,Combined Gender,44
+Trimethoprim-sulfamethoxazole,2015,National,0-19,Combined Gender,46
+Urinary anti-infectives,2015,National,0-19,Combined Gender,10
+All classes,2015,National,0-19,Female,840
+B-lactams increased activity,2015,National,0-19,Female,Insufficient Data
+Cephalosporins,2015,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2015,National,0-19,Female,Insufficient Data
+Lincosamides,2015,National,0-19,Female,Insufficient Data
+Macrolides,2015,National,0-19,Female,Insufficient Data
+Other,2015,National,0-19,Female,Insufficient Data
+Penicillins,2015,National,0-19,Female,Insufficient Data
+Tetracycline,2015,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2015,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2015,National,0-19,Female,Insufficient Data
+All classes,2015,National,0-19,Male,737
+B-lactams increased activity,2015,National,0-19,Male,Insufficient Data
+Cephalosporins,2015,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2015,National,0-19,Male,Insufficient Data
+Lincosamides,2015,National,0-19,Male,Insufficient Data
+Macrolides,2015,National,0-19,Male,Insufficient Data
+Other,2015,National,0-19,Male,Insufficient Data
+Penicillins,2015,National,0-19,Male,Insufficient Data
+Tetracycline,2015,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2015,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2015,National,0-19,Male,Insufficient Data
+All classes,2015,National,20+,Combined Gender,850
+B-lactams increased activity,2015,National,20+,Combined Gender,77
+Cephalosporins,2015,National,20+,Combined Gender,103
+Fluoroquinolones,2015,National,20+,Combined Gender,132
+Lincosamides,2015,National,20+,Combined Gender,36
+Macrolides,2015,National,20+,Combined Gender,157
+Other,2015,National,20+,Combined Gender,2
+Penicillins,2015,National,20+,Combined Gender,152
+Tetracycline,2015,National,20+,Combined Gender,71
+Trimethoprim-sulfamethoxazole,2015,National,20+,Combined Gender,69
+Urinary anti-infectives,2015,National,20+,Combined Gender,50
+All classes,2015,National,20+,Female,1053
+B-lactams increased activity,2015,National,20+,Female,Insufficient Data
+Cephalosporins,2015,National,20+,Female,Insufficient Data
+Fluoroquinolones,2015,National,20+,Female,Insufficient Data
+Lincosamides,2015,National,20+,Female,Insufficient Data
+Macrolides,2015,National,20+,Female,Insufficient Data
+Other,2015,National,20+,Female,Insufficient Data
+Penicillins,2015,National,20+,Female,Insufficient Data
+Tetracycline,2015,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2015,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2015,National,20+,Female,Insufficient Data
+All classes,2015,National,20+,Male,633
+B-lactams increased activity,2015,National,20+,Male,Insufficient Data
+Cephalosporins,2015,National,20+,Male,Insufficient Data
+Fluoroquinolones,2015,National,20+,Male,Insufficient Data
+Lincosamides,2015,National,20+,Male,Insufficient Data
+Macrolides,2015,National,20+,Male,Insufficient Data
+Other,2015,National,20+,Male,Insufficient Data
+Penicillins,2015,National,20+,Male,Insufficient Data
+Tetracycline,2015,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2015,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2015,National,20+,Male,Insufficient Data
+All classes,2015,National,Combined Ages,Combined Gender,838
+B-lactams increased activity,2015,National,Combined Ages,Combined Gender,79
+Cephalosporins,2015,National,Combined Ages,Combined Gender,113
+Fluoroquinolones,2015,National,Combined Ages,Combined Gender,101
+Lincosamides,2015,National,Combined Ages,Combined Gender,31
+Macrolides,2015,National,Combined Ages,Combined Gender,154
+Other,2015,National,Combined Ages,Combined Gender,1
+Penicillins,2015,National,Combined Ages,Combined Gender,192
+Tetracycline,2015,National,Combined Ages,Combined Gender,64
+Trimethoprim-sulfamethoxazole,2015,National,Combined Ages,Combined Gender,63
+Urinary anti-infectives,2015,National,Combined Ages,Combined Gender,40
+All classes,2015,National,Combined Ages,Female,1005
+B-lactams increased activity,2015,National,Combined Ages,Female,89
+Cephalosporins,2015,National,Combined Ages,Female,129
+Fluoroquinolones,2015,National,Combined Ages,Female,129
+Lincosamides,2015,National,Combined Ages,Female,36
+Macrolides,2015,National,Combined Ages,Female,185
+Other,2015,National,Combined Ages,Female,2
+Penicillins,2015,National,Combined Ages,Female,210
+Tetracycline,2015,National,Combined Ages,Female,74
+Trimethoprim-sulfamethoxazole,2015,National,Combined Ages,Female,79
+Urinary anti-infectives,2015,National,Combined Ages,Female,72
+All classes,2015,National,Combined Ages,Male,663
+B-lactams increased activity,2015,National,Combined Ages,Male,68
+Cephalosporins,2015,National,Combined Ages,Male,95
+Fluoroquinolones,2015,National,Combined Ages,Male,72
+Lincosamides,2015,National,Combined Ages,Male,25
+Macrolides,2015,National,Combined Ages,Male,121
+Other,2015,National,Combined Ages,Male,1
+Penicillins,2015,National,Combined Ages,Male,172
+Tetracycline,2015,National,Combined Ages,Male,54
+Fluoroquinolones,2016,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2015,National,Combined Ages,Male,47
+Urinary anti-infectives,2015,National,Combined Ages,Male,8
+All classes,2015,Alabama,Combined Ages,Combined Gender,1149
+All classes,2015,Alaska,Combined Ages,Combined Gender,511
+All classes,2015,Arizona,Combined Ages,Combined Gender,769
+All classes,2015,Arkansas,Combined Ages,Combined Gender,1154
+All classes,2015,California,Combined Ages,Combined Gender,590
+All classes,2015,Colorado,Combined Ages,Combined Gender,624
+All classes,2015,Connecticut,Combined Ages,Combined Gender,843
+All classes,2015,Delaware,Combined Ages,Combined Gender,915
+All classes,2015,District Of Columbia,Combined Ages,Combined Gender,979
+All classes,2015,Florida,Combined Ages,Combined Gender,706
+All classes,2015,Georgia,Combined Ages,Combined Gender,830
+All classes,2015,Hawaii,Combined Ages,Combined Gender,640
+All classes,2015,Idaho,Combined Ages,Combined Gender,720
+All classes,2015,Illinois,Combined Ages,Combined Gender,845
+All classes,2015,Indiana,Combined Ages,Combined Gender,964
+All classes,2015,Iowa,Combined Ages,Combined Gender,1018
+All classes,2015,Kansas,Combined Ages,Combined Gender,1016
+All classes,2015,Kentucky,Combined Ages,Combined Gender,1256
+All classes,2015,Louisiana,Combined Ages,Combined Gender,1174
+All classes,2015,Maine,Combined Ages,Combined Gender,732
+All classes,2015,Maryland,Combined Ages,Combined Gender,794
+All classes,2015,Massachusetts,Combined Ages,Combined Gender,759
+All classes,2015,Michigan,Combined Ages,Combined Gender,918
+All classes,2015,Minnesota,Combined Ages,Combined Gender,696
+All classes,2015,Mississippi,Combined Ages,Combined Gender,1254
+All classes,2015,Missouri,Combined Ages,Combined Gender,944
+All classes,2015,Montana,Combined Ages,Combined Gender,662
+All classes,2015,Nebraska,Combined Ages,Combined Gender,1072
+All classes,2015,Nevada,Combined Ages,Combined Gender,733
+All classes,2015,New Hampshire,Combined Ages,Combined Gender,728
+All classes,2015,New Jersey,Combined Ages,Combined Gender,903
+All classes,2015,New Mexico,Combined Ages,Combined Gender,724
+All classes,2015,New York,Combined Ages,Combined Gender,898
+All classes,2015,North Carolina,Combined Ages,Combined Gender,872
+All classes,2015,North Dakota,Combined Ages,Combined Gender,864
+All classes,2015,Ohio,Combined Ages,Combined Gender,964
+All classes,2015,Oklahoma,Combined Ages,Combined Gender,966
+All classes,2015,Oregon,Combined Ages,Combined Gender,582
+All classes,2015,Pennsylvania,Combined Ages,Combined Gender,895
+All classes,2015,Rhode Island,Combined Ages,Combined Gender,888
+All classes,2015,South Carolina,Combined Ages,Combined Gender,936
+All classes,2015,South Dakota,Combined Ages,Combined Gender,893
+All other,2015,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+All classes,2015,Tennessee,Combined Ages,Combined Gender,1165
+All classes,2015,Texas,Combined Ages,Combined Gender,895
+All classes,2015,Utah,Combined Ages,Combined Gender,779
+All classes,2015,Vermont,Combined Ages,Combined Gender,668
+All classes,2015,Virginia,Combined Ages,Combined Gender,804
+All classes,2015,Washington,Combined Ages,Combined Gender,610
+All classes,2015,West Virginia,Combined Ages,Combined Gender,1319
+All classes,2015,Wisconsin,Combined Ages,Combined Gender,745
+All classes,2015,Wyoming,Combined Ages,Combined Gender,789
+All other,2015,Alabama,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Alaska,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Arizona,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,California,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Colorado,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Delaware,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Florida,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Georgia,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Idaho,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Illinois,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Indiana,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Iowa,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Kansas,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Maine,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Maryland,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Michigan,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Missouri,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Montana,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Nevada,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,New York,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Ohio,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Oregon,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Texas,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Utah,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Vermont,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Virginia,Combined Ages,Combined Gender,Insufficient Data
+All other,2015,Washington,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2015,Alabama,Combined Ages,Combined Gender,176
+Cephalosporins,2015,Alaska,Combined Ages,Combined Gender,62
+Cephalosporins,2015,Arizona,Combined Ages,Combined Gender,110
+Cephalosporins,2015,Arkansas,Combined Ages,Combined Gender,175
+Cephalosporins,2015,California,Combined Ages,Combined Gender,74
+Cephalosporins,2015,Colorado,Combined Ages,Combined Gender,86
+Cephalosporins,2015,Connecticut,Combined Ages,Combined Gender,110
+Cephalosporins,2015,Delaware,Combined Ages,Combined Gender,114
+Cephalosporins,2015,District Of Columbia,Combined Ages,Combined Gender,102
+Cephalosporins,2015,Florida,Combined Ages,Combined Gender,88
+Cephalosporins,2015,Georgia,Combined Ages,Combined Gender,112
+Cephalosporins,2015,Hawaii,Combined Ages,Combined Gender,76
+Cephalosporins,2015,Idaho,Combined Ages,Combined Gender,108
+Cephalosporins,2015,Illinois,Combined Ages,Combined Gender,98
+Cephalosporins,2015,Indiana,Combined Ages,Combined Gender,166
+Cephalosporins,2015,Iowa,Combined Ages,Combined Gender,169
+Cephalosporins,2015,Kansas,Combined Ages,Combined Gender,158
+Cephalosporins,2015,Kentucky,Combined Ages,Combined Gender,198
+Cephalosporins,2015,Louisiana,Combined Ages,Combined Gender,143
+Cephalosporins,2015,Maine,Combined Ages,Combined Gender,83
+Cephalosporins,2015,Maryland,Combined Ages,Combined Gender,92
+Cephalosporins,2015,Massachusetts,Combined Ages,Combined Gender,86
+Cephalosporins,2015,Michigan,Combined Ages,Combined Gender,125
+Cephalosporins,2015,Minnesota,Combined Ages,Combined Gender,96
+Cephalosporins,2015,Mississippi,Combined Ages,Combined Gender,180
+Cephalosporins,2015,Missouri,Combined Ages,Combined Gender,133
+Cephalosporins,2015,Montana,Combined Ages,Combined Gender,80
+Cephalosporins,2015,Nebraska,Combined Ages,Combined Gender,182
+Cephalosporins,2015,Nevada,Combined Ages,Combined Gender,92
+Cephalosporins,2015,New Hampshire,Combined Ages,Combined Gender,88
+Cephalosporins,2015,New Jersey,Combined Ages,Combined Gender,106
+Cephalosporins,2015,New Mexico,Combined Ages,Combined Gender,92
+Cephalosporins,2015,New York,Combined Ages,Combined Gender,107
+Cephalosporins,2015,North Carolina,Combined Ages,Combined Gender,119
+Cephalosporins,2015,North Dakota,Combined Ages,Combined Gender,134
+Cephalosporins,2015,Ohio,Combined Ages,Combined Gender,127
+Cephalosporins,2015,Oklahoma,Combined Ages,Combined Gender,144
+Cephalosporins,2015,Oregon,Combined Ages,Combined Gender,72
+Cephalosporins,2015,Pennsylvania,Combined Ages,Combined Gender,114
+Cephalosporins,2015,Rhode Island,Combined Ages,Combined Gender,99
+Cephalosporins,2015,South Carolina,Combined Ages,Combined Gender,126
+Cephalosporins,2015,South Dakota,Combined Ages,Combined Gender,154
+Cephalosporins,2015,Tennessee,Combined Ages,Combined Gender,174
+Cephalosporins,2015,Texas,Combined Ages,Combined Gender,129
+Cephalosporins,2015,Utah,Combined Ages,Combined Gender,121
+Cephalosporins,2015,Vermont,Combined Ages,Combined Gender,87
+Cephalosporins,2015,Virginia,Combined Ages,Combined Gender,119
+Cephalosporins,2015,Washington,Combined Ages,Combined Gender,82
+Cephalosporins,2015,West Virginia,Combined Ages,Combined Gender,217
+Cephalosporins,2015,Wisconsin,Combined Ages,Combined Gender,91
+Cephalosporins,2015,Wyoming,Combined Ages,Combined Gender,114
+Fluoroquinolones,2015,Alabama,Combined Ages,Combined Gender,159
+Fluoroquinolones,2015,Alaska,Combined Ages,Combined Gender,57
+Fluoroquinolones,2015,Arizona,Combined Ages,Combined Gender,89
+Fluoroquinolones,2015,Arkansas,Combined Ages,Combined Gender,148
+Fluoroquinolones,2015,California,Combined Ages,Combined Gender,70
+Fluoroquinolones,2015,Colorado,Combined Ages,Combined Gender,62
+Fluoroquinolones,2015,Connecticut,Combined Ages,Combined Gender,95
+Fluoroquinolones,2015,Delaware,Combined Ages,Combined Gender,116
+Fluoroquinolones,2015,District Of Columbia,Combined Ages,Combined Gender,134
+Fluoroquinolones,2015,Florida,Combined Ages,Combined Gender,106
+Fluoroquinolones,2015,Georgia,Combined Ages,Combined Gender,104
+Fluoroquinolones,2015,Hawaii,Combined Ages,Combined Gender,81
+Fluoroquinolones,2015,Idaho,Combined Ages,Combined Gender,72
+Fluoroquinolones,2015,Illinois,Combined Ages,Combined Gender,96
+Fluoroquinolones,2015,Indiana,Combined Ages,Combined Gender,110
+Fluoroquinolones,2015,Iowa,Combined Ages,Combined Gender,115
+Fluoroquinolones,2015,Kansas,Combined Ages,Combined Gender,118
+Fluoroquinolones,2015,Kentucky,Combined Ages,Combined Gender,158
+Fluoroquinolones,2015,Louisiana,Combined Ages,Combined Gender,136
+Fluoroquinolones,2015,Maine,Combined Ages,Combined Gender,81
+Fluoroquinolones,2015,Maryland,Combined Ages,Combined Gender,95
+Fluoroquinolones,2015,Massachusetts,Combined Ages,Combined Gender,82
+Fluoroquinolones,2015,Michigan,Combined Ages,Combined Gender,103
+Fluoroquinolones,2015,Minnesota,Combined Ages,Combined Gender,71
+Fluoroquinolones,2015,Mississippi,Combined Ages,Combined Gender,157
+Fluoroquinolones,2015,Missouri,Combined Ages,Combined Gender,115
+Fluoroquinolones,2015,Montana,Combined Ages,Combined Gender,74
+Fluoroquinolones,2015,Nebraska,Combined Ages,Combined Gender,123
+Fluoroquinolones,2015,Nevada,Combined Ages,Combined Gender,90
+Fluoroquinolones,2015,New Hampshire,Combined Ages,Combined Gender,75
+Fluoroquinolones,2015,New Jersey,Combined Ages,Combined Gender,116
+Fluoroquinolones,2015,New Mexico,Combined Ages,Combined Gender,73
+Macrolides,2015,Michigan,Combined Ages,Combined Gender,171
+Fluoroquinolones,2015,New York,Combined Ages,Combined Gender,116
+Fluoroquinolones,2015,North Carolina,Combined Ages,Combined Gender,110
+Fluoroquinolones,2015,North Dakota,Combined Ages,Combined Gender,110
+Fluoroquinolones,2015,Ohio,Combined Ages,Combined Gender,115
+Fluoroquinolones,2015,Oklahoma,Combined Ages,Combined Gender,114
+Fluoroquinolones,2015,Oregon,Combined Ages,Combined Gender,66
+Fluoroquinolones,2015,Pennsylvania,Combined Ages,Combined Gender,106
+Fluoroquinolones,2015,Rhode Island,Combined Ages,Combined Gender,110
+Fluoroquinolones,2015,South Carolina,Combined Ages,Combined Gender,122
+Fluoroquinolones,2015,South Dakota,Combined Ages,Combined Gender,87
+Fluoroquinolones,2015,Tennessee,Combined Ages,Combined Gender,153
+Fluoroquinolones,2015,Texas,Combined Ages,Combined Gender,106
+Fluoroquinolones,2015,Utah,Combined Ages,Combined Gender,70
+Fluoroquinolones,2015,Vermont,Combined Ages,Combined Gender,68
+Fluoroquinolones,2015,Virginia,Combined Ages,Combined Gender,94
+Fluoroquinolones,2015,Washington,Combined Ages,Combined Gender,60
+Fluoroquinolones,2015,West Virginia,Combined Ages,Combined Gender,164
+Fluoroquinolones,2015,Wisconsin,Combined Ages,Combined Gender,77
+Fluoroquinolones,2015,Wyoming,Combined Ages,Combined Gender,72
+Macrolides,2015,Alabama,Combined Ages,Combined Gender,214
+Macrolides,2015,Alaska,Combined Ages,Combined Gender,101
+Macrolides,2015,Arizona,Combined Ages,Combined Gender,146
+Macrolides,2015,Arkansas,Combined Ages,Combined Gender,205
+Macrolides,2015,California,Combined Ages,Combined Gender,114
+Macrolides,2015,Colorado,Combined Ages,Combined Gender,107
+Macrolides,2015,Connecticut,Combined Ages,Combined Gender,157
+Macrolides,2015,Delaware,Combined Ages,Combined Gender,157
+Macrolides,2015,District Of Columbia,Combined Ages,Combined Gender,163
+Macrolides,2015,Florida,Combined Ages,Combined Gender,133
+Macrolides,2015,Georgia,Combined Ages,Combined Gender,144
+Macrolides,2015,Hawaii,Combined Ages,Combined Gender,131
+Macrolides,2015,Idaho,Combined Ages,Combined Gender,122
+Macrolides,2015,Illinois,Combined Ages,Combined Gender,161
+Macrolides,2015,Indiana,Combined Ages,Combined Gender,166
+Macrolides,2015,Iowa,Combined Ages,Combined Gender,191
+Macrolides,2015,Kansas,Combined Ages,Combined Gender,184
+Macrolides,2015,Kentucky,Combined Ages,Combined Gender,228
+Macrolides,2015,Louisiana,Combined Ages,Combined Gender,230
+Macrolides,2015,Maine,Combined Ages,Combined Gender,140
+Macrolides,2015,Maryland,Combined Ages,Combined Gender,140
+Macrolides,2015,Massachusetts,Combined Ages,Combined Gender,125
+Macrolides,2015,Minnesota,Combined Ages,Combined Gender,118
+Macrolides,2015,Mississippi,Combined Ages,Combined Gender,242
+Macrolides,2015,Missouri,Combined Ages,Combined Gender,163
+Macrolides,2015,Montana,Combined Ages,Combined Gender,127
+Macrolides,2015,Nebraska,Combined Ages,Combined Gender,179
+Macrolides,2015,Nevada,Combined Ages,Combined Gender,140
+Macrolides,2015,New Hampshire,Combined Ages,Combined Gender,122
+Macrolides,2015,New Jersey,Combined Ages,Combined Gender,188
+Macrolides,2015,New Mexico,Combined Ages,Combined Gender,142
+Macrolides,2015,New York,Combined Ages,Combined Gender,177
+Macrolides,2015,North Carolina,Combined Ages,Combined Gender,142
+Macrolides,2015,North Dakota,Combined Ages,Combined Gender,150
+Macrolides,2015,Ohio,Combined Ages,Combined Gender,170
+Macrolides,2015,Oklahoma,Combined Ages,Combined Gender,183
+Macrolides,2015,Oregon,Combined Ages,Combined Gender,94
+Macrolides,2015,Pennsylvania,Combined Ages,Combined Gender,160
+Macrolides,2015,Rhode Island,Combined Ages,Combined Gender,175
+Macrolides,2015,South Carolina,Combined Ages,Combined Gender,166
+Macrolides,2015,South Dakota,Combined Ages,Combined Gender,169
+Macrolides,2015,Tennessee,Combined Ages,Combined Gender,200
+Macrolides,2015,Texas,Combined Ages,Combined Gender,169
+Macrolides,2015,Utah,Combined Ages,Combined Gender,124
+Macrolides,2015,Vermont,Combined Ages,Combined Gender,115
+Macrolides,2015,Virginia,Combined Ages,Combined Gender,139
+Macrolides,2015,Washington,Combined Ages,Combined Gender,106
+Macrolides,2015,West Virginia,Combined Ages,Combined Gender,229
+Macrolides,2015,Wisconsin,Combined Ages,Combined Gender,127
+Macrolides,2015,Wyoming,Combined Ages,Combined Gender,156
+Penicillins,2015,Alabama,Combined Ages,Combined Gender,219
+Penicillins,2015,Alaska,Combined Ages,Combined Gender,108
+Penicillins,2015,Arizona,Combined Ages,Combined Gender,166
+Penicillins,2015,Arkansas,Combined Ages,Combined Gender,251
+Penicillins,2015,California,Combined Ages,Combined Gender,148
+Penicillins,2015,Colorado,Combined Ages,Combined Gender,159
+Penicillins,2015,Connecticut,Combined Ages,Combined Gender,190
+Penicillins,2015,Delaware,Combined Ages,Combined Gender,212
+Penicillins,2015,District Of Columbia,Combined Ages,Combined Gender,214
+Penicillins,2015,Florida,Combined Ages,Combined Gender,140
+Penicillins,2015,Georgia,Combined Ages,Combined Gender,189
+Penicillins,2015,Hawaii,Combined Ages,Combined Gender,140
+Penicillins,2015,Idaho,Combined Ages,Combined Gender,165
+Penicillins,2015,Illinois,Combined Ages,Combined Gender,210
+Penicillins,2015,Indiana,Combined Ages,Combined Gender,218
+Penicillins,2015,Iowa,Combined Ages,Combined Gender,221
+Penicillins,2015,Kansas,Combined Ages,Combined Gender,214
+Penicillins,2015,Kentucky,Combined Ages,Combined Gender,281
+Penicillins,2015,Louisiana,Combined Ages,Combined Gender,249
+Penicillins,2015,Maine,Combined Ages,Combined Gender,160
+Penicillins,2015,Maryland,Combined Ages,Combined Gender,192
+Penicillins,2015,Massachusetts,Combined Ages,Combined Gender,188
+Penicillins,2015,Michigan,Combined Ages,Combined Gender,229
+Penicillins,2015,Minnesota,Combined Ages,Combined Gender,176
+Penicillins,2015,Mississippi,Combined Ages,Combined Gender,243
+Penicillins,2015,Missouri,Combined Ages,Combined Gender,219
+Penicillins,2015,Montana,Combined Ages,Combined Gender,145
+Penicillins,2015,Nebraska,Combined Ages,Combined Gender,236
+Penicillins,2015,Nevada,Combined Ages,Combined Gender,167
+Penicillins,2015,New Hampshire,Combined Ages,Combined Gender,173
+Penicillins,2015,New Jersey,Combined Ages,Combined Gender,209
+Penicillins,2015,New Mexico,Combined Ages,Combined Gender,174
+Penicillins,2015,New York,Combined Ages,Combined Gender,208
+Penicillins,2015,North Carolina,Combined Ages,Combined Gender,190
+Penicillins,2015,North Dakota,Combined Ages,Combined Gender,178
+Penicillins,2015,Ohio,Combined Ages,Combined Gender,223
+Penicillins,2015,Oklahoma,Combined Ages,Combined Gender,209
+Penicillins,2015,Oregon,Combined Ages,Combined Gender,134
+Penicillins,2015,Pennsylvania,Combined Ages,Combined Gender,216
+Penicillins,2015,Rhode Island,Combined Ages,Combined Gender,197
+Penicillins,2015,South Carolina,Combined Ages,Combined Gender,200
+Penicillins,2015,South Dakota,Combined Ages,Combined Gender,202
+Penicillins,2015,Tennessee,Combined Ages,Combined Gender,230
+Penicillins,2015,Texas,Combined Ages,Combined Gender,208
+Penicillins,2015,Utah,Combined Ages,Combined Gender,213
+Penicillins,2015,Vermont,Combined Ages,Combined Gender,159
+Penicillins,2015,Virginia,Combined Ages,Combined Gender,185
+Penicillins,2015,Washington,Combined Ages,Combined Gender,133
+Penicillins,2015,West Virginia,Combined Ages,Combined Gender,266
+Penicillins,2015,Wisconsin,Combined Ages,Combined Gender,177
+Penicillins,2015,Wyoming,Combined Ages,Combined Gender,179
+All classes,2016,National,0-19,Combined Gender,790
+B-lactams increased activity,2016,National,0-19,Combined Gender,82
+Cephalosporins,2016,National,0-19,Combined Gender,141
+Fluoroquinolones,2016,National,0-19,Combined Gender,8
+Lincosamides,2016,National,0-19,Combined Gender,15
+Macrolides,2016,National,0-19,Combined Gender,131
+Other,2016,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2016,National,0-19,Combined Gender,314
+Tetracycline,2016,National,0-19,Combined Gender,44
+Trimethoprim-sulfamethoxazole,2016,National,0-19,Combined Gender,44
+Urinary anti-infectives,2016,National,0-19,Combined Gender,10
+All classes,2016,National,0-19,Female,842
+B-lactams increased activity,2016,National,0-19,Female,Insufficient Data
+Cephalosporins,2016,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2016,National,0-19,Female,Insufficient Data
+Lincosamides,2016,National,0-19,Female,Insufficient Data
+Macrolides,2016,National,0-19,Female,Insufficient Data
+Other,2016,National,0-19,Female,Insufficient Data
+Penicillins,2016,National,0-19,Female,Insufficient Data
+Tetracycline,2016,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2016,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2016,National,0-19,Female,Insufficient Data
+All classes,2016,National,0-19,Male,739
+B-lactams increased activity,2016,National,0-19,Male,Insufficient Data
+Cephalosporins,2016,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2016,National,0-19,Male,Insufficient Data
+Lincosamides,2016,National,0-19,Male,Insufficient Data
+Macrolides,2016,National,0-19,Male,Insufficient Data
+Other,2016,National,0-19,Male,Insufficient Data
+Penicillins,2016,National,0-19,Male,Insufficient Data
+Tetracycline,2016,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2016,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2016,National,0-19,Male,Insufficient Data
+All classes,2016,National,20+,Combined Gender,852
+B-lactams increased activity,2016,National,20+,Combined Gender,82
+Cephalosporins,2016,National,20+,Combined Gender,105
+Fluoroquinolones,2016,National,20+,Combined Gender,120
+Lincosamides,2016,National,20+,Combined Gender,37
+Macrolides,2016,National,20+,Combined Gender,153
+Other,2016,National,20+,Combined Gender,2
+Penicillins,2016,National,20+,Combined Gender,155
+Tetracycline,2016,National,20+,Combined Gender,75
+Trimethoprim-sulfamethoxazole,2016,National,20+,Combined Gender,70
+Urinary anti-infectives,2016,National,20+,Combined Gender,53
+All classes,2016,National,20+,Female,1056
+B-lactams increased activity,2016,National,20+,Female,Insufficient Data
+Cephalosporins,2016,National,20+,Female,Insufficient Data
+Fluoroquinolones,2016,National,20+,Female,Insufficient Data
+Lincosamides,2016,National,20+,Female,Insufficient Data
+Macrolides,2016,National,20+,Female,Insufficient Data
+Other,2016,National,20+,Female,Insufficient Data
+Penicillins,2016,National,20+,Female,Insufficient Data
+Tetracycline,2016,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2016,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2016,National,20+,Female,Insufficient Data
+All classes,2016,National,20+,Male,636
+Lincosamides,2016,National,20+,Male,Insufficient Data
+Macrolides,2016,National,20+,Male,Insufficient Data
+Other,2016,National,20+,Male,Insufficient Data
+Penicillins,2016,National,20+,Male,Insufficient Data
+Tetracycline,2016,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2016,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2016,National,20+,Male,Insufficient Data
+All classes,2016,National,Combined Ages,Combined Gender,836
+B-lactams increased activity,2016,National,Combined Ages,Combined Gender,82
+Cephalosporins,2016,National,Combined Ages,Combined Gender,114
+Fluoroquinolones,2016,National,Combined Ages,Combined Gender,92
+Lincosamides,2016,National,Combined Ages,Combined Gender,31
+Macrolides,2016,National,Combined Ages,Combined Gender,148
+Other,2016,National,Combined Ages,Combined Gender,2
+Penicillins,2016,National,Combined Ages,Combined Gender,196
+Tetracycline,2016,National,Combined Ages,Combined Gender,67
+Trimethoprim-sulfamethoxazole,2016,National,Combined Ages,Combined Gender,63
+Urinary anti-infectives,2016,National,Combined Ages,Combined Gender,42
+All classes,2016,National,Combined Ages,Female,1003
+B-lactams increased activity,2016,National,Combined Ages,Female,93
+Cephalosporins,2016,National,Combined Ages,Female,132
+Fluoroquinolones,2016,National,Combined Ages,Female,116
+Lincosamides,2016,National,Combined Ages,Female,37
+Macrolides,2016,National,Combined Ages,Female,177
+Other,2016,National,Combined Ages,Female,2
+Penicillins,2016,National,Combined Ages,Female,214
+Tetracycline,2016,National,Combined Ages,Female,78
+Trimethoprim-sulfamethoxazole,2016,National,Combined Ages,Female,79
+Urinary anti-infectives,2016,National,Combined Ages,Female,75
+All classes,2016,National,Combined Ages,Male,663
+B-lactams increased activity,2016,National,Combined Ages,Male,70
+Cephalosporins,2016,National,Combined Ages,Male,96
+Fluoroquinolones,2016,National,Combined Ages,Male,66
+Lincosamides,2016,National,Combined Ages,Male,26
+Macrolides,2016,National,Combined Ages,Male,117
+Other,2016,National,Combined Ages,Male,1
+Penicillins,2016,National,Combined Ages,Male,176
+Tetracycline,2016,National,Combined Ages,Male,56
+Trimethoprim-sulfamethoxazole,2016,National,Combined Ages,Male,47
+Urinary anti-infectives,2016,National,Combined Ages,Male,8
+All classes,2016,Alabama,Combined Ages,Combined Gender,1188
+All classes,2016,Alaska,Combined Ages,Combined Gender,511
+All classes,2016,Arizona,Combined Ages,Combined Gender,744
+All classes,2016,Arkansas,Combined Ages,Combined Gender,1131
+All classes,2016,California,Combined Ages,Combined Gender,567
+All classes,2016,Colorado,Combined Ages,Combined Gender,585
+All classes,2016,Connecticut,Combined Ages,Combined Gender,841
+All classes,2016,Delaware,Combined Ages,Combined Gender,929
+All classes,2016,District Of Columbia,Combined Ages,Combined Gender,936
+All classes,2016,Florida,Combined Ages,Combined Gender,855
+All classes,2016,Georgia,Combined Ages,Combined Gender,898
+All classes,2016,Hawaii,Combined Ages,Combined Gender,615
+All classes,2016,Idaho,Combined Ages,Combined Gender,689
+All classes,2016,Illinois,Combined Ages,Combined Gender,844
+All classes,2016,Indiana,Combined Ages,Combined Gender,963
+All classes,2016,Iowa,Combined Ages,Combined Gender,997
+All classes,2016,Kansas,Combined Ages,Combined Gender,964
+All classes,2016,Kentucky,Combined Ages,Combined Gender,1270
+All classes,2016,Louisiana,Combined Ages,Combined Gender,1193
+All classes,2016,Maine,Combined Ages,Combined Gender,707
+All classes,2016,Maryland,Combined Ages,Combined Gender,784
+All classes,2016,Massachusetts,Combined Ages,Combined Gender,751
+All classes,2016,Michigan,Combined Ages,Combined Gender,899
+All classes,2016,Minnesota,Combined Ages,Combined Gender,687
+All classes,2016,Mississippi,Combined Ages,Combined Gender,1235
+All classes,2016,Missouri,Combined Ages,Combined Gender,924
+All classes,2016,Montana,Combined Ages,Combined Gender,631
+All classes,2016,Nebraska,Combined Ages,Combined Gender,1040
+All classes,2016,Nevada,Combined Ages,Combined Gender,721
+All classes,2016,New Hampshire,Combined Ages,Combined Gender,716
+All classes,2016,New Jersey,Combined Ages,Combined Gender,911
+All classes,2016,New Mexico,Combined Ages,Combined Gender,704
+All classes,2016,New York,Combined Ages,Combined Gender,905
+All classes,2016,North Carolina,Combined Ages,Combined Gender,856
+All classes,2016,North Dakota,Combined Ages,Combined Gender,797
+All classes,2016,Ohio,Combined Ages,Combined Gender,963
+All classes,2016,Oklahoma,Combined Ages,Combined Gender,911
+All classes,2016,Oregon,Combined Ages,Combined Gender,547
+All classes,2016,Pennsylvania,Combined Ages,Combined Gender,895
+All classes,2016,Rhode Island,Combined Ages,Combined Gender,885
+All classes,2016,South Carolina,Combined Ages,Combined Gender,957
+All classes,2016,South Dakota,Combined Ages,Combined Gender,900
+All classes,2016,Tennessee,Combined Ages,Combined Gender,1169
+All classes,2016,Texas,Combined Ages,Combined Gender,852
+All classes,2016,Utah,Combined Ages,Combined Gender,753
+All classes,2016,Vermont,Combined Ages,Combined Gender,640
+All classes,2016,Virginia,Combined Ages,Combined Gender,790
+All classes,2016,Washington,Combined Ages,Combined Gender,580
+All classes,2016,West Virginia,Combined Ages,Combined Gender,1257
+All classes,2016,Wisconsin,Combined Ages,Combined Gender,733
+All classes,2016,Wyoming,Combined Ages,Combined Gender,744
+All other,2016,Alabama,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Alaska,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Arizona,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,California,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Colorado,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Delaware,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Florida,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Georgia,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Idaho,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Illinois,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Indiana,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Iowa,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Kansas,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Maine,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Maryland,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Michigan,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Missouri,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Montana,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Nevada,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,New York,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Ohio,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Oregon,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Texas,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Utah,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Vermont,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Virginia,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Washington,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+All other,2016,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2016,Alabama,Combined Ages,Combined Gender,185
+Cephalosporins,2016,Alaska,Combined Ages,Combined Gender,62
+Cephalosporins,2016,Arizona,Combined Ages,Combined Gender,107
+Cephalosporins,2016,Arkansas,Combined Ages,Combined Gender,175
+Cephalosporins,2016,California,Combined Ages,Combined Gender,73
+Cephalosporins,2016,Colorado,Combined Ages,Combined Gender,82
+Cephalosporins,2016,Connecticut,Combined Ages,Combined Gender,110
+Cephalosporins,2016,Delaware,Combined Ages,Combined Gender,122
+Cephalosporins,2016,District Of Columbia,Combined Ages,Combined Gender,101
+Cephalosporins,2016,Florida,Combined Ages,Combined Gender,103
+Cephalosporins,2016,Georgia,Combined Ages,Combined Gender,120
+All classes,2017,National,0-19,Female,Insufficient Data
+Cephalosporins,2016,Hawaii,Combined Ages,Combined Gender,75
+Cephalosporins,2016,Idaho,Combined Ages,Combined Gender,103
+Cephalosporins,2016,Illinois,Combined Ages,Combined Gender,101
+Cephalosporins,2016,Indiana,Combined Ages,Combined Gender,169
+Cephalosporins,2016,Iowa,Combined Ages,Combined Gender,167
+Cephalosporins,2016,Kansas,Combined Ages,Combined Gender,153
+Cephalosporins,2016,Kentucky,Combined Ages,Combined Gender,205
+Cephalosporins,2016,Louisiana,Combined Ages,Combined Gender,149
+Cephalosporins,2016,Maine,Combined Ages,Combined Gender,82
+Cephalosporins,2016,Maryland,Combined Ages,Combined Gender,93
+Cephalosporins,2016,Massachusetts,Combined Ages,Combined Gender,86
+Cephalosporins,2016,Michigan,Combined Ages,Combined Gender,126
+Cephalosporins,2016,Minnesota,Combined Ages,Combined Gender,98
+Cephalosporins,2016,Mississippi,Combined Ages,Combined Gender,178
+Cephalosporins,2016,Missouri,Combined Ages,Combined Gender,132
+Cephalosporins,2016,Montana,Combined Ages,Combined Gender,80
+Cephalosporins,2016,Nebraska,Combined Ages,Combined Gender,175
+Cephalosporins,2016,Nevada,Combined Ages,Combined Gender,89
+Cephalosporins,2016,New Hampshire,Combined Ages,Combined Gender,89
+Cephalosporins,2016,New Jersey,Combined Ages,Combined Gender,109
+Cephalosporins,2016,New Mexico,Combined Ages,Combined Gender,94
+Cephalosporins,2016,New York,Combined Ages,Combined Gender,110
+Cephalosporins,2016,North Carolina,Combined Ages,Combined Gender,119
+Cephalosporins,2016,North Dakota,Combined Ages,Combined Gender,126
+Cephalosporins,2016,Ohio,Combined Ages,Combined Gender,129
+Cephalosporins,2016,Oklahoma,Combined Ages,Combined Gender,140
+Cephalosporins,2016,Oregon,Combined Ages,Combined Gender,71
+Cephalosporins,2016,Pennsylvania,Combined Ages,Combined Gender,116
+Cephalosporins,2016,Rhode Island,Combined Ages,Combined Gender,103
+Cephalosporins,2016,South Carolina,Combined Ages,Combined Gender,131
+Cephalosporins,2016,South Dakota,Combined Ages,Combined Gender,153
+Cephalosporins,2016,Tennessee,Combined Ages,Combined Gender,177
+Cephalosporins,2016,Texas,Combined Ages,Combined Gender,123
+Cephalosporins,2016,Utah,Combined Ages,Combined Gender,118
+Cephalosporins,2016,Vermont,Combined Ages,Combined Gender,82
+Cephalosporins,2016,Virginia,Combined Ages,Combined Gender,118
+Cephalosporins,2016,Washington,Combined Ages,Combined Gender,81
+Cephalosporins,2016,West Virginia,Combined Ages,Combined Gender,209
+Cephalosporins,2016,Wisconsin,Combined Ages,Combined Gender,93
+Cephalosporins,2016,Wyoming,Combined Ages,Combined Gender,113
+Fluoroquinolones,2016,Alabama,Combined Ages,Combined Gender,145
+Fluoroquinolones,2016,Alaska,Combined Ages,Combined Gender,51
+Fluoroquinolones,2016,Arizona,Combined Ages,Combined Gender,80
+Fluoroquinolones,2016,Arkansas,Combined Ages,Combined Gender,129
+Fluoroquinolones,2016,California,Combined Ages,Combined Gender,63
+Fluoroquinolones,2016,Colorado,Combined Ages,Combined Gender,52
+Fluoroquinolones,2016,Connecticut,Combined Ages,Combined Gender,84
+Fluoroquinolones,2016,Delaware,Combined Ages,Combined Gender,102
+Fluoroquinolones,2016,District Of Columbia,Combined Ages,Combined Gender,114
+Fluoroquinolones,2016,Florida,Combined Ages,Combined Gender,117
+Fluoroquinolones,2016,Georgia,Combined Ages,Combined Gender,100
+Fluoroquinolones,2016,Hawaii,Combined Ages,Combined Gender,72
+Fluoroquinolones,2016,Idaho,Combined Ages,Combined Gender,64
+Fluoroquinolones,2016,Illinois,Combined Ages,Combined Gender,87
+Fluoroquinolones,2016,Indiana,Combined Ages,Combined Gender,99
+Fluoroquinolones,2016,Iowa,Combined Ages,Combined Gender,103
+Fluoroquinolones,2016,Kansas,Combined Ages,Combined Gender,104
+Fluoroquinolones,2016,Kentucky,Combined Ages,Combined Gender,142
+Fluoroquinolones,2016,Louisiana,Combined Ages,Combined Gender,128
+Fluoroquinolones,2016,Maine,Combined Ages,Combined Gender,71
+Fluoroquinolones,2016,Maryland,Combined Ages,Combined Gender,84
+Fluoroquinolones,2016,Massachusetts,Combined Ages,Combined Gender,73
+Fluoroquinolones,2016,Michigan,Combined Ages,Combined Gender,92
+Fluoroquinolones,2016,Minnesota,Combined Ages,Combined Gender,63
+Fluoroquinolones,2016,Mississippi,Combined Ages,Combined Gender,139
+Fluoroquinolones,2016,Missouri,Combined Ages,Combined Gender,104
+Fluoroquinolones,2016,Montana,Combined Ages,Combined Gender,64
+Fluoroquinolones,2016,Nebraska,Combined Ages,Combined Gender,108
+Fluoroquinolones,2016,Nevada,Combined Ages,Combined Gender,82
+Fluoroquinolones,2016,New Hampshire,Combined Ages,Combined Gender,66
+Fluoroquinolones,2016,New Jersey,Combined Ages,Combined Gender,103
+Fluoroquinolones,2016,New Mexico,Combined Ages,Combined Gender,66
+Fluoroquinolones,2016,New York,Combined Ages,Combined Gender,105
+Fluoroquinolones,2016,North Carolina,Combined Ages,Combined Gender,98
+Fluoroquinolones,2016,North Dakota,Combined Ages,Combined Gender,94
+Fluoroquinolones,2016,Ohio,Combined Ages,Combined Gender,103
+Fluoroquinolones,2016,Oklahoma,Combined Ages,Combined Gender,97
+Fluoroquinolones,2016,Oregon,Combined Ages,Combined Gender,56
+Fluoroquinolones,2016,Pennsylvania,Combined Ages,Combined Gender,96
+Fluoroquinolones,2016,Rhode Island,Combined Ages,Combined Gender,97
+Fluoroquinolones,2016,South Carolina,Combined Ages,Combined Gender,114
+Fluoroquinolones,2016,South Dakota,Combined Ages,Combined Gender,84
+Fluoroquinolones,2016,Tennessee,Combined Ages,Combined Gender,135
+Fluoroquinolones,2016,Texas,Combined Ages,Combined Gender,93
+Fluoroquinolones,2016,Utah,Combined Ages,Combined Gender,62
+Fluoroquinolones,2016,Vermont,Combined Ages,Combined Gender,58
+Fluoroquinolones,2016,Virginia,Combined Ages,Combined Gender,82
+Fluoroquinolones,2016,Washington,Combined Ages,Combined Gender,51
+Fluoroquinolones,2016,West Virginia,Combined Ages,Combined Gender,140
+Fluoroquinolones,2016,Wisconsin,Combined Ages,Combined Gender,68
+Fluoroquinolones,2016,Wyoming,Combined Ages,Combined Gender,65
+Macrolides,2016,Alabama,Combined Ages,Combined Gender,214
+Macrolides,2016,Alaska,Combined Ages,Combined Gender,98
+Macrolides,2016,Arizona,Combined Ages,Combined Gender,133
+Macrolides,2016,Arkansas,Combined Ages,Combined Gender,192
+Macrolides,2016,California,Combined Ages,Combined Gender,105
+Macrolides,2016,Colorado,Combined Ages,Combined Gender,94
+Macrolides,2016,Connecticut,Combined Ages,Combined Gender,153
+Macrolides,2016,Delaware,Combined Ages,Combined Gender,162
+Macrolides,2016,District Of Columbia,Combined Ages,Combined Gender,156
+Macrolides,2016,Florida,Combined Ages,Combined Gender,151
+Macrolides,2016,Georgia,Combined Ages,Combined Gender,150
+Macrolides,2016,Hawaii,Combined Ages,Combined Gender,125
+Macrolides,2016,Idaho,Combined Ages,Combined Gender,113
+Macrolides,2016,Illinois,Combined Ages,Combined Gender,157
+Macrolides,2016,Indiana,Combined Ages,Combined Gender,161
+Macrolides,2016,Iowa,Combined Ages,Combined Gender,179
+Macrolides,2016,Kansas,Combined Ages,Combined Gender,160
+Macrolides,2016,Kentucky,Combined Ages,Combined Gender,225
+Macrolides,2016,Louisiana,Combined Ages,Combined Gender,226
+Macrolides,2016,Maine,Combined Ages,Combined Gender,127
+Macrolides,2016,Maryland,Combined Ages,Combined Gender,139
+Macrolides,2016,Massachusetts,Combined Ages,Combined Gender,121
+Macrolides,2016,Michigan,Combined Ages,Combined Gender,163
+Macrolides,2016,Minnesota,Combined Ages,Combined Gender,115
+Macrolides,2016,Mississippi,Combined Ages,Combined Gender,239
+Macrolides,2016,Missouri,Combined Ages,Combined Gender,153
+Macrolides,2016,Montana,Combined Ages,Combined Gender,111
+Macrolides,2016,Nebraska,Combined Ages,Combined Gender,159
+Macrolides,2016,Nevada,Combined Ages,Combined Gender,133
+Macrolides,2016,New Hampshire,Combined Ages,Combined Gender,115
+Macrolides,2016,New Jersey,Combined Ages,Combined Gender,190
+Macrolides,2016,New Mexico,Combined Ages,Combined Gender,129
+Macrolides,2016,New York,Combined Ages,Combined Gender,173
+Macrolides,2016,North Carolina,Combined Ages,Combined Gender,136
+Macrolides,2016,North Dakota,Combined Ages,Combined Gender,127
+Macrolides,2016,Ohio,Combined Ages,Combined Gender,164
+Macrolides,2016,Oklahoma,Combined Ages,Combined Gender,159
+Macrolides,2016,Oregon,Combined Ages,Combined Gender,83
+Macrolides,2016,Pennsylvania,Combined Ages,Combined Gender,157
+Macrolides,2016,Rhode Island,Combined Ages,Combined Gender,172
+Macrolides,2016,South Carolina,Combined Ages,Combined Gender,163
+Macrolides,2016,South Dakota,Combined Ages,Combined Gender,154
+Macrolides,2016,Tennessee,Combined Ages,Combined Gender,196
+Macrolides,2016,Texas,Combined Ages,Combined Gender,150
+Macrolides,2016,Utah,Combined Ages,Combined Gender,113
+Macrolides,2016,Vermont,Combined Ages,Combined Gender,107
+Macrolides,2016,Virginia,Combined Ages,Combined Gender,135
+Macrolides,2016,Washington,Combined Ages,Combined Gender,94
+Macrolides,2016,West Virginia,Combined Ages,Combined Gender,204
+Macrolides,2016,Wisconsin,Combined Ages,Combined Gender,121
+Macrolides,2016,Wyoming,Combined Ages,Combined Gender,138
+Penicillins,2016,Alabama,Combined Ages,Combined Gender,238
+Penicillins,2016,Alaska,Combined Ages,Combined Gender,111
+Penicillins,2016,Arizona,Combined Ages,Combined Gender,163
+Penicillins,2016,Arkansas,Combined Ages,Combined Gender,249
+Penicillins,2016,California,Combined Ages,Combined Gender,142
+Penicillins,2016,Colorado,Combined Ages,Combined Gender,150
+Penicillins,2016,Connecticut,Combined Ages,Combined Gender,197
+Penicillins,2016,Delaware,Combined Ages,Combined Gender,216
+Penicillins,2016,District Of Columbia,Combined Ages,Combined Gender,212
+Penicillins,2016,Florida,Combined Ages,Combined Gender,197
+Penicillins,2016,Georgia,Combined Ages,Combined Gender,221
+Penicillins,2016,Hawaii,Combined Ages,Combined Gender,133
+Penicillins,2016,Idaho,Combined Ages,Combined Gender,157
+Penicillins,2016,Illinois,Combined Ages,Combined Gender,210
+Penicillins,2016,Indiana,Combined Ages,Combined Gender,219
+Penicillins,2016,Iowa,Combined Ages,Combined Gender,217
+Penicillins,2016,Kansas,Combined Ages,Combined Gender,206
+Penicillins,2016,Kentucky,Combined Ages,Combined Gender,287
+Penicillins,2016,Louisiana,Combined Ages,Combined Gender,254
+Penicillins,2016,Maine,Combined Ages,Combined Gender,157
+Penicillins,2016,Maryland,Combined Ages,Combined Gender,193
+Penicillins,2016,Massachusetts,Combined Ages,Combined Gender,189
+Penicillins,2016,Michigan,Combined Ages,Combined Gender,226
+Penicillins,2016,Minnesota,Combined Ages,Combined Gender,175
+Penicillins,2016,Mississippi,Combined Ages,Combined Gender,243
+Penicillins,2016,Missouri,Combined Ages,Combined Gender,214
+Penicillins,2016,Montana,Combined Ages,Combined Gender,137
+Penicillins,2016,Nebraska,Combined Ages,Combined Gender,246
+Penicillins,2016,Nevada,Combined Ages,Combined Gender,168
+Penicillins,2016,New Hampshire,Combined Ages,Combined Gender,169
+Penicillins,2016,New Jersey,Combined Ages,Combined Gender,214
+Penicillins,2016,New Mexico,Combined Ages,Combined Gender,174
+Penicillins,2016,New York,Combined Ages,Combined Gender,214
+Penicillins,2016,North Carolina,Combined Ages,Combined Gender,191
+Penicillins,2016,North Dakota,Combined Ages,Combined Gender,164
+Penicillins,2016,Ohio,Combined Ages,Combined Gender,227
+Penicillins,2016,Oklahoma,Combined Ages,Combined Gender,201
+Penicillins,2016,Oregon,Combined Ages,Combined Gender,125
+Penicillins,2016,Pennsylvania,Combined Ages,Combined Gender,219
+Penicillins,2016,Rhode Island,Combined Ages,Combined Gender,205
+Penicillins,2016,South Carolina,Combined Ages,Combined Gender,217
+Penicillins,2016,South Dakota,Combined Ages,Combined Gender,211
+Penicillins,2016,Tennessee,Combined Ages,Combined Gender,240
+Penicillins,2016,Texas,Combined Ages,Combined Gender,201
+Penicillins,2016,Utah,Combined Ages,Combined Gender,205
+Penicillins,2016,Vermont,Combined Ages,Combined Gender,155
+Penicillins,2016,Virginia,Combined Ages,Combined Gender,186
+Penicillins,2016,Washington,Combined Ages,Combined Gender,128
+Penicillins,2016,West Virginia,Combined Ages,Combined Gender,258
+Penicillins,2016,Wisconsin,Combined Ages,Combined Gender,173
+Penicillins,2016,Wyoming,Combined Ages,Combined Gender,168
+All classes,2017,National,0-19,Combined Gender,760
+B-lactams increased activity,2017,National,0-19,Combined Gender,79
+Cephalosporins,2017,National,0-19,Combined Gender,137
+Fluoroquinolones,2017,National,0-19,Combined Gender,6
+Lincosamides,2017,National,0-19,Combined Gender,14
+Macrolides,2017,National,0-19,Combined Gender,119
+Other,2017,National,0-19,Combined Gender,Insufficient Data
+Penicillins,2017,National,0-19,Combined Gender,312
+Tetracycline,2017,National,0-19,Combined Gender,43
+Trimethoprim-sulfamethoxazole,2017,National,0-19,Combined Gender,40
+Urinary anti-infectives,2017,National,0-19,Combined Gender,10
+B-lactams increased activity,2017,National,0-19,Female,Insufficient Data
+Cephalosporins,2017,National,0-19,Female,Insufficient Data
+Fluoroquinolones,2017,National,0-19,Female,Insufficient Data
+Lincosamides,2017,National,0-19,Female,Insufficient Data
+Macrolides,2017,National,0-19,Female,Insufficient Data
+Other,2017,National,0-19,Female,Insufficient Data
+Penicillins,2017,National,0-19,Female,Insufficient Data
+Tetracycline,2017,National,0-19,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2017,National,0-19,Female,Insufficient Data
+Urinary anti-infectives,2017,National,0-19,Female,Insufficient Data
+All classes,2017,National,0-19,Male,Insufficient Data
+B-lactams increased activity,2017,National,0-19,Male,Insufficient Data
+Cephalosporins,2017,National,0-19,Male,Insufficient Data
+Fluoroquinolones,2017,National,0-19,Male,Insufficient Data
+Lincosamides,2017,National,0-19,Male,Insufficient Data
+Macrolides,2017,National,0-19,Male,Insufficient Data
+Other,2017,National,0-19,Male,Insufficient Data
+Penicillins,2017,National,0-19,Male,Insufficient Data
+Tetracycline,2017,National,0-19,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2017,National,0-19,Male,Insufficient Data
+Urinary anti-infectives,2017,National,0-19,Male,Insufficient Data
+All classes,2017,National,20+,Combined Gender,842
+B-lactams increased activity,2017,National,20+,Combined Gender,86
+Cephalosporins,2017,National,20+,Combined Gender,107
+Fluoroquinolones,2017,National,20+,Combined Gender,102
+Lincosamides,2017,National,20+,Combined Gender,37
+Macrolides,2017,National,20+,Combined Gender,149
+Other,2017,National,20+,Combined Gender,2
+Penicillins,2017,National,20+,Combined Gender,154
+Tetracycline,2017,National,20+,Combined Gender,81
+Trimethoprim-sulfamethoxazole,2017,National,20+,Combined Gender,68
+Urinary anti-infectives,2017,National,20+,Combined Gender,56
+All classes,2017,National,20+,Female,Insufficient Data
+B-lactams increased activity,2017,National,20+,Female,Insufficient Data
+Cephalosporins,2017,National,20+,Female,Insufficient Data
+Fluoroquinolones,2017,National,20+,Female,Insufficient Data
+Lincosamides,2017,National,20+,Female,Insufficient Data
+Macrolides,2017,National,20+,Female,Insufficient Data
+Other,2017,National,20+,Female,Insufficient Data
+Penicillins,2017,National,20+,Female,Insufficient Data
+Tetracycline,2017,National,20+,Female,Insufficient Data
+Trimethoprim-sulfamethoxazole,2017,National,20+,Female,Insufficient Data
+Urinary anti-infectives,2017,National,20+,Female,Insufficient Data
+All classes,2017,National,20+,Male,Insufficient Data
+B-lactams increased activity,2017,National,20+,Male,Insufficient Data
+Cephalosporins,2017,National,20+,Male,Insufficient Data
+Fluoroquinolones,2017,National,20+,Male,Insufficient Data
+Lincosamides,2017,National,20+,Male,Insufficient Data
+Macrolides,2017,National,20+,Male,Insufficient Data
+Other,2017,National,20+,Male,Insufficient Data
+Penicillins,2017,National,20+,Male,Insufficient Data
+Tetracycline,2017,National,20+,Male,Insufficient Data
+Trimethoprim-sulfamethoxazole,2017,National,20+,Male,Insufficient Data
+Urinary anti-infectives,2017,National,20+,Male,Insufficient Data
+All classes,2017,National,Combined Ages,Combined Gender,821
+B-lactams increased activity,2017,National,Combined Ages,Combined Gender,84
+Cephalosporins,2017,National,Combined Ages,Combined Gender,115
+Fluoroquinolones,2017,National,Combined Ages,Combined Gender,78
+Lincosamides,2017,National,Combined Ages,Combined Gender,31
+All other,2017,Kentucky,Combined Ages,Combined Gender,Insufficient Data
+Macrolides,2017,National,Combined Ages,Combined Gender,142
+Other,2017,National,Combined Ages,Combined Gender,2
+Penicillins,2017,National,Combined Ages,Combined Gender,194
+Tetracycline,2017,National,Combined Ages,Combined Gender,71
+Trimethoprim-sulfamethoxazole,2017,National,Combined Ages,Combined Gender,61
+Urinary anti-infectives,2017,National,Combined Ages,Combined Gender,44
+All classes,2017,National,Combined Ages,Female,986
+B-lactams increased activity,2017,National,Combined Ages,Female,96
+Cephalosporins,2017,National,Combined Ages,Female,134
+Fluoroquinolones,2017,National,Combined Ages,Female,97
+Lincosamides,2017,National,Combined Ages,Female,37
+Macrolides,2017,National,Combined Ages,Female,170
+Other,2017,National,Combined Ages,Female,2
+Penicillins,2017,National,Combined Ages,Female,212
+Tetracycline,2017,National,Combined Ages,Female,82
+Trimethoprim-sulfamethoxazole,2017,National,Combined Ages,Female,76
+Urinary anti-infectives,2017,National,Combined Ages,Female,80
+All classes,2017,National,Combined Ages,Male,651
+B-lactams increased activity,2017,National,Combined Ages,Male,72
+Cephalosporins,2017,National,Combined Ages,Male,95
+Fluoroquinolones,2017,National,Combined Ages,Male,58
+Lincosamides,2017,National,Combined Ages,Male,25
+Macrolides,2017,National,Combined Ages,Male,112
+Other,2017,National,Combined Ages,Male,1
+Penicillins,2017,National,Combined Ages,Male,175
+Tetracycline,2017,National,Combined Ages,Male,60
+Trimethoprim-sulfamethoxazole,2017,National,Combined Ages,Male,45
+Urinary anti-infectives,2017,National,Combined Ages,Male,8
+All classes,2017,Alabama,Combined Ages,Combined Gender,1178
+All classes,2017,Alaska,Combined Ages,Combined Gender,504
+All classes,2017,Arizona,Combined Ages,Combined Gender,735
+All classes,2017,Arkansas,Combined Ages,Combined Gender,1107
+All classes,2017,California,Combined Ages,Combined Gender,565
+All classes,2017,Colorado,Combined Ages,Combined Gender,565
+All classes,2017,Connecticut,Combined Ages,Combined Gender,839
+All classes,2017,Delaware,Combined Ages,Combined Gender,885
+All classes,2017,District Of Columbia,Combined Ages,Combined Gender,910
+All classes,2017,Florida,Combined Ages,Combined Gender,831
+All classes,2017,Georgia,Combined Ages,Combined Gender,872
+All classes,2017,Hawaii,Combined Ages,Combined Gender,618
+All classes,2017,Idaho,Combined Ages,Combined Gender,674
+All classes,2017,Illinois,Combined Ages,Combined Gender,822
+All classes,2017,Indiana,Combined Ages,Combined Gender,933
+All classes,2017,Iowa,Combined Ages,Combined Gender,946
+All classes,2017,Kansas,Combined Ages,Combined Gender,931
+All classes,2017,Kentucky,Combined Ages,Combined Gender,1239
+All classes,2017,Louisiana,Combined Ages,Combined Gender,1204
+All classes,2017,Maine,Combined Ages,Combined Gender,698
+All classes,2017,Maryland,Combined Ages,Combined Gender,764
+All classes,2017,Massachusetts,Combined Ages,Combined Gender,748
+All classes,2017,Michigan,Combined Ages,Combined Gender,885
+All classes,2017,Minnesota,Combined Ages,Combined Gender,658
+All classes,2017,Mississippi,Combined Ages,Combined Gender,1222
+All classes,2017,Missouri,Combined Ages,Combined Gender,890
+All classes,2017,Montana,Combined Ages,Combined Gender,617
+All classes,2017,Nebraska,Combined Ages,Combined Gender,986
+All classes,2017,Nevada,Combined Ages,Combined Gender,711
+All classes,2017,New Hampshire,Combined Ages,Combined Gender,724
+All classes,2017,New Jersey,Combined Ages,Combined Gender,891
+All classes,2017,New Mexico,Combined Ages,Combined Gender,681
+All classes,2017,New York,Combined Ages,Combined Gender,899
+All classes,2017,North Carolina,Combined Ages,Combined Gender,844
+All classes,2017,North Dakota,Combined Ages,Combined Gender,768
+All classes,2017,Ohio,Combined Ages,Combined Gender,945
+All classes,2017,Oklahoma,Combined Ages,Combined Gender,901
+All classes,2017,Oregon,Combined Ages,Combined Gender,520
+All classes,2017,Pennsylvania,Combined Ages,Combined Gender,879
+All classes,2017,Rhode Island,Combined Ages,Combined Gender,883
+All classes,2017,South Carolina,Combined Ages,Combined Gender,929
+All classes,2017,South Dakota,Combined Ages,Combined Gender,862
+All classes,2017,Tennessee,Combined Ages,Combined Gender,1142
+All classes,2017,Texas,Combined Ages,Combined Gender,852
+All classes,2017,Utah,Combined Ages,Combined Gender,725
+All classes,2017,Vermont,Combined Ages,Combined Gender,645
+All classes,2017,Virginia,Combined Ages,Combined Gender,784
+All classes,2017,Washington,Combined Ages,Combined Gender,560
+All classes,2017,West Virginia,Combined Ages,Combined Gender,1254
+All classes,2017,Wisconsin,Combined Ages,Combined Gender,703
+All classes,2017,Wyoming,Combined Ages,Combined Gender,770
+All other,2017,Alabama,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Alaska,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Arizona,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Arkansas,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,California,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Colorado,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Connecticut,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Delaware,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,District Of Columbia,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Florida,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Georgia,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Hawaii,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Idaho,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Illinois,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Indiana,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Iowa,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Kansas,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Louisiana,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Maine,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Maryland,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Massachusetts,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Michigan,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Minnesota,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Mississippi,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Missouri,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Montana,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Nebraska,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Nevada,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,New Hampshire,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,New Jersey,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,New Mexico,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,New York,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,North Carolina,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,North Dakota,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Ohio,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Oklahoma,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Oregon,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Pennsylvania,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Rhode Island,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,South Carolina,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,South Dakota,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Tennessee,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Texas,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Utah,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Vermont,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Virginia,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Washington,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,West Virginia,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Wisconsin,Combined Ages,Combined Gender,Insufficient Data
+All other,2017,Wyoming,Combined Ages,Combined Gender,Insufficient Data
+Cephalosporins,2017,Alabama,Combined Ages,Combined Gender,189
+Cephalosporins,2017,Alaska,Combined Ages,Combined Gender,63
+Cephalosporins,2017,Arizona,Combined Ages,Combined Gender,106
+Cephalosporins,2017,Arkansas,Combined Ages,Combined Gender,176
+Cephalosporins,2017,California,Combined Ages,Combined Gender,74
+Cephalosporins,2017,Colorado,Combined Ages,Combined Gender,80
+Cephalosporins,2017,Connecticut,Combined Ages,Combined Gender,111
+Cephalosporins,2017,Delaware,Combined Ages,Combined Gender,123
+Cephalosporins,2017,District Of Columbia,Combined Ages,Combined Gender,104
+Cephalosporins,2017,Florida,Combined Ages,Combined Gender,103
+Cephalosporins,2017,Georgia,Combined Ages,Combined Gender,118
+Cephalosporins,2017,Hawaii,Combined Ages,Combined Gender,79
+Cephalosporins,2017,Idaho,Combined Ages,Combined Gender,104
+Cephalosporins,2017,Illinois,Combined Ages,Combined Gender,102
+Cephalosporins,2017,Indiana,Combined Ages,Combined Gender,167
+Cephalosporins,2017,Iowa,Combined Ages,Combined Gender,162
+Cephalosporins,2017,Kansas,Combined Ages,Combined Gender,150
+Cephalosporins,2017,Kentucky,Combined Ages,Combined Gender,207
+Cephalosporins,2017,Louisiana,Combined Ages,Combined Gender,154
+Cephalosporins,2017,Maine,Combined Ages,Combined Gender,82
+Cephalosporins,2017,Maryland,Combined Ages,Combined Gender,93
+Cephalosporins,2017,Massachusetts,Combined Ages,Combined Gender,88
+Cephalosporins,2017,Michigan,Combined Ages,Combined Gender,127
+Cephalosporins,2017,Minnesota,Combined Ages,Combined Gender,97
+Cephalosporins,2017,Mississippi,Combined Ages,Combined Gender,179
+Cephalosporins,2017,Missouri,Combined Ages,Combined Gender,131
+Cephalosporins,2017,Montana,Combined Ages,Combined Gender,84
+Cephalosporins,2017,Nebraska,Combined Ages,Combined Gender,165
+Cephalosporins,2017,Nevada,Combined Ages,Combined Gender,91
+Cephalosporins,2017,New Hampshire,Combined Ages,Combined Gender,92
+Cephalosporins,2017,New Jersey,Combined Ages,Combined Gender,110
+Cephalosporins,2017,New Mexico,Combined Ages,Combined Gender,93
+Cephalosporins,2017,New York,Combined Ages,Combined Gender,113
+Cephalosporins,2017,North Carolina,Combined Ages,Combined Gender,121
+Cephalosporins,2017,North Dakota,Combined Ages,Combined Gender,123
+Cephalosporins,2017,Ohio,Combined Ages,Combined Gender,131
+Cephalosporins,2017,Oklahoma,Combined Ages,Combined Gender,144
+Cephalosporins,2017,Oregon,Combined Ages,Combined Gender,72
+Cephalosporins,2017,Pennsylvania,Combined Ages,Combined Gender,117
+Cephalosporins,2017,Rhode Island,Combined Ages,Combined Gender,104
+Cephalosporins,2017,South Carolina,Combined Ages,Combined Gender,130
+Cephalosporins,2017,South Dakota,Combined Ages,Combined Gender,150
+Cephalosporins,2017,Tennessee,Combined Ages,Combined Gender,176
+Cephalosporins,2017,Texas,Combined Ages,Combined Gender,124
+Cephalosporins,2017,Utah,Combined Ages,Combined Gender,117
+Cephalosporins,2017,Vermont,Combined Ages,Combined Gender,84
+Cephalosporins,2017,Virginia,Combined Ages,Combined Gender,120
+Cephalosporins,2017,Washington,Combined Ages,Combined Gender,80
+Cephalosporins,2017,West Virginia,Combined Ages,Combined Gender,216
+Cephalosporins,2017,Wisconsin,Combined Ages,Combined Gender,93
+Cephalosporins,2017,Wyoming,Combined Ages,Combined Gender,120
+Fluoroquinolones,2017,Alabama,Combined Ages,Combined Gender,123
+Fluoroquinolones,2017,Alaska,Combined Ages,Combined Gender,42
+Fluoroquinolones,2017,Arizona,Combined Ages,Combined Gender,70
+Fluoroquinolones,2017,Arkansas,Combined Ages,Combined Gender,109
+Fluoroquinolones,2017,California,Combined Ages,Combined Gender,56
+Fluoroquinolones,2017,Colorado,Combined Ages,Combined Gender,42
+Fluoroquinolones,2017,Connecticut,Combined Ages,Combined Gender,72
+Fluoroquinolones,2017,Delaware,Combined Ages,Combined Gender,81
+Fluoroquinolones,2017,District Of Columbia,Combined Ages,Combined Gender,91
+Fluoroquinolones,2017,Florida,Combined Ages,Combined Gender,102
+Fluoroquinolones,2017,Georgia,Combined Ages,Combined Gender,85
+Fluoroquinolones,2017,Hawaii,Combined Ages,Combined Gender,64
+Fluoroquinolones,2017,Idaho,Combined Ages,Combined Gender,53
+Fluoroquinolones,2017,Illinois,Combined Ages,Combined Gender,72
+Fluoroquinolones,2017,Indiana,Combined Ages,Combined Gender,83
+Fluoroquinolones,2017,Iowa,Combined Ages,Combined Gender,84
+Fluoroquinolones,2017,Kansas,Combined Ages,Combined Gender,85
+Fluoroquinolones,2017,Kentucky,Combined Ages,Combined Gender,117
+Fluoroquinolones,2017,Louisiana,Combined Ages,Combined Gender,115
+Fluoroquinolones,2017,Maine,Combined Ages,Combined Gender,61
+Fluoroquinolones,2017,Maryland,Combined Ages,Combined Gender,70
+Fluoroquinolones,2017,Massachusetts,Combined Ages,Combined Gender,62
+Fluoroquinolones,2017,Michigan,Combined Ages,Combined Gender,79
+Fluoroquinolones,2017,Minnesota,Combined Ages,Combined Gender,52
+Fluoroquinolones,2017,Mississippi,Combined Ages,Combined Gender,120
+Fluoroquinolones,2017,Missouri,Combined Ages,Combined Gender,86
+Fluoroquinolones,2017,Montana,Combined Ages,Combined Gender,52
+Fluoroquinolones,2017,Nebraska,Combined Ages,Combined Gender,91
+Fluoroquinolones,2017,Nevada,Combined Ages,Combined Gender,71
+Fluoroquinolones,2017,New Hampshire,Combined Ages,Combined Gender,54
+Fluoroquinolones,2017,New Jersey,Combined Ages,Combined Gender,85
+Fluoroquinolones,2017,New Mexico,Combined Ages,Combined Gender,57
+Fluoroquinolones,2017,New York,Combined Ages,Combined Gender,89
+Fluoroquinolones,2017,North Carolina,Combined Ages,Combined Gender,83
+Fluoroquinolones,2017,North Dakota,Combined Ages,Combined Gender,79
+Fluoroquinolones,2017,Ohio,Combined Ages,Combined Gender,87
+Fluoroquinolones,2017,Oklahoma,Combined Ages,Combined Gender,83
+Fluoroquinolones,2017,Oregon,Combined Ages,Combined Gender,45
+Fluoroquinolones,2017,Pennsylvania,Combined Ages,Combined Gender,80
+Fluoroquinolones,2017,Rhode Island,Combined Ages,Combined Gender,85
+Fluoroquinolones,2017,South Carolina,Combined Ages,Combined Gender,96
+Fluoroquinolones,2017,South Dakota,Combined Ages,Combined Gender,70
+Fluoroquinolones,2017,Tennessee,Combined Ages,Combined Gender,113
+Fluoroquinolones,2017,Texas,Combined Ages,Combined Gender,82
+Fluoroquinolones,2017,Utah,Combined Ages,Combined Gender,52
+Fluoroquinolones,2017,Vermont,Combined Ages,Combined Gender,50
+Fluoroquinolones,2017,Virginia,Combined Ages,Combined Gender,70
+Fluoroquinolones,2017,Washington,Combined Ages,Combined Gender,42
+Fluoroquinolones,2017,West Virginia,Combined Ages,Combined Gender,117
+Fluoroquinolones,2017,Wisconsin,Combined Ages,Combined Gender,56
+Fluoroquinolones,2017,Wyoming,Combined Ages,Combined Gender,56
+Macrolides,2017,Alabama,Combined Ages,Combined Gender,207
+Macrolides,2017,Alaska,Combined Ages,Combined Gender,93
+Macrolides,2017,Arizona,Combined Ages,Combined Gender,127
+Macrolides,2017,Arkansas,Combined Ages,Combined Gender,189
+Macrolides,2017,California,Combined Ages,Combined Gender,106
+Macrolides,2017,Colorado,Combined Ages,Combined Gender,89
+Macrolides,2017,Connecticut,Combined Ages,Combined Gender,149
+Macrolides,2017,Delaware,Combined Ages,Combined Gender,146
+Macrolides,2017,District Of Columbia,Combined Ages,Combined Gender,146
+Macrolides,2017,Florida,Combined Ages,Combined Gender,145
+Macrolides,2017,Georgia,Combined Ages,Combined Gender,142
+Macrolides,2017,Hawaii,Combined Ages,Combined Gender,124
+Macrolides,2017,Idaho,Combined Ages,Combined Gender,107
+Macrolides,2017,Illinois,Combined Ages,Combined Gender,146
+Macrolides,2017,Indiana,Combined Ages,Combined Gender,148
+Macrolides,2017,Iowa,Combined Ages,Combined Gender,162
+Macrolides,2017,Kansas,Combined Ages,Combined Gender,146
+Macrolides,2017,Kentucky,Combined Ages,Combined Gender,209
+Macrolides,2017,Louisiana,Combined Ages,Combined Gender,223
+Macrolides,2017,Maine,Combined Ages,Combined Gender,121
+Macrolides,2017,Maryland,Combined Ages,Combined Gender,131
+Macrolides,2017,Massachusetts,Combined Ages,Combined Gender,121
+Macrolides,2017,Michigan,Combined Ages,Combined Gender,158
+Macrolides,2017,Minnesota,Combined Ages,Combined Gender,104
+Macrolides,2017,Mississippi,Combined Ages,Combined Gender,234
+Macrolides,2017,Missouri,Combined Ages,Combined Gender,141
+Macrolides,2017,Montana,Combined Ages,Combined Gender,102
+Macrolides,2017,Nebraska,Combined Ages,Combined Gender,143
+Macrolides,2017,Nevada,Combined Ages,Combined Gender,129
+Macrolides,2017,New Hampshire,Combined Ages,Combined Gender,111
+Macrolides,2017,New Jersey,Combined Ages,Combined Gender,181
+Macrolides,2017,New Mexico,Combined Ages,Combined Gender,119
+Macrolides,2017,New York,Combined Ages,Combined Gender,168
+Macrolides,2017,North Carolina,Combined Ages,Combined Gender,129
+Macrolides,2017,North Dakota,Combined Ages,Combined Gender,122
+Macrolides,2017,Ohio,Combined Ages,Combined Gender,154
+Macrolides,2017,Oklahoma,Combined Ages,Combined Gender,156
+Macrolides,2017,Oregon,Combined Ages,Combined Gender,77
+Macrolides,2017,Pennsylvania,Combined Ages,Combined Gender,148
+Macrolides,2017,Rhode Island,Combined Ages,Combined Gender,168
+Macrolides,2017,South Carolina,Combined Ages,Combined Gender,153
+Macrolides,2017,South Dakota,Combined Ages,Combined Gender,139
+Macrolides,2017,Tennessee,Combined Ages,Combined Gender,187
+Macrolides,2017,Texas,Combined Ages,Combined Gender,152
+Macrolides,2017,Utah,Combined Ages,Combined Gender,105
+Macrolides,2017,Vermont,Combined Ages,Combined Gender,106
+Macrolides,2017,Virginia,Combined Ages,Combined Gender,128
+Macrolides,2017,Washington,Combined Ages,Combined Gender,87
+Macrolides,2017,West Virginia,Combined Ages,Combined Gender,195
+Macrolides,2017,Wisconsin,Combined Ages,Combined Gender,107
+Macrolides,2017,Wyoming,Combined Ages,Combined Gender,136
+Penicillins,2017,Alabama,Combined Ages,Combined Gender,242
+Penicillins,2017,Alaska,Combined Ages,Combined Gender,110
+Penicillins,2017,Arizona,Combined Ages,Combined Gender,161
+Penicillins,2017,Arkansas,Combined Ages,Combined Gender,240
+Penicillins,2017,California,Combined Ages,Combined Gender,141
+Penicillins,2017,Colorado,Combined Ages,Combined Gender,145
+Penicillins,2017,Connecticut,Combined Ages,Combined Gender,196
+Penicillins,2017,Delaware,Combined Ages,Combined Gender,209
+Penicillins,2017,District Of Columbia,Combined Ages,Combined Gender,216
+Penicillins,2017,Florida,Combined Ages,Combined Gender,191
+Penicillins,2017,Georgia,Combined Ages,Combined Gender,217
+Penicillins,2017,Hawaii,Combined Ages,Combined Gender,134
+Penicillins,2017,Idaho,Combined Ages,Combined Gender,154
+Penicillins,2017,Illinois,Combined Ages,Combined Gender,209
+Penicillins,2017,Indiana,Combined Ages,Combined Gender,213
+Penicillins,2017,Iowa,Combined Ages,Combined Gender,209
+Penicillins,2017,Kansas,Combined Ages,Combined Gender,202
+Penicillins,2017,Kentucky,Combined Ages,Combined Gender,280
+Penicillins,2017,Louisiana,Combined Ages,Combined Gender,260
+Penicillins,2017,Maine,Combined Ages,Combined Gender,152
+Penicillins,2017,Maryland,Combined Ages,Combined Gender,190
+Penicillins,2017,Massachusetts,Combined Ages,Combined Gender,188
+Penicillins,2017,Michigan,Combined Ages,Combined Gender,224
+Penicillins,2017,Minnesota,Combined Ages,Combined Gender,168
+Penicillins,2017,Mississippi,Combined Ages,Combined Gender,246
+Penicillins,2017,Missouri,Combined Ages,Combined Gender,208
+Penicillins,2017,Montana,Combined Ages,Combined Gender,133
+Penicillins,2017,Nebraska,Combined Ages,Combined Gender,231
+Penicillins,2017,Nevada,Combined Ages,Combined Gender,166
+Penicillins,2017,New Hampshire,Combined Ages,Combined Gender,171
+Penicillins,2017,New Jersey,Combined Ages,Combined Gender,213
+Penicillins,2017,New Mexico,Combined Ages,Combined Gender,167
+Penicillins,2017,New York,Combined Ages,Combined Gender,215
+Penicillins,2017,North Carolina,Combined Ages,Combined Gender,193
+Penicillins,2017,North Dakota,Combined Ages,Combined Gender,159
+Penicillins,2017,Ohio,Combined Ages,Combined Gender,224
+Penicillins,2017,Oklahoma,Combined Ages,Combined Gender,204
+Penicillins,2017,Oregon,Combined Ages,Combined Gender,117
+Penicillins,2017,Pennsylvania,Combined Ages,Combined Gender,217
+Penicillins,2017,Rhode Island,Combined Ages,Combined Gender,202
+Penicillins,2017,South Carolina,Combined Ages,Combined Gender,213
+Penicillins,2017,South Dakota,Combined Ages,Combined Gender,203
+Penicillins,2017,Tennessee,Combined Ages,Combined Gender,240
+Penicillins,2017,Texas,Combined Ages,Combined Gender,202
+Penicillins,2017,Utah,Combined Ages,Combined Gender,195
+Penicillins,2017,Vermont,Combined Ages,Combined Gender,152
+Penicillins,2017,Virginia,Combined Ages,Combined Gender,188
+Penicillins,2017,Washington,Combined Ages,Combined Gender,124
+Penicillins,2017,West Virginia,Combined Ages,Combined Gender,258
+Penicillins,2017,Wisconsin,Combined Ages,Combined Gender,167
+Penicillins,2017,Wyoming,Combined Ages,Combined Gender,174
