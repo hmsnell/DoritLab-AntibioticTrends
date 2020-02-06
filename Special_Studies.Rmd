@@ -776,7 +776,7 @@ MDR_Paeru_ceph <- ceph_use %>%
 
 ggplot(data = MDR_Paeru_ceph, mapping = aes(x = Total_Rate, y = as.numeric(as.character(PercentResistant)))) + geom_point() + labs(title = "2011-2014 P. aeruginosa MDR and Cephalosporins Use") + geom_smooth(method = "lm", se = FALSE, fullrange = TRUE, color = "black")
 
-##############
+#############
 
 # P. aeruginosa MDR and Fluoroquinolones
 
