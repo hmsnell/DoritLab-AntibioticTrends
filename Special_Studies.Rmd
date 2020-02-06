@@ -3,7 +3,6 @@ title: "Special_Studies"
 output: html_document
 ---
 
-Hello my name is Hannah 
 # Data Loading:
 ```{r}
 library(ggplot2)
