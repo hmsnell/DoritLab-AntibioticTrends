@@ -14,15 +14,16 @@ require(tidyverse)
 
 ## Resistance Data 
 
-```{r}
+```{r, include = FALSE}
 resistance_state <- read.csv("Resist_States.csv")
 resistance_region <- read.csv("Resist_Regional.csv")
 resistance_national <- read.csv("Resist_National.csv")
+IsolateData_2 <- read.csv("IsolateData-2.csv")
 ```
 
 ## Outpatient Antibiotic Use Data 
 
-```{r}
+```{r, include = FALSE} 
 antibiotic_use <- read.csv("Outpatient_Antibiotic_Use.csv") 
 antibiotic_use <- antibiotic_use %>% 
   mutate(State = recode(Location, 
@@ -95,13 +96,13 @@ IsolateData_2 %>% distinct(Species)
 ```{r}
 isolate_enterica <- IsolateData_2 %>% 
   filter(Species == "enterica") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz1 <- ggplot(data = isolate_enterica, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz1 <- ggplot(data = isolate_enterica, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Enterica")
 testviz1
   
 
@@ -113,13 +114,13 @@ testviz1
 ```{r}
 isolate_jejuni <- IsolateData_2 %>% 
   filter(Species == "jejuni") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz2 <- ggplot(data = isolate_jejuni, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz2 <- ggplot(data = isolate_jejuni, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))+ ggtitle("Jejuni")
 testviz2
 ```
 
@@ -128,13 +129,13 @@ testviz2
 ```{r}
 isolate_flexneri <- IsolateData_2 %>% 
   filter(Species == "flexneri") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz3 <- ggplot(data = isolate_flexneri, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz3 <- ggplot(data = isolate_flexneri, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Flexneri")
 testviz3
 ```
 
@@ -143,13 +144,13 @@ testviz3
 ```{r}
 isolate_sonnei <- IsolateData_2 %>% 
   filter(Species == "sonnei") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz4 <- ggplot(data = isolate_sonnei, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz4 <- ggplot(data = isolate_sonnei, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Sonnei")
 testviz4
 ```
 
@@ -159,13 +160,13 @@ testviz4
 ```{r}
 isolate_coli <- IsolateData_2 %>% 
   filter(Species == "coli") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz5 <- ggplot(data = isolate_coli, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz5 <- ggplot(data = isolate_coli, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Coli")
 testviz5
 ```
 
@@ -174,13 +175,13 @@ testviz5
 ```{r}
 isolate_boydii <- IsolateData_2 %>% 
   filter(Species == "boydii") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   #filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz6 <- ggplot(data = isolate_boydii, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz6 <- ggplot(data = isolate_boydii, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Boydii")
 testviz6
 
 # NOTE: Did not filter for 100+ occurrences! 
@@ -191,13 +192,13 @@ testviz6
 ```{r}
 isolate_unknown <- IsolateData_2 %>% 
   filter(Species == "unknown") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   #filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz7 <- ggplot(data = isolate_unknown, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz7 <- ggplot(data = isolate_unknown, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Unknown")
 testviz7
 
 # NOTE: Did not filter for 100+ occurrences! 
@@ -208,13 +209,13 @@ testviz7
 ```{r}
 isolate_dysenteriae <- IsolateData_2 %>% 
   filter(Species == "dysenteriae") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) %>% 
   #filter(ResistCount >= 100) %>% 
   mutate(logResist = log10(ResistCount))
 
   
-testviz8 <- ggplot(data = isolate_dysenteriae, aes(x = `Resistance Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz8 <- ggplot(data = isolate_dysenteriae, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Dysenteriae")
 testviz8
 ```
 
@@ -223,13 +224,13 @@ testviz8
 ```{r}
 isolate_provisional <- IsolateData_2 %>% 
   filter(Species == "provisional") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) 
   #filter(ResistCount >= 100) %>% 
   #mutate(logResist = log10(ResistCount))
 
   
-testviz9 <- ggplot(data = isolate_provisional, aes(x = `Resistance Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz9 <- ggplot(data = isolate_provisional, aes(x = `Resistance.Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Provisonal")
 testviz9
 ```
 
@@ -238,13 +239,13 @@ testviz9
 ```{r}
 isolate_other <- IsolateData_2 %>% 
   filter(Species == "other") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) 
   #filter(ResistCount >= 100) %>% 
   #mutate(logResist = log10(ResistCount))
 
   
-testviz10 <- ggplot(data = isolate_other, aes(x = `Resistance Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz10 <- ggplot(data = isolate_other, aes(x = `Resistance.Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Other")
 testviz10
 ```
 
@@ -253,13 +254,13 @@ testviz10
 ```{r}
 isolate_bongori <- IsolateData_2 %>% 
   filter(Species == "bongori") %>% 
-  group_by(`Resistance Pattern`) %>% 
+  group_by(`Resistance.Pattern`) %>% 
   mutate(ResistCount = n()) 
   #filter(ResistCount >= 100) %>% 
   #mutate(logResist = log10(ResistCount))
 
   
-testviz11 <- ggplot(data = isolate_bongori, aes(x = `Resistance Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+testviz11 <- ggplot(data = isolate_bongori, aes(x = `Resistance.Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Bongori")
 testviz11
 ```
 
