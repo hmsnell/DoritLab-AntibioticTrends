@@ -87,6 +87,7 @@ antibiotic_use <- antibiotic_use %>%
 ```{r}
 IsolateData_2 %>% distinct(Species)
 
+
 # So there are 11 unique species --> This will be easy to work with and make some EDA viz
 ```
 
