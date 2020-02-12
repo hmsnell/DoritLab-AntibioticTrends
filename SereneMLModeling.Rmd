@@ -4,4 +4,40 @@ author: "Serene Lee"
 output: html_document
 ---
 
+```{r}
+library(tidyverse)
+library(dplyr)
+
+IsolateData_6 <- read.csv("IsolateData-6.csv")
+```
+
+
+# Parsing:
+```{r}
+IsolateData_6 %>%
+  IsolateData_6$Region.Name <- as.character(Region.Name) %>%
+  select(Region.Name)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
