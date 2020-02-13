@@ -114,7 +114,35 @@ Wound
   
 ```
 
-*** We 
+
+#Loading Antibiotic Use Data:
+```{r}
+Antibiotic_Use <- read.csv("Outpatient_Antibiotic_Use.csv")
+
+WhichYear <- Antibiotic_Use %>%
+  filter(Sex == "Combined Gender",
+         Rate != "Insufficient Data",
+         Antibiotic_Class != "All classes") #%>%
+#  group_by(Year) %>%
+#  summarise(count = n())
+```
+
+
+#Jejuni Collapse Data:
+```{r}
+## Filtering for ONLY 2011 b/c it has the most observations from the Isolate Dataset
+Jejuni_IsolateData <- IsolateData_6 %>%
+  filter(Species == "jejuni", 
+         Resistance.Pattern == "CipNal" |
+         Resistance.Pattern == "Cli" |
+         Resistance.Pattern == "T" |
+         Resistance.Pattern == "TCipNal" |
+         Resistance.Pattern == "TCipNalCli" |
+         Resistance.Pattern == "TCli") %>%
+  group_by(Data.Year) %>%
+  summarise(count = n())
+```
+
 
 
 
