@@ -265,6 +265,32 @@ testviz11 <- ggplot(data = isolate_bongori, aes(x = `Resistance.Pattern`, y = Re
 testviz11
 ```
 
+```{r}
+### Dataset Building! 
+
+# flexneri2011 dataset
+flexneri2011 <- IsolateData_2 %>% 
+  select(Species, Region.Name, Data.Year, Resistance.Pattern) %>% 
+  filter(Data.Year == 2011) %>% 
+  filter(Species == "flexneri") 
+
+flexcount <- flexneri2011 %>% 
+  group_by(Resistance.Pattern) %>% 
+  mutate(count = n()) %>% 
+  distinct(count) 
+
+# distribution of resistance 
+
+ggplot(flexcount, aes(x = Resistance.Pattern, y = count)) + geom_col() + theme(axis.text.x = element_text(angle = 90))
+  
+# antibiotic use data prep 
+
+antibiotic2011 <- antibiotic_use %>% 
+  filter(Year == 2011) 
+
+
+ 
+```
 
 
 
