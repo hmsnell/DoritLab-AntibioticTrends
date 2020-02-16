@@ -288,9 +288,42 @@ ggplot(flexcount, aes(x = Resistance.Pattern, y = count)) + geom_col() + theme(a
 antibiotic2011 <- antibiotic_use %>% 
   filter(Year == 2011) 
 
-
- 
 ```
+
+
+```{r}
+
+IsolateData_2 %>% 
+  mutate(SampleType = ifelse(Resistance.Pattern %in% c("T" |  "East North Central",
+                         ifelse(State %in% c("AL", "KY", "MS", "TN"), "East South Central",
+                                ifelse(State %in% c("NJ", "NY", "PA"), "Middle Atlantic",
+
+goaldf <- IsolateData_2 %>% 
+  select(Species, )
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
