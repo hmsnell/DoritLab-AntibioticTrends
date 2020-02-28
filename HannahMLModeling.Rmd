@@ -247,6 +247,17 @@ gdp2011 <- gdp2011 %>%
   mutate(GDPperCap = (`Rate`/`Population Count`))
 ```
 
+```{r}
+# Visualization? 
+
+gdp2011 <- gdp2011 %>% 
+  mutate(loggdp = log10(GDPperCap))
+
+ggplot(gdp2011, aes(x = loggdp)) + geom_histogram(binwidth = 0.3)
+
+```
+
+
 # Loop over all years to create dataframes for each year
 
 ```{r}
@@ -270,7 +281,7 @@ gdp[i] <- gdp[i] %>%
 _____________________________________________________________________
 
 (Previous Work) 
-## IsolateData-2 Set 
+# IsolateData-2 Set 
 
 ```{r}
 IsolateData_2 %>% distinct(Species)
@@ -477,6 +488,8 @@ antibiotic2011 <- antibiotic_use %>%
   filter(Year == 2011) 
 
 ```
+
+
 
 
 
