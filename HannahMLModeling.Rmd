@@ -5,6 +5,10 @@ date: "2/6/2020"
 output: html_document
 ---
 
+
+LOAD FOLLOWING CODE CHUNKS EACH TIME:
+----------------------------------------
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 require(tidyverse)
@@ -81,7 +85,171 @@ antibiotic_use <- antibiotic_use %>%
 
 ```
 
+----------------------------------------
 
+### 20200228
+
+```{r}
+isolatedata <- IsolateData_2 %>% 
+  select(Genus, Species, Data.Year, Resistance.Pattern)
+
+outpatientdata <- Outpatient_Antibiotic_Use %>% 
+  select(Antibiotic_Class, Year, Rate, Location) %>% 
+  mutate(Rate = as.numeric(Rate)) %>% 
+  filter(Location != "National") %>% 
+  mutate(Location = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District Of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY")) 
+
+  
+  
+
+censusdata <- Census_10_19 %>% 
+  select(-`Census`, -`Estimation Base`) %>% 
+  pivot_longer(names_to = "Year", 
+               values_to = "Population Count", 
+               cols = -`Geographic Area`) %>% 
+  mutate(Year = as.numeric(Year)) %>% 
+  mutate(Location = recode(`Geographic Area`, 
+                           ".Alabama" = "AL",
+                           ".Alaska" = "AK",
+                           ".Arizona" = "AZ",
+                           ".Arkansas" = "AR",
+                           ".California" = "CA",
+                           ".Colorado" = "CO",
+                           ".Connecticut" = "CT",
+                           ".Delaware" = "DE",
+                           ".District Of Columbia" = "DC",
+                           ".Florida" = "FL",
+                           ".Georgia" = "GA",
+                           ".Hawaii" = "HI",
+                           ".Idaho" = "ID",
+                           ".Illinois" = "IL",
+                           ".Indiana" = "IN", 
+                           ".Iowa" = "IA",
+                           ".Kansas" = "KS",
+                           ".Kentucky" = "KY",
+                           ".Louisiana" = "LA", 
+                           ".Maine" = "ME",
+                           ".Maryland" = "MD",
+                           ".Massachusetts" = "MA",
+                           ".Michigan" = "MI",
+                           ".Minnesota" = "MN",
+                           ".Mississippi" = "MS",
+                           ".Missouri" = "MO",
+                           ".Montana" = "MT",
+                           ".Nebraska" = "NE",
+                           ".Nevada" = "NV",
+                           ".New Hampshire" = "NH",
+                           ".New Jersey" = "NJ",
+                           ".New Mexico" = "NM",
+                           ".New York" = "NY",
+                           ".North Carolina" = "NC",
+                           ".North Dakota" = "ND",
+                           ".Ohio" = "OH",
+                           ".Oklahoma" = "OK",
+                           ".Oregon" = "OR",
+                           ".Pennsylvania" = "PA",
+                           ".Rhode Island" = "RI",
+                           ".South Carolina" = "SC",
+                           ".South Dakota" = "SD",
+                           ".Tennessee" = "TN",
+                           ".Texas" = "TX",
+                           ".Utah" = "UT",
+                           ".Vermont" = "VT",
+                           ".Virginia" = "VA",
+                           ".Washington" = "WA",
+                           ".West Virginia" = "WV",
+                           ".Wisconsin" = "WI",
+                           ".Wyoming" = "WY")) %>% 
+  select(-`Geographic Area`)
+
+
+
+```
+
+
+#### Calculating for GDP per Cap (aka normalizing per number of prescriptions based on population of people in US)
+
+```{r}
+census2011<- censusdata %>% 
+  filter(Year == 2011, 
+         Location != "United States", 
+         Location != "Northeast", 
+         Location != "Midwest", 
+         Location != "South", 
+         Location != "West", 
+         Location != "Puerto Rico") 
+
+outpatient2011 <- outpatientdata %>% 
+  filter(Year == 2011)
+
+# Merge census2011 and outpatient2011 
+
+gdp2011 <- outpatient2011 %>% 
+  left_join(census2011, by = "Location") %>% 
+  select(-"Year.y") %>% 
+  rename("Year" = Year.x) 
+
+# GDP per Cap Calculation 
+
+gdp2011 <- gdp2011 %>% 
+  mutate(GDPperCap = (`Rate`/`Population Count`))
+```
+
+
+_____________________________________________________________________
+
+(Previous Work) 
 ## IsolateData-2 Set 
 
 ```{r}
@@ -290,20 +458,6 @@ antibiotic2011 <- antibiotic_use %>%
 
 ```
 
-
-```{r}
-
-IsolateData_2 %>% 
-  mutate(SampleType = ifelse(Resistance.Pattern %in% c("T" |  "East North Central",
-                         ifelse(State %in% c("AL", "KY", "MS", "TN"), "East South Central",
-                                ifelse(State %in% c("NJ", "NY", "PA"), "Middle Atlantic",
-
-goaldf <- IsolateData_2 %>% 
-  select(Species, )
-
-
-
-```
 
 
 
