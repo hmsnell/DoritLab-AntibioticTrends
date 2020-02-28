@@ -19,17 +19,20 @@ require(tidyverse)
 ## Resistance Data 
 
 ```{r, include = FALSE}
+
 resistance_state <- read.csv("Resist_States.csv")
 resistance_region <- read.csv("Resist_Regional.csv")
 resistance_national <- read.csv("Resist_National.csv")
 IsolateData_2 <- read.csv("IsolateData-2.csv")
+Census_10_19 <- read_csv("Census_10:19.csv")
+
 ```
 
 ## Outpatient Antibiotic Use Data 
 
 ```{r, include = FALSE} 
-antibiotic_use <- read.csv("Outpatient_Antibiotic_Use.csv") 
-antibiotic_use <- antibiotic_use %>% 
+antibioticuse <- read.csv("Outpatient_Antibiotic_Use.csv") 
+antibioticuse <- antibioticuse %>% 
   mutate(State = recode(Location, 
                            "Alabama" = "AL",
                            "Alaska" = "AK",
@@ -93,7 +96,7 @@ antibiotic_use <- antibiotic_use %>%
 isolatedata <- IsolateData_2 %>% 
   select(Genus, Species, Data.Year, Resistance.Pattern)
 
-outpatientdata <- Outpatient_Antibiotic_Use %>% 
+outpatientdata <- antibioticuse %>% 
   select(Antibiotic_Class, Year, Rate, Location) %>% 
   mutate(Rate = as.numeric(Rate)) %>% 
   filter(Location != "National") %>% 
@@ -154,7 +157,7 @@ outpatientdata <- Outpatient_Antibiotic_Use %>%
   
 
 censusdata <- Census_10_19 %>% 
-  select(-`Census`, -`Estimation Base`) %>% 
+  select(-`Census`, - `Estimation Base`) %>% 
   pivot_longer(names_to = "Year", 
                values_to = "Population Count", 
                cols = -`Geographic Area`) %>% 
@@ -211,26 +214,24 @@ censusdata <- Census_10_19 %>%
                            ".West Virginia" = "WV",
                            ".Wisconsin" = "WI",
                            ".Wyoming" = "WY")) %>% 
-  select(-`Geographic Area`)
-
-
-
+  select(-`Geographic Area`) %>% 
+  filter(Location != "United States", 
+         Location != "Northeast", 
+         Location != "Midwest", 
+         Location != "South", 
+         Location != "West", 
+         Location != "Puerto Rico") 
+  
 ```
 
 
 #### Calculating for GDP per Cap (aka normalizing per number of prescriptions based on population of people in US)
 
 ```{r}
-census2011<- censusdata %>% 
-  filter(Year == 2011, 
-         Location != "United States", 
-         Location != "Northeast", 
-         Location != "Midwest", 
-         Location != "South", 
-         Location != "West", 
-         Location != "Puerto Rico") 
-
 outpatient2011 <- outpatientdata %>% 
+  filter(Year == 2011)
+
+census2011 <- censusdata %>% 
   filter(Year == 2011)
 
 # Merge census2011 and outpatient2011 
@@ -244,6 +245,25 @@ gdp2011 <- outpatient2011 %>%
 
 gdp2011 <- gdp2011 %>% 
   mutate(GDPperCap = (`Rate`/`Population Count`))
+```
+
+# Loop over all years to create dataframes for each year
+
+```{r}
+for (i in 2011:2017){outpatient[i] <- outpatientdata %>% 
+    filter(Year == i)
+
+census[i] <- censusdata %>% 
+  filter(Year == i) 
+
+gdp[i] <- outpatient[i] %>% 
+  left_join(census[i], by = "Location") %>% 
+  select(-"Year.y") %>% 
+  rename("Year" = Year.x) 
+
+gdp[i] <- gdp[i] %>% 
+  mutate(GDPperCap = (`Rate`/`Population Count`))
+}
 ```
 
 
