@@ -1,0 +1,19 @@
+---
+title: "MedicaidEDA"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+Medicaid_FilteredMeth <- Medicaid_SpendingUtilization %>%
+  filter(GenericName == "Meth/Meblue/Sod Phos/Psal/Hyos")
+
+ggplot(data = Medicaid_SpendingUtilization, aes(x = Year, y = TotalSpending)) + geom_point()
+
+ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalSpending, col = BrandName)) + geom_point()
+ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalClaims, col = BrandName)) + geom_line()
+
+```
+
