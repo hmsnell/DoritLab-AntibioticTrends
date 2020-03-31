@@ -157,6 +157,39 @@ ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalSpending, col = Bran
 ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalClaims, col = BrandName)) + geom_line()
 ```
 
+#Medicare:
+## Using only Years 2011-2013 because of Resist_States
+##Quinolones/Fluoroquinolones antibiotic drugs:
+```{r}
+#Generic name of drug (Referenced GoodRx): Ciprofloxacin HCl, Ciprofloxacin, Ciprofloxacin/Hydrocortisone,
+#Ciprofloxacin In 5 % Dextrose, Ciprofloxacin HCl/Dexameth, Ciprofloxacin Lactate, Ciprofloxacin/Ciprofloxa HCl, Ciprofloxacin HCl/Fluocinolone, Levofloxacin, Levofloxacin In Dextrose 5 %, Ofloxacin, Moxifloxacin HCl, Moxifloxacin-Sod.Chloride(Iso), Moxifloxacin/Sod.Ace,Sul/Water, Besifloxacin HCl, Delafloxacin Meglumine, Gatifloxacin
+
+# Create a new data set with only drugs under the quinolones antibiotic class:
+Medicaid_Quinolone <- Medicaid_SpendingUtilization %>%
+  filter(GenericName == "Ciprofloxacin HCl"|
+           GenericName == "Ciprofloxacin"|
+           GenericName == "Ciprofloxacin/Hydrocortisone"|
+           GenericName == "Ciprofloxacin In 5 % Dextrose"|
+           GenericName == "Ciprofloxacin HCl/Dexameth"|
+           GenericName == "Ciprofloxacin Lactate"|
+           GenericName == "Ciprofloxacin/Ciprofloxa HCl"|
+           GenericName == "Ciprofloxacin HCl/Fluocinolone"|
+           GenericName == "Levofloxacin"|
+           GenericName == "Levofloxacin In Dextrose 5 %"|
+           GenericName == "Ofloxacin"|
+           GenericName == "Moxifloxacin HCl"|
+           GenericName == "Moxifloxacin-Sod.Chloride(Iso)"|
+           GenericName == "Moxifloxacin/Sod.Ace,Sul/Water"|
+           GenericName == "Besifloxacin HCl"|
+           GenericName == "Delafloxacin Meglumine"|
+           GenericName == "Gatifloxacin")
+View(Medicaid_Quinolone)
+
+# EDA to look at trends for spending:
+ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalSpending)) + geom_point()
+ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalClaims)) + geom_point()
+```
+
 
 
 

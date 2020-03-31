@@ -353,6 +353,7 @@ WestNorthCentral_2013 <- joined_2013 %>%
 WestSouthCentral_2013 <- joined_2013 %>%
   filter(Region == "West South Central")
 
+
 #########################################
 
 # EastNorthCentral - 2014
