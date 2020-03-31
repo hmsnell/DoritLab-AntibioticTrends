@@ -194,6 +194,9 @@ ggplot(data = Medicaid_Quinolone, aes(x = log10(TotalClaims))) + geom_histogram(
 #Medicare:
 ## Using only Years 2011-2013 because of Resist_States
 ```{r}
+# Refreshing Regional resistance data
+Resist_Regional <- resistance_region
+
 #Resistance Trends by Region
 Resist_Regional <- Resist_Regional %>%
   filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
@@ -206,10 +209,20 @@ Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$Perc
 ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant, col = AgeCategory)) + geom_col()
 ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant)) + geom_col() + facet_wrap(~Region)
 
+```
 
-  
+# Plot NumberTested and NumberResistant
+```{r}
+library(tidyr)
+library(reshape2)
 
+# Tidy format for Resist_Regional data
+Resist_Regional <- Resist_Regional %>%
+  select(EventYear, Phenotype, EventType, AgeCategory, NumberTested, NumberResistant) %>%
+  gather(Number, "NumberTested", "NumberResistant")
 
+# Plot NumberTested and Number Data
+ggplot(data = Resist_Regional, aes(x = EventYear, y = Number, col = Observe)) + geom_col(position = "dodge") + facet_wrap(~Region)
 ```
 
 
