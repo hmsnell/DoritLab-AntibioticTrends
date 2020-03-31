@@ -219,7 +219,11 @@ library(reshape2)
 # Tidy format for Resist_Regional data
 Resist_Regional <- Resist_Regional %>%
   select(EventYear, Phenotype, EventType, AgeCategory, NumberTested, NumberResistant) %>%
-  gather(Number, "NumberTested", "NumberResistant")
+  reshape(Resist_Regional, 
+          idvar = c("Phenotype", "Region", "EventType", "EventYear", "AgeCategory"), 
+          varying = c("NumberTested", "NumberResistant"), 
+          timevar = "Index",
+          direction = "long")
 
 # Plot NumberTested and Number Data
 ggplot(data = Resist_Regional, aes(x = EventYear, y = Number, col = Observe)) + geom_col(position = "dodge") + facet_wrap(~Region)
