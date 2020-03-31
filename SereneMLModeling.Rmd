@@ -157,8 +157,7 @@ ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalSpending, col = Bran
 ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalClaims, col = BrandName)) + geom_line()
 ```
 
-#Medicare:
-## Using only Years 2011-2013 because of Resist_States
+#Medicaid:
 ##Quinolones/Fluoroquinolones antibiotic drugs:
 ```{r}
 #Generic name of drug (Referenced GoodRx): Ciprofloxacin HCl, Ciprofloxacin, Ciprofloxacin/Hydrocortisone,
@@ -187,9 +186,31 @@ View(Medicaid_Quinolone)
 
 # EDA to look at trends for spending:
 ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalSpending)) + geom_point()
-ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalClaims)) + geom_point()
+ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalClaims, col = GenericName)) + geom_jitter()
+ggplot(data = Medicaid_Quinolone, aes(x = log10(TotalClaims))) + geom_histogram() + facet_wrap(~Year)
 ```
 
+
+#Medicare:
+## Using only Years 2011-2013 because of Resist_States
+```{r}
+#Resistance Trends by Region
+Resist_Regional <- Resist_Regional %>%
+  filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
+
+Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
+Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
+Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$PercentResistant))
+
+# Plot to see trends in region:
+ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant, col = AgeCategory)) + geom_col()
+ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant)) + geom_col() + facet_wrap(~Region)
+
+
+  
+
+
+```
 
 
 
