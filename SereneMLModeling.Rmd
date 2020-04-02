@@ -195,7 +195,8 @@ ggplot(data = Medicaid_Quinolone, aes(x = log10(TotalClaims))) + geom_histogram(
 ## Using only Years 2011-2013 because of Resist_States
 ```{r}
 # Refreshing Regional resistance data
-Resist_Regional <- resistance_region
+Resist_Regional <- resistance_region %>%
+  select(-Lower95CI, -Upper95CI)
 
 #Resistance Trends by Region
 Resist_Regional <- Resist_Regional %>%
