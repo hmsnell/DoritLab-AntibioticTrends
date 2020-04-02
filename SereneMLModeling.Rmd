@@ -196,7 +196,7 @@ ggplot(data = Medicaid_Quinolone, aes(x = log10(TotalClaims))) + geom_histogram(
 ```{r}
 # Refreshing Regional resistance data
 Resist_Regional <- resistance_region %>%
-  select(-Lower95CI, -Upper95CI)
+  select(-Lower95CI, -Upper95CI, -PercentResistant)
 
 #Resistance Trends by Region
 Resist_Regional <- Resist_Regional %>%
@@ -204,11 +204,11 @@ Resist_Regional <- Resist_Regional %>%
 
 Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
 Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
-Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$PercentResistant))
+#Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$PercentResistant))
 
 # Plot to see trends in region:
-ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant, col = AgeCategory)) + geom_col()
-ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant)) + geom_col() + facet_wrap(~Region)
+#ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant, col = AgeCategory)) + geom_col()
+#ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant)) + geom_col() + facet_wrap(~Region)
 
 ```
 
@@ -216,18 +216,23 @@ ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant)) + geom_
 ```{r}
 library(tidyr)
 library(reshape2)
+library(ggplot2)
 
-# Tidy format for Resist_Regional data
+# Tidy format for Resist_Regional data - Add
 Resist_Regional <- Resist_Regional %>%
-  select(EventYear, Phenotype, EventType, AgeCategory, NumberTested, NumberResistant) %>%
-  reshape(Resist_Regional, 
-          idvar = c("Phenotype", "Region", "EventType", "EventYear", "AgeCategory"), 
-          varying = c("NumberTested", "NumberResistant"), 
-          timevar = "Index",
-          direction = "long")
+  gather(MetricType, MetricNumber, NumberTested:NumberResistant)
 
-# Plot NumberTested and Number Data
-ggplot(data = Resist_Regional, aes(x = EventYear, y = Number, col = Observe)) + geom_col(position = "dodge") + facet_wrap(~Region)
+# Plot NumberTested and NumberResistant Data
+ggplot(data = Resist_Regional, 
+       aes(x = EventYear, y = MetricNumber, fill = MetricType)) + 
+  geom_col(position = position_dodge(width = 0.5)) + 
+  facet_wrap(~Region)
+
+# Plot Calculated PercentResistant Data
+Resist_Regional_CalculateResPercent <- Resist_Regional %>%
+  group_by(Region, EventYear, MetricType) %>%
+  
+  
 ```
 
 
