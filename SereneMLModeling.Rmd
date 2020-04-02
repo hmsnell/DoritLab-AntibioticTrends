@@ -7,6 +7,9 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(dplyr)
+library(tidyr)
+library(reshape2)
+library(ggplot2)
 
 IsolateData_6 <- read.csv("IsolateData-6.csv")
 
@@ -202,6 +205,7 @@ Resist_Regional <- resistance_region %>%
 Resist_Regional <- Resist_Regional %>%
   filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
 
+#Change data type
 Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
 Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
 #Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$PercentResistant))
@@ -212,13 +216,9 @@ Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$Numbe
 
 ```
 
-# Plot NumberTested and NumberResistant
+# Calculate Percent Resistant
 ```{r}
-library(tidyr)
-library(reshape2)
-library(ggplot2)
-
-# Tidy format for Resist_Regional data - Add
+# Tidy format for Resist_Regional data 
 Resist_Regional <- Resist_Regional %>%
   gather(MetricType, MetricNumber, NumberTested:NumberResistant)
 
@@ -228,13 +228,40 @@ ggplot(data = Resist_Regional,
   geom_col(position = position_dodge(width = 0.5)) + 
   facet_wrap(~Region)
 
-# Plot Calculated PercentResistant Data
+# Regroup data for Calculated PercentResistant Data
 Resist_Regional_CalculateResPercent <- Resist_Regional %>%
   group_by(Region, EventYear, MetricType) %>%
-  
+  summarize(TotalMetricNumber = sum(MetricNumber))
+
+# Revert Dataset to Wide form
+Wide_data_ResistPercent <- spread(Resist_Regional_CalculateResPercent,
+                                  MetricType,
+                                  TotalMetricNumber)
+Wide_data_ResistPercent <- Wide_data_ResistPercent %>%
+  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
+
+#Wide_data_ResistPercent <- melt(Resist_Regional_CalculateResPercent,
+#                                id.vars = c("Region", "EventYear"),
+#                                variable.name = "MetricType",
+#                                value.name = "TotalMetricNumber")
+
+#Wide_data_ResistPercent <- reshape(Resist_Regional_CalculateResPercent,
+#                                   idvar = c("Region", "EventYear"),
+#                                   timevar = "MetricType",
+#                                   direction = "wide")
+
+# Plot Percent Resistant Data
+ggplot(data = Wide_data_ResistPercent, 
+       aes(x = EventYear, y = Percent_Resistant)) + 
+  geom_col() + 
+  facet_wrap(~Region)
   
 ```
 
+#Trying other variables:
+```{r}
+
+```
 
 
 
