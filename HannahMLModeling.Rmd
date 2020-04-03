@@ -244,14 +244,14 @@ gdp2011 <- outpatient2011 %>%
 # GDP per Cap Calculation 
 
 gdp2011 <- gdp2011 %>% 
-  mutate(GDPperCap = (`Rate`/`Population Count`))
+  mutate(PrescriptionsPerCap = (`Rate`/`Population Count`))
 ```
 
 ```{r}
 # Visualization? 
 
 gdp2011 <- gdp2011 %>% 
-  mutate(loggdp = log10(GDPperCap))
+  mutate(loggdp = log10(PrescriptionsPerCap))
 
 ggplot(gdp2011, aes(x = loggdp)) + geom_histogram(binwidth = 0.3)
 
@@ -278,7 +278,34 @@ gdp[i] <- gdp[i] %>%
 ```
 
 
+# 20200403: Importing Age Distribution Data  
+
+```{r}
+library(readr)
+age_2008 <- read_csv("2008_agedistribution.csv")
+age_2009 <- read_csv("2009_agedistribution.csv")
+age_2010 <- read_csv("2010_agedistribution.csv")
+age_2011 <- read_csv("2011_agedistribution.csv")
+age_2012 <- read_csv("2012_agedistribution.csv")
+age_2013 <- read_csv("2013_agedistribution.csv")
+age_2014 <- read_csv("2014_agedistribution.csv")
+age_2015 <- read_csv("2015_agedistribution.csv")
+age_2016 <- read_csv("2016_agedistribution.csv")
+age_2017 <- read_csv("2017_agedistribution.csv")
+age_2018 <- read_csv("2018_agedistribution.csv")
+
+```
+
+```{r}
+USagedistributions <- rbind(age_2008, age_2009, age_2010, age_2011, age_2012, age_2013, age_2014, age_2015, age_2016, age_2017, age_2018)
+```
+
+
+
 _____________________________________________________________________
+
+
+
 
 (Previous Work) 
 # IsolateData-2 Set 
