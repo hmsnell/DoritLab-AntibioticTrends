@@ -194,8 +194,7 @@ ggplot(data = Medicaid_Quinolone, aes(x = log10(TotalClaims))) + geom_histogram(
 ```
 
 
-#Medicare:
-## Using only Years 2011-2013 because of Resist_States
+#Regional Resistance Data:
 ```{r}
 # Refreshing Regional resistance data
 Resist_Regional <- resistance_region %>%
@@ -209,6 +208,7 @@ Resist_Regional <- Resist_Regional %>%
 Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
 Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
 #Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$PercentResistant))
+Resist_Regional$AgeCategory <- as.character(Resist_Regional$AgeCategory)
 
 # Plot to see trends in region:
 #ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant, col = AgeCategory)) + geom_col()
@@ -218,9 +218,10 @@ Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$Numbe
 
 # Calculate Percent Resistant
 ```{r}
-# Tidy format for Resist_Regional data 
+# Tidy format for Resist_Regional data and take out ALL HAIS and ALL AGES
 Resist_Regional <- Resist_Regional %>%
-  gather(MetricType, MetricNumber, NumberTested:NumberResistant)
+  gather(MetricType, MetricNumber, NumberTested:NumberResistant) %>%
+  filter(EventType != "All HAIs", AgeCategory != "All Ages")
 
 # Plot NumberTested and NumberResistant Data
 ggplot(data = Resist_Regional, 
@@ -258,8 +259,62 @@ ggplot(data = Wide_data_ResistPercent,
   
 ```
 
-#Trying other variables:
+#Trying other variables: Age Category
 ```{r}
+#Regroup Resist_Regional by AgeCategory:
+Resist_Regional <- resistance_region %>%
+  select(-Lower95CI, -Upper95CI, -PercentResistant)
+
+#Resistance Trends by Region
+Resist_Regional <- Resist_Regional %>%
+  filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
+
+#Change data type to numerical
+Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
+Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
+
+# Tidy format for Resist_Regional data 
+Resist_Regional <- Resist_Regional %>%
+  gather(MetricType, MetricNumber, NumberTested:NumberResistant) %>%
+  filter(EventType != "All HAIs", AgeCategory != "All Ages")
+
+# Regroup with age and year
+Resist_Regional_byAge <- Resist_Regional %>%
+  group_by(Region, EventYear, MetricType, AgeCategory) %>%
+  summarize(TotalMetricNumber = sum(MetricNumber))
+
+# Revert Dataset to Wide form
+Wide_AgeCategory <- spread(Resist_Regional_byAge,
+                                  MetricType,
+                                  TotalMetricNumber)
+Wide_AgeCategory <- Wide_AgeCategory %>%
+  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
+
+# Plot Percent Resistance by AgeCaetgory (bar):
+ggplot(data = Wide_AgeCategory, 
+       aes(x = EventYear, y = Percent_Resistant, fill = AgeCategory)) + 
+  geom_col(position = "dodge") + 
+  facet_wrap(~Region)
+
+# Plot Percent Resistance by AgeCaetgory (line):
+Resist_Regional_byAge <- Resist_Regional %>%
+  group_by(EventYear, MetricType, AgeCategory) %>%
+  summarize(TotalMetricNumber = sum(MetricNumber))
+
+Wide_AgeCategory <- spread(Resist_Regional_byAge,
+                                  MetricType,
+                                  TotalMetricNumber)
+Wide_AgeCategory <- Wide_AgeCategory %>%
+  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
+
+Wide_AgeCategory <- Wide_AgeCategory %>%
+  filter(Percent_Resistant != 0)
+
+ggplot(data = Wide_AgeCategory, 
+       aes(x = EventYear, y = Percent_Resistant, col = AgeCategory)) + 
+  geom_line() #Don't know why it's not plotting
+
+
 
 ```
 
