@@ -20,18 +20,18 @@ require(tidyverse)
 
 ```{r, include = FALSE}
 
-resistance_state <- read.csv("Resist_States.csv")
-resistance_region <- read.csv("Resist_Regional.csv")
-resistance_national <- read.csv("Resist_National.csv")
-IsolateData_2 <- read.csv("IsolateData-2.csv")
-Census_10_19 <- read_csv("Census_10:19.csv")
+resistance_state <- read.csv("Data/Resist_States.csv")
+resistance_region <- read.csv("Data/Resist_Regional.csv")
+resistance_national <- read.csv("Data/Resist_National.csv")
+IsolateData_2 <- read.csv("Data/IsolateData-2.csv")
+Census_10_19 <- read_csv("Data/Census_10:19.csv")
 
 ```
 
 ## Outpatient Antibiotic Use Data 
 
 ```{r, include = FALSE} 
-antibioticuse <- read.csv("Outpatient_Antibiotic_Use.csv") 
+antibioticuse <- read.csv("Data/Outpatient_Antibiotic_Use.csv") 
 antibioticuse <- antibioticuse %>% 
   mutate(State = recode(Location, 
                            "Alabama" = "AL",
@@ -282,17 +282,17 @@ gdp[i] <- gdp[i] %>%
 
 ```{r}
 library(readr)
-age_2008 <- read_csv("2008_agedistribution.csv")
-age_2009 <- read_csv("2009_agedistribution.csv")
-age_2010 <- read_csv("2010_agedistribution.csv")
-age_2011 <- read_csv("2011_agedistribution.csv")
-age_2012 <- read_csv("2012_agedistribution.csv")
-age_2013 <- read_csv("2013_agedistribution.csv")
-age_2014 <- read_csv("2014_agedistribution.csv")
-age_2015 <- read_csv("2015_agedistribution.csv")
-age_2016 <- read_csv("2016_agedistribution.csv")
-age_2017 <- read_csv("2017_agedistribution.csv")
-age_2018 <- read_csv("2018_agedistribution.csv")
+age_2008 <- read_csv("Data/2008_agedistribution.csv")
+age_2009 <- read_csv("Data/2009_agedistribution.csv")
+age_2010 <- read_csv("Data/2010_agedistribution.csv")
+age_2011 <- read_csv("Data/2011_agedistribution.csv")
+age_2012 <- read_csv("Data/2012_agedistribution.csv")
+age_2013 <- read_csv("Data/2013_agedistribution.csv")
+age_2014 <- read_csv("Data/2014_agedistribution.csv")
+age_2015 <- read_csv("Data/2015_agedistribution.csv")
+age_2016 <- read_csv("Data/2016_agedistribution.csv")
+age_2017 <- read_csv("Data/2017_agedistribution.csv")
+age_2018 <- read_csv("Data/2018_agedistribution.csv")
 
 ```
 
@@ -302,6 +302,28 @@ USagedistributions <- rbind(age_2008, age_2009, age_2010, age_2011, age_2012, ag
 
 
 # Importing Corresponding Population Data 
+
+```{r}
+library(readr)
+
+pop_2008 <- read_csv("Data/2008_populationct.csv")
+pop_2009 <- read_csv("Data/2009_populationct.csv")
+pop_2010 <- read_csv("Data/2010_populationct.csv")
+pop_2011 <- read_csv("Data/2011_populationct.csv")
+pop_2012 <- read_csv("Data/2012_populationct.csv")
+pop_2013 <- read_csv("Data/2013_populationct.csv")
+pop_2014 <- read_csv("Data/2014_populationct.csv")
+pop_2015 <- read_csv("Data/2015_populationct.csv")
+pop_2016 <- read_csv("Data/2016_populationct.csv")
+pop_2017 <- read_csv("Data/2017_populationct.csv")
+pop_2018 <- read_csv("Data/2018_populationct.csv")
+```
+
+
+```{r}
+USpopulationct <- rbind(pop_2008, pop_2009, pop_2010, pop_2011,pop_2012, pop_2013,pop_2014, pop_2015, pop_2016, pop_2017, pop_2018)
+USpopulationct
+```
 
 _____________________________________________________________________
 
