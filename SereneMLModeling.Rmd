@@ -256,6 +256,8 @@ ggplot(data = Wide_data_ResistPercent,
        aes(x = EventYear, y = Percent_Resistant)) + 
   geom_col() + 
   facet_wrap(~Region)
+
+# Facet with Years
   
 ```
 
@@ -318,7 +320,44 @@ ggplot(data = Wide_AgeCategory,
 
 ```
 
+#Trying out some statistical tests
+```{r}
+# Chi Square:
+# categorical variables: Phenotype, Region, EventType, EventYear, EventCategory
 
+
+#Regroup Resist_Regional by AgeCategory:
+Resist_Regional <- resistance_region %>%
+  select(-Lower95CI, -Upper95CI, -PercentResistant)
+
+#Resistance Trends by Region
+Resist_Regional <- Resist_Regional %>%
+  filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
+
+#Change data type to numerical
+Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
+Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
+
+# Tidy format for Resist_Regional data 
+Resist_Regional <- Resist_Regional %>%
+  gather(MetricType, MetricNumber, NumberTested:NumberResistant) %>%
+  filter(EventType != "All HAIs", AgeCategory != "All Ages")
+
+
+#Rearrange
+Resist_Regional_test <- Resist_Regional %>%
+  group_by(Phenotype, Region, MetricType, AgeCategory) %>%
+  summarize(TotalMetricNumber = sum(MetricNumber))
+
+# Revert Dataset to Wide form
+Wide_test <- spread(Resist_Regional_test,
+                                  MetricType,
+                                  TotalMetricNumber)
+Wide_test <- Wide_test %>%
+  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
+
+
+```
 
 
 
