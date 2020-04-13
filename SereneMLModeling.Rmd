@@ -11,6 +11,10 @@ library(tidyr)
 library(reshape2)
 library(ggplot2)
 
+#For SAS:
+install.packages("haven")
+require(haven)
+
 IsolateData_6 <- read.csv("IsolateData-6.csv")
 
 ```
@@ -358,6 +362,12 @@ Wide_test <- Wide_test %>%
 
 
 ```
+
+Load SAS files
+```{r}
+
+```
+
 
 
 
