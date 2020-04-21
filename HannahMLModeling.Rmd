@@ -9,10 +9,6 @@ editor_options:
   chunk_output_type: inline
 ---
 
-
-LOAD FOLLOWING CODE CHUNKS EACH TIME:
-----------------------------------------
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -20,9 +16,15 @@ library(tidyverse)
 
 # Data Preparation 
 
-## Resistance Data 
+## Import IqVia Data
+```{r, cache = TRUE}
+iqvia <- read.delim("~/Downloads/PartD_Prescriber_PUF_NPI_Drug_17.txt")
+```
 
-```{r, include = FALSE}
+
+## Dataframe Input
+
+```{r, include = FALSE, Dataframe Input}
 
 resistance_state <- read.csv("Data/Resist_States.csv")
 resistance_region <- read.csv("Data/Resist_Regional.csv")
@@ -30,12 +32,11 @@ resistance_national <- read.csv("Data/Resist_National.csv")
 IsolateData_2 <- read.csv("Data/IsolateData-2.csv")
 Census_10_19 <- read_csv("Data/Census_10:19.csv")
 
-resistance_state
 ```
 
-## Outpatient Antibiotic Use Data 
+## Outpatient Antibiotic Use  Cleanup 
 
-```{r, include = FALSE} 
+```{r, include = FALSE, antibioticuse df} 
 antibioticuse <- read.csv("Data/Outpatient_Antibiotic_Use.csv") 
 antibioticuse <- antibioticuse %>% 
   mutate(State = recode(Location, 
@@ -90,14 +91,10 @@ antibioticuse <- antibioticuse %>%
                            "West Virginia" = "WV",
                            "Wisconsin" = "WI",
                            "Wyoming" = "WY"))
-antibioticuse
 ```
+## 20200228: Isolate Data 2 Cleanup
 
-----------------------------------------
-
-### 20200228
-
-```{r}
+```{r, Isolate Data 2 cleanup}
 isolatedata <- IsolateData_2 %>% 
   select(Genus, Species, Data.Year, Resistance.Pattern)
 
@@ -263,6 +260,9 @@ ggplot(gdp2011, aes(x = loggdp)) + geom_histogram(binwidth = 0.3)
 ```
 
 
+
+
+
 # 20200403: Importing Age Distribution Data  
 
 ```{r, Importing Age Distribution Data}
@@ -327,12 +327,8 @@ _____________________________________________________________________
 
 ```{r}
 IsolateData_2 %>% distinct(Species)
-
-
 # So there are 11 unique species --> This will be easy to work with and make some EDA viz
 ```
-
-## EDA 
 
 ### Enterica
 ```{r}

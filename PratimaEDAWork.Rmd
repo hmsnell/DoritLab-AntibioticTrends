@@ -1,0 +1,30 @@
+---
+title: "Pratima EDA Work"
+author: "Pratima Niroula"
+date: "4/20/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r, Import Datasets}
+# Import your data into R 
+resistance_state <- read.csv("Data/Resist_States.csv")
+resistance_region <- read.csv("Data/Resist_Regional.csv")
+resistance_national <- read.csv("Data/Resist_National.csv")
+
+# Now use the "View" function in your console to see these dataframes in different tabs. 
+# View(`dataframe`)
+```
+
+```{r, Clean Up Some Variables}
+
+```
+
+
+
