@@ -2,7 +2,11 @@
 title: "MLWork"
 author: "Hannah Snell"
 date: "2/6/2020"
-output: html_document
+output: 
+  html_document: 
+    theme: journal
+editor_options: 
+  chunk_output_type: inline
 ---
 
 
@@ -11,7 +15,7 @@ LOAD FOLLOWING CODE CHUNKS EACH TIME:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-require(tidyverse)
+library(tidyverse)
 ```
 
 # Data Preparation 
@@ -26,6 +30,7 @@ resistance_national <- read.csv("Data/Resist_National.csv")
 IsolateData_2 <- read.csv("Data/IsolateData-2.csv")
 Census_10_19 <- read_csv("Data/Census_10:19.csv")
 
+resistance_state
 ```
 
 ## Outpatient Antibiotic Use Data 
@@ -85,7 +90,7 @@ antibioticuse <- antibioticuse %>%
                            "West Virginia" = "WV",
                            "Wisconsin" = "WI",
                            "Wyoming" = "WY"))
-
+antibioticuse
 ```
 
 ----------------------------------------
@@ -225,7 +230,7 @@ censusdata <- Census_10_19 %>%
 ```
 
 
-#### Calculating for GDP per Cap (aka normalizing per number of prescriptions based on population of people in US)
+#### Calculating for GDP per Cap (aka normalizing per number of prescriptions based on population of people in US) for 2011
 
 ```{r}
 outpatient2011 <- outpatientdata %>% 
@@ -258,29 +263,9 @@ ggplot(gdp2011, aes(x = loggdp)) + geom_histogram(binwidth = 0.3)
 ```
 
 
-# Loop over all years to create dataframes for each year
-
-```{r}
-for (i in 2011:2017){outpatient[i] <- outpatientdata %>% 
-    filter(Year == i)
-
-census[i] <- censusdata %>% 
-  filter(Year == i) 
-
-gdp[i] <- outpatient[i] %>% 
-  left_join(census[i], by = "Location") %>% 
-  select(-"Year.y") %>% 
-  rename("Year" = Year.x) 
-
-gdp[i] <- gdp[i] %>% 
-  mutate(GDPperCap = (`Rate`/`Population Count`))
-}
-```
-
-
 # 20200403: Importing Age Distribution Data  
 
-```{r}
+```{r, Importing Age Distribution Data}
 library(readr)
 age_2008 <- read_csv("Data/2008_agedistribution.csv")
 age_2009 <- read_csv("Data/2009_agedistribution.csv")
@@ -296,14 +281,14 @@ age_2018 <- read_csv("Data/2018_agedistribution.csv")
 
 ```
 
-```{r}
+```{r, Collapsing Age Distribution Data}
 USagedistributions <- rbind(age_2008, age_2009, age_2010, age_2011, age_2012, age_2013, age_2014, age_2015, age_2016, age_2017, age_2018)
 ```
 
 
-# Importing Corresponding Population Data 
+# 20200403: Ιmporting Corresponding Population Data 
 
-```{r}
+```{r, Importing Population Data}
 library(readr)
 
 pop_2008 <- read_csv("Data/2008_populationct.csv")
@@ -319,18 +304,26 @@ pop_2017 <- read_csv("Data/2017_populationct.csv")
 pop_2018 <- read_csv("Data/2018_populationct.csv")
 ```
 
-
-```{r}
+```{r, Collapsing Population Dataframes}
 USpopulationct <- rbind(pop_2008, pop_2009, pop_2010, pop_2011,pop_2012, pop_2013,pop_2014, pop_2015, pop_2016, pop_2017, pop_2018)
 USpopulationct
 ```
+
+
+
+
+
+
+
+
 
 _____________________________________________________________________
 
 
 
 (Previous Work) 
-# IsolateData-2 Set 
+
+# IsolateData-2 Set EDA
 
 ```{r}
 IsolateData_2 %>% distinct(Species)
@@ -566,3 +559,7 @@ antibiotic2011 <- antibiotic_use %>%
 
 
 
+
+
+
+{end of doc}
