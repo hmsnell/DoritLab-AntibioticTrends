@@ -15,112 +15,7 @@ library(ggplot2)
 install.packages("haven")
 require(haven)
 
-IsolateData_6 <- read.csv("IsolateData-6.csv")
-
 ```
-
-
-# Parsing:
-```{r}
-#IsolateData_6 %>%
-#  IsolateData_6$Region.Name <- as.character(Region.Name) %>%
-#  select(Region.Name)
-
-IsolateData_6$Region.Name <- as.character(IsolateData_6$Region.Name)
-
-isolate_RegionFreq <- IsolateData_6 %>% 
-  select(Region.Name) %>%
-  filter(Region.Name == "Region 1",
-         Region.Name == "Region 2",
-         Region.Name == "Region 3",
-         Region.Name == "Region 4",
-         Region.Name == "Region 5",
-         Region.Name == "Region 6",
-         Region.Name == "Region 7",
-         Region.Name == "Region 8",
-         Region.Name == "Region 9",
-         Region.Name == "Region 10")# %>% 
-#  group_by(`Region.Name`) %>% 
-#  mutate(count = n())
-
-```
-
-# Sample Source: Blood, Stool, Urine, Gall Bladder, CSF, Wound
-```{r}
-# Blood Sample
-isolate_Blood <- IsolateData_6 %>% 
-  filter(Specimen.Source == "Blood") %>% 
-  group_by(`Resistance.Pattern`) %>% 
-  mutate(ResistCount = n()) %>% 
-  filter(ResistCount >= 100) %>% 
-  mutate(logResist = log10(ResistCount))
-
-  
-Blood <- ggplot(data = isolate_Blood, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Blood Sample")
-Blood
-
-# Stool Sample
-isolate_Stool <- IsolateData_6 %>% 
-  filter(Specimen.Source == "Stool") %>% 
-  group_by(`Resistance.Pattern`) %>% 
-  mutate(ResistCount = n()) %>% 
-  filter(ResistCount >= 100) %>% 
-  mutate(logResist = log10(ResistCount))
-
-  
-Stool <- ggplot(data = isolate_Stool, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Stool Sample")
-Stool
-
-# Urine Sample
-isolate_Urine <- IsolateData_6 %>% 
-  filter(Specimen.Source == "Urine") %>% 
-  group_by(`Resistance.Pattern`) %>% 
-  mutate(ResistCount = n()) %>% 
-  filter(ResistCount >= 100) %>% 
-  mutate(logResist = log10(ResistCount))
-
-  
-Urine <- ggplot(data = isolate_Urine, aes(x = `Resistance.Pattern`, y = logResist)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Urine Sample")
-Urine
-
-#Gall Bladder Sample
-isolate_GBladder <- IsolateData_6 %>% 
-  filter(Specimen.Source == "Gall Bladder") %>% 
-  group_by(`Resistance.Pattern`) %>% 
-  mutate(ResistCount = n()) #%>% 
-#  filter(ResistCount >= 100) %>% 
-#  mutate(logResist = log10(ResistCount))
-
-  
-GBladder <- ggplot(data = isolate_GBladder, aes(x = `Resistance.Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Gall Bladder Sample")
-GBladder
-
-#CSF Sample (Cerebrospinal fluid)
-isolate_CSF <- IsolateData_6 %>% 
-  filter(Specimen.Source == "CSF") %>% 
-  group_by(`Resistance.Pattern`) %>% 
-  mutate(ResistCount = n()) #%>% 
-#  filter(ResistCount >= 100) %>% 
-#  mutate(logResist = log10(ResistCount))
-
-  
-CSF <- ggplot(data = isolate_CSF, aes(x = `Resistance.Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("CSF Sample")
-CSF
-
-#Wound Sample
-isolate_Wound <- IsolateData_6 %>% 
-  filter(Specimen.Source == "Wound") %>% 
-  group_by(`Resistance.Pattern`) %>% 
-  mutate(ResistCount = n()) #%>% 
-#  filter(ResistCount >= 100) %>% 
-#  mutate(logResist = log10(ResistCount))
-
-  
-Wound <- ggplot(data = isolate_Wound, aes(x = `Resistance.Pattern`, y = ResistCount)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + ggtitle("Wound Sample")
-Wound
-  
-```
-
 
 #Loading Antibiotic Use Data:
 ```{r}
@@ -135,33 +30,18 @@ WhichYear <- Antibiotic_Use %>%
 ```
 
 
-#Jejuni Collapse Data:
-```{r}
-## Filtering for ONLY 2011 b/c it has the most observations from the Isolate Dataset
-Jejuni_IsolateData <- IsolateData_6 %>%
-  filter(Species == "jejuni", 
-         Resistance.Pattern == "CipNal" |
-         Resistance.Pattern == "Cli" |
-         Resistance.Pattern == "T" |
-         Resistance.Pattern == "TCipNal" |
-         Resistance.Pattern == "TCipNalCli" |
-         Resistance.Pattern == "TCli") %>%
-  group_by(Data.Year) %>%
-  summarise(count = n())
-```
-
 # CMS Data - Medicaid/Medicare
 ```{r}
 library(dplyr)
 library(ggplot2)
 
-Medicaid_FilteredMeth <- Medicaid_SpendingUtilization %>%
-  filter(GenericName == "Meth/Meblue/Sod Phos/Psal/Hyos")
+#Medicaid_FilteredMeth <- Medicaid_SpendingUtilization %>%
+#  filter(GenericName == "Meth/Meblue/Sod Phos/Psal/Hyos")
 
-ggplot(data = Medicaid_SpendingUtilization, aes(x = Year, y = TotalSpending)) + geom_point()
+#ggplot(data = Medicaid_SpendingUtilization, aes(x = Year, y = TotalSpending)) + geom_point()
 
-ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalSpending, col = BrandName)) + geom_point()
-ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalClaims, col = BrandName)) + geom_line()
+#ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalSpending, col = BrandName)) + geom_point()
+#ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalClaims, col = BrandName)) + geom_line()
 ```
 
 #Medicaid:
