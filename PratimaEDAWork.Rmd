@@ -1,5 +1,5 @@
 ---
-title: "Pratima EDA Work"
+title: "Pratima EDA Wor"
 author: "Pratima Niroula"
 date: "4/20/2020"
 output: html_document
