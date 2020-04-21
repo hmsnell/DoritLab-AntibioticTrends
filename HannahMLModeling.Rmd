@@ -19,6 +19,8 @@ library(tidyverse)
 ## Import IqVia Data
 ```{r, cache = TRUE}
 iqvia <- read.delim("~/Downloads/PartD_Prescriber_PUF_NPI_Drug_17.txt")
+
+
 ```
 
 
@@ -30,7 +32,7 @@ resistance_state <- read.csv("Data/Resist_States.csv")
 resistance_region <- read.csv("Data/Resist_Regional.csv")
 resistance_national <- read.csv("Data/Resist_National.csv")
 IsolateData_2 <- read.csv("Data/IsolateData-2.csv")
-Census_10_19 <- read_csv("Data/Census_10:19.csv")
+Census_10_19 <- read_csv("Data/Census_1019.csv")
 
 ```
 
