@@ -4,6 +4,12 @@ author: "Serene Lee"
 output: html_document
 ---
 
+IQVIA Data Load
+```{r}
+
+```
+
+
 ```{r}
 library(tidyverse)
 library(dplyr)
