@@ -17,234 +17,16 @@ library(tidyr)
 library(reshape2)
 library(ggplot2)
 
+resistance_state <- read.csv("~/Documents/School/Smith Sem 7/Special Studies/PSP_Antibiotic_Resistance_Data/Resist_States.csv")
+
+# 2) 
+resistance_region <- read.csv("~/Documents/School/Smith Sem 7/Special Studies/PSP_Antibiotic_Resistance_Data/Resist_Regional.csv")
+
+# 3)
+resistance_national <- read.csv("~/Documents/School/Smith Sem 7/Special Studies/PSP_Antibiotic_Resistance_Data/Resist_National.csv")
 
 ```
 
-#Loading Antibiotic Use Data:
-```{r}
-Antibiotic_Use <- read.csv("Outpatient_Antibiotic_Use.csv")
-
-WhichYear <- Antibiotic_Use %>%
-  filter(Sex == "Combined Gender",
-         Rate != "Insufficient Data",
-         Antibiotic_Class != "All classes") #%>%
-#  group_by(Year) %>%
-#  summarise(count = n())
-```
-
-
-# CMS Data - Medicaid/Medicare
-```{r}
-library(dplyr)
-library(ggplot2)
-
-#Medicaid_FilteredMeth <- Medicaid_SpendingUtilization %>%
-#  filter(GenericName == "Meth/Meblue/Sod Phos/Psal/Hyos")
-
-#ggplot(data = Medicaid_SpendingUtilization, aes(x = Year, y = TotalSpending)) + geom_point()
-
-#ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalSpending, col = BrandName)) + geom_point()
-#ggplot(data = Medicaid_FilteredMeth, aes(x = Year, y = TotalClaims, col = BrandName)) + geom_line()
-```
-
-#Medicaid:
-##Quinolones/Fluoroquinolones antibiotic drugs:
-```{r}
-#Generic name of drug (Referenced GoodRx): Ciprofloxacin HCl, Ciprofloxacin, Ciprofloxacin/Hydrocortisone,
-#Ciprofloxacin In 5 % Dextrose, Ciprofloxacin HCl/Dexameth, Ciprofloxacin Lactate, Ciprofloxacin/Ciprofloxa HCl, Ciprofloxacin HCl/Fluocinolone, Levofloxacin, Levofloxacin In Dextrose 5 %, Ofloxacin, Moxifloxacin HCl, Moxifloxacin-Sod.Chloride(Iso), Moxifloxacin/Sod.Ace,Sul/Water, Besifloxacin HCl, Delafloxacin Meglumine, Gatifloxacin
-
-# Create a new data set with only drugs under the quinolones antibiotic class:
-Medicaid_Quinolone <- Medicaid_SpendingUtilization %>%
-  filter(GenericName == "Ciprofloxacin HCl"|
-           GenericName == "Ciprofloxacin"|
-           GenericName == "Ciprofloxacin/Hydrocortisone"|
-           GenericName == "Ciprofloxacin In 5 % Dextrose"|
-           GenericName == "Ciprofloxacin HCl/Dexameth"|
-           GenericName == "Ciprofloxacin Lactate"|
-           GenericName == "Ciprofloxacin/Ciprofloxa HCl"|
-           GenericName == "Ciprofloxacin HCl/Fluocinolone"|
-           GenericName == "Levofloxacin"|
-           GenericName == "Levofloxacin In Dextrose 5 %"|
-           GenericName == "Ofloxacin"|
-           GenericName == "Moxifloxacin HCl"|
-           GenericName == "Moxifloxacin-Sod.Chloride(Iso)"|
-           GenericName == "Moxifloxacin/Sod.Ace,Sul/Water"|
-           GenericName == "Besifloxacin HCl"|
-           GenericName == "Delafloxacin Meglumine"|
-           GenericName == "Gatifloxacin")
-View(Medicaid_Quinolone)
-
-# EDA to look at trends for spending:
-ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalSpending)) + geom_point()
-ggplot(data = Medicaid_Quinolone, aes(x = Year, y = TotalClaims, col = GenericName)) + geom_jitter()
-ggplot(data = Medicaid_Quinolone, aes(x = log10(TotalClaims))) + geom_histogram() + facet_wrap(~Year)
-```
-
-
-#Regional Resistance Data:
-```{r}
-# Refreshing Regional resistance data
-Resist_Regional <- resistance_region %>%
-  select(-Lower95CI, -Upper95CI, -PercentResistant)
-
-#Resistance Trends by Region
-Resist_Regional <- Resist_Regional %>%
-  filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
-
-#Change data type
-Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
-Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
-#Resist_Regional$PercentResistant <- as.numeric(as.character(Resist_Regional$PercentResistant))
-Resist_Regional$AgeCategory <- as.character(Resist_Regional$AgeCategory)
-
-# Plot to see trends in region:
-#ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant, col = AgeCategory)) + geom_col()
-#ggplot(data = Resist_Regional, aes(x = EventYear, y = PercentResistant)) + geom_col() + facet_wrap(~Region)
-
-```
-
-# Calculate Percent Resistant
-```{r}
-# Tidy format for Resist_Regional data and take out ALL HAIS and ALL AGES
-Resist_Regional <- Resist_Regional %>%
-  gather(MetricType, MetricNumber, NumberTested:NumberResistant) %>%
-  filter(EventType != "All HAIs", AgeCategory != "All Ages")
-
-# Plot NumberTested and NumberResistant Data
-ggplot(data = Resist_Regional, 
-       aes(x = EventYear, y = MetricNumber, fill = MetricType)) + 
-  geom_col(position = position_dodge(width = 0.5)) + 
-  facet_wrap(~Region)
-
-# Regroup data for Calculated PercentResistant Data
-Resist_Regional_CalculateResPercent <- Resist_Regional %>%
-  group_by(Region, EventYear, MetricType) %>%
-  summarize(TotalMetricNumber = sum(MetricNumber))
-
-# Revert Dataset to Wide form
-Wide_data_ResistPercent <- spread(Resist_Regional_CalculateResPercent,
-                                  MetricType,
-                                  TotalMetricNumber)
-Wide_data_ResistPercent <- Wide_data_ResistPercent %>%
-  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
-
-#Wide_data_ResistPercent <- melt(Resist_Regional_CalculateResPercent,
-#                                id.vars = c("Region", "EventYear"),
-#                                variable.name = "MetricType",
-#                                value.name = "TotalMetricNumber")
-
-#Wide_data_ResistPercent <- reshape(Resist_Regional_CalculateResPercent,
-#                                   idvar = c("Region", "EventYear"),
-#                                   timevar = "MetricType",
-#                                   direction = "wide")
-
-# Plot Percent Resistant Data
-ggplot(data = Wide_data_ResistPercent, 
-       aes(x = EventYear, y = Percent_Resistant)) + 
-  geom_col() + 
-  facet_wrap(~Region)
-
-# Facet with Years
-  
-```
-
-#Trying other variables: Age Category
-```{r}
-#Regroup Resist_Regional by AgeCategory:
-Resist_Regional <- resistance_region %>%
-  select(-Lower95CI, -Upper95CI, -PercentResistant)
-
-#Resistance Trends by Region
-Resist_Regional <- Resist_Regional %>%
-  filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
-
-#Change data type to numerical
-Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
-Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
-
-# Tidy format for Resist_Regional data 
-Resist_Regional <- Resist_Regional %>%
-  gather(MetricType, MetricNumber, NumberTested:NumberResistant) %>%
-  filter(EventType != "All HAIs", AgeCategory != "All Ages")
-
-# Regroup with age and year
-Resist_Regional_byAge <- Resist_Regional %>%
-  group_by(Region, EventYear, MetricType, AgeCategory) %>%
-  summarize(TotalMetricNumber = sum(MetricNumber))
-
-# Revert Dataset to Wide form
-Wide_AgeCategory <- spread(Resist_Regional_byAge,
-                                  MetricType,
-                                  TotalMetricNumber)
-Wide_AgeCategory <- Wide_AgeCategory %>%
-  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
-
-# Plot Percent Resistance by AgeCaetgory (bar):
-ggplot(data = Wide_AgeCategory, 
-       aes(x = EventYear, y = Percent_Resistant, fill = AgeCategory)) + 
-  geom_col(position = "dodge") + 
-  facet_wrap(~Region)
-
-# Plot Percent Resistance by AgeCaetgory (line):
-Resist_Regional_byAge <- Resist_Regional %>%
-  group_by(EventYear, MetricType, AgeCategory) %>%
-  summarize(TotalMetricNumber = sum(MetricNumber))
-
-Wide_AgeCategory <- spread(Resist_Regional_byAge,
-                                  MetricType,
-                                  TotalMetricNumber)
-Wide_AgeCategory <- Wide_AgeCategory %>%
-  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
-
-Wide_AgeCategory <- Wide_AgeCategory %>%
-  filter(Percent_Resistant != 0)
-
-ggplot(data = Wide_AgeCategory, 
-       aes(x = EventYear, y = Percent_Resistant, col = AgeCategory)) + 
-  geom_line() #Don't know why it's not plotting
-
-
-
-```
-
-#Trying out some statistical tests
-```{r}
-# Chi Square:
-# categorical variables: Phenotype, Region, EventType, EventYear, EventCategory
-
-
-#Regroup Resist_Regional by AgeCategory:
-Resist_Regional <- resistance_region %>%
-  select(-Lower95CI, -Upper95CI, -PercentResistant)
-
-#Resistance Trends by Region
-Resist_Regional <- Resist_Regional %>%
-  filter(NumberResistant != "Insufficient Data" & NumberResistant != "None Tested" & EventYear != "All Years")
-
-#Change data type to numerical
-Resist_Regional$NumberTested <- as.numeric(as.character(Resist_Regional$NumberTested))
-Resist_Regional$NumberResistant <- as.numeric(as.character(Resist_Regional$NumberResistant))
-
-# Tidy format for Resist_Regional data 
-Resist_Regional <- Resist_Regional %>%
-  gather(MetricType, MetricNumber, NumberTested:NumberResistant) %>%
-  filter(EventType != "All HAIs", AgeCategory != "All Ages")
-
-
-#Rearrange
-Resist_Regional_test <- Resist_Regional %>%
-  group_by(Phenotype, Region, MetricType, AgeCategory) %>%
-  summarize(TotalMetricNumber = sum(MetricNumber))
-
-# Revert Dataset to Wide form
-Wide_test <- spread(Resist_Regional_test,
-                                  MetricType,
-                                  TotalMetricNumber)
-Wide_test <- Wide_test %>%
-  mutate(Percent_Resistant = (NumberResistant/NumberTested)*100)
-
-
-```
 
 #Medicaid:
 ##Quinolones/Fluoroquinolones antibiotic drugs:
@@ -920,6 +702,30 @@ resistance_total <- rbind(resistance_2011, resistance_2012,
 ```
 
 
+Multiple Imputation:
+```{r}
+# removing all HAIs:
+resistance_total <- resistance_total %>%
+  filter(EventType != "All HAIs")
+
+resistance_total$Phenotype <- as.character(resistance_total$Phenotype)
+resistance_total$EventType <- as.character(resistance_total$EventType)
+resistance_total$Location <- as.character(resistance_total$Location)
+resistance_total$EventYeat <- as.character(resistance_total$EventYear)
+resistance_total$AgeCategory <- as.character(resistance_total$AgeCategory)
+
+
+
+# Finding the means of numberTested and number Resistant
+#Acinetobacter spp. (R+I) to carbapenems, CAUTI, 
+
+
+
+# With plyr package:
+plyr_resistance_total <- ddply(resistance_total,~ Phenotype  +  EventType + Location + EventYear + AgeCategory,
+      summarise,average=mean(numberTested)) 
+
+```
 
 
 
