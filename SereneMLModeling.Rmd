@@ -23,6 +23,9 @@ iqvia3 <- filter(iqvia3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name
 iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
 iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
 
+#combine all sets into one
+combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5)
+
 ```
 
 
