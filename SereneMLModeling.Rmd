@@ -5,6 +5,10 @@ output: html_document
 ---
 
 ```{r}
+library(tidyverse)
+library(tidyr)
+library(reshape2)
+library(ggplot2)
 library(dplyr)
 #Unique values from partd_antibioticgeneric:
 PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
@@ -29,13 +33,14 @@ combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5)
 ```
 
 
+EDA for IQVIA data:
+```{r}
+
+```
+
+
 
 ```{r}
-library(tidyverse)
-library(dplyr)
-library(tidyr)
-library(reshape2)
-library(ggplot2)
 
 resistance_state <- read.csv("~/Documents/School/Smith Sem 7/Special Studies/PSP_Antibiotic_Resistance_Data/Resist_States.csv")
 
