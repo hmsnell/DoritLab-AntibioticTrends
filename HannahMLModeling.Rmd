@@ -12,6 +12,7 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(stringr)
 ```
 
 # Data Preparation 
@@ -19,9 +20,39 @@ library(tidyverse)
 ## Import IqVia Data
 ```{r, cache = TRUE}
 iqvia <- read.delim("~/Downloads/PartD_Prescriber_PUF_NPI_Drug_17.txt")
-
-
 ```
+
+## Make IqVia Dataframes (parse into 5 dataframes)
+
+```{r}
+iqvia1 <- iqvia %>% 
+  slice(1:5000000)
+iqvia2 <- iqvia %>% 
+  slice(5000001:10000000) 
+iqvia3 <- iqvia %>% 
+  slice(10000001:15000000) 
+iqvia4 <- iqvia %>% 
+  slice(15000001:20000000)
+iqvia5 <- iqvia %>% 
+  slice(20000001:25209130)
+  
+iqvia %>% distinct(drug_name)
+```
+
+## Filter Out Quinonones Class (EDA)
+
+```{r}
+iqvai1_quinolone <- iqvia1 %>%
+  filter(str_detect(drug_name, "CIPRO"))
+
+iqvai1_quinolone 
+```
+
+
+
+
+
+
 
 
 ## Dataframe Input
