@@ -13,6 +13,7 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(stringr)
+library(readxl)
 ```
 
 # Data Preparation 
@@ -20,6 +21,10 @@ library(stringr)
 ## Import IqVia Data
 ```{r, cache = TRUE}
 iqvia <- read.delim("~/Downloads/PartD_Prescriber_PUF_NPI_Drug_17.txt")
+```
+
+```{r}
+PARTD_AntibioticGeneric <- read_excel("Data/PARTD_AntibioticGeneric.xlsx")
 ```
 
 ## Make IqVia Dataframes (parse into 5 dataframes)
@@ -36,18 +41,46 @@ iqvia4 <- iqvia %>%
 iqvia5 <- iqvia %>% 
   slice(20000001:25209130)
   
-iqvia %>% distinct(drug_name)
+iqvia1 %>% 
+  write_csv()
 ```
 
 ## Filter Out Quinonones Class (EDA)
 
 ```{r}
-iqvai1_quinolone <- iqvia1 %>%
-  filter(str_detect(drug_name, "CIPRO"))
+#Unique values from partd_antibioticgeneric:
+PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
 
-iqvai1_quinolone 
+#IMPORT IQVIA DATA:
+iqvia1 <- read.csv("~/Downloads/Iqvia Data/iqvia1data.csv")
+iqvia2 <- read.csv("~/Downloads/Iqvia Data/iqvia2data.csv")
+iqvia3 <- read.csv("~/Downloads/Iqvia Data/iqvia3data.csv")
+iqvia4 <- read.csv("~/Downloads/Iqvia Data/iqvia4data.csv")
+iqvia5 <- read.csv("~/Downloads/Iqvia Data/iqvia5data.csv")
+
+#Filter for antibiotic drugs only:
+iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia2 <- filter(iqvia2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia3 <- filter(iqvia3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+
+#combine all sets into one
+combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5)
 ```
 
+
+```{r}
+totaliqvia2017 <- combinediqvia %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(25)
+totaliqvia2017
+
+ggplot(totaliqvia2017, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 25 Highest Prescribed Antibiotics in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+```
 
 
 
@@ -125,6 +158,7 @@ antibioticuse <- antibioticuse %>%
                            "Wisconsin" = "WI",
                            "Wyoming" = "WY"))
 ```
+
 ## 20200228: Isolate Data 2 Cleanup
 
 ```{r, Isolate Data 2 cleanup}
@@ -187,9 +221,6 @@ outpatientdata <- antibioticuse %>%
                            "West Virginia" = "WV",
                            "Wisconsin" = "WI",
                            "Wyoming" = "WY")) 
-
-  
-  
 
 censusdata <- Census_10_19 %>% 
   select(-`Census`, - `Estimation Base`) %>% 
