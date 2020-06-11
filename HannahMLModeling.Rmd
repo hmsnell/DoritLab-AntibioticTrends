@@ -40,9 +40,6 @@ iqvia4 <- iqvia %>%
   slice(15000001:20000000)
 iqvia5 <- iqvia %>% 
   slice(20000001:25209130)
-  
-iqvia1 %>% 
-  write_csv()
 ```
 
 ## Filter Out Quinonones Class (EDA)
@@ -52,11 +49,11 @@ iqvia1 %>%
 PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
 
 #IMPORT IQVIA DATA:
-iqvia1 <- read.csv("~/Downloads/Iqvia Data/iqvia1data.csv")
-iqvia2 <- read.csv("~/Downloads/Iqvia Data/iqvia2data.csv")
-iqvia3 <- read.csv("~/Downloads/Iqvia Data/iqvia3data.csv")
-iqvia4 <- read.csv("~/Downloads/Iqvia Data/iqvia4data.csv")
-iqvia5 <- read.csv("~/Downloads/Iqvia Data/iqvia5data.csv")
+# iqvia1 <- read.csv("~/Downloads/Iqvia Data/iqvia1data.csv")
+# iqvia2 <- read.csv("~/Downloads/Iqvia Data/iqvia2data.csv")
+# iqvia3 <- read.csv("~/Downloads/Iqvia Data/iqvia3data.csv")
+# iqvia4 <- read.csv("~/Downloads/Iqvia Data/iqvia4data.csv")
+# iqvia5 <- read.csv("~/Downloads/Iqvia Data/iqvia5data.csv")
 
 #Filter for antibiotic drugs only:
 iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
@@ -78,14 +75,43 @@ totaliqvia2017 <- combinediqvia %>%
   head(25)
 totaliqvia2017
 
-ggplot(totaliqvia2017, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 25 Highest Prescribed Antibiotics in 2017") + theme(axis.text.x = element_text(angle = 90))
+ggplot(totaliqvia2017, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + 
+  geom_col() + 
+  labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 25 Highest Prescribed Antibiotics in 2017") + 
+  theme(axis.text.x = element_text(angle = 90))
 
+```
+
+# 20200602 
+
+```{r}
+combinediqvia <- combinediqvia %>% 
+  select(-nppes_provider_last_org_name, 
+         -nppes_provider_first_name, 
+         -total_30_day_fill_count, 
+         -total_30_day_fill_count_ge65, 
+         -total_day_supply, 
+         -bene_count_ge65, 
+         -bene_count_ge65_suppress_flag, 
+         -total_claim_count_ge65,
+         -total_30_day_fill_count_ge65, 
+         -description_flag, 
+         -ge65_suppress_flag, 
+         -total_day_supply_ge65, 
+         -total_drug_cost_ge65)
+```
+
+```{r}
+distinctantibiotics <- combinediqvia %>% 
+  distinct(generic_name) 
+
+write_csv(distinctantibiotics, path = "distinctantibiotics.csv")
 ```
 
 
 
 
-
+------------------------------------------------------------------
 
 
 ## Dataframe Input
