@@ -102,14 +102,36 @@ combinediqvia <- combinediqvia %>%
 ```
 
 ```{r}
-distinctantibiotics <- combinediqvia %>% 
-  distinct(generic_name) 
-
-write_csv(distinctantibiotics, path = "distinctantibiotics.csv")
+antibioticclasses <- read.csv("distinctantibiotics.csv")
+colnames(antibioticclasses)[1] <- "generic_name"
 ```
 
+```{r}
+combinediqvia <- combinediqvia %>% 
+  left_join(antibioticclasses, by = "generic_name")
+```
 
+```{r}
+options(scipen = 999)
+distbyclass <- ggplot(combinediqvia, aes(x = class, fill = "blue")) + 
+                        geom_histogram(stat = "count") + 
+                        labs(title = "Distribution of Antibiotic Classes in Dataset", x = "Class", y = "Row Count") + 
+  theme(axis.text.x = element_text(angle = 90))
+distbyclass
+```
 
+```{r}
+totalclaims <- combinediqvia %>% 
+  group_by(class) %>% 
+  summarise(total = sum(total_claim_count))
+
+totalclaimcounts <- ggplot(totalclaims, aes(x = class, y = total, fill = "blue")) +
+  geom_bar(stat = "identity") + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claim Count of Each Antibiotic Class") + 
+  theme(axis.text.x = element_text(angle = 90))
+totalclaimcounts
+```
+ 
 
 ------------------------------------------------------------------
 

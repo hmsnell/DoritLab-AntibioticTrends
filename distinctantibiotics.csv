@@ -1,106 +1,106 @@
-generic_name
-CEPHALEXIN
-CIPROFLOXACIN HCL
-DOXYCYCLINE HYCLATE
-LEVOFLOXACIN
-AMOXICILLIN
-AZITHROMYCIN
-AMOXICILLIN/POTASSIUM CLAV
-METRONIDAZOLE
-NITROFURANTOIN MONOHYD/M-CRYST
-CEFUROXIME AXETIL
-NITROFURANTOIN MACROCRYSTAL
-SULFAMETHOXAZOLE/TRIMETHOPRIM
-CLINDAMYCIN PHOSPHATE
-CEFAZOLIN SODIUM
-CEFTRIAXONE SODIUM
-DOXYCYCLINE MONOHYDRATE
-FOSFOMYCIN TROMETHAMINE
-CLINDAMYCIN HCL
-PENICILLIN V POTASSIUM
-ERYTHROMYCIN BASE
-CEFDINIR
-GENTAMICIN SULFATE
-CEFEPIME HCL
-CLARITHROMYCIN
-DAPTOMYCIN
-ERTAPENEM SODIUM
-MINOCYCLINE HCL
-PIPERACILLIN SODIUM/TAZOBACTAM
-CEFTAROLINE FOSAMIL ACETATE
-VANCOMYCIN HCL
-MOXIFLOXACIN HCL
-NEOMYCIN SULFATE
-OFLOXACIN
-TRIMETHOPRIM
-CEFADROXIL
-DICLOXACILLIN SODIUM
-RIFAXIMIN
-CEFPODOXIME PROXETIL
-CEFEPIME IN ISO-OSM DEXTROSE
-LEVOFLOXACIN IN DEXTROSE 5 %
-MEROPENEM
-CEFTAZIDIME
-DEMECLOCYCLINE HCL
-AMPICILLIN SODIUM/SULBACTAM NA
-CEFPROZIL
-ERYTHROMYCIN ETHYLSUCCINATE
-AMPICILLIN SODIUM
-AMPICILLIN TRIHYDRATE
-LINEZOLID
-PENICILLIN G BENZATHINE
-TOBRAMYCIN SULFATE
-CEFTRIAXONE IN IS-OSM DEXTROSE
-VANCOMYCIN/0.9 % SOD CHLORIDE
-AMIKACIN SULFATE
-IMIPENEM/CILASTATIN SODIUM
-CEFIXIME
-VANCOMYCIN HCL IN 5 % DEXTROSE
-PENICILLIN G POTASSIUM
-FIDAXOMICIN
-"GENTAMICIN IN NACL, ISO-OSM"
-"PIPERACILLIN-TAZO-DEXTROSE,ISO"
-"CEFAZOLIN SODIUM/DEXTROSE,ISO"
-ERYTHROMYCIN STEARATE
-CEFOXITIN SODIUM
-CEFACLOR
-SULFADIAZINE
-METRONIDAZOLE/SODIUM CHLORIDE
-CLINDAMYCIN PALMITATE HCL
-TIGECYCLINE
-OXACILLIN SODIUM
-TETRACYCLINE HCL
-TINIDAZOLE
-NITROFURANTOIN
-CIPROFLOXACIN IN 5 % DEXTROSE
-NAFCILLIN SODIUM
-DOXYCYCLINE CALCIUM
-MEROPENEM-0.9% SODIUM CHLORIDE
-CLINDAMYCIN PHOSPHATE/D5W
-CEFTOLOZANE/TAZOBACTAM
-PEN G BENZ/PEN G PROCAINE
-TELAVANCIN HCL
-AZTREONAM
-TEDIZOLID PHOSPHATE
-OXACILLIN IN DEXTROSE(ISO-OSM)
-DALBAVANCIN HCL
-CEFTAZIDIME/AVIBACTAM
-ORITAVANCIN DIPHOSPHATE
-GENTAMICIN SULFATE/PF
-CEFTAZIDIME IN DEXTROSE5%WATER
-"MOXIFLOXACIN/SOD.ACE,SUL/WATER"
-CIPROFLOXACIN/CIPROFLOXA HCL
-LINEZOLID-0.9% SODIUM CHLORIDE
-DORIPENEM
-CIPROFLOXACIN
-CIPROFLOXACIN LACTATE
-MOXIFLOXACIN IN NACL (ISO-OSM)
-CEFEPIME HCL IN DEXTROSE 5 %
-AZTREONAM/DEXTROSE-WATER
-ERYTHROMYCIN LACTOBIONATE
-QUINUPRISTIN/DALFOPRISTIN
-"NAFCILLIN IN DEXTROSE,ISO-OSM"
-STREPTOMYCIN SULFATE
-CEFOTETAN DISODIUM
-CEFUROXIME SODIUM
-PEN G POT/DEXTROSE-WATER
+generic_name,class,code,reference
+CEPHALEXIN,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a682733.html#:~:text=Cephalexin%20is%20used%20to%20treat,of%20medications%20called%20cephalosporin%20antibiotics."
+CIPROFLOXACIN HCL,fluoroquinolones,,"https://medlineplus.gov/druginfo/meds/a688016.html#:~:text=Ciprofloxacin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+DOXYCYCLINE HYCLATE,tetracyclines,,"https://www.goodrx.com/doxycycline-hyclate/what-is#:~:text=Doxycycline%20belongs%20to%20the%20class,flu%2C%20or%20other%20virus%20infections."
+LEVOFLOXACIN,quinolones,,"https://www.webmd.com/drugs/2/drug-14495-8235/levofloxacin-oral/levofloxacin-oral/details#:~:text=Levofloxacin%20is%20used%20to%20treat,stopping%20the%20growth%20of%20bacteria."
+AMOXICILLIN,penicillins,,"https://medlineplus.gov/druginfo/meds/a685024.html#:~:text=Amoxicillin%20is%20in%20a%20class,preventing%20bacteria%20from%20destroying%20amoxicillin."
+AZITHROMYCIN,macrolides,,"https://medlineplus.gov/druginfo/meds/a697037.html#:~:text=Azithromycin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+AMOXICILLIN/POTASSIUM CLAV,penicillins,,"https://medlineplus.gov/druginfo/meds/a685024.html#:~:text=The%20combination%20of%20amoxicillin%20and,medications%20called%20penicillin%2Dlike%20antibiotics."
+METRONIDAZOLE,nitroimdazoles,,https://www.medicinenet.com/metronidazole-oral/article.htm
+NITROFURANTOIN MONOHYD/M-CRYST,,,
+CEFUROXIME AXETIL,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a601206.html#:~:text=Cefuroxime%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+NITROFURANTOIN MACROCRYSTAL,,,
+SULFAMETHOXAZOLE/TRIMETHOPRIM,,,
+CLINDAMYCIN PHOSPHATE,macrolides,,https://www.sciencedirect.com/topics/medicine-and-dentistry/clindamycin
+CEFAZOLIN SODIUM,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a682731.html#:~:text=Cefazolin%20injection%20is%20in%20a,It%20works%20by%20killing%20bacteria."
+CEFTRIAXONE SODIUM,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a685032.html#:~:text=Ceftriaxone%20injection%20is%20in%20a,It%20works%20by%20killing%20bacteria."
+DOXYCYCLINE MONOHYDRATE,tetracyclines,,https://www.wellrx.com/doxycycline%20monohydrate/drug-information/
+FOSFOMYCIN TROMETHAMINE,,,
+CLINDAMYCIN HCL,lincomycin,,https://www.rxlist.com/cleocin_vs_cipro/drugs-condition.htm
+PENICILLIN V POTASSIUM,penicillins,,"https://medlineplus.gov/druginfo/meds/a685015.html#:~:text=Penicillin%20V%20potassium%20is%20in,flu%2C%20or%20other%20viral%20infections."
+ERYTHROMYCIN BASE,macrolides,,"https://medlineplus.gov/druginfo/meds/a682381.html#:~:text=Erythromycin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+CEFDINIR,cephalosporin,,https://medlineplus.gov/druginfo/meds/a698001.html#:~:text=Cefdinir%20is%20in%20a%20class%20of%20medications%20called%20cephalosporin%20antibiotics.
+GENTAMICIN SULFATE,aminoglycosides,,"https://www.webmd.com/drugs/2/drug-1496/gentamicin-injection/details#:~:text=Gentamicin%20belongs%20to%20a%20class,stopping%20the%20growth%20of%20bacteria."
+CEFEPIME HCL,cephalosporin,,"https://www.webmd.com/drugs/2/drug-5296/cefepime-injection/details#:~:text=Cefepime%20is%20used%20to%20treat,stopping%20the%20growth%20of%20bacteria."
+CLARITHROMYCIN,macrolides,,"https://medlineplus.gov/druginfo/meds/a692005.html#:~:text=Clarithromycin%20is%20in%20a%20class,stopping%20the%20growth%20of%20bacteria."
+DAPTOMYCIN,cyclic lipopeptides,,"https://medlineplus.gov/druginfo/meds/a608045.html#:~:text=Daptomycin%20injection%20is%20in%20a,flu%2C%20or%20other%20viral%20infections."
+ERTAPENEM SODIUM,carbapenems,,"https://medlineplus.gov/druginfo/meds/a614001.html#:~:text=Ertapenem%20is%20in%20a%20class,It%20works%20by%20killing%20bacteria."
+MINOCYCLINE HCL,tetracyclines,,"https://www.webmd.com/drugs/2/drug-7722-8073/minocycline-oral/minocycline-oral/details#:~:text=Minocycline%20is%20used%20to%20treat,stopping%20the%20growth%20of%20bacteria."
+PIPERACILLIN SODIUM/TAZOBACTAM,penicillins,,"https://medlineplus.gov/druginfo/meds/a694003.html#:~:text=Piperacillin%20is%20in%20a%20class,preventing%20bacteria%20from%20destroying%20piperacillin."
+CEFTAROLINE FOSAMIL ACETATE,cephalosporin,,"https://www.webmd.com/drugs/2/drug-154892/ceftaroline-fosamil-intravenous/details#:~:text=Uses,known%20as%20a%20cephalosporin%20antibiotic."
+VANCOMYCIN HCL,glycopeptides,,"https://medlineplus.gov/druginfo/meds/a604038.html#:~:text=Vancomycin%20is%20in%20a%20class,body%20when%20taken%20by%20mouth."
+MOXIFLOXACIN HCL,quinolones,,"https://www.webmd.com/drugs/2/drug-17874/moxifloxacin-oral/details#:~:text=Moxifloxacin%20is%20used%20to%20treat,antibiotic%20treats%20only%20bacterial%20infections."
+NEOMYCIN SULFATE,aminoglycosides,,"https://www.webmd.com/drugs/2/drug-8047/neomycin-oral/details#:~:text=Neomycin%20belongs%20to%20a%20class,brain%20problem%20(hepatic%20encephalopathy)."
+OFLOXACIN,quinolones,,"https://www.webmd.com/drugs/2/drug-7792/ofloxacin-oral/details#:~:text=Ofloxacin%20belongs%20to%20a%20class,stopping%20the%20growth%20of%20bacteria."
+TRIMETHOPRIM,penicillins,,https://www.orthobullets.com/basic-science/9059/antibiotic-classification-and-mechanism
+CEFADROXIL,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a682730.html#:~:text=Cefadroxil%20is%20in%20a%20class,It%20works%20by%20killing%20bacteria."
+DICLOXACILLIN SODIUM,penicillins,,"https://medlineplus.gov/druginfo/meds/a685017.html#:~:text=Dicloxacillin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+RIFAXIMIN,,,
+CEFPODOXIME PROXETIL,cephalosporin,,"https://www.webmd.com/drugs/2/drug-8749/cefpodoxime-oral/details#:~:text=This%20medication%20is%20used%20to,antibiotic%20treats%20only%20bacterial%20infections."
+CEFEPIME IN ISO-OSM DEXTROSE,cephalosporin,,"https://www.webmd.com/drugs/2/drug-151171/cefepime-in-dextrose-iso-osmotic-intravenous/details#:~:text=Uses,stopping%20the%20growth%20of%20bacteria."
+LEVOFLOXACIN IN DEXTROSE 5 %,quinolones,,"https://www.webmd.com/drugs/2/drug-16245/levofloxacin-in-5-dextrose-intravenous/details#:~:text=This%20medication%20is%20used%20to,take%20the%20medication%20by%20mouth."
+MEROPENEM,carbapenems,,"https://www.drugbank.ca/drugs/DB00760#:~:text=Meropenem%20is%20a%20broad%2Dspectrum,positive%20and%20Gram%2Dnegative%20bacteria."
+CEFTAZIDIME,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a686007.html#:~:text=Ceftazidime%20injection%20is%20in%20a,It%20works%20by%20killing%20bacteria."
+DEMECLOCYCLINE HCL,tetracyclines,,"https://medlineplus.gov/druginfo/meds/a682103.html#:~:text=Demeclocycline%20can%20also%20be%20used,of%20medications%20called%20tetracycline%20antibiotics."
+AMPICILLIN SODIUM/SULBACTAM NA,penicillins,,"https://medlineplus.gov/druginfo/meds/a693021.html#:~:text=Ampicillin%20is%20in%20a%20class,medications%20called%20beta%2Dlactamase%20inhibitors."
+CEFPROZIL,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a698022.html#:~:text=Cefprozil%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+ERYTHROMYCIN ETHYLSUCCINATE,macrolides,,"https://www.webmd.com/drugs/2/drug-3762-3015/erythromycin-ethylsuccinate-oral/erythromycin-ethylsuccinate-liquid-oral/details#:~:text=Erythromycin%20is%20used%20to%20treat,stopping%20the%20growth%20of%20bacteria."
+AMPICILLIN SODIUM,penicillins,,https://www.drugbank.ca/drugs/DB00415
+AMPICILLIN TRIHYDRATE,penicillins,,https://pubchem.ncbi.nlm.nih.gov/compound/Ampicillin
+LINEZOLID,oxazolidinones,,"https://medlineplus.gov/druginfo/meds/a602004.html#:~:text=Linezolid%20is%20used%20to%20treat,flu%2C%20and%20other%20viral%20infections."
+PENICILLIN G BENZATHINE,penicillins,,"https://medlineplus.gov/druginfo/meds/a615051.html#:~:text=Penicillin%20G%20benzathine%20injection%20is%20in%20a%20class%20of%20antibiotics,killing%20bacteria%20that%20cause%20infections."
+TOBRAMYCIN SULFATE,aminoglycosides,,"https://www.webmd.com/drugs/2/drug-16699/tobramycin-intravenous/details#:~:text=Tobramycin%20belongs%20to%20a%20class,stopping%20the%20growth%20of%20bacteria."
+CEFTRIAXONE IN IS-OSM DEXTROSE,cephalosporin,,"https://www.webmd.com/drugs/2/drug-16181/rocephin-in-dextrose-iso-osmotic-intravenous/details#:~:text=Ceftriaxone%20is%20used%20to%20treat,stopping%20the%20growth%20of%20bacteria."
+VANCOMYCIN/0.9 % SOD CHLORIDE,glycopeptides,,"https://medlineplus.gov/druginfo/meds/a604038.html#:~:text=Vancomycin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+AMIKACIN SULFATE,aminoglycosides,,"https://www.webmd.com/drugs/2/drug-3889/amikacin-injection/details#:~:text=Amikacin%20belongs%20to%20a%20class,stopping%20the%20growth%20of%20bacteria."
+IMIPENEM/CILASTATIN SODIUM,carbapenems,,"https://medlineplus.gov/druginfo/meds/a686013.html#:~:text=Imipenem%20is%20in%20a%20class,of%20medications%20called%20dehydropeptidase%20inhibitors."
+CEFIXIME,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a690007.html#:~:text=Cefixime%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+VANCOMYCIN HCL IN 5 % DEXTROSE,glycopeptides,,"https://medlineplus.gov/druginfo/meds/a604038.html#:~:text=Vancomycin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+PENICILLIN G POTASSIUM,penicillins,,https://www.rxlist.com/penicillin-g-potassium-drug.htm
+FIDAXOMICIN,macrolides,,"https://medlineplus.gov/druginfo/meds/a611040.html#:~:text=Fidaxomicin%20is%20in%20a%20class,flu%2C%20or%20other%20viral%20infections."
+"GENTAMICIN IN NACL, ISO-OSM",aminoglycosides,,"https://www.webmd.com/drugs/2/drug-77768/gentamicin-in-sodium-chlorideiso-osm-intravenous/details#:~:text=This%20medication%20is%20used%20to,drugs%20known%20as%20aminoglycoside%20antibiotics."
+"PIPERACILLIN-TAZO-DEXTROSE,ISO",penicillins,,"https://medlineplus.gov/druginfo/meds/a694003.html#:~:text=Piperacillin%20and%20tazobactam%20injection%20is,killing%20bacteria%20that%20cause%20infection."
+"CEFAZOLIN SODIUM/DEXTROSE,ISO",cephalosporin,,"https://medlineplus.gov/druginfo/meds/a682731.html#:~:text=Cefazolin%20injection%20is%20in%20a,flu%2C%20or%20other%20viral%20infections."
+ERYTHROMYCIN STEARATE,macrolides,,"https://medlineplus.gov/druginfo/meds/a682381.html#:~:text=Erythromycin%20is%20in%20a%20class,stopping%20the%20growth%20of%20bacteria."
+CEFOXITIN SODIUM,cephamycins,,https://www.rxlist.com/mefoxin-drug.htm
+CEFACLOR,cephalosporin,,"https://medlineplus.gov/druginfo/meds/a682729.html#:~:text=Cefaclor%20is%20in%20a%20class,stopping%20the%20growth%20of%20bacteria."
+SULFADIAZINE,sulfa,,https://www.medicinenet.com/sulfadiazine-oral_tablet/article.htm
+METRONIDAZOLE/SODIUM CHLORIDE,,,
+CLINDAMYCIN PALMITATE HCL,,,
+TIGECYCLINE,,,
+OXACILLIN SODIUM,,,
+TETRACYCLINE HCL,,,
+TINIDAZOLE,,,
+NITROFURANTOIN,,,
+CIPROFLOXACIN IN 5 % DEXTROSE,,,
+NAFCILLIN SODIUM,,,
+DOXYCYCLINE CALCIUM,,,
+MEROPENEM-0.9% SODIUM CHLORIDE,,,
+CLINDAMYCIN PHOSPHATE/D5W,,,
+CEFTOLOZANE/TAZOBACTAM,,,
+PEN G BENZ/PEN G PROCAINE,,,
+TELAVANCIN HCL,,,
+AZTREONAM,,,
+TEDIZOLID PHOSPHATE,,,
+OXACILLIN IN DEXTROSE(ISO-OSM),,,
+DALBAVANCIN HCL,,,
+CEFTAZIDIME/AVIBACTAM,,,
+ORITAVANCIN DIPHOSPHATE,,,
+GENTAMICIN SULFATE/PF,,,
+CEFTAZIDIME IN DEXTROSE5%WATER,,,
+"MOXIFLOXACIN/SOD.ACE,SUL/WATER",,,
+CIPROFLOXACIN/CIPROFLOXA HCL,,,
+LINEZOLID-0.9% SODIUM CHLORIDE,,,
+DORIPENEM,,,
+CIPROFLOXACIN,,,
+CIPROFLOXACIN LACTATE,,,
+MOXIFLOXACIN IN NACL (ISO-OSM),,,
+CEFEPIME HCL IN DEXTROSE 5 %,,,
+AZTREONAM/DEXTROSE-WATER,,,
+ERYTHROMYCIN LACTOBIONATE,,,
+QUINUPRISTIN/DALFOPRISTIN,,,
+"NAFCILLIN IN DEXTROSE,ISO-OSM",,,
+STREPTOMYCIN SULFATE,,,
+CEFOTETAN DISODIUM,,,
+CEFUROXIME SODIUM,,,
+PEN G POT/DEXTROSE-WATER,,,
