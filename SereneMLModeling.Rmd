@@ -30,11 +30,563 @@ iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name
 #combine all sets into one
 combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5)
 
+#insert region column
+combinediqvia <- combinediqvia %>%
+  mutate(Region = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
+                         ifelse(nppes_provider_state %in% c("AL", "KY", "MS", "TN"), "East South Central",
+                                ifelse(nppes_provider_state %in% c("NJ", "NY", "PA"), "Middle Atlantic",
+                                       ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY"), "Mountain",
+                                              ifelse(nppes_provider_state %in% c("CT", "ME", "MA", "NH", "RI", "VT"), "New England",
+                                                     ifelse(nppes_provider_state %in% c("AK", "CA", "HI", "OR", "WA"), "Pacific",
+                                                            ifelse(nppes_provider_state %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV"), "South Atlantic",
+                                                                   ifelse(nppes_provider_state %in% c("IA", "KS", "MN", "MO", "NE", "ND", "SD"), "West North Central",
+                                                                          ifelse(nppes_provider_state %in% c("AR", "LA", "OK", "TX"), "West South Central", "Region Undefined")))))))))) %>%
+  select(-npi, -nppes_provider_last_org_name, -nppes_provider_first_name)
+
 ```
 
 
-EDA for IQVIA data:
+Normalize to pop/enrollment and age distribution:
 ```{r}
+#Based on the enrollment data: only 15% of total medical enrollees in 2017 were under the age of 65, meaning majority are over the age of 65 - knowing this, will make a variable for aggregate population for each state under 65
+
+#importing population data for 2017
+pop_2017 <- read.csv("~/Documents/GitHub/DoritLab_AntibioticTrends/Data/2017_populationct.csv") %>%
+  select(-Year) %>%
+  filter(Location != "United States") %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands"="VI")) %>%
+  mutate(AgeUnder65_17 = Total - X65.) %>%
+  rename('Total_population_17'='Total',
+         'Age65+_17'='X65.',
+         'Age0-18_17'='Children.0.18',
+         'Age19-25_17'='Adults.19.25',
+         'Age26-34_17'='Adults.26.34',
+         'Age35-54_17'='Adults.35.54',
+         'Age55-64_17'='Adults.55.64') %>%
+  select(-Location)
+
+#reorder columns in pop_2017
+pop_2017 <- pop_2017[c(8,7,6,9,1,2,3,4,5)]
+
+#importing Enrollment data
+Enroll_17 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2017.csv")
+
+#Data wrangling for Enroll_17
+Enroll_17 <- Enroll_17 %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands"="VI")) %>%
+  select(-Location)
+
+#reorder columns in Enroll_17
+Enroll_17 <- Enroll_17[c(5,1,2,3,4)]
+
+#Merging combinediqvia/Enroll_17/pop_2017 using left outer join
+combinediqvia_17 <- merge(x = combinediqvia, y = pop_2017, by = "nppes_provider_state", all.x = TRUE)
+combinediqvia_17 <- merge(x = combinediqvia_17, y = Enroll_17, by = "nppes_provider_state", all.x = TRUE) %>%
+  filter(Region != "Region Undefined") # for nnow taking our undefined regions
+
+#Calculate proportion of total medicare enrollment for each state
+##get rid of the commas in the data
+combinediqvia_17$Total_MedicareEnroll <- as.numeric(gsub(",","",combinediqvia_17$Total_MedicareEnroll))
+combinediqvia_17$Total_PartDEnroll <- as.numeric(gsub(",","",combinediqvia_17$Total_PartDEnroll))
+combinediqvia_17$StandAlone_DrugPlanEnroll <- as.numeric(gsub(",","",combinediqvia_17$StandAlone_DrugPlanEnroll))
+combinediqvia_17$MedicareAdv_DrugPlanEnroll <- as.numeric(gsub(",","",combinediqvia_17$MedicareAdv_DrugPlanEnroll))
+##turn NAS to 0
+#combinediqvia_17$Total_population_17[is.na(combinediqvia_17$Total_population_17)] <- 0
+#combinediqvia_17$Total_MedicareEnroll[is.na(combinediqvia_17$Total_MedicareEnroll)] <- 0
+#combinediqvia_17$Total_PartDEnroll[is.na(combinediqvia_17$Total_PartDEnroll)] <- 0
+#combinediqvia_17$StandAlone_DrugPlanEnroll[is.na(combinediqvia_17$StandAlone_DrugPlanEnroll)] <- 0
+#combinediqvia_17$MedicareAdv_DrugPlanEnroll[is.na(combinediqvia_17$MedicareAdv_DrugPlanEnroll)] <- 0
+
+
+##calculate the percent
+#combinediqvia_17 <- combinediqvia_17 %>%
+#  mutate(Enroll_percapita_17 = bene_count/Total_MedicareEnroll)
+#         prop_planDEnroll_17 = Total_PartDEnroll/Total_population_17,
+#         prop_AgeOver65 = `Age65+_17`/Total_population_17)
+
+##Selecting wanted variables only:
+combinediqvia_17 <- combinediqvia_17 %>%
+  select(-nppes_provider_city, -description_flag, -drug_name, -bene_count_ge65_suppress_flag)
+
+```
+
+Per capita enrollment:
+```{r}
+# USING TOTAL_CLAIMS
+region <- combinediqvia_17 %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count),
+            total_medicareEnroll = mean(Total_MedicareEnroll),
+            percapita_Enroll = totalprescriptioncount/total_medicareEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+region
+
+ggplot(region, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#Checking the age distribution of states
+Age_over65_state <- combinediqvia_17 %>%
+  mutate(percent_over65 = (`Age65+_17`/Total_population_17)*100) %>%
+  group_by(nppes_provider_state) %>%
+  summarise(percent_over65 = mean(percent_over65, na.rm = TRUE))
+
+Age_over65_region <- combinediqvia_17 %>%
+  mutate(percent_over65 = (`Age65+_17`/Total_population_17)*100) %>%
+  group_by(Region) %>%
+  summarise(percent_over65 = mean(percent_over65, na.rm = TRUE))
+
+
+
+#boxplot of percent age 65 years older
+boxplot_over65 <- combinediqvia_17 %>%
+  mutate(prop_age65over_Enrolls = bene_count_ge65/bene_count,
+         prop_age65over = `Age65+_17`/Total_population_17) %>%
+  select(nppes_provider_state, Region, prop_age65over_Enrolls, prop_age65over)
+
+boxplot_over65 <- na.omit(boxplot_over65) 
+
+ggplot(boxplot_over65, aes(x=Region, y=prop_age65over_Enrolls)) + 
+  geom_boxplot(outlier.colour=NA) + coord_cartesian(ylim = c(0, 1.0))
+
+ggplot(boxplot_over65, aes(x=Region, y=prop_age65over)) + 
+  geom_boxplot(outlier.colour=NA) + coord_cartesian(ylim = c(0, 1.0))
+
+boxplot_over65 <- boxplot_over65 %>%
+  group_by(Region) %>%
+  summarise(avgProp_age65over = mean(prop_age65over_Enrolls))
+
+# USING TOTAL_CLAIMS_GE65 - beneficiaries older than 65 years old 
+#combinediqvia_17$total_claim_count_ge65[is.na(combinediqvia_17$total_claim_count_ge65)] <- 0
+#combinediqvia_17$bene_count_ge65[is.na(combinediqvia_17$bene_count_ge65)] <- 0
+#combinediqvia_17$bene_count[is.na(combinediqvia_17$bene_count)] <- 0
+
+
+region <- combinediqvia_17 %>%
+  mutate(percent_age65over = bene_count_ge65/bene_count) %>%
+  group_by(Region) %>% 
+  summarise(avg_percent = mean(percent_age65over,na.rm = TRUE),
+            totalprescriptioncount = sum(total_claim_count_ge65, na.rm = TRUE),
+            total_relative_medicareEnroll = avg_percent*mean(Total_MedicareEnroll, na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_relative_medicareEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+ggplot(region, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment for 65+ yrs", title = "Total Claims per capita enrollment for 65+ by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+region
+
+##Compare to original WITHOUT per capita:
+region <- combinediqvia %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>%
+  filter(Region != "Region Undefined")
+
+ggplot(region, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+```
+
+#Looking at Prescribers
+```{r}
+#EastSouthCentral
+EastSouthCentral <- combinediqvia_17 %>%
+  mutate(percent_age65over = bene_count_ge65/bene_count) %>%
+  filter(Region == "East South Central") %>%
+  group_by(specialty_description) %>%
+  summarise(avg_percent = mean(percent_age65over,na.rm = TRUE),
+            totalprescriptioncount = sum(total_claim_count_ge65, na.rm = TRUE),
+            total_relative_medicareEnroll = avg_percent*mean(Total_MedicareEnroll, na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_relative_medicareEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+
+  
+```
+
+
+
+EDA for IQVIA data:
+
+NAs
+```{r}
+glimpse(combinediqvia)
+summary(combinediqvia)
+
+#about NAs
+combinediqvia %>% map(~ mean(is.na(.)))
+
+#filter for only NAs in bene_count
+
+```
+
+description_flag
+```{r}
+descrip_flag <- combinediqvia %>%
+  group_by(description_flag) %>%
+  summarise(count = n(),
+            percent = 100*(count/1519798))
+
+ggplot(descrip_flag, aes(description_flag, percent)) + geom_col() + coord_flip()
+# majority of the specialty description is associated to Medicare specialty code/Part B, if more htan one specialty - code asociated with the largest number of services reported
+
+```
+
+
+bene_count
+```{r}
+#histogram displaying the distribution of beneficiaries number
+distrib_bene <- ggplot(combinediqvia, aes(bene_count)) + geom_histogram(na.rm = TRUE) + scale_y_log10() + facet_wrap(~Region)
+distrib_bene
+
+#least number of beneficiaries (bene_count <= 11)
+combinediqvia_leastbene <- combinediqvia %>%
+  filter(bene_count <= 11) #add n/a rows next time --> insert randomized counts from 0-11?
+
+totaliqvia2017_leastbene <- combinediqvia_leastbene %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(25)
+
+ggplot(totaliqvia2017_leastbene, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Top Prescribed Antibiotics with the LEAST number of Medicare Beneficiaries") + theme(axis.text.x = element_text(angle = 90))
+
+#Most number of beneficiaries (bene)
+combinediqvia_mostbene <- combinediqvia %>%
+  filter(bene_count > 500) #add n/a rows next time --> insert randomized counts from 0-11?
+
+totaliqvia2017_mostbene <- combinediqvia_mostbene %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(25)
+
+ggplot(totaliqvia2017_mostbene, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Top Prescribed Antibiotics with the MOST number of Medicare Beneficiaries") + theme(axis.text.x = element_text(angle = 90))
+
+#In general for year 2017
+totaliqvia2017 <- combinediqvia %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(25)
+
+ggplot(totaliqvia2017, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 25 Highest Prescribed Antibiotics in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#In general for year 2017 (ge65)
+totaliqvia2017 <- combinediqvia %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count_ge65)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(10)
+
+ggplot(totaliqvia2017, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 10 Highest Prescribed Antibiotics for 65+ in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+
+```
+
+specialty_description:
+```{r}
+#distribution of specialty
+totaliqvia2017 <- combinediqvia %>% 
+  group_by(specialty_description) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(10)
+
+ggplot(totaliqvia2017, aes(x = reorder(specialty_description, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Prescriber Specialty", y = "Total Prescription Claims", title = "Count of Top 10 Highest Prescribers in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#distribution of specialty
+totaliqvia2017 <- combinediqvia %>% 
+  group_by(specialty_description) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange() %>% 
+  head(10)
+
+ggplot(totaliqvia2017, aes(x = reorder(specialty_description, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Prescriber Specialty", y = "Total Prescription Claims", title = "Count of Bottom 10 Prescribers in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#distribution of specialty for only 65+
+total_spec_ge65 <- combinediqvia %>% 
+  group_by(specialty_description) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count_ge65)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(10)
+
+ggplot(total_spec_ge65, aes(x = reorder(specialty_description, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Prescriber Specialty", y = "Total Prescription Claims", title = "Count of Top 10 Highest Prescribers for 65+ in 2017") + theme(axis.text.x = element_text(angle = 90)) #There are a lot more NA values for total_claim_count_ge65
+
+# general specialty distribution by region
+## Family Medicine
+region_familymedicine <- combinediqvia %>% 
+  filter(specialty_description == "Family Practice") %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_familymedicine, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Family Practice Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+## Internal Medicine
+region_internalmed <- combinediqvia %>% 
+  filter(specialty_description == "Internal Medicine") %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_internalmed, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Internal Medicine Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+## Nurse Practitioner
+region_nursepract <- combinediqvia %>% 
+  filter(specialty_description == "Nurse Practitioner") %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_nursepract, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Nurse Practitioner Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+## Dentist
+region_dentist <- combinediqvia %>% 
+  filter(specialty_description == "Dentist") %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_dentist, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Dentist Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+## Physician Assistant
+region_pa <- combinediqvia %>% 
+  filter(specialty_description == "Physician Assistant") %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_pa, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Physician Assistant Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#South Atlantic has most claims for the top five specialties -- followed by East North Central and Middle Atlantic, Pacific and West South Central
+
+region <- combinediqvia %>%
+  group_by(Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Total Prescription Claims", title = "Count of Claims by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+
+
+```
+
+total_day_supply
+```{r}
+remove.packages("ggplot2") # Unisntall ggplot
+install.packages("ggplot2") # Install it again
+library(ggplot2)
+
+# looking at total supply with top five prescribers
+total_supply_top5 <- combinediqvia %>% 
+  filter(specialty_description == "Family Practice" |
+           specialty_description == "Internal Medicine" |
+           specialty_description == "Nurse Practitioner" |
+           specialty_description == "Dentist" |
+           specialty_description == "Physician Assistant")
+
+gglot(total_supply_top5, aes(specialty_description, total_day_supply)) + geom_boxplot()
+
+# looking at total supply with bottom five prescribers
+total_supply_bottom5 <- combinediqvia %>% 
+  filter(specialty_description == "Cardiology" |
+           specialty_description == "Allergy/ Immunology" |
+           specialty_description == "Anesthesiology" |
+           specialty_description == "Cardiac Surgery" |
+           specialty_description == "Addiction Medicine")
+
+gglot(total_supply_bottom5, aes(specialty_description, total_day_supply)) + geom_boxplot()
+
+
+```
+
+
+Region
+```{r}
+#South Atlantic:
+region_southatlantic <- combinediqvia %>%
+  filter(Region == "South Atlantic")
+##total claims by state
+region_southatlantic_state <- region_southatlantic %>%
+  group_by(nppes_provider_state) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_southatlantic_state, aes(x = reorder(nppes_provider_state, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "State", y = "Total Prescription Claims", title = "Count of Toal Claims by State for South Atlantic Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#East North Central:
+region_eastnorthcentral <- combinediqvia %>%
+  filter(Region == "East North Central")
+##total claims by state
+region_eastnorthcentral_state <- region_eastnorthcentral %>%
+  group_by(nppes_provider_state) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount))
+
+ggplot(region_eastnorthcentral_state, aes(x = reorder(nppes_provider_state, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "State", y = "Total Prescription Claims", title = "Count of Toal Claims by State for East North Central Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+```
+
+State
+Florida:
+```{r}
+#Florida:
+state_FL <- combinediqvia %>%
+  filter(nppes_provider_state == "FL")
+#summary(state_FL)
+
+#Total claims in general for generic_name
+state_FL_total <- state_FL %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(10)
+
+ggplot(state_FL_total, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 10 Highest Prescribed Antibiotics in Florida 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#Total Claims for year 2017 (ge65)
+state_FL_ge65 <- state_FL %>% 
+  group_by(generic_name) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count_ge65)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(10)
+
+ggplot(state_FL_ge65, aes(x = reorder(generic_name, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Generic Antibiotic Name", y = "Total Prescription Claims", title = "Count of Top 10 Highest Prescribed Antibiotics in Florida for 65+ in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#What is the specialty distribution
+
+state_FL_spec <- state_FL %>% 
+  group_by(specialty_description) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count)) %>% 
+  arrange(desc(totalprescriptioncount)) %>% 
+  head(10)
+
+ggplot(state_FL_spec, aes(x = reorder(specialty_description, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Prescriber Specialty", y = "Total Prescription Claims", title = "Count of Top 10 Highest Prescribers in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+state_FL_spec <- state_FL %>% 
+  group_by(specialty_description) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count_ge65)) %>% 
+  arrange(desc(totalprescriptioncount)) %>%
+  head(5)
+
+ggplot(state_FL_spec, aes(x = reorder(specialty_description, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Prescriber Specialty", y = "Total Prescription Claims", title = "Count of Top  Highest Prescribers for 65+ in 2017") + theme(axis.text.x = element_text(angle = 90))
+
+#Dig deeper for ge65 and tigecycline
+state_FL_tygecycline <- state_FL %>%
+  filter(generic_name == "TIGECYCLINE") %>%
+  group_by(specialty_description) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count_ge65)) %>% 
+  arrange(desc(totalprescriptioncount)) %>%
+  head(10)
+
+ggplot(state_FL_spec, aes(x = reorder(specialty_description, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Prescriber Specialty", y = "Total Prescription Claims", title = "Top Prescribers for Tigecycline for 65+ in Florida in 2017") + theme(axis.text.x = element_text(angle = 90))
 
 ```
 
