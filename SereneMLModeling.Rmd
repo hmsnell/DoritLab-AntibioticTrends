@@ -10,7 +10,10 @@ library(tidyr)
 library(reshape2)
 library(ggplot2)
 library(dplyr)
+library(stringr)
+library(readxl)
 #Unique values from partd_antibioticgeneric:
+PARTD_AntibioticGeneric <- read_excel("Data/PARTD_AntibioticGeneric.xlsx")
 PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
 
 #IMPORT IQVIA DATA:
