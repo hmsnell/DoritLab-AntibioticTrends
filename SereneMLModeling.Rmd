@@ -15,7 +15,74 @@ library(readxl)
 #Unique values from partd_antibioticgeneric:
 PARTD_AntibioticGeneric <- read_excel("Data/PARTD_AntibioticGeneric.xlsx")
 PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
+```
 
+
+```{r}
+#IMPORTI 2013-2016
+iqvia13 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_13.txt")
+iqvia14 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_14.txt")
+iqvia15 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_15.txt")
+iqvia16 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_16.txt")
+```
+
+Parse 2013-2016 into 5 data frames
+```{r}
+#2013
+iqvia13_1 <- iqvia13 %>% 
+  slice(1:5000000)
+iqvia13_2 <- iqvia13 %>% 
+  slice(5000001:10000000) 
+iqvia13_3 <- iqvia13 %>% 
+  slice(10000001:15000000) 
+iqvia13_4 <- iqvia13 %>% 
+  slice(15000001:20000000)
+iqvia13_5 <- iqvia13 %>% 
+  slice(20000001:23645873)
+
+#2014
+iqvia14_1 <- iqvia14 %>% 
+  slice(1:5000000)
+iqvia14_2 <- iqvia14 %>% 
+  slice(5000001:10000000) 
+iqvia14_3 <- iqvia14 %>% 
+  slice(10000001:15000000) 
+iqvia14_4 <- iqvia14 %>% 
+  slice(15000001:20000000)
+iqvia14_5 <- iqvia14 %>% 
+  slice(20000001:24120618)
+
+#2015
+iqvia15_1 <- iqvia15 %>% 
+  slice(1:5000000)
+iqvia15_2 <- iqvia15 %>% 
+  slice(5000001:10000000) 
+iqvia15_3 <- iqvia15 %>% 
+  slice(10000001:15000000) 
+iqvia15_4 <- iqvia15 %>% 
+  slice(15000001:20000000)
+iqvia15_5 <- iqvia15 %>% 
+  slice(20000001:24524894)
+
+#2016
+iqvia16_1 <- iqvia16 %>% 
+  slice(1:5000000)
+iqvia16_2 <- iqvia16 %>% 
+  slice(5000001:10000000) 
+iqvia16_3 <- iqvia16 %>% 
+  slice(10000001:15000000) 
+iqvia16_4 <- iqvia16 %>% 
+  slice(15000001:20000000)
+iqvia16_5 <- iqvia16 %>% 
+  slice(20000001:24964300)
+
+write.csv(iqvia13_1,"C:~/Desktop/iqvia13_1.csv", row.names = FALSE)
+
+```
+
+
+
+```{r}
 #IMPORT IQVIA DATA:
 iqvia1 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia1data.csv")
 iqvia2 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia2data.csv")
