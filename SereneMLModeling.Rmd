@@ -17,18 +17,11 @@ PARTD_AntibioticGeneric <- read_excel("Data/PARTD_AntibioticGeneric.xlsx")
 PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
 ```
 
-
-```{r}
-#IMPORTI 2013-2016
-iqvia13 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_13.txt")
-iqvia14 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_14.txt")
-iqvia15 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_15.txt")
-iqvia16 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_16.txt")
-```
-
-Parse 2013-2016 into 5 data frames
+IMPORTING DATAFRAMES
 ```{r}
 #2013
+iqvia13 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_13.txt")
+#Parse 2013
 iqvia13_1 <- iqvia13 %>% 
   slice(1:5000000)
 iqvia13_2 <- iqvia13 %>% 
@@ -39,8 +32,18 @@ iqvia13_4 <- iqvia13 %>%
   slice(15000001:20000000)
 iqvia13_5 <- iqvia13 %>% 
   slice(20000001:23645873)
+#Export .csv files
+write.csv(iqvia13_1,"~/Desktop/iqvia13_1.csv")
+write.csv(iqvia13_2,"~/Desktop/iqvia13_2.csv")
+write.csv(iqvia13_3,"~/Desktop/iqvia13_3.csv")
+write.csv(iqvia13_4,"~/Desktop/iqvia13_4.csv")
+write.csv(iqvia13_5,"~/Desktop/iqvia13_5.csv")
+
+#Delete Data environment to restore data storage
 
 #2014
+iqvia14 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_14.txt")
+#Parse 2014
 iqvia14_1 <- iqvia14 %>% 
   slice(1:5000000)
 iqvia14_2 <- iqvia14 %>% 
@@ -51,8 +54,18 @@ iqvia14_4 <- iqvia14 %>%
   slice(15000001:20000000)
 iqvia14_5 <- iqvia14 %>% 
   slice(20000001:24120618)
+#Export .csv files
+write.csv(iqvia14_1,"~/Desktop/iqvia14_1.csv")
+write.csv(iqvia14_2,"~/Desktop/iqvia14_2.csv")
+write.csv(iqvia14_3,"~/Desktop/iqvia14_3.csv")
+write.csv(iqvia14_4,"~/Desktop/iqvia14_4.csv")
+write.csv(iqvia14_5,"~/Desktop/iqvia14_5.csv")
+
+#Delete Data environment to restore data storage
 
 #2015
+iqvia15 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_15.txt")
+#Parse 2015
 iqvia15_1 <- iqvia15 %>% 
   slice(1:5000000)
 iqvia15_2 <- iqvia15 %>% 
@@ -63,8 +76,18 @@ iqvia15_4 <- iqvia15 %>%
   slice(15000001:20000000)
 iqvia15_5 <- iqvia15 %>% 
   slice(20000001:24524894)
+#Export .csv files
+write.csv(iqvia15_1,"~/Desktop/iqvia15_1.csv")
+write.csv(iqvia15_2,"~/Desktop/iqvia15_2.csv")
+write.csv(iqvia15_3,"~/Desktop/iqvia15_3.csv")
+write.csv(iqvia15_4,"~/Desktop/iqvia15_4.csv")
+write.csv(iqvia15_5,"~/Desktop/iqvia15_5.csv")
+
+#Delete Data environment to restore data storage
 
 #2016
+iqvia16 <- read.delim("~/Desktop/PartD_Prescriber_PUF_NPI_Drug_16.txt")
+#Parse 2016
 iqvia16_1 <- iqvia16 %>% 
   slice(1:5000000)
 iqvia16_2 <- iqvia16 %>% 
@@ -75,11 +98,64 @@ iqvia16_4 <- iqvia16 %>%
   slice(15000001:20000000)
 iqvia16_5 <- iqvia16 %>% 
   slice(20000001:24964300)
+#Export .csv files
+write.csv(iqvia16_1,"~/Desktop/iqvia16_1.csv")
+write.csv(iqvia16_2,"~/Desktop/iqvia16_2.csv")
+write.csv(iqvia16_3,"~/Desktop/iqvia16_3.csv")
+write.csv(iqvia16_4,"~/Desktop/iqvia16_4.csv")
+write.csv(iqvia16_5,"~/Desktop/iqvia16_5.csv")
 
-write.csv(iqvia13_1,"C:~/Desktop/iqvia13_1.csv", row.names = FALSE)
+#READ IN THE DATAFRAMES
+iqvia13_1 <- read.csv("~/Desktop/iqvia13_1.csv")
+iqvia13_2 <- read.csv("~/Desktop/iqvia13_2.csv")
+iqvia13_3 <- read.csv("~/Desktop/iqvia13_3.csv")
+iqvia13_4 <- read.csv("~/Desktop/iqvia13_4.csv")
+iqvia13_5 <- read.csv("~/Desktop/iqvia13_5.csv")
+
+iqvia14_1 <- read.csv("~/Desktop/iqvia14_1.csv")
+iqvia14_2 <- read.csv("~/Desktop/iqvia14_2.csv")
+iqvia14_3 <- read.csv("~/Desktop/iqvia14_3.csv")
+iqvia14_4 <- read.csv("~/Desktop/iqvia14_4.csv")
+iqvia14_5 <- read.csv("~/Desktop/iqvia14_5.csv")
+
+iqvia15_1 <- read.csv("~/Desktop/iqvia15_1.csv")
+iqvia15_2 <- read.csv("~/Desktop/iqvia15_2.csv")
+iqvia15_3 <- read.csv("~/Desktop/iqvia15_3.csv")
+iqvia15_4 <- read.csv("~/Desktop/iqvia15_4.csv")
+iqvia15_5 <- read.csv("~/Desktop/iqvia15_5.csv")
+
+iqvia16_1 <- read.csv("~/Desktop/iqvia16_1.csv")
+iqvia16_2 <- read.csv("~/Desktop/iqvia16_2.csv")
+iqvia16_3 <- read.csv("~/Desktop/iqvia16_3.csv")
+iqvia16_4 <- read.csv("~/Desktop/iqvia16_4.csv")
+iqvia16_5 <- read.csv("~/Desktop/iqvia16_5.csv")
+
+#Filter for antibiotic drugs only:
+iqvia13_1 <- filter(iqvia13_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia13_2 <- filter(iqvia13_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia13_3 <- filter(iqvia13_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia13_4 <- filter(iqvia13_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia13_5 <- filter(iqvia13_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+
+iqvia14_1 <- filter(iqvia14_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia14_2 <- filter(iqvia14_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia14_3 <- filter(iqvia14_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia14_4 <- filter(iqvia14_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia14_5 <- filter(iqvia14_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+
+iqvia15_1 <- filter(iqvia15_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia15_2 <- filter(iqvia15_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia15_3 <- filter(iqvia15_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia15_4 <- filter(iqvia15_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia15_5 <- filter(iqvia15_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+
+iqvia16_1 <- filter(iqvia16_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia16_2 <- filter(iqvia16_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia16_3 <- filter(iqvia16_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia16_4 <- filter(iqvia16_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia16_5 <- filter(iqvia16_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
 
 ```
-
 
 
 ```{r}
