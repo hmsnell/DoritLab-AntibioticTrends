@@ -104,7 +104,10 @@ write.csv(iqvia16_2,"~/Desktop/iqvia16_2.csv")
 write.csv(iqvia16_3,"~/Desktop/iqvia16_3.csv")
 write.csv(iqvia16_4,"~/Desktop/iqvia16_4.csv")
 write.csv(iqvia16_5,"~/Desktop/iqvia16_5.csv")
+```
 
+READING IN DATAFRAMES
+```{r}
 #READ IN THE DATAFRAMES
 iqvia13_1 <- read.csv("~/Desktop/iqvia13_1.csv")
 iqvia13_2 <- read.csv("~/Desktop/iqvia13_2.csv")
