@@ -134,29 +134,69 @@ iqvia16_4 <- read.csv("~/Desktop/iqvia16_4.csv")
 iqvia16_5 <- read.csv("~/Desktop/iqvia16_5.csv")
 
 #Filter for antibiotic drugs only:
-iqvia13_1 <- filter(iqvia13_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia13_2 <- filter(iqvia13_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia13_3 <- filter(iqvia13_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia13_4 <- filter(iqvia13_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia13_5 <- filter(iqvia13_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia13_1 <- filter(iqvia13_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2013") %>%
+  select(-X)
+iqvia13_2 <- filter(iqvia13_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2013") %>%
+  select(-X)
+iqvia13_3 <- filter(iqvia13_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2013") %>%
+  select(-X)
+iqvia13_4 <- filter(iqvia13_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2013") %>%
+  select(-X)
+iqvia13_5 <- filter(iqvia13_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2013") %>%
+  select(-X)
 
-iqvia14_1 <- filter(iqvia14_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia14_2 <- filter(iqvia14_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia14_3 <- filter(iqvia14_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia14_4 <- filter(iqvia14_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia14_5 <- filter(iqvia14_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia14_1 <- filter(iqvia14_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2014") %>%
+  select(-X)
+iqvia14_2 <- filter(iqvia14_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2014") %>%
+  select(-X)
+iqvia14_3 <- filter(iqvia14_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2014") %>%
+  select(-X)
+iqvia14_4 <- filter(iqvia14_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2014") %>%
+  select(-X)
+iqvia14_5 <- filter(iqvia14_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2014") %>%
+  select(-X)
 
-iqvia15_1 <- filter(iqvia15_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia15_2 <- filter(iqvia15_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia15_3 <- filter(iqvia15_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia15_4 <- filter(iqvia15_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia15_5 <- filter(iqvia15_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia15_1 <- filter(iqvia15_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2015") %>%
+  select(-X)
+iqvia15_2 <- filter(iqvia15_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2015") %>%
+  select(-X)
+iqvia15_3 <- filter(iqvia15_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2015") %>%
+  select(-X)
+iqvia15_4 <- filter(iqvia15_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2015") %>%
+  select(-X)
+iqvia15_5 <- filter(iqvia15_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2015") %>%
+  select(-X)
 
-iqvia16_1 <- filter(iqvia16_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia16_2 <- filter(iqvia16_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia16_3 <- filter(iqvia16_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia16_4 <- filter(iqvia16_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia16_5 <- filter(iqvia16_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia16_1 <- filter(iqvia16_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2016") %>%
+  select(-X)
+iqvia16_2 <- filter(iqvia16_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2016") %>%
+  select(-X)
+iqvia16_3 <- filter(iqvia16_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2016") %>%
+  select(-X)
+iqvia16_4 <- filter(iqvia16_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2016") %>%
+  select(-X)
+iqvia16_5 <- filter(iqvia16_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2016") %>%
+  select(-X)
 
 ```
 
@@ -170,14 +210,23 @@ iqvia4 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvi
 iqvia5 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia5data.csv")
 
 #Filter for antibiotic drugs only:
-iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia2 <- filter(iqvia2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia3 <- filter(iqvia3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
-iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`)
+iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2017")
+iqvia2 <- filter(iqvia2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2017")
+iqvia3 <- filter(iqvia3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2017")
+iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2017")
+iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
+  mutate(Year = "2017")
 
-#combine all sets into one
-combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5)
+#combine ALL YEARS in one dataset 'combinediqvia'
+combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5, 
+                       iqvia13_1, iqvia13_2, iqvia13_3, iqvia13_4, iqvia13_5, 
+                       iqvia14_1, iqvia14_2, iqvia14_3, iqvia14_4, iqvia14_5,
+                       iqvia15_1, iqvia15_2, iqvia15_3, iqvia15_4, iqvia15_5,
+                       iqvia16_1, iqvia16_2, iqvia16_3, iqvia16_4, iqvia16_5)
 
 #insert region column
 combinediqvia <- combinediqvia %>%
@@ -200,7 +249,7 @@ Normalize to pop/enrollment and age distribution:
 #Based on the enrollment data: only 15% of total medical enrollees in 2017 were under the age of 65, meaning majority are over the age of 65 - knowing this, will make a variable for aggregate population for each state under 65
 
 #importing population data for 2017
-pop_2017 <- read.csv("~/Documents/GitHub/DoritLab_AntibioticTrends/Data/2017_populationct.csv") %>%
+pop_2017 <- read.csv("~/Documents/GitHub/DoritLab-AntibioticTrends/Data/2017_populationct.csv") %>%
   select(-Year) %>%
   filter(Location != "United States") %>%
   mutate(nppes_provider_state = recode(Location, 
