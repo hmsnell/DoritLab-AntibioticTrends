@@ -106,7 +106,7 @@ write.csv(iqvia16_4,"~/Desktop/iqvia16_4.csv")
 write.csv(iqvia16_5,"~/Desktop/iqvia16_5.csv")
 ```
 
-READING IN DATAFRAMES
+READING IN DATAFRAMES FOR YEARS 2013-2017
 ```{r}
 #READ IN THE DATAFRAMES
 iqvia13_1 <- read.csv("~/Desktop/iqvia13_1.csv")
@@ -132,6 +132,12 @@ iqvia16_2 <- read.csv("~/Desktop/iqvia16_2.csv")
 iqvia16_3 <- read.csv("~/Desktop/iqvia16_3.csv")
 iqvia16_4 <- read.csv("~/Desktop/iqvia16_4.csv")
 iqvia16_5 <- read.csv("~/Desktop/iqvia16_5.csv")
+#2017
+iqvia1 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia1data.csv")
+iqvia2 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia2data.csv")
+iqvia3 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia3data.csv")
+iqvia4 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia4data.csv")
+iqvia5 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia5data.csv")
 
 #Filter for antibiotic drugs only:
 iqvia13_1 <- filter(iqvia13_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
@@ -149,7 +155,9 @@ iqvia13_4 <- filter(iqvia13_4, generic_name %in% PARTD_AntibioticGeneric$`Generi
 iqvia13_5 <- filter(iqvia13_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2013") %>%
   select(-X)
+iqvia13 <- rbind(iqvia13_1, iqvia13_2, iqvia13_3, iqvia13_4, iqvia13_5) #combined for 2013
 
+#2014
 iqvia14_1 <- filter(iqvia14_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
   select(-X)
@@ -165,7 +173,9 @@ iqvia14_4 <- filter(iqvia14_4, generic_name %in% PARTD_AntibioticGeneric$`Generi
 iqvia14_5 <- filter(iqvia14_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
   select(-X)
+iqvia14 <- rbind(iqvia14_1, iqvia14_2, iqvia14_3, iqvia14_4, iqvia14_5) #combined for 2014
 
+#2015
 iqvia15_1 <- filter(iqvia15_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
   select(-X)
@@ -181,7 +191,9 @@ iqvia15_4 <- filter(iqvia15_4, generic_name %in% PARTD_AntibioticGeneric$`Generi
 iqvia15_5 <- filter(iqvia15_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
   select(-X)
+iqvia15 <- rbind(iqvia15_1, iqvia15_2, iqvia15_3, iqvia15_4, iqvia15_5) #combined for 2015
 
+#2016
 iqvia16_1 <- filter(iqvia16_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
   select(-X)
@@ -197,19 +209,9 @@ iqvia16_4 <- filter(iqvia16_4, generic_name %in% PARTD_AntibioticGeneric$`Generi
 iqvia16_5 <- filter(iqvia16_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
   select(-X)
+iqvia16 <- rbind(iqvia16_1, iqvia16_2, iqvia16_3, iqvia16_4, iqvia16_5) #combined for 2016
 
-```
-
-
-```{r}
-#IMPORT IQVIA DATA:
-iqvia1 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia1data.csv")
-iqvia2 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia2data.csv")
-iqvia3 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia3data.csv")
-iqvia4 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia4data.csv")
-iqvia5 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia5data.csv")
-
-#Filter for antibiotic drugs only:
+#2017
 iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2017")
 iqvia2 <- filter(iqvia2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
@@ -220,13 +222,390 @@ iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name
   mutate(Year = "2017")
 iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2017")
+iqvia17 <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5) #combined for 2017
 
+```
+
+IMPORTING ENROLLMENT DATA AND MERGING WITH EACH YEAR
+(2013):
+```{r}
+#importing Enrollment data
+Enroll_13 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2013.csv")
+#Data wrangling for Enroll_13
+Enroll_13 <- Enroll_13 %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands "="VI")) %>%
+  select(-Location)
+#reorder columns in Enroll_13
+Enroll_13 <- Enroll_13[c(3,1,2)]
+
+#Merge Enroll data with iqvia13 data
+iqvia13 <- merge(x = iqvia13, y = Enroll_13, by = "nppes_provider_state", all.x = TRUE)
+
+#Erase commas
+iqvia13$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia13$Total_MedicareEnroll))
+iqvia13$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia13$Total_PartDEnroll))
+```
+
+IMPORTING ENROLLMENT DATA AND MERGING WITH EACH YEAR
+(2014):
+```{r}
+#importing Enrollment data
+Enroll_14 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2014.csv")
+#Data wrangling for Enroll_14
+Enroll_14 <- Enroll_14 %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands "="VI")) %>%
+  select(-Location)
+#reorder columns in Enroll_14
+Enroll_14 <- Enroll_14[c(3,1,2)]
+
+#Merge Enroll data with iqvia13 data
+iqvia14 <- merge(x = iqvia14, y = Enroll_14, by = "nppes_provider_state", all.x = TRUE)
+
+#Erase commas
+iqvia14$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia14$Total_MedicareEnroll))
+iqvia14$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia14$Total_PartDEnroll))
+
+```
+
+IMPORTING ENROLLMENT DATA AND MERGING WITH EACH YEAR
+(2015):
+```{r}
+#importing Enrollment data
+Enroll_15 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2015.csv")
+#Data wrangling for Enroll_15
+Enroll_15 <- Enroll_15 %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands "="VI")) %>%
+  select(-Location)
+#reorder columns in Enroll_15
+Enroll_15 <- Enroll_15[c(3,1,2)]
+
+#Merge Enroll data with iqvia15 data
+iqvia15 <- merge(x = iqvia15, y = Enroll_15, by = "nppes_provider_state", all.x = TRUE)
+
+#Erase commas
+iqvia15$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia15$Total_MedicareEnroll))
+iqvia15$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia15$Total_PartDEnroll))
+```
+
+IMPORTING ENROLLMENT DATA AND MERGING WITH EACH YEAR
+(2016):
+```{r}
+#importing Enrollment data
+Enroll_16 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2016.csv")
+
+#Data wrangling for Enroll_16
+Enroll_16 <- Enroll_16 %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands "="VI")) %>%
+  select(-Location)
+#reorder columns in Enroll_16
+Enroll_16 <- Enroll_16[c(3,1,2)]
+#Merge Enroll data with iqvia16 data
+iqvia16 <- merge(x = iqvia16, y = Enroll_16, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia16$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia16$Total_MedicareEnroll))
+iqvia16$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia16$Total_PartDEnroll))
+
+```
+
+IMPORTING ENROLLMENT DATA AND MERGING WITH EACH YEAR
+(2017):
+```{r}
+#importing Enrollment data
+Enroll_17 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2017.csv")
+
+#Data wrangling for Enroll_17
+Enroll_17 <- Enroll_17 %>%
+  mutate(nppes_provider_state = recode(Location, 
+                           "Alabama" = "AL",
+                           "Alaska" = "AK",
+                           "Arizona" = "AZ",
+                           "Arkansas" = "AR",
+                           "California" = "CA",
+                           "Colorado" = "CO",
+                           "Connecticut" = "CT",
+                           "Delaware" = "DE",
+                           "District of Columbia" = "DC",
+                           "Florida" = "FL",
+                           "Georgia" = "GA",
+                           "Hawaii" = "HI",
+                           "Idaho" = "ID",
+                           "Illinois" = "IL",
+                           "Indiana" = "IN", 
+                           "Iowa" = "IA",
+                           "Kansas" = "KS",
+                           "Kentucky" = "KY",
+                           "Louisiana" = "LA", 
+                           "Maine" = "ME",
+                           "Maryland" = "MD",
+                           "Massachusetts" = "MA",
+                           "Michigan" = "MI",
+                           "Minnesota" = "MN",
+                           "Mississippi" = "MS",
+                           "Missouri" = "MO",
+                           "Montana" = "MT",
+                           "Nebraska" = "NE",
+                           "Nevada" = "NV",
+                           "New Hampshire" = "NH",
+                           "New Jersey" = "NJ",
+                           "New Mexico" = "NM",
+                           "New York" = "NY",
+                           "North Carolina" = "NC",
+                           "North Dakota" = "ND",
+                           "Ohio" = "OH",
+                           "Oklahoma" = "OK",
+                           "Oregon" = "OR",
+                           "Pennsylvania" = "PA",
+                           "Rhode Island" = "RI",
+                           "South Carolina" = "SC",
+                           "South Dakota" = "SD",
+                           "Tennessee" = "TN",
+                           "Texas" = "TX",
+                           "Utah" = "UT",
+                           "Vermont" = "VT",
+                           "Virginia" = "VA",
+                           "Washington" = "WA",
+                           "West Virginia" = "WV",
+                           "Wisconsin" = "WI",
+                           "Wyoming" = "WY",
+                           "Puerto Rico" = "PR",
+                           "Guam"="GU",
+                           "American Samoa"="AS",
+                           "Virgin Islands "="VI")) %>%
+  select(nppes_provider_state, Total_PartDEnroll, Total_MedicareEnroll)
+#reorder columns in Enroll_17
+Enroll_17 <- Enroll_17[c(3,1,2)]
+#Merge Enroll data with iqvia17 data
+iqvia17 <- merge(x = iqvia17, y = Enroll_17, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia17$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia17$Total_MedicareEnroll))
+iqvia17$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia17$Total_PartDEnroll))
+
+```
+
+MERGING ALL DATAFRAMES FOR ALL YEARS (2013-2017)
+```{r}
 #combine ALL YEARS in one dataset 'combinediqvia'
-combinediqvia <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5, 
-                       iqvia13_1, iqvia13_2, iqvia13_3, iqvia13_4, iqvia13_5, 
-                       iqvia14_1, iqvia14_2, iqvia14_3, iqvia14_4, iqvia14_5,
-                       iqvia15_1, iqvia15_2, iqvia15_3, iqvia15_4, iqvia15_5,
-                       iqvia16_1, iqvia16_2, iqvia16_3, iqvia16_4, iqvia16_5)
+combinediqvia <- rbind(iqvia13, iqvia14, iqvia15, iqvia16, iqvia17)
 
 #insert region column
 combinediqvia <- combinediqvia %>%
@@ -242,6 +621,8 @@ combinediqvia <- combinediqvia %>%
   select(-npi, -nppes_provider_last_org_name, -nppes_provider_first_name)
 
 ```
+
+
 
 
 Normalize to pop/enrollment and age distribution:
@@ -321,83 +702,7 @@ pop_2017 <- read.csv("~/Documents/GitHub/DoritLab-AntibioticTrends/Data/2017_pop
 #reorder columns in pop_2017
 pop_2017 <- pop_2017[c(8,7,6,9,1,2,3,4,5)]
 
-#importing Enrollment data
-Enroll_17 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Data/MedicareEnroll_Data/MedicareEnroll_2017.csv")
 
-#Data wrangling for Enroll_17
-Enroll_17 <- Enroll_17 %>%
-  mutate(nppes_provider_state = recode(Location, 
-                           "Alabama" = "AL",
-                           "Alaska" = "AK",
-                           "Arizona" = "AZ",
-                           "Arkansas" = "AR",
-                           "California" = "CA",
-                           "Colorado" = "CO",
-                           "Connecticut" = "CT",
-                           "Delaware" = "DE",
-                           "District of Columbia" = "DC",
-                           "Florida" = "FL",
-                           "Georgia" = "GA",
-                           "Hawaii" = "HI",
-                           "Idaho" = "ID",
-                           "Illinois" = "IL",
-                           "Indiana" = "IN", 
-                           "Iowa" = "IA",
-                           "Kansas" = "KS",
-                           "Kentucky" = "KY",
-                           "Louisiana" = "LA", 
-                           "Maine" = "ME",
-                           "Maryland" = "MD",
-                           "Massachusetts" = "MA",
-                           "Michigan" = "MI",
-                           "Minnesota" = "MN",
-                           "Mississippi" = "MS",
-                           "Missouri" = "MO",
-                           "Montana" = "MT",
-                           "Nebraska" = "NE",
-                           "Nevada" = "NV",
-                           "New Hampshire" = "NH",
-                           "New Jersey" = "NJ",
-                           "New Mexico" = "NM",
-                           "New York" = "NY",
-                           "North Carolina" = "NC",
-                           "North Dakota" = "ND",
-                           "Ohio" = "OH",
-                           "Oklahoma" = "OK",
-                           "Oregon" = "OR",
-                           "Pennsylvania" = "PA",
-                           "Rhode Island" = "RI",
-                           "South Carolina" = "SC",
-                           "South Dakota" = "SD",
-                           "Tennessee" = "TN",
-                           "Texas" = "TX",
-                           "Utah" = "UT",
-                           "Vermont" = "VT",
-                           "Virginia" = "VA",
-                           "Washington" = "WA",
-                           "West Virginia" = "WV",
-                           "Wisconsin" = "WI",
-                           "Wyoming" = "WY",
-                           "Puerto Rico" = "PR",
-                           "Guam"="GU",
-                           "American Samoa"="AS",
-                           "Virgin Islands"="VI")) %>%
-  select(-Location)
-
-#reorder columns in Enroll_17
-Enroll_17 <- Enroll_17[c(5,1,2,3,4)]
-
-#Merging combinediqvia/Enroll_17/pop_2017 using left outer join
-combinediqvia_17 <- merge(x = combinediqvia, y = pop_2017, by = "nppes_provider_state", all.x = TRUE)
-combinediqvia_17 <- merge(x = combinediqvia_17, y = Enroll_17, by = "nppes_provider_state", all.x = TRUE) %>%
-  filter(Region != "Region Undefined") # for nnow taking our undefined regions
-
-#Calculate proportion of total medicare enrollment for each state
-##get rid of the commas in the data
-combinediqvia_17$Total_MedicareEnroll <- as.numeric(gsub(",","",combinediqvia_17$Total_MedicareEnroll))
-combinediqvia_17$Total_PartDEnroll <- as.numeric(gsub(",","",combinediqvia_17$Total_PartDEnroll))
-combinediqvia_17$StandAlone_DrugPlanEnroll <- as.numeric(gsub(",","",combinediqvia_17$StandAlone_DrugPlanEnroll))
-combinediqvia_17$MedicareAdv_DrugPlanEnroll <- as.numeric(gsub(",","",combinediqvia_17$MedicareAdv_DrugPlanEnroll))
 ##turn NAS to 0
 #combinediqvia_17$Total_population_17[is.na(combinediqvia_17$Total_population_17)] <- 0
 #combinediqvia_17$Total_MedicareEnroll[is.na(combinediqvia_17$Total_MedicareEnroll)] <- 0
