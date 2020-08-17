@@ -622,10 +622,14 @@ combinediqvia <- combinediqvia %>%
 
 ```
 
+PER CAPITA ENROLLMENT CALCULATION:
+```{r}
+
+```
 
 
 
-Normalize to pop/enrollment and age distribution:
+Normalize to pop/age distribution:
 ```{r}
 #Based on the enrollment data: only 15% of total medical enrollees in 2017 were under the age of 65, meaning majority are over the age of 65 - knowing this, will make a variable for aggregate population for each state under 65
 
@@ -726,7 +730,7 @@ combinediqvia_17 <- combinediqvia_17 %>%
 Per capita enrollment:
 ```{r}
 # USING TOTAL_CLAIMS
-region <- combinediqvia_17 %>%
+region <- combinediqvia %>%
   group_by(Region) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count),
             total_medicareEnroll = mean(Total_MedicareEnroll),
@@ -734,7 +738,7 @@ region <- combinediqvia_17 %>%
   arrange(desc(percapita_Enroll))
 region
 
-ggplot(region, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region in 2017") + theme(axis.text.x = element_text(angle = 90))
+ggplot(region, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90))
 
 #Checking the age distribution of states
 Age_over65_state <- combinediqvia_17 %>%
@@ -746,8 +750,6 @@ Age_over65_region <- combinediqvia_17 %>%
   mutate(percent_over65 = (`Age65+_17`/Total_population_17)*100) %>%
   group_by(Region) %>%
   summarise(percent_over65 = mean(percent_over65, na.rm = TRUE))
-
-
 
 #boxplot of percent age 65 years older
 boxplot_over65 <- combinediqvia_17 %>%
