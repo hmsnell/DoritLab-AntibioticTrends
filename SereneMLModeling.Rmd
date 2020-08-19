@@ -624,9 +624,62 @@ combinediqvia <- combinediqvia %>%
 
 PER CAPITA ENROLLMENT CALCULATION:
 ```{r}
+#Grouped by Region and Year --- TOTAL_MEDICAREENROLL
+PerCapita_Enroll_ALLAGES <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  group_by(Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count),
+            total_medicareEnroll = mean(Total_MedicareEnroll),
+            percapita_Enroll = totalprescriptioncount/total_medicareEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+#bargraph
+ggplot(PerCapita_Enroll_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+#linegraph
+
+PerCapita_Enroll_AGES65 <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  mutate(percent_age65over = bene_count_ge65/bene_count) %>%
+  group_by(Region, Year) %>% 
+  summarise(avg_percent = mean(percent_age65over,na.rm = TRUE),
+            totalprescriptioncount = sum(total_claim_count_ge65, na.rm = TRUE),
+            total_relative_medicareEnroll = avg_percent*mean(Total_MedicareEnroll, na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_relative_medicareEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+ggplot(PerCapita_Enroll_AGES65, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment for 65+ yrs", title = "Total Claims per capita enrollment for 65+ by Region in 2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+
+#Grouped by Region and Year --- TOTAL_PARTDENROLL
+PerCapita_PartD_ALLAGES <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  mutate(PartD_Prop = Total_PartDEnroll/Total_MedicareEnroll) %>%
+  group_by(Region, Year) %>% 
+  summarise(partD_avg = mean(PartD_Prop,na.rm = TRUE),
+            totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = partD_avg*mean(Total_MedicareEnroll, na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+#bargraph
+ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 
 ```
 
+For Enrollment -- Medicare or PartD Enroll?
+```{r}
+#state
+PartD_Prop <- combinediqvia %>%
+  mutate(PartD_Prop = Total_PartDEnroll/Total_MedicareEnroll) %>%
+  group_by(Year, nppes_provider_state) %>%
+  summarise(Enroll_Users = mean(PartD_Prop))
+
+#Region
+PartD_Prop_Region <- combinediqvia%>%
+  filter(Region != "Region Undefined") %>%
+  mutate(PartD_Prop = Total_PartDEnroll/Total_MedicareEnroll) %>%
+  group_by(Year, Region) %>%
+  summarise(Enroll_PartD_Users = mean(PartD_Prop))
+```
 
 
 Normalize to pop/age distribution:
