@@ -625,6 +625,7 @@ combinediqvia <- combinediqvia %>%
 PER CAPITA ENROLLMENT CALCULATION:
 ```{r}
 #Grouped by Region and Year --- TOTAL_MEDICAREENROLL
+##all ages
 PerCapita_Enroll_ALLAGES <- combinediqvia %>%
   filter(Region != "Region Undefined") %>%
   group_by(Region, Year) %>% 
@@ -635,8 +636,8 @@ PerCapita_Enroll_ALLAGES <- combinediqvia %>%
 
 #bargraph
 ggplot(PerCapita_Enroll_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
-#linegraph
 
+##ages 65+
 PerCapita_Enroll_AGES65 <- combinediqvia %>%
   filter(Region != "Region Undefined") %>%
   mutate(percent_age65over = bene_count_ge65/bene_count) %>%
@@ -647,6 +648,7 @@ PerCapita_Enroll_AGES65 <- combinediqvia %>%
             percapita_Enroll = totalprescriptioncount/total_relative_medicareEnroll) %>% 
   arrange(desc(percapita_Enroll))
 
+#bargraph
 ggplot(PerCapita_Enroll_AGES65, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment for 65+ yrs", title = "Total Claims per capita enrollment for 65+ by Region in 2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 
 #Grouped by Region and Year --- TOTAL_PARTDENROLL
@@ -661,7 +663,7 @@ PerCapita_PartD_ALLAGES <- combinediqvia %>%
   arrange(desc(percapita_Enroll))
 
 #bargraph
-ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita PartD enrollee", title = "Total Claims per capita PartD enrollee by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 
 ```
 
