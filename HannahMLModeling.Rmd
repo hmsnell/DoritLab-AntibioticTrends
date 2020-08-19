@@ -112,30 +112,145 @@ combinediqvia <- combinediqvia %>%
 ```
 
 ```{r}
+colnames(combinediqvia)[3] <- "State"
+combinediqvia <- combinediqvia %>% 
+  mutate(Region = ifelse(State %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
+                         ifelse(State %in% c("AL", "KY", "MS", "TN"), "East South Central",
+                                ifelse(State %in% c("NJ", "NY", "PA"), "Middle Atlantic",
+                                       ifelse(State %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY"), "Mountain",
+                                              ifelse(State %in% c("CT", "ME", "MA", "NH", "RI", "VT"), "New England",
+                                                     ifelse(State %in% c("AK", "CA", "HI", "OR", "WA"), "Pacific",
+                                                            ifelse(State %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV"), "South Atlantic",
+                                                                   ifelse(State %in% c("IA", "KS", "MN", "MO", "NE", "ND", "SD"), "West North Central",
+                                                                          ifelse(State %in% c("AR", "LA", "OK", "TX"), "West South Central", "Region Undefined"))))))))))
+```
+
+
+```{r}
 options(scipen = 999)
-distbyclass <- ggplot(combinediqvia, aes(x = class, fill = "blue")) + 
+distbyclass <- ggplot(combinediqvia, aes(x = class, fill = Region)) + 
                         geom_histogram(stat = "count") + 
-                        labs(title = "Distribution of Antibiotic Classes in Dataset", x = "Class", y = "Row Count") + 
+                        labs(title = "Distribution of Antibiotic Classes in Dataset", x = "Class", y = "Row Count", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90))
 distbyclass
 ```
 
 ```{r}
 totalclaims <- combinediqvia %>% 
-  group_by(class) %>% 
+  group_by(class, Region) %>% 
   summarise(total = sum(total_claim_count))
 
-totalclaimcounts <- ggplot(totalclaims, aes(x = class, y = total, fill = "blue")) +
+totalclaimcounts <- ggplot(totalclaims, aes(reorder(x = class, -total), y = total, fill = Region)) +
   geom_bar(stat = "identity") + 
-  labs(x = "Class", y = "Total Claim Count", title = "Total Claim Count of Each Antibiotic Class") + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claim Count of Each Antibiotic Class", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90))
 totalclaimcounts
+```
+ 
+============================================================================================
+ 
+# 20200720 
+
+```{r}
+penicillinclaimcount <- combinediqvia %>% 
+  filter(class == "penicillins") %>% 
+  group_by(Region) %>% 
+  summarise(n = n())
+
+p3 <- ggplot(penicillinclaimcount, aes(x = reorder(Region, -n), y = n)) +
+  geom_col(color = "black", fill = "darkgreen") + 
+  theme_bw() +
+  labs(title = "Regions that Prescribed the Most Penicillins in 2017", x = "Region", y = "Total Claim Count") + 
+  theme(axis.text.x = element_text(angle = 90))
+p3
+
+```
+
+```{r}
+# add horizontal bars
+p3 <- p3 + geom_errorbar(aes(ymax = "hline", ymin = "hline"), width = 0.45)
+
+# add vertical bars
+p3 <- p3 + geom_linerange(aes(ymax = max(penicillinclaimcount$n)+3, ymin = max(penicillinclaimcount$n)+1), position = position_dodge(0.9))
+
+# add asterisks   
+p3 <- p3 + geom_text(penicillinclaimcount = penicillinclaimcount[1:2], aes(y = max(penicillinclaimcount$n)+4), label = ifelse(penicillinclaimcount$p_value[1:2] <= 0.4, "*", ifelse(penicillinclaimcount$p_value[1:2] <= 0.05, "*", "")), size = 8)
+
+p3
+```
+  
+```{r}
+macrolidesclaimcount <- combinediqvia %>% 
+  filter(class == "macrolides") %>% 
+  group_by(Region) %>% 
+  summarise(n = n())
+
+p4 <- ggplot(penicillinclaimcount, aes(x = reorder(Region, -n), y = n)) +
+  geom_col(color = "black", fill = "darkred") + 
+  theme_bw() +
+  labs(title = "Regions that Prescribed the Most Macrolides in 2017", x = "Region", y = "Total Claim Count") + 
+  theme(axis.text.x = element_text(angle = 90))
+p4
+```
+ 
+```{r}
+penicillinclaimcount <- combinediqvia %>% 
+  filter(class == "cephalosporin") %>% 
+  group_by(Region) %>% 
+  summarise(n = n())
+
+p3 <- ggplot(penicillinclaimcount, aes(x = reorder(Region, -n), y = n)) +
+  geom_col(color = "black", fill = "darkblue") + 
+  theme_bw() +
+  labs(title = "Regions that Prescribed the Most Cephalosporins in 2017", x = "Region", y = "Total Claim Count") +
+  theme(axis.text.x = element_text(angle = 90))
+p3
+```
+ 
+## 20200817
+
+```{r}
+ttestpenicillins <- combinediqvia %>% 
+  filter(class == "penicillins") %>% 
+  select(Region, total_claim_count) %>% 
+  group_by(Region) %>% 
+  summarise(totalclaims = sum(total_claim_count)) %>% 
+  mutate(totalclaims = as.numeric(totalclaims))
+  
+chisq.test(ttestpenicillins$count, ttestpenicillins$Region, p = c(0.5,0.5), correct = F)
+
+t.test(ttestpenicillins$count, ttestpenicillins$Region, p.adjust = "bonferroni")
+```
+
+ 
+```{r}
+lm <- glm(totalclaims ~ Region, data = ttestpenicillins, family = gaussian)
+
+summary(lm)
+```
+ 
+ 
+```{r}
+matriz <- as.matrix(ttestpenicillins)
+library(rcompanion)
+
+# pairwiseNominalIndependence(matriz,
+#                             fisher = FALSE,
+#                             gtest  = FALSE,
+#                             chisq  = TRUE,
+#                             method = "bonferroni")
+
+
+# YIKES
+library(FSA)
+
+dunnTest(ttestpenicillins$totalclaims, ttestpenicillins$Region, method = "bonferroni", alpha = 0.01)
 ```
  
 
 ------------------------------------------------------------------
 
-
+# Older Analyses
 ## Dataframe Input
 
 ```{r, include = FALSE, Dataframe Input}
@@ -375,7 +490,7 @@ ggplot(gdp2011, aes(x = loggdp)) + geom_histogram(binwidth = 0.3)
 
 
 
-# 20200403: Importing Age Distribution Data  
+## 20200403: Importing Age Distribution Data  
 
 ```{r, Importing Age Distribution Data}
 library(readr)
@@ -398,7 +513,7 @@ USagedistributions <- rbind(age_2008, age_2009, age_2010, age_2011, age_2012, ag
 ```
 
 
-# 20200403: Ιmporting Corresponding Population Data 
+## 20200403: Ιmporting Corresponding Population Data 
 
 ```{r, Importing Population Data}
 library(readr)
@@ -435,7 +550,7 @@ _____________________________________________________________________
 
 (Previous Work) 
 
-# IsolateData-2 Set EDA
+## IsolateData-2 Set EDA
 
 ```{r}
 IsolateData_2 %>% distinct(Species)
