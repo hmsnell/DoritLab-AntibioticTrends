@@ -742,7 +742,7 @@ totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll)
   facet_wrap(~Year)
 totalclaimgraph
 
-#filtering for the top six antibiotic classes
+#filtering  for the top six antibiotic classes
 totalclaims <- totalclaims %>%
   filter(class == "penicillins" | 
            class == "macrolides" | 
