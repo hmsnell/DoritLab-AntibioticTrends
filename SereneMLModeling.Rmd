@@ -666,12 +666,12 @@ PER CAPITA ENROLLMENT CALCULATION:
 
 #Grouped by Region and Year --- TOTAL_PARTDENROLL
 PerCapita_PartD_ALLAGES <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
   group_by(Region, Year) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
             total_PartDEnroll = mean(Total_PartDEnroll, na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
   arrange(desc(percapita_Enroll))
+PerCapita_PartD_ALLAGES
 
 #bargraph
 ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita PartD enrollement", title = "Total Claims per capita PartD enrollee by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
