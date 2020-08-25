@@ -955,6 +955,73 @@ totalclaimgraph
 
 ```
 
+Chi Square tests
+```{r}
+#Penicillin
+penicillins_avgpercapita <- totalclaims %>%
+  filter(class == "penicillins") %>%
+  group_by(Year) %>%
+  summarise(avg_percapita = mean(percapita_Enroll))
+penicillins <-totalclaims %>%
+  filter(class == "penicillins")
+penicillins <- left_join(penicillins, penicillins_avgpercapita, by = "Year")
+penicillins <- penicillins %>%
+  mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+
+
+
+#Macrolide
+macrolides_avgpercapita <- totalclaims %>%
+  filter(class == "macrolides") %>%
+  group_by(Year) %>%
+  summarise(avg_percapita = mean(percapita_Enroll))
+macrolides <-totalclaims %>%
+  filter(class == "macrolides")
+macrolides <- left_join(macrolides, macrolides_avgpercapita, by = "Year")
+macrolides <- macrolides %>%
+  mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+#Cephalosporin
+cephalosporin_avgpercapita <- totalclaims %>%
+  filter(class == "cephalosporin") %>%
+  group_by(Year) %>%
+  summarise(avg_percapita = mean(percapita_Enroll))
+cephalosporin <-totalclaims %>%
+  filter(class == "cephalosporin")
+cephalosporin <- left_join(cephalosporin, macrolides_avgpercapita, by = "Year")
+cephalosporin <- cephalosporin %>%
+  mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+#fluoroquinolones
+fluoroquinolones_avgpercapita <- totalclaims %>%
+  filter(class == "fluoroquinolones") %>%
+  group_by(Year) %>%
+  summarise(avg_percapita = mean(percapita_Enroll))
+fluoroquinolones <-totalclaims %>%
+  filter(class == "fluoroquinolones")
+fluoroquinolones <- left_join(fluoroquinolones, fluoroquinolones_avgpercapita, by = "Year")
+fluoroquinolones <- fluoroquinolones %>%
+  mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+#quinolones
+quinolones_avgpercapita <- totalclaims %>%
+  filter(class == "quinolones") %>%
+  group_by(Year) %>%
+  summarise(avg_percapita = mean(percapita_Enroll))
+quinolones <-totalclaims %>%
+  filter(class == "quinolones")
+quinolones <- left_join(quinolones, quinolones_avgpercapita, by = "Year")
+quinolones <- quinolones %>%
+  mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+#tetracyclines
+tetracyclines_avgpercapita <- totalclaims %>%
+  filter(class == "tetracyclines") %>%
+  group_by(Year) %>%
+  summarise(avg_percapita = mean(percapita_Enroll))
+tetracyclines <-totalclaims %>%
+  filter(class == "tetracyclines")
+tetracyclines <- left_join(tetracyclines, tetracyclines_avgpercapita, by = "Year")
+tetracyclines <- tetracyclines %>%
+  mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+
+```
 
 
 Normalize to pop/age distribution:
