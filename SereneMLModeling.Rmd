@@ -968,7 +968,7 @@ penicillins <- left_join(penicillins, penicillins_avgpercapita, by = "Year")
 penicillins <- penicillins %>%
   mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
 
-
+chisq.test(penicillins$totalprescriptioncount, penicillins$expected_totalprescriptioncount, correct = F)
 
 #Macrolide
 macrolides_avgpercapita <- totalclaims %>%
@@ -980,6 +980,7 @@ macrolides <-totalclaims %>%
 macrolides <- left_join(macrolides, macrolides_avgpercapita, by = "Year")
 macrolides <- macrolides %>%
   mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+
 #Cephalosporin
 cephalosporin_avgpercapita <- totalclaims %>%
   filter(class == "cephalosporin") %>%
@@ -990,6 +991,7 @@ cephalosporin <-totalclaims %>%
 cephalosporin <- left_join(cephalosporin, macrolides_avgpercapita, by = "Year")
 cephalosporin <- cephalosporin %>%
   mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+
 #fluoroquinolones
 fluoroquinolones_avgpercapita <- totalclaims %>%
   filter(class == "fluoroquinolones") %>%
@@ -1000,6 +1002,7 @@ fluoroquinolones <-totalclaims %>%
 fluoroquinolones <- left_join(fluoroquinolones, fluoroquinolones_avgpercapita, by = "Year")
 fluoroquinolones <- fluoroquinolones %>%
   mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+
 #quinolones
 quinolones_avgpercapita <- totalclaims %>%
   filter(class == "quinolones") %>%
@@ -1010,6 +1013,7 @@ quinolones <-totalclaims %>%
 quinolones <- left_join(quinolones, quinolones_avgpercapita, by = "Year")
 quinolones <- quinolones %>%
   mutate(expected_totalprescriptioncount = avg_percapita*total_PartDEnroll)
+
 #tetracyclines
 tetracyclines_avgpercapita <- totalclaims %>%
   filter(class == "tetracyclines") %>%
