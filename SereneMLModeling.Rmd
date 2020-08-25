@@ -607,6 +607,13 @@ MERGING ALL DATAFRAMES FOR ALL YEARS (2013-2017)
 #combine ALL YEARS in one dataset 'combinediqvia'
 combinediqvia <- rbind(iqvia13, iqvia14, iqvia15, iqvia16, iqvia17)
 
+#Including Antibiotic classes:
+antibioticclasses <- read.csv("distinctantibiotics.csv") %>%
+  select(-code, -reference)
+colnames(antibioticclasses)[1] <- "generic_name"
+combinediqvia <- combinediqvia %>% 
+  left_join(antibioticclasses, by = "generic_name")
+
 #insert region column
 combinediqvia <- combinediqvia %>%
   mutate(Region = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
@@ -618,7 +625,13 @@ combinediqvia <- combinediqvia %>%
                                                             ifelse(nppes_provider_state %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV"), "South Atlantic",
                                                                    ifelse(nppes_provider_state %in% c("IA", "KS", "MN", "MO", "NE", "ND", "SD"), "West North Central",
                                                                           ifelse(nppes_provider_state %in% c("AR", "LA", "OK", "TX"), "West South Central", "Region Undefined")))))))))) %>%
-  select(-npi, -nppes_provider_last_org_name, -nppes_provider_first_name)
+  select(-npi, 
+         -nppes_provider_last_org_name, 
+         -nppes_provider_first_name, 
+         -nppes_provider_city,
+         -description_flag,
+         -bene_count_ge65_suppress_flag,
+         -ge65_suppress_flag)
 
 ```
 
@@ -626,45 +639,57 @@ PER CAPITA ENROLLMENT CALCULATION:
 ```{r}
 #Grouped by Region and Year --- TOTAL_MEDICAREENROLL
 ##all ages
-PerCapita_Enroll_ALLAGES <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
-  group_by(Region, Year) %>% 
-  summarise(totalprescriptioncount = sum(total_claim_count),
-            total_medicareEnroll = mean(Total_MedicareEnroll),
-            percapita_Enroll = totalprescriptioncount/total_medicareEnroll) %>% 
-  arrange(desc(percapita_Enroll))
+#PerCapita_Enroll_ALLAGES <- combinediqvia %>%
+#  filter(Region != "Region Undefined") %>%
+#  group_by(Region, Year) %>% 
+#  summarise(totalprescriptioncount = sum(total_claim_count),
+#            total_medicareEnroll = mean(Total_MedicareEnroll),
+#            percapita_Enroll = totalprescriptioncount/total_medicareEnroll) %>% 
+#  arrange(desc(percapita_Enroll))
 
 #bargraph
-ggplot(PerCapita_Enroll_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+#ggplot(PerCapita_Enroll_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment", title = "Total Claims per capita enrollment by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 
 ##ages 65+
-PerCapita_Enroll_AGES65 <- combinediqvia %>%
+#PerCapita_Enroll_AGES65 <- combinediqvia %>%
+#  filter(Region != "Region Undefined") %>%
+#  mutate(percent_age65over = bene_count_ge65/bene_count) %>%
+#  group_by(Region, Year) %>% 
+#  summarise(avg_percent = mean(percent_age65over,na.rm = TRUE),
+#            totalprescriptioncount = sum(total_claim_count_ge65, na.rm = TRUE),
+#            total_relative_medicareEnroll = avg_percent*mean(Total_MedicareEnroll, na.rm = TRUE),
+#            percapita_Enroll = totalprescriptioncount/total_relative_medicareEnroll) %>% 
+#  arrange(desc(percapita_Enroll))
+
+#bargraph
+#ggplot(PerCapita_Enroll_AGES65, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment for 65+ yrs", title = "Total Claims per capita enrollment for 65+ by Region in 2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+
+#Grouped by Region and Year --- TOTAL_PARTDENROLL
+PerCapita_PartD_ALLAGES <- combinediqvia %>%
+  group_by(Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = mean(Total_PartDEnroll, na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+PerCapita_PartD_ALLAGES
+
+#bargraph
+ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita PartD enrollement", title = "Total Claims per capita PartD enrollee by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+
+##ages 65+
+PerCapita_PartD_AGE65 <- combinediqvia %>%
   filter(Region != "Region Undefined") %>%
   mutate(percent_age65over = bene_count_ge65/bene_count) %>%
   group_by(Region, Year) %>% 
   summarise(avg_percent = mean(percent_age65over,na.rm = TRUE),
-            totalprescriptioncount = sum(total_claim_count_ge65, na.rm = TRUE),
-            total_relative_medicareEnroll = avg_percent*mean(Total_MedicareEnroll, na.rm = TRUE),
-            percapita_Enroll = totalprescriptioncount/total_relative_medicareEnroll) %>% 
-  arrange(desc(percapita_Enroll))
-
-#bargraph
-ggplot(PerCapita_Enroll_AGES65, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita enrollment for 65+ yrs", title = "Total Claims per capita enrollment for 65+ by Region in 2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
-
-#Grouped by Region and Year --- TOTAL_PARTDENROLL
-PerCapita_PartD_ALLAGES <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
-  mutate(PartD_Prop = Total_PartDEnroll/Total_MedicareEnroll) %>%
-  group_by(Region, Year) %>% 
-  summarise(partD_avg = mean(PartD_Prop,na.rm = TRUE),
             totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
-            total_PartDEnroll = partD_avg*mean(Total_MedicareEnroll, na.rm = TRUE),
+            total_PartDEnroll = avg_percent*mean(Total_PartDEnroll, na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
   arrange(desc(percapita_Enroll))
+PerCapita_PartD_AGE65
 
 #bargraph
-ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita PartD enrollee", title = "Total Claims per capita PartD enrollee by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
-
+ggplot(PerCapita_PartD_AGE65, aes(x = reorder(Region, -percapita_Enroll), y = percapita_Enroll)) + geom_col() + labs(x = "Region", y = "Total prescription Count per capita 65+ yrs old PartD enrollement", title = "Total Claims per capita 65+ yrs old PartD enrollement PartD enrollee by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 ```
 
 For Enrollment -- Medicare or PartD Enroll?
@@ -682,6 +707,254 @@ PartD_Prop_Region <- combinediqvia%>%
   group_by(Year, Region) %>%
   summarise(Enroll_PartD_Users = mean(PartD_Prop))
 ```
+
+CLASS Missing values:
+```{r}
+library(forcats)
+
+#mode function
+#mode <- function(x) {
+#  ux <- unique(x)
+#  ux[which.max(tabulate(match(x, ux)))]
+#}
+
+test_missingvalues <- combinediqvia %>%
+  mutate(class = forcats::fct_explicit_na(class)) %>%
+  group_by(class, Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+test_graph <- ggplot(test_missingvalues, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+test_graph
+  
+```
+
+
+PER CAPITA PARTD ENROLLMENT -- REGION AND ANTIBIOTIC CLASS
+```{r}
+totalclaims <- combinediqvia %>%
+  mutate(class = forcats::fct_explicit_na(class)) %>%
+  filter(Region != "Region Undefined") %>%
+  group_by(class, Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+#bar graph for all the years
+totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+totalclaimgraph
+
+#filtering  for the top six antibiotic classes
+totalclaims <- totalclaims %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+
+totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+totalclaimgraph
+
+#Bargraphs separated by year for zoom in
+#2013
+totalclaims_13 <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  filter(Year == "2013") %>%
+  group_by(class, Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+totalclaimgraph <- ggplot(totalclaims_13, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2013", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90))
+totalclaimgraph
+
+#2014
+totalclaims_14 <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  filter(Year == "2014") %>%
+  group_by(class, Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+totalclaimgraph <- ggplot(totalclaims_14, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2014", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90))
+totalclaimgraph
+
+#2015
+totalclaims_15 <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  filter(Year == "2015") %>%
+  group_by(class, Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+totalclaimgraph <- ggplot(totalclaims_15, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2015", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90))
+totalclaimgraph
+
+#2016
+totalclaims_16 <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  filter(Year == "2016") %>%
+  group_by(class, Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+totalclaimgraph <- ggplot(totalclaims_16, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2016", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90))
+totalclaimgraph
+
+#2017
+totalclaims_17 <- combinediqvia %>%
+  filter(Region != "Region Undefined") %>%
+  filter(Year == "2017") %>%
+  group_by(class, Region) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll))
+
+totalclaimgraph <- ggplot(totalclaims_17, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2017", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90))
+totalclaimgraph
+
+
+
+```
+
+Top Six Antibiotic class total claims per capita PARTD Enrollment for all years
+```{r}
+#filtering for the top six antibiotic classes
+totalclaims <- totalclaims %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+
+totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year) +
+  expand_limits(y=3)
+totalclaimgraph
+
+#2013
+totalclaims_13 <- totalclaims_13 %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+
+totalclaimgraph <- ggplot(totalclaims_13, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2013", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  expand_limits(y=3)
+totalclaimgraph
+
+#2014
+totalclaims_14 <- totalclaims_14 %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+  
+totalclaimgraph <- ggplot(totalclaims_14, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2014", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  expand_limits(y=3)
+totalclaimgraph
+
+#2015
+totalclaims_15 <- totalclaims_15 %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+totalclaimgraph <- ggplot(totalclaims_15, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2015", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  expand_limits(y=3)
+totalclaimgraph
+
+#2016
+totalclaims_16 <- totalclaims_16 %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+totalclaimgraph <- ggplot(totalclaims_16, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2016", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  expand_limits(y=3)
+totalclaimgraph
+
+#2017
+totalclaims_17 <- totalclaims_17 %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+
+totalclaimgraph <- ggplot(totalclaims_17, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2017", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  expand_limits(y=3)
+totalclaimgraph
+
+```
+
 
 
 Normalize to pop/age distribution:
