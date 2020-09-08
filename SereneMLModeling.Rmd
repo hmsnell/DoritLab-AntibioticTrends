@@ -872,7 +872,7 @@ totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll)
   labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
   facet_wrap(~Year) +
-  expand_limits(y=3)
+  expand_limits(y=2.5)
 totalclaimgraph
 
 #2013
@@ -888,7 +888,7 @@ totalclaimgraph <- ggplot(totalclaims_13, aes(x = reorder(class, -percapita_Enro
   geom_col() + 
   labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2013", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
-  expand_limits(y=3)
+  expand_limits(y=2.5)
 totalclaimgraph
 
 #2014
@@ -904,7 +904,7 @@ totalclaimgraph <- ggplot(totalclaims_14, aes(x = reorder(class, -percapita_Enro
   geom_col() + 
   labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2014", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
-  expand_limits(y=3)
+  expand_limits(y=2.5)
 totalclaimgraph
 
 #2015
@@ -919,7 +919,7 @@ totalclaimgraph <- ggplot(totalclaims_15, aes(x = reorder(class, -percapita_Enro
   geom_col() + 
   labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2015", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
-  expand_limits(y=3)
+  expand_limits(y=2.5)
 totalclaimgraph
 
 #2016
@@ -934,7 +934,7 @@ totalclaimgraph <- ggplot(totalclaims_16, aes(x = reorder(class, -percapita_Enro
   geom_col() + 
   labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2016", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
-  expand_limits(y=3)
+  expand_limits(y=2.5)
 totalclaimgraph
 
 #2017
@@ -950,7 +950,7 @@ totalclaimgraph <- ggplot(totalclaims_17, aes(x = reorder(class, -percapita_Enro
   geom_col() + 
   labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2017", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
-  expand_limits(y=3)
+  expand_limits(y=2.5)
 totalclaimgraph
 
 ```
