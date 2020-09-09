@@ -5,6 +5,8 @@ output: html_document
 ---
 
 ```{r}
+install.packages("vroom")
+
 library(tidyverse)
 library(tidyr)
 library(reshape2)
@@ -12,10 +14,17 @@ library(ggplot2)
 library(dplyr)
 library(stringr)
 library(readxl)
+library(vroom)
 #Unique values from partd_antibioticgeneric:
 PARTD_AntibioticGeneric <- read_excel("Data/PARTD_AntibioticGeneric.xlsx")
 PARTD_AntibioticGeneric[!duplicated(PARTD_AntibioticGeneric$`Generic Name`), ]
+
+#Unique values from PARTD_AP (Antipsychotic drugs):
+PARTD_AP <- read_excel("Data/PARTD_AP.xlsx")
+PARTD_AP <- PARTD_AP[!duplicated(PARTD_AP$`Generic_Name_AP`), ]
 ```
+
+ANTIBIOTICS
 
 IMPORTING DATAFRAMES
 ```{r}
@@ -109,115 +118,115 @@ write.csv(iqvia16_5,"~/Desktop/iqvia16_5.csv")
 READING IN DATAFRAMES FOR YEARS 2013-2017
 ```{r}
 #READ IN THE DATAFRAMES
-iqvia13_1 <- read.csv("~/Desktop/iqvia13_1.csv")
-iqvia13_2 <- read.csv("~/Desktop/iqvia13_2.csv")
-iqvia13_3 <- read.csv("~/Desktop/iqvia13_3.csv")
-iqvia13_4 <- read.csv("~/Desktop/iqvia13_4.csv")
-iqvia13_5 <- read.csv("~/Desktop/iqvia13_5.csv")
+iqvia13_1 <- vroom("~/Desktop/iqvia13_1.csv")
+iqvia13_2 <- vroom("~/Desktop/iqvia13_2.csv")
+iqvia13_3 <- vroom("~/Desktop/iqvia13_3.csv")
+iqvia13_4 <- vroom("~/Desktop/iqvia13_4.csv")
+iqvia13_5 <- vroom("~/Desktop/iqvia13_5.csv")
 
-iqvia14_1 <- read.csv("~/Desktop/iqvia14_1.csv")
-iqvia14_2 <- read.csv("~/Desktop/iqvia14_2.csv")
-iqvia14_3 <- read.csv("~/Desktop/iqvia14_3.csv")
-iqvia14_4 <- read.csv("~/Desktop/iqvia14_4.csv")
-iqvia14_5 <- read.csv("~/Desktop/iqvia14_5.csv")
+iqvia14_1 <- vroom("~/Desktop/iqvia14_1.csv")
+iqvia14_2 <- vroom("~/Desktop/iqvia14_2.csv")
+iqvia14_3 <- vroom("~/Desktop/iqvia14_3.csv")
+iqvia14_4 <- vroom("~/Desktop/iqvia14_4.csv")
+iqvia14_5 <- vroom("~/Desktop/iqvia14_5.csv")
 
-iqvia15_1 <- read.csv("~/Desktop/iqvia15_1.csv")
-iqvia15_2 <- read.csv("~/Desktop/iqvia15_2.csv")
-iqvia15_3 <- read.csv("~/Desktop/iqvia15_3.csv")
-iqvia15_4 <- read.csv("~/Desktop/iqvia15_4.csv")
-iqvia15_5 <- read.csv("~/Desktop/iqvia15_5.csv")
+iqvia15_1 <- vroom("~/Desktop/iqvia15_1.csv")
+iqvia15_2 <- vroom("~/Desktop/iqvia15_2.csv")
+iqvia15_3 <- vroom("~/Desktop/iqvia15_3.csv")
+iqvia15_4 <- vroom("~/Desktop/iqvia15_4.csv")
+iqvia15_5 <- vroom("~/Desktop/iqvia15_5.csv")
 
-iqvia16_1 <- read.csv("~/Desktop/iqvia16_1.csv")
-iqvia16_2 <- read.csv("~/Desktop/iqvia16_2.csv")
-iqvia16_3 <- read.csv("~/Desktop/iqvia16_3.csv")
-iqvia16_4 <- read.csv("~/Desktop/iqvia16_4.csv")
-iqvia16_5 <- read.csv("~/Desktop/iqvia16_5.csv")
+iqvia16_1 <- vroom("~/Desktop/iqvia16_1.csv")
+iqvia16_2 <- vroom("~/Desktop/iqvia16_2.csv")
+iqvia16_3 <- vroom("~/Desktop/iqvia16_3.csv")
+iqvia16_4 <- vroom("~/Desktop/iqvia16_4.csv")
+iqvia16_5 <- vroom("~/Desktop/iqvia16_5.csv")
 #2017
-iqvia1 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia1data.csv")
-iqvia2 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia2data.csv")
-iqvia3 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia3data.csv")
-iqvia4 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia4data.csv")
-iqvia5 <- read.csv("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia5data.csv")
+iqvia1 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia1data.csv")
+iqvia2 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia2data.csv")
+iqvia3 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia3data.csv")
+iqvia4 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia4data.csv")
+iqvia5 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia5data.csv")
 
 #Filter for antibiotic drugs only:
 iqvia13_1 <- filter(iqvia13_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2013") %>%
-  select(-X)
+  select(-'...1')
 iqvia13_2 <- filter(iqvia13_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2013") %>%
-  select(-X)
+  select(-'...1')
 iqvia13_3 <- filter(iqvia13_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2013") %>%
-  select(-X)
+  select(-'...1')
 iqvia13_4 <- filter(iqvia13_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2013") %>%
-  select(-X)
+  select(-'...1')
 iqvia13_5 <- filter(iqvia13_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2013") %>%
-  select(-X)
+  select(-'...1')
 iqvia13 <- rbind(iqvia13_1, iqvia13_2, iqvia13_3, iqvia13_4, iqvia13_5) #combined for 2013
 
 #2014
 iqvia14_1 <- filter(iqvia14_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
-  select(-X)
+  select(-'...1')
 iqvia14_2 <- filter(iqvia14_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
-  select(-X)
+  select(-'...1')
 iqvia14_3 <- filter(iqvia14_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
-  select(-X)
+  select(-'...1')
 iqvia14_4 <- filter(iqvia14_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
-  select(-X)
+  select(-'...1')
 iqvia14_5 <- filter(iqvia14_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2014") %>%
-  select(-X)
+  select(-'...1')
 iqvia14 <- rbind(iqvia14_1, iqvia14_2, iqvia14_3, iqvia14_4, iqvia14_5) #combined for 2014
 
 #2015
 iqvia15_1 <- filter(iqvia15_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
-  select(-X)
+  select(-'...1')
 iqvia15_2 <- filter(iqvia15_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
-  select(-X)
+  select(-'...1')
 iqvia15_3 <- filter(iqvia15_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
-  select(-X)
+  select(-'...1')
 iqvia15_4 <- filter(iqvia15_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
-  select(-X)
+  select(-'...1')
 iqvia15_5 <- filter(iqvia15_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2015") %>%
-  select(-X)
+  select(-'...1')
 iqvia15 <- rbind(iqvia15_1, iqvia15_2, iqvia15_3, iqvia15_4, iqvia15_5) #combined for 2015
 
 #2016
 iqvia16_1 <- filter(iqvia16_1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
-  select(-X)
+  select(-'...1')
 iqvia16_2 <- filter(iqvia16_2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
-  select(-X)
+  select(-'...1')
 iqvia16_3 <- filter(iqvia16_3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
-  select(-X)
+  select(-'...1')
 iqvia16_4 <- filter(iqvia16_4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
-  select(-X)
+  select(-'...1')
 iqvia16_5 <- filter(iqvia16_5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2016") %>%
-  select(-X)
+  select(-'...1')
 iqvia16 <- rbind(iqvia16_1, iqvia16_2, iqvia16_3, iqvia16_4, iqvia16_5) #combined for 2016
 
 #2017
 iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
-  mutate(Year = "2017")
+  mutate(Year = "2017") 
 iqvia2 <- filter(iqvia2, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
-  mutate(Year = "2017")
+  mutate(Year = "2017") 
 iqvia3 <- filter(iqvia3, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
-  mutate(Year = "2017")
+  mutate(Year = "2017") 
 iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
   mutate(Year = "2017")
 iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AntibioticGeneric$`Generic Name`) %>%
@@ -368,7 +377,7 @@ Enroll_14 <- Enroll_14 %>%
 #reorder columns in Enroll_14
 Enroll_14 <- Enroll_14[c(3,1,2)]
 
-#Merge Enroll data with iqvia13 data
+#Merge Enroll data with iqvia14 data
 iqvia14 <- merge(x = iqvia14, y = Enroll_14, by = "nppes_provider_state", all.x = TRUE)
 
 #Erase commas
@@ -954,6 +963,173 @@ totalclaimgraph <- ggplot(totalclaims_17, aes(x = reorder(class, -percapita_Enro
 totalclaimgraph
 
 ```
+
+
+ANTIPSYCHOTIC DRUGS:
+
+ANTIPSYCHOTIC DRUGS (COMPARISON GROUP):
+```{r}
+#READ IN THE DATAFRAMES
+iqvia13_1 <- vroom("~/Desktop/iqvia13_1.csv")
+iqvia13_2 <- vroom("~/Desktop/iqvia13_2.csv")
+iqvia13_3 <- vroom("~/Desktop/iqvia13_3.csv")
+iqvia13_4 <- vroom("~/Desktop/iqvia13_4.csv")
+iqvia13_5 <- vroom("~/Desktop/iqvia13_5.csv")
+
+iqvia14_1 <- vroom("~/Desktop/iqvia14_1.csv")
+iqvia14_2 <- vroom("~/Desktop/iqvia14_2.csv")
+iqvia14_3 <- vroom("~/Desktop/iqvia14_3.csv")
+iqvia14_4 <- vroom("~/Desktop/iqvia14_4.csv")
+iqvia14_5 <- vroom("~/Desktop/iqvia14_5.csv")
+
+iqvia15_1 <- vroom("~/Desktop/iqvia15_1.csv")
+iqvia15_2 <- vroom("~/Desktop/iqvia15_2.csv")
+iqvia15_3 <- vroom("~/Desktop/iqvia15_3.csv")
+iqvia15_4 <- vroom("~/Desktop/iqvia15_4.csv")
+iqvia15_5 <- vroom("~/Desktop/iqvia15_5.csv")
+
+iqvia16_1 <- vroom("~/Desktop/iqvia16_1.csv")
+iqvia16_2 <- vroom("~/Desktop/iqvia16_2.csv")
+iqvia16_3 <- vroom("~/Desktop/iqvia16_3.csv")
+iqvia16_4 <- vroom("~/Desktop/iqvia16_4.csv")
+iqvia16_5 <- vroom("~/Desktop/iqvia16_5.csv")
+#2017
+iqvia1 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia1data.csv")
+iqvia2 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia2data.csv")
+iqvia3 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia3data.csv")
+iqvia4 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia4data.csv")
+iqvia5 <- vroom("~/Documents/School/Smith Sem 8 LAST SEM/Special Studies/Iqvia Data/iqvia5data.csv")
+
+#Filter for antibiotic drugs only:
+iqvia13_1 <- filter(iqvia13_1, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2013") %>%
+  select(-'...1')
+iqvia13_2 <- filter(iqvia13_2, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2013") %>%
+  select(-'...1')
+iqvia13_3 <- filter(iqvia13_3, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2013") %>%
+  select(-'...1')
+iqvia13_4 <- filter(iqvia13_4, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2013") %>%
+  select(-'...1')
+iqvia13_5 <- filter(iqvia13_5, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2013") %>%
+  select(-'...1')
+iqvia13 <- rbind(iqvia13_1, iqvia13_2, iqvia13_3, iqvia13_4, iqvia13_5) #combined for 2013
+
+#2014
+iqvia14_1 <- filter(iqvia14_1, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2014") %>%
+  select(-'...1')
+iqvia14_2 <- filter(iqvia14_2, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2014") %>%
+  select(-'...1')
+iqvia14_3 <- filter(iqvia14_3, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2014") %>%
+  select(-'...1')
+iqvia14_4 <- filter(iqvia14_4, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2014") %>%
+  select(-'...1')
+iqvia14_5 <- filter(iqvia14_5, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2014") %>%
+  select(-'...1')
+iqvia14 <- rbind(iqvia14_1, iqvia14_2, iqvia14_3, iqvia14_4, iqvia14_5) #combined for 2014
+
+#2015
+iqvia15_1 <- filter(iqvia15_1, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2015") %>%
+  select(-'...1')
+iqvia15_2 <- filter(iqvia15_2, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2015") %>%
+  select(-'...1')
+iqvia15_3 <- filter(iqvia15_3, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2015") %>%
+  select(-'...1')
+iqvia15_4 <- filter(iqvia15_4, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2015") %>%
+  select(-'...1')
+iqvia15_5 <- filter(iqvia15_5, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2015") %>%
+  select(-'...1')
+iqvia15 <- rbind(iqvia15_1, iqvia15_2, iqvia15_3, iqvia15_4, iqvia15_5) #combined for 2015
+
+#2016
+iqvia16_1 <- filter(iqvia16_1, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2016") %>%
+  select(-'...1')
+iqvia16_2 <- filter(iqvia16_2, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2016") %>%
+  select(-'...1')
+iqvia16_3 <- filter(iqvia16_3, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2016") %>%
+  select(-'...1')
+iqvia16_4 <- filter(iqvia16_4, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2016") %>%
+  select(-'...1')
+iqvia16_5 <- filter(iqvia16_5, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2016") %>%
+  select(-'...1')
+iqvia16 <- rbind(iqvia16_1, iqvia16_2, iqvia16_3, iqvia16_4, iqvia16_5) #combined for 2016
+
+#2017
+iqvia1 <- filter(iqvia1, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2017") 
+iqvia2 <- filter(iqvia2, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2017") 
+iqvia3 <- filter(iqvia3, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2017") 
+iqvia4 <- filter(iqvia4, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2017")
+iqvia5 <- filter(iqvia5, generic_name %in% PARTD_AP$`Generic_Name_AP`) %>%
+  mutate(Year = "2017")
+iqvia17 <- rbind(iqvia1, iqvia2, iqvia3, iqvia4, iqvia5)
+```
+
+
+Add Enroll data for Antipsychotic
+```{r}
+#Merge Enroll data with iqvia13 data
+iqvia13 <- merge(x = iqvia13, y = Enroll_13, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia13$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia13$Total_MedicareEnroll))
+iqvia13$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia13$Total_PartDEnroll))
+
+#Merge Enroll data with iqvia14 data
+iqvia14 <- merge(x = iqvia14, y = Enroll_14, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia14$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia14$Total_MedicareEnroll))
+iqvia14$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia14$Total_PartDEnroll))
+
+#Merge Enroll data with iqvia15 data
+iqvia15 <- merge(x = iqvia15, y = Enroll_15, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia15$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia15$Total_MedicareEnroll))
+iqvia15$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia15$Total_PartDEnroll))
+
+#Merge Enroll data with iqvia16 data
+iqvia16 <- merge(x = iqvia16, y = Enroll_16, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia16$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia16$Total_MedicareEnroll))
+iqvia16$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia16$Total_PartDEnroll))
+
+#Merge Enroll data with iqvia157data
+iqvia17 <- merge(x = iqvia17, y = Enroll_17, by = "nppes_provider_state", all.x = TRUE)
+#Erase commas
+iqvia17$Total_MedicareEnroll <- as.numeric(gsub(",","",iqvia17$Total_MedicareEnroll))
+iqvia17$Total_PartDEnroll <- as.numeric(gsub(",","",iqvia17$Total_PartDEnroll))
+
+```
+
+Merging all years (2013-2017)
+```{r}
+#combine ALL YEARS in one dataset 'combinediqvia'
+AP_combinediqvia <- rbind(iqvia13, iqvia14, iqvia15, iqvia16, iqvia17)
+```
+
+
+
+
 
 Chi Square tests
 ```{r}
