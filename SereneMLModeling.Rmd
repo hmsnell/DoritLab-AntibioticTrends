@@ -749,7 +749,6 @@ PER CAPITA PARTD ENROLLMENT -- REGION AND ANTIBIOTIC CLASS
 ```{r}
 totalclaims <- combinediqvia %>%
   mutate(class = forcats::fct_explicit_na(class)) %>%
-  filter(Region != "Region Undefined") %>%
   group_by(class, Region, Year) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
@@ -783,7 +782,6 @@ totalclaimgraph
 #Bargraphs separated by year for zoom in
 #2013
 totalclaims_13 <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
   filter(Year == "2013") %>%
   group_by(class, Region) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
@@ -799,7 +797,6 @@ totalclaimgraph
 
 #2014
 totalclaims_14 <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
   filter(Year == "2014") %>%
   group_by(class, Region) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
@@ -815,7 +812,6 @@ totalclaimgraph
 
 #2015
 totalclaims_15 <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
   filter(Year == "2015") %>%
   group_by(class, Region) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
@@ -831,7 +827,6 @@ totalclaimgraph
 
 #2016
 totalclaims_16 <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
   filter(Year == "2016") %>%
   group_by(class, Region) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
@@ -847,7 +842,6 @@ totalclaimgraph
 
 #2017
 totalclaims_17 <- combinediqvia %>%
-  filter(Region != "Region Undefined") %>%
   filter(Year == "2017") %>%
   group_by(class, Region) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
@@ -1127,7 +1121,88 @@ Merging all years (2013-2017)
 AP_combinediqvia <- rbind(iqvia13, iqvia14, iqvia15, iqvia16, iqvia17)
 ```
 
+```{r}
+#classification
+AP_combinediqvia <- AP_combinediqvia %>%
+  mutate(Category = ifelse(generic_name %in% c("ARIPIPRAZOLE", "ARIPIPRAZOLE LAUROXIL", "CLOZAPINE", "ILOPERIDONE", "ZIPRASIDONE HCL", "ZIPRASIDONE MESYLATE", "PALIPERIDONE", "PALIPERIDONE PALMITATE", "LURASIDONE HCL", "PIMAVANSERIN TARTRATE", "OLANZAPINE", "QUETIAPINE FUMARATE", "BREXPIPRAZOLE", "QUETIAPINE FUMARATE", "RISPERIDONE", "RISPERIDONE MICROSPHERES", "ASENAPINE MALEATE", "CARIPRAZINE HCL", "OLANZAPINE PAMOATE"), "Second Generation", 
+         ifelse(generic_name %in% c("CHLORPROMAZINE HCL", "FLUPHENAZINE DECANOATE", "FLUPHENAZINE HCL", "HALOPERIDOL LACTATE", "HALOPERIDOL LACTATE", "HALOPERIDOL DECANOATE", "HALOPERIDOL", "LOXAPINE SUCCINATE", "MOLINDONE HCL", "PIMOZIDE", "PERPHENAZINE", "THIORIDAZINE HCL", "THIOTHIXENE", "TRIFLUOPERAZINE HCL"), "First Generation", "Mixed Drugs")))
 
+AP_combinediqvia <- AP_combinediqvia %>%
+  mutate(Category2 = ifelse(generic_name %in% c("ARIPIPRAZOLE", "ARIPIPRAZOLE LAUROXIL"), "ARIPIPRAZOLE", ifelse(generic_name == "ASENAPINE MALEATE", "ASENAPINE",
+  ifelse(generic_name == "BREXPIPRAZOLE", "BREXPIPRAZOLE",
+  ifelse(generic_name == "CARIPRAZINE HCL", "CARIPRAZINE",
+  ifelse(generic_name == "CHLORPROMAZINE HCL", "CHLORPROMAZINE",
+  ifelse(generic_name == "CLOZAPINE", "CLOZAPINE",
+  ifelse(generic_name %in% c("FLUPHENAZINE DECANOATE", "FLUPHENAZINE HCL"), "FLUPHENAZINE",
+  ifelse(generic_name %in% c("HALOPERIDOL", "HALOPERIDOL DECANOATE", "HALOPERIDOL LACTATE"), "HALOPERIDOL",
+  ifelse(generic_name == "ILOPERIDONE", "ILOPERIDONE",
+  ifelse(generic_name == "LOXAPINE SUCCINATE", "LOXAPINE",
+  ifelse(generic_name == "LURASIDONE HCL", "LURASIDONE",
+  ifelse(generic_name == "MOLINDONE HCL", "MOLINDONE",
+  ifelse(generic_name %in% c("OLANZAPINE", "OLANZAPINE PAMOATE"), "OLANZAPINE", 
+  ifelse(generic_name %in% c("PALIPERIDONE", "PALIPERIDONE PALMITATE"), "PALIPERIDONE",
+  ifelse(generic_name == "PERPHENAZINE", "PERPHENAZINE",
+  ifelse(generic_name == "PIMAVANSERIN TARTRATE", "PIMAVANSERIN",
+  ifelse(generic_name == "PIMOZIDE", "PIMOZIDE",
+  ifelse(generic_name == "QUETIAPINE FUMARATE", "QUETIAPINE",
+  ifelse(generic_name %in% c("RISPERIDONE", "RISPERIDONE MICROSPHERES"), "RISPERIDONE",
+  ifelse(generic_name == "THIORIDAZINE HCL", "THIORIDAZINE",
+  ifelse(generic_name == "THIOTHIXENE", "THIOTHIXENE", 
+  ifelse(generic_name == "TRIFLUOPERAZINE HCL", "TRIFLUOPERAZINE",
+  ifelse(generic_name %in% c("ZIPRASIDONE HCL", "ZIPRASIDONE MESYLATE"), "ZIPRASIDONE", "MIXED DRUGS"))))))))))))))))))))))))
+
+#insert region column
+AP_combinediqvia <- AP_combinediqvia %>%
+  mutate(Region = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
+                         ifelse(nppes_provider_state %in% c("AL", "KY", "MS", "TN"), "East South Central",
+                                ifelse(nppes_provider_state %in% c("NJ", "NY", "PA"), "Middle Atlantic",
+                                       ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY"), "Mountain",
+                                              ifelse(nppes_provider_state %in% c("CT", "ME", "MA", "NH", "RI", "VT"), "New England",
+                                                     ifelse(nppes_provider_state %in% c("AK", "CA", "HI", "OR", "WA"), "Pacific",
+                                                            ifelse(nppes_provider_state %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV"), "South Atlantic",
+                                                                   ifelse(nppes_provider_state %in% c("IA", "KS", "MN", "MO", "NE", "ND", "SD"), "West North Central",
+                                                                          ifelse(nppes_provider_state %in% c("AR", "LA", "OK", "TX"), "West South Central", "Region Undefined")))))))))) %>%
+  select(-npi, 
+         -nppes_provider_last_org_name, 
+         -nppes_provider_first_name, 
+         -nppes_provider_city,
+         -description_flag,
+         -bene_count_ge65_suppress_flag,
+         -ge65_suppress_flag)
+```
+
+Antipsychotic drugs EDA
+```{r}
+#CATEGORY1
+test_AP <- AP_combinediqvia %>%
+  group_by(Category, Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count, na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
+  arrange(desc(percapita_Enroll)) 
+
+test_graph <- ggplot(test_AP, aes(x = reorder(Category, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Antipsychotic Drug Category", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of AP Category", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+test_graph
+
+#CATEGORY2
+test_AP <- AP_combinediqvia  %>%
+  group_by(Category2, Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count, na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>%
+  arrange(desc(percapita_Enroll))
+
+test_graph <- ggplot(test_AP, aes(x = reorder(Category2, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Antipsychotic Drug Category", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of AP Category", fill = "Region") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+test_graph
+```
 
 
 
