@@ -717,6 +717,19 @@ PartD_Prop_Region <- combinediqvia%>%
   summarise(Enroll_PartD_Users = mean(PartD_Prop))
 ```
 
+Total Claim Count by Region
+```{r}
+PartD_ClaimCount <- combinediqvia %>%
+  group_by(Region, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE)) %>% 
+  arrange(desc(totalprescriptioncount))
+PartD_ClaimCount
+
+#bargraph
+ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Prescription Claim Count", title = "Total Prescription Claim Counts by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+```
+
+
 CLASS Missing values:
 ```{r}
 library(forcats)
@@ -774,7 +787,7 @@ totalclaims <- totalclaims %>%
 
 totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
   geom_col() + 
-  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Division") + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Top Six Antibiotic Classes", fill = "Division") + 
   theme(axis.text.x = element_text(angle = 90)) +
   facet_wrap(~Year)
 totalclaimgraph
@@ -1195,6 +1208,22 @@ test_AP <- AP_combinediqvia  %>%
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>%
   arrange(desc(percapita_Enroll))
+
+test_graph <- ggplot(test_AP, aes(x = reorder(Category2, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
+  geom_col() + 
+  labs(x = "Antipsychotic Drug Category", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of AP Category", fill = "Division") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+test_graph
+
+# TOP SIX DRUGS
+test_AP <- test_AP %>%
+  filter(Category2 == "QUETIAPINE"|
+           Category2 == "RISPERIDONE" |
+           Category2 == "OLANZAPINE"|
+           Category2 == "ARIPIPRAZOLE"|
+           Category2 == "HALOPERIDOL"|
+           Category2 == "CLOZAPINE")
 
 test_graph <- ggplot(test_AP, aes(x = reorder(Category2, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
   geom_col() + 
