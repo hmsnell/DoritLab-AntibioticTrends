@@ -623,9 +623,9 @@ colnames(antibioticclasses)[1] <- "generic_name"
 combinediqvia <- combinediqvia %>% 
   left_join(antibioticclasses, by = "generic_name")
 
-#insert region column
+#insert division column (9 divisions)
 combinediqvia <- combinediqvia %>%
-  mutate(Region = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
+  mutate(Divsion = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
                          ifelse(nppes_provider_state %in% c("AL", "KY", "MS", "TN"), "East South Central",
                                 ifelse(nppes_provider_state %in% c("NJ", "NY", "PA"), "Middle Atlantic",
                                        ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY"), "Mountain",
@@ -633,7 +633,7 @@ combinediqvia <- combinediqvia %>%
                                                      ifelse(nppes_provider_state %in% c("AK", "CA", "HI", "OR", "WA"), "Pacific",
                                                             ifelse(nppes_provider_state %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV"), "South Atlantic",
                                                                    ifelse(nppes_provider_state %in% c("IA", "KS", "MN", "MO", "NE", "ND", "SD"), "West North Central",
-                                                                          ifelse(nppes_provider_state %in% c("AR", "LA", "OK", "TX"), "West South Central", "Region Undefined")))))))))) %>%
+                                                                          ifelse(nppes_provider_state %in% c("AR", "LA", "OK", "TX"), "West South Central", "Undefined Division")))))))))) %>%
   select(-npi, 
          -nppes_provider_last_org_name, 
          -nppes_provider_first_name, 
@@ -642,7 +642,16 @@ combinediqvia <- combinediqvia %>%
          -bene_count_ge65_suppress_flag,
          -ge65_suppress_flag)
 
+#Adding Region (4 regions)
+combinediqvia <- combinediqvia %>%
+  mutate(Region = ifelse(nppes_provider_state %in% c("CT", "ME", "MA", "NH", "RI", "VT", "NJ", "NY", "PA"), "Northeast",
+                         ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI", "IA", "KS", "MN", "MO", "NE", "ND", "SD"), "Midwest",
+                                ifelse(nppes_provider_state %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV", "AL", "KY", "MS", "TN", "AR", "LA", "OK", "TX"), "South",
+                                       ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY", "AK", "CA", "HI", "OR", "WA"), "West", "Undefined Region")))))
+
 ```
+
+
 
 PER CAPITA ENROLLMENT CALCULATION:
 ```{r}
