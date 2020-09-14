@@ -625,7 +625,7 @@ combinediqvia <- combinediqvia %>%
 
 #insert division column (9 divisions)
 combinediqvia <- combinediqvia %>%
-  mutate(Divsion = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
+  mutate(Division = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
                          ifelse(nppes_provider_state %in% c("AL", "KY", "MS", "TN"), "East South Central",
                                 ifelse(nppes_provider_state %in% c("NJ", "NY", "PA"), "Middle Atlantic",
                                        ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY"), "Mountain",
@@ -728,6 +728,7 @@ PartD_Prop_Region <- combinediqvia%>%
 
 Total Claim Count by Region
 ```{r}
+#REGION
 PartD_ClaimCount <- combinediqvia %>%
   group_by(Region, Year) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE)) %>% 
@@ -735,9 +736,28 @@ PartD_ClaimCount <- combinediqvia %>%
 PartD_ClaimCount
 
 #bargraph
-ggplot(PerCapita_PartD_ALLAGES, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Prescription Claim Count", title = "Total Prescription Claim Counts by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+ggplot(PartD_ClaimCount, aes(x = reorder(Region, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Region", y = "Prescription Claim Count", title = "Total Prescription Claim Counts by Region 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
+
+#DIVISION
+PartD_ClaimCount <- combinediqvia %>%
+  group_by(Division, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE)) %>% 
+  arrange(desc(totalprescriptioncount))
+PartD_ClaimCount
+
+#bargraph
+ggplot(PartD_ClaimCount, aes(x = reorder(Division, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Division", y = "Prescription Claim Count", title = "Total Prescription Claim Counts by Division 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 ```
 
+
+MAPPING:
+```{r}
+library(ggplot2)
+library(sf)
+
+usgeom <- 
+
+```
 
 CLASS Missing values:
 ```{r}
@@ -759,12 +779,98 @@ test_missingvalues <- combinediqvia %>%
 
 test_graph <- ggplot(test_missingvalues, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
   geom_col() + 
-  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Division") + 
+  labs(x = "Class", y = "CLaim per PartD Enrollee", title = "Claims per PartD Enrollee by Antibiotic Classes", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
   facet_wrap(~Year)
 test_graph
   
 ```
+
+PENICILLIN
+```{r}
+install.packages("ggthemes") # Install 
+library(ggthemes)
+
+#Region
+pen <- combinediqvia %>%
+  filter(class == "penicillins") %>%
+  group_by(Year, Region) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) + 
+  geom_line() + 
+  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Penicilin Claims", subtitle = "2013 - 2017", col = "Region")
+
+pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+pen_line+ theme_economist()+  theme(legend.position = "right")
+
+
+
+
+#Division
+pen <- combinediqvia %>%
+  filter(class == "penicillins") %>%
+  group_by(Year, Division) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+  geom_line() + 
+  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Penicilin Claims", subtitle = "2013 - 2017", col = "Division")
+
+pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+pen_line+ theme_economist()+  theme(legend.position = "right")
+```
+
+MACROLIDE
+```{r}
+install.packages("ggthemes") # Install 
+library(ggthemes)
+
+#Region
+macro <- combinediqvia %>%
+  filter(class == "macrolides") %>%
+  group_by(Year, Region) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+macro_line <- ggplot(macro, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) + 
+  geom_line() + 
+  labs(x = "Year", y = "Claim per PartD Enrollee", title = "Claims per PartD Enrollee for 2013-2017", subtitle = "Macrolides", col = "Region")
+
+macro_line
+macro_line + theme_classic()
+macro_line + theme_light()
+macro_line+ theme_hc()+ scale_colour_hc()
+
+
+
+#Division
+macro <- combinediqvia %>%
+  filter(class == "macrolides") %>%
+  group_by(Year, Division) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+macro_line <- ggplot(macro, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+  geom_line() + 
+  labs(x = "Year", y = "Claim per PartD Enrollee", subtitle = "Macrolides", title =  "Claims per PartD Enrollee for 2013-2017", col = "Division")
+
+macro_line
+macro_line + theme_classic()
+macro_line + theme_light()
+
+macro_line+ theme_hc()+ scale_colour_hc()
+
+```
+
 
 
 PER CAPITA PARTD ENROLLMENT -- REGION AND ANTIBIOTIC CLASS
@@ -780,7 +886,7 @@ totalclaims <- combinediqvia %>%
 #bar graph for all the years
 totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
   geom_col() + 
-  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Division") + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
   facet_wrap(~Year)
 totalclaimgraph
@@ -796,7 +902,7 @@ totalclaims <- totalclaims %>%
 
 totalclaimgraph <- ggplot(totalclaims, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
   geom_col() + 
-  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Top Six Antibiotic Classes", fill = "Division") + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Top Six Antibiotic Classes", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90)) +
   facet_wrap(~Year)
 totalclaimgraph
@@ -813,7 +919,7 @@ totalclaims_13 <- combinediqvia %>%
 
 totalclaimgraph <- ggplot(totalclaims_13, aes(x = reorder(class, -percapita_Enroll), y = percapita_Enroll, fill = Region)) +
   geom_col() + 
-  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2013", fill = "Division") + 
+  labs(x = "Class", y = "Total Claim Count", title = "Total Claims per capita PartD Enrollment of Each Antibiotic Class in 2013", fill = "Region") + 
   theme(axis.text.x = element_text(angle = 90))
 totalclaimgraph
 
@@ -1175,7 +1281,7 @@ AP_combinediqvia <- AP_combinediqvia %>%
 
 #insert region column
 AP_combinediqvia <- AP_combinediqvia %>%
-  mutate(Region = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
+  mutate(Division = ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI"), "East North Central",
                          ifelse(nppes_provider_state %in% c("AL", "KY", "MS", "TN"), "East South Central",
                                 ifelse(nppes_provider_state %in% c("NJ", "NY", "PA"), "Middle Atlantic",
                                        ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY"), "Mountain",
@@ -1191,6 +1297,13 @@ AP_combinediqvia <- AP_combinediqvia %>%
          -description_flag,
          -bene_count_ge65_suppress_flag,
          -ge65_suppress_flag)
+
+AP_combinediqvia <- AP_combinediqvia %>%
+  mutate(Region = ifelse(nppes_provider_state %in% c("CT", "ME", "MA", "NH", "RI", "VT", "NJ", "NY", "PA"), "Northeast",
+                         ifelse(nppes_provider_state %in% c("IL", "IN", "MI", "OH", "WI", "IA", "KS", "MN", "MO", "NE", "ND", "SD"), "Midwest",
+                                ifelse(nppes_provider_state %in% c("DE", "DC", "FL", "GA", "MD", "NC", "SC", "VA", "WV", "AL", "KY", "MS", "TN", "AR", "LA", "OK", "TX"), "South",
+                                       ifelse(nppes_provider_state %in% c("AZ", "CO", "ID", "MT", "NV", "NM", "UT", "WY", "AK", "CA", "HI", "OR", "WA"), "West", "Undefined Region")))))
+
 ```
 
 Antipsychotic drugs EDA
@@ -1242,6 +1355,99 @@ test_graph <- ggplot(test_AP, aes(x = reorder(Category2, -percapita_Enroll), y =
 test_graph
 ```
 
+QUETIAPINE
+```{r}
+#Region
+quet <- AP_combinediqvia %>%
+  filter(Category2 == "QUETIAPINE") %>%
+  group_by(Year, Region) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group=Region, colour = Region)) + geom_line() + labs(x = "Year", y = "Claim per PartD Enrollee", title = "Quetiapine Claims", subtitle = "2013 - 2017", col = "Region")
+
+quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+quet_line+ theme_economist()+  theme(legend.position = "right")
+
+
+
+
+#Division
+quet <- AP_combinediqvia %>%
+  filter(Category2 == "QUETIAPINE") %>%
+  group_by(Year, Division) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+  geom_line() + 
+  labs(x = "Year", y = "Claim per PartD Enrollee", title = "Quetiapine Claims", subtitle = "2013 - 2017", col = "Division")
+
+quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+quet_line+ theme_economist()+  theme(legend.position = "right")
+```
+
+```{r}
+#Undefined Region
+#Mainly Puerto Rico?
+
+Undefined <- AP_combinediqvia %>%
+  filter(Region == "Undefined Region") %>%
+  group_by(nppes_provider_state) %>%
+  summarise(Count = n())
+Undefined
+
+#graphing the use of AP in PR
+PR_AP <- AP_combinediqvia  %>%
+  filter(nppes_provider_state == "PR") %>%
+  group_by(Category2, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count, na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>%
+  arrange(desc(percapita_Enroll))
+
+PR_graph <- ggplot(PR_AP, aes(x = reorder(Category2, -percapita_Enroll), y = percapita_Enroll)) +
+  geom_col() + 
+  labs(x = "Antipsychotic Drug Category", y = "Total Claim Count", title = "Claims per PartD Enrollee in PR") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  facet_wrap(~Year)
+PR_graph
+
+#TOP FIVE AP in PR
+PR_AP <- AP_combinediqvia %>%
+  filter(Category2 == "QUETIAPINE"|
+           Category2 == "RISPERIDONE" |
+           Category2 == "OLANZAPINE"|
+           Category2 == "ARIPIPRAZOLE"|
+           Category2 == "HALOPERIDOL") %>%
+  filter(nppes_provider_state == "PR") %>%
+  group_by(Category2, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count, na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+PR_line <- ggplot(PR_AP, aes(x = Year, y = percapita_Enroll, group = Category2, colour = Category2)) + 
+  geom_line() + 
+  labs(x = "Year", y = "Claim per PartD Enrollee", title = "Claims per PartD Enrollee in PR", subtitle = "2013 - 2017", col = "Category")
+
+PR_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+PR_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+PR_line+ theme_economist()+  theme(legend.position = "right")
+
+```
+
+```{r}
+#AP Distribution of Counts for the Regions 
+Count_AP <- AP_combinediqvia %>%
+  filter(Year == "2017") %>%
+  group_by(Region) %>%
+  summarise(Count = n())
+
+```
 
 
 Chi Square tests
