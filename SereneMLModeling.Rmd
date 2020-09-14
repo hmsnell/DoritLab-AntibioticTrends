@@ -825,6 +825,26 @@ pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, co
 pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
 pen_line+ theme_economist()+  theme(legend.position = "right")
+
+#Region/Division
+pen <- combinediqvia %>%
+  filter(class == "penicillins") %>%
+  group_by(Year, Division, Region) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+pd <- position_dodge(0.07)
+
+pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+  geom_line(position = pd) + 
+  geom_point(position = pd, aes(shape = Region), size = 2, colour = "black") +
+  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Penicilin Claims", subtitle = "2013 - 2017", col = "Division")
+
+pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+pen_line+ theme_economist()+  theme(legend.position = "right")
+
 ```
 
 MACROLIDE
@@ -1389,6 +1409,26 @@ quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group = Division, 
 quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
 quet_line+ theme_economist()+  theme(legend.position = "right")
+
+#Region/Division
+quet <- AP_combinediqvia %>%
+  filter(Category2 == "QUETIAPINE") %>%
+  group_by(Year, Division, Region) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+pd <- position_dodge(0.07)
+
+quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+  geom_line(position = pd) + 
+  geom_point(position = pd, aes(shape = Region), size = 2, colour = "black") +
+  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Quetiapine Claims", subtitle = "2013 - 2017", col = "Division")
+
+quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+quet_line+ theme_economist()+  theme(legend.position = "right")
+
 ```
 
 ```{r}
@@ -1437,6 +1477,8 @@ PR_line <- ggplot(PR_AP, aes(x = Year, y = percapita_Enroll, group = Category2, 
 PR_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 PR_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
 PR_line+ theme_economist()+  theme(legend.position = "right")
+
+
 
 ```
 
