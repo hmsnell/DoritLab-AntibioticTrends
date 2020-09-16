@@ -786,28 +786,49 @@ test_graph
   
 ```
 
+WHAT ARE THE OTHER STATES?
+```{r}
+otherdivisions <- combinediqvia %>%
+  filter(Division == "Undefined Division")
+
+unique(otherdivisions$nppes_provider_state)
+
+#From Medicare PUF Methodology
+#“XX” = “Unknown”
+#“AA” = “Armed Forces Central/South America”
+#“AE” = “Armed Forces Europe”
+#“AP” = “Armed Forces Pacific”
+#“AS” = “American Samoa”
+#“GU” = “Guam”
+#“MP” = “Northern Mariana Islands”
+#“PR” = “Puerto Rico”
+#“VI” = “Virgin Islands”
+#“ZZ” = “Foreign Country”
+
+```
+
+
 PENICILLIN
 ```{r}
 install.packages("ggthemes") # Install 
 library(ggthemes)
 
 #Region
-pen <- combinediqvia %>%
-  filter(class == "penicillins") %>%
-  group_by(Year, Region) %>%
-  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
-            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
-            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
-
-pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) + 
-  geom_line() + 
-  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Penicilin Claims", subtitle = "2013 - 2017", col = "Region")
-
-pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
-pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
-pen_line+ theme_economist()+  theme(legend.position = "right")
+#pen <- combinediqvia %>%
+#  filter(class == "penicillins") %>%
+#  group_by(Year, Region) %>%
+#  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+#            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+#            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
 
 
+#pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) + 
+#  geom_line() + 
+#  labs(x = "Year", y = "Per capita Prescriptions", title = expression(paste('Annual ',italic('per capita'),' Penicillin Prescriptions')), subtitle = "2013 - 2017", col = "Region")
+
+#pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+#pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+#pen_line+ theme_economist()+  theme(legend.position = "right")
 
 
 #Division
@@ -818,32 +839,86 @@ pen <- combinediqvia %>%
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
 
-pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
-  geom_line() + 
-  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Penicilin Claims", subtitle = "2013 - 2017", col = "Division")
+pen$Division[pen$Division == "Undefined Division"] <- "*Other"
 
-pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
-pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
-pen_line+ theme_economist()+  theme(legend.position = "right")
+
+pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+  geom_line(size = 0.9) + 
+  labs(x = "\nYear\n\n", 
+       y = "Per capita Prescriptions\n", 
+       title = 'Annual per capita Penicillin Prescriptions\n', 
+       subtitle = "2013 - 2017\n", 
+       caption = expression(paste(italic("\n\n*Other: Areas identified as Armed Forces, Foreign Country, Puerto Rico, Island and Unknown"))),
+       col = "Division")
+
+#From Medicare PUF Methodology
+#“XX” = “Unknown”
+#“AA” = “Armed Forces Central/South America”
+#“AE” = “Armed Forces Europe”
+#“AP” = “Armed Forces Pacific”
+#“AS” = “American Samoa”
+#“GU” = “Guam”
+#“MP” = “Northern Mariana Islands”
+#“PR” = “Puerto Rico”
+#“VI” = “Virgin Islands”
+#“ZZ” = “Foreign Country”
+
+#pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+#pen_line+ theme_hc() + theme(legend.position = "right", 
+#                             axis.line = element_line(colour = "grey"),
+#                             plot.title = element_text(face = "bold"),
+#                             plot.subtitle = element_text(size = 11))
+#pen_line + theme_economist_white() + theme(legend.position = "right",
+#                                    legend.text=element_text(size=13),
+#                                    plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
+#                                    plot.subtitle = element_text(size = 15, hjust = 0.5),
+#                                    legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+#                                    axis.line.y = element_line(colour = "black"),
+#                                    plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
+#                                    axis.title.x = element_text(size = 13),
+#                                    axis.title.y = element_text(size = 13))
+pen_line+ theme_economist() + 
+  theme(legend.position = "right",
+        legend.text=element_text(size=11),
+        plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 15, hjust = 0.5),
+        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+        axis.line.y = element_line(colour = "black"),
+        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
+        axis.title.x = element_text(size = 15),
+        axis.title.y = element_text(size = 15),
+        plot.caption = element_text(size = 11, hjust = 1),
+        plot.caption.position = "plot") +
+  scale_color_discrete(breaks = c("East North Central",
+                                  "East South Central",
+                                  "Middle Atlantic",
+                                  "Mountain",
+                                  "New England",
+                                  "Pacific",
+                                  "South Atlantic",
+                                  "West North Central",
+                                  "West South Central",
+                                  "*Other"))
+  
 
 #Region/Division
-pen <- combinediqvia %>%
-  filter(class == "penicillins") %>%
-  group_by(Year, Division, Region) %>%
-  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
-            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
-            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+#pen <- combinediqvia %>%
+#  filter(class == "penicillins") %>%
+#  group_by(Year, Division, Region) %>%
+#  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+#            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+#            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+#
+#pd <- position_dodge(0.07)
+#
+#pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
+#  geom_line(position = pd) + 
+#  geom_point(position = pd, aes(shape = Region), size = 2, colour = "black") +
+#  labs(x = "Year", y = "Per capita Prescriptions", title = "Annual per capita Penicillin Prescriptions", subtitle = "2013 - 2017", col = "Division")
 
-pd <- position_dodge(0.07)
-
-pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
-  geom_line(position = pd) + 
-  geom_point(position = pd, aes(shape = Region), size = 2, colour = "black") +
-  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Penicilin Claims", subtitle = "2013 - 2017", col = "Division")
-
-pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
-pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
-pen_line+ theme_economist()+  theme(legend.position = "right")
+#pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+#pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+#pen_line+ theme_economist()+  theme(legend.position = "right")
 
 ```
 
@@ -897,7 +972,7 @@ PER CAPITA PARTD ENROLLMENT -- REGION AND ANTIBIOTIC CLASS
 ```{r}
 totalclaims <- combinediqvia %>%
   mutate(class = forcats::fct_explicit_na(class)) %>%
-  group_by(class, Region, Year) %>% 
+  group_by(class, Division, Year) %>% 
   summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll) %>% 
@@ -1006,6 +1081,87 @@ totalclaimgraph
 
 
 ```
+
+TOP SIX ANTIBIOTIC CLASSES LINE GRAPH
+```{r}
+top6 <- combinediqvia %>%
+  mutate(class = forcats::fct_explicit_na(class)) %>%
+  group_by(class, Year) %>% 
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+
+#top6$Division[top6$Division == "Undefined Division"] <- "*Other"
+
+top6 <- top6 %>%
+  filter(class == "penicillins" | 
+           class == "macrolides" | 
+           class == "cephalosporin" | 
+           class == "fluoroquinolones" |
+           class == "quinolones" |
+           class == "tetracyclines")
+top6$class <- as.character(top6$class)
+
+top6$class[top6$class == "penicillins"] <- "Penicillin"
+top6$class[top6$class == "macrolides"] <- "Macrolide"
+top6$class[top6$class == "cephalosporin"] <- "Cephalosporin"
+top6$class[top6$class == "fluoroquinolones"] <- "Fluoroquinolone"
+top6$class[top6$class == "quinolones"] <- "Quinolone"
+top6$class[top6$class == "tetracyclines"] <- "Tetracycline"
+
+
+
+
+
+top6_line <- ggplot(top6, aes(x = Year, y = percapita_Enroll, group = class, colour = class)) + 
+  geom_line(size = 0.9) + 
+  labs(x = "\nYear\n\n", 
+       y = "Per capita Prescriptions\n", 
+       title = 'Annual per capita Antibiotic Prescriptions', 
+       subtitle = "2013 - 2017\n",
+       col = "Antibiotic Class")
+
+top6_line + theme_economist() +
+  theme(legend.position = "right",
+        legend.text=element_text(size=11),
+        plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 15, hjust = 0.5),
+        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+        axis.line.y = element_line(colour = "black"),
+        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
+        axis.title.x = element_text(size = 15),
+        axis.title.y = element_text(size = 15),
+        plot.caption = element_text(size = 11, hjust = 1),
+        plot.caption.position = "plot") +
+  scale_color_discrete(breaks = c("Penicillin",
+                                  "Macrolide",
+                                  "Cephalosporin",
+                                  "Fluoroquinolone",
+                                  "Quinolone",
+                                  "Tetracycline"))
+
+top6_line + theme_clean() +
+  theme(legend.position = "right",
+        legend.text=element_text(size=11),
+        plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 15, hjust = 0.5),
+        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+        axis.line.y = element_line(colour = "black"),
+        axis.line.x = element_line(colour = "black"),
+        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
+        axis.title.x = element_text(size = 15),
+        axis.title.y = element_text(size = 15),
+        plot.caption = element_text(size = 11, hjust = 1),
+        plot.caption.position = "plot") +
+  scale_color_discrete(breaks = c("Penicillin",
+                                  "Macrolide",
+                                  "Cephalosporin",
+                                  "Fluoroquinolone",
+                                  "Quinolone",
+                                  "Tetracycline"))
+
+```
+
 
 Top Six Antibiotic class total claims per capita PARTD Enrollment for all years
 ```{r}
@@ -1385,7 +1541,7 @@ quet <- AP_combinediqvia %>%
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
 
-quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group=Region, colour = Region)) + geom_line() + labs(x = "Year", y = "Claim per PartD Enrollee", title = "Quetiapine Claims", subtitle = "2013 - 2017", col = "Region")
+quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group=Region, colour = Region)) + geom_line() + labs(x = "Year", y = "Per capita Prescriptions", title = "Annual italic(per capita) Quetiapine Prescriptions", subtitle = "2013 - 2017", col = "Region")
 
 quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
@@ -1402,14 +1558,41 @@ quet <- AP_combinediqvia %>%
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
 
+quet$Division[quet$Division == "Undefined"] <- "*Other"
+
 quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
-  geom_line() + 
-  labs(x = "Year", y = "Claim per PartD Enrollee", title = "Quetiapine Claims", subtitle = "2013 - 2017", col = "Division")
+  geom_line(size = 0.9) + 
+  labs(x = "\nYear\n\n", 
+       y = "Per capita Prescriptions\n", 
+       title = 'Annual per capita Quetiapine Prescriptions\n', 
+       subtitle = "2013 - 2017\n", 
+       caption = expression(paste(italic("\n\n*Other: Areas identified as Armed Forces, Foreign Country, Puerto Rico, Island and Unknown"))),
+       col = "Division")
 
-quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
-quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
-quet_line+ theme_economist()+  theme(legend.position = "right")
-
+#quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
+#quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
+quet_line + theme_economist() + 
+  theme(legend.position = "right",
+        legend.text=element_text(size=11),
+        plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(size = 15, hjust = 0.5),
+        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+        axis.line.y = element_line(colour = "black"),
+        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
+        axis.title.x = element_text(size = 15),
+        axis.title.y = element_text(size = 15),
+        plot.caption = element_text(size = 11, hjust = 1),
+        plot.caption.position = "plot") +
+  scale_color_discrete(breaks = c("East North Central",
+                                  "East South Central",
+                                  "Middle Atlantic",
+                                  "Mountain",
+                                  "New England",
+                                  "Pacific",
+                                  "South Atlantic",
+                                  "West North Central",
+                                  "West South Central",
+                                  "*Other"))
 #Region/Division
 quet <- AP_combinediqvia %>%
   filter(Category2 == "QUETIAPINE") %>%
@@ -1423,7 +1606,7 @@ pd <- position_dodge(0.07)
 quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group = Division, colour = Division)) + 
   geom_line(position = pd) + 
   geom_point(position = pd, aes(shape = Region), size = 2, colour = "black") +
-  labs(x = "Year", y = "Claims per PartD Enrollee", title = "Quetiapine Claims", subtitle = "2013 - 2017", col = "Division")
+  labs(x = "Year", y = "Per capita Prescriptions", title = "Annual Per capita Quetiapine Prescriptions", subtitle = "2013 - 2017", col = "Division")
 
 quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
