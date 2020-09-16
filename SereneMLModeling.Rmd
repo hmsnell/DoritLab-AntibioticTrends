@@ -808,6 +808,15 @@ unique(otherdivisions$nppes_provider_state)
 ```
 
 
+DOUBLE CHECKING TOTAL PRESCRIPTION COUNT
+```{r}
+subyear <- AP_combinediqvia %>%
+  filter(Year == "2016")
+
+sum(subyear$total_claim_count)
+```
+
+
 PENICILLIN
 ```{r}
 install.packages("ggthemes") # Install 
