@@ -823,21 +823,43 @@ install.packages("ggthemes") # Install
 library(ggthemes)
 
 #Region
-#pen <- combinediqvia %>%
-#  filter(class == "penicillins") %>%
-#  group_by(Year, Region) %>%
-#  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
-#            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
-#            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
+pen <- combinediqvia %>%
+  filter(class == "penicillins") %>%
+  group_by(Year, Region) %>%
+  summarise(totalprescriptioncount = sum(total_claim_count,na.rm = TRUE),
+            total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
+            percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
 
+pen$Region[pen$Region == "Undefined Region"] <- "*Other"
 
-#pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) + 
-#  geom_line() + 
-#  labs(x = "Year", y = "Per capita Prescriptions", title = expression(paste('Annual ',italic('per capita'),' Penicillin Prescriptions')), subtitle = "2013 - 2017", col = "Region")
+pen_line <- ggplot(pen, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) +
+  geom_line(size = 1.5) + 
+  labs(x = "\nYear\n\n", 
+       y = expression(paste(italic('Per capita\n'), ' Prescriptions\n')), 
+       title = expression(paste('Annual\n', italic(' per capita\n'), ' Penicillin Prescriptions\n')), 
+       subtitle = "2013 - 2017\n", 
+       caption = expression(paste(italic("\n\n*Other: Areas identified as Armed Forces, Foreign Country, Puerto Rico, Island and Unknown"))),
+       col = "Region")
 
 #pen_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 #pen_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
-#pen_line+ theme_economist()+  theme(legend.position = "right")
+pen_line + theme_economist() + 
+  theme(legend.position = "right",
+        legend.text=element_text(size=13),
+        plot.title = element_text(size = 20, hjust = 0.5),
+        plot.subtitle = element_text(size = 17, hjust = 0.5),
+        legend.title = element_text(size = 15, hjust = 0.5),
+        axis.line.y = element_line(colour = "black"),
+        plot.margin = margin(1, 1, 1, 1, "cm"),
+        axis.title.x = element_text(size = 17),
+        axis.title.y = element_text(size = 17),
+        plot.caption = element_text(size = 13, hjust = 1),
+        plot.caption.position = "plot") +
+  scale_color_discrete(breaks = c("Midwest",
+                                  "Northeast",
+                                  "South",
+                                  "West",
+                                  "*Other"))
 
 
 #Division
@@ -1123,24 +1145,27 @@ top6$class[top6$class == "tetracyclines"] <- "Tetracycline"
 
 
 top6_line <- ggplot(top6, aes(x = Year, y = percapita_Enroll, group = class, colour = class)) + 
-  geom_line(size = 0.9) + 
+  geom_line(size = 1.75) + 
   labs(x = "\nYear\n\n", 
-       y = "Per capita Prescriptions\n", 
-       title = 'Annual per capita Antibiotic Prescriptions', 
+       y = expression(paste(italic('Per capita\n'), ' Prescriptions\n')), 
+       title = expression(paste('Annual', italic(' per capita'), ' Antibiotic Prescriptions')),
        subtitle = "2013 - 2017\n",
        col = "Antibiotic Class")
 
-top6_line + theme_economist() +
+top6_line + theme_clean() + 
   theme(legend.position = "right",
-        legend.text=element_text(size=11),
-        plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
-        plot.subtitle = element_text(size = 15, hjust = 0.5),
-        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+        legend.text=element_text(size=13),
+        plot.title = element_text(size = 20, hjust = 0.5),
+        plot.subtitle = element_text(size = 17, hjust = 0.5),
+        legend.title = element_text(size = 15, hjust = 0.5),
         axis.line.y = element_line(colour = "black"),
-        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
-        axis.title.x = element_text(size = 15),
-        axis.title.y = element_text(size = 15),
-        plot.caption = element_text(size = 11, hjust = 1),
+        axis.line.x = element_line(colour = "black"),
+        plot.margin = margin(1,1,1,1, "cm"),
+        axis.title.x = element_text(size = 17),
+        axis.title.y = element_text(size = 17),
+        axis.text.x = element_text(size = 11),
+        axis.text.y = element_text(size = 11),
+        plot.caption = element_text(size = 13, hjust = 1),
         plot.caption.position = "plot") +
   scale_color_discrete(breaks = c("Penicillin",
                                   "Macrolide",
@@ -1149,25 +1174,6 @@ top6_line + theme_economist() +
                                   "Quinolone",
                                   "Tetracycline"))
 
-top6_line + theme_clean() +
-  theme(legend.position = "right",
-        legend.text=element_text(size=11),
-        plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
-        plot.subtitle = element_text(size = 15, hjust = 0.5),
-        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
-        axis.line.y = element_line(colour = "black"),
-        axis.line.x = element_line(colour = "black"),
-        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
-        axis.title.x = element_text(size = 15),
-        axis.title.y = element_text(size = 15),
-        plot.caption = element_text(size = 11, hjust = 1),
-        plot.caption.position = "plot") +
-  scale_color_discrete(breaks = c("Penicillin",
-                                  "Macrolide",
-                                  "Cephalosporin",
-                                  "Fluoroquinolone",
-                                  "Quinolone",
-                                  "Tetracycline"))
 
 ```
 
@@ -1550,7 +1556,36 @@ quet <- AP_combinediqvia %>%
             total_PartDEnroll = sum(unique(Total_PartDEnroll), na.rm = TRUE),
             percapita_Enroll = totalprescriptioncount/total_PartDEnroll)
 
-quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group=Region, colour = Region)) + geom_line() + labs(x = "Year", y = "Per capita Prescriptions", title = "Annual italic(per capita) Quetiapine Prescriptions", subtitle = "2013 - 2017", col = "Region")
+quet$Region[quet$Region == "Undefined Region"] <- "*Other"
+
+quet_line <- ggplot(quet, aes(x = Year, y = percapita_Enroll, group = Region, colour = Region)) +
+  geom_line(size = 1.75) + 
+  labs(x = "\nYear\n\n", 
+       y = expression(paste(italic('Per capita\n'), ' Prescriptions\n')), 
+       title = expression(paste('Annual\n', italic(' per capita\n'), ' Quetiapine Prescriptions\n')), 
+       subtitle = "2013 - 2017\n", 
+       caption = expression(paste(italic("\n\n*Other: Areas identified as Armed Forces, Foreign Country, Puerto Rico, Island and Unknown"))),
+       col = "Region")
+
+quet_line + theme_economist() + 
+  theme(legend.position = "right",
+        legend.text=element_text(size=13),
+        plot.title = element_text(size = 20, hjust = 0.5),
+        plot.subtitle = element_text(size = 17, hjust = 0.5),
+        legend.title = element_text(size = 15, hjust = 0.5),
+        axis.line.y = element_line(colour = "black"),
+        plot.margin = margin(1,1,1,1, "cm"),
+        axis.title.x = element_text(size = 17),
+        axis.title.y = element_text(size = 17),
+        plot.caption = element_text(size = 13, hjust = 1),
+        plot.caption.position = "plot") +
+  scale_color_discrete(breaks = c("Midwest",
+                                  "Northeast",
+                                  "South",
+                                  "West",
+                                  "*Other"))
+
+
 
 quet_line + theme_minimal() + theme(axis.line = element_line(colour = "grey"))
 quet_line+ theme_hc() + theme(legend.position = "right", axis.line = element_line(colour = "grey"))
@@ -1585,9 +1620,9 @@ quet_line + theme_economist() +
         legend.text=element_text(size=11),
         plot.title = element_text(size = 17, face = "bold", hjust = 0.5),
         plot.subtitle = element_text(size = 15, hjust = 0.5),
-        legend.title = element_text(face = "bold",size = 15, hjust = 0.5),
+        legend.title = element_text(size = 15, hjust = 0.5),
         axis.line.y = element_line(colour = "black"),
-        plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
+        plot.margin = margin(1,1,1,1, "cm"),
         axis.title.x = element_text(size = 15),
         axis.title.y = element_text(size = 15),
         plot.caption = element_text(size = 11, hjust = 1),
