@@ -7,6 +7,7 @@ output: html_document
 ```{r}
 install.packages("vroom")
 
+
 library(tidyverse)
 library(tidyr)
 library(reshape2)
@@ -749,15 +750,6 @@ PartD_ClaimCount
 ggplot(PartD_ClaimCount, aes(x = reorder(Division, -totalprescriptioncount), y = totalprescriptioncount)) + geom_col() + labs(x = "Division", y = "Prescription Claim Count", title = "Total Prescription Claim Counts by Division 2013-2017") + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~Year)
 ```
 
-
-MAPPING:
-```{r}
-library(ggplot2)
-library(sf)
-
-usgeom <- 
-
-```
 
 CLASS Missing values:
 ```{r}
